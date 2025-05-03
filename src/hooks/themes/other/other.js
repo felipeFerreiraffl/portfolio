@@ -1,5 +1,4 @@
 import { colors } from "../colors/colors";
-import themes from "../themes";
 
 export const others = {
   spacing: {

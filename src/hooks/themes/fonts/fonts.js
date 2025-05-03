@@ -1,11 +1,11 @@
 import {
-  Space_Grotesk,
-  League_Gothic,
+  Charm,
   Gothic_A1,
   Handjet,
-  Oxanium,
+  League_Gothic,
   Lexend,
-  Charm,
+  Oxanium,
+  Space_Grotesk,
   Zain,
 } from "next/font/google";
 
