@@ -1,3 +1,5 @@
+@import url("./themes.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,4 +11,62 @@
 body {
   width: 100%;
   height: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--neu-02);
+}
+
+.mn-ttl {
+  font-size: var(--ft-h1);
+  font-weight: var(--ft-bold);
+}
+
+.sec-ttl {
+  font-size: var(--ft-h2);
+  font-weight: var(--ft-bold);
+}
+
+.thd-ttl {
+  font-size: var(--ft-h3);
+  font-weight: var(--ft-bold);
+}
+
+.four-ttl {
+  font-size: var(--ft-h4);
+  font-weight: var(--ft-medium);
+}
+
+.last-ttl {
+  font-size: var(--ft-h5);
+  font-weight: var(--ft-medium);
+}
+
+.header {
+  font-size: var(--ft-header);
+  font-weight: var(--ft-medium);
+}
+
+.body {
+  font-size: var(--ft-body);
+  font-weight: var(--ft-light);
+}
+
+.subttl {
+  font-size: var(--ft-subtitle);
+  font-weight: var(--ft-medium);
+}
+
+.btn {
+  font-size: var(--ft-button);
+  font-weight: var(--ft-bold);
+}
+
+.caption {
+  font-size: var(--ft-caption);
+  font-weight: var(--ft-light);
 }
