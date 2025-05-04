@@ -1,0 +1,103 @@
+:root {
+  /* -- Cores -- */
+  /* Principais */
+  --main-01: #2b17de;
+  --main-02: #7993e7;
+  --main-03: #0e064f;
+  --main-04: #7c1fcc;
+  --main-05: #bf72f2;
+  --main-06: #280543;
+
+  /* Auxiliares */
+  --aux-01: #11a83e;
+  --aux-02: #8fee47;
+  --aux-03: #ccbe1f;
+  --aux-04: #cc1f1f;
+
+  /* Neutras */
+  --neu-01: #000000;
+  --neu-02: #161616;
+  --neu-03: #888888;
+  --neu-04: #ffffff;
+
+  /* RGBA */
+  --rgba-bk80: rgba(0, 0, 0, 0.8);
+  --rgba-bk50: rgba(0, 0, 0, 0.5);
+  --rgba-bl50: rgba(14, 6, 79, 0.5);
+  --rgba-pp50: rgba(40, 5, 67, 0.5);
+
+  /* -- Fontes -- */
+  /* Tamanhos */
+  --ft-h1: 4rem;
+  --ft-h2: 3rem;
+  --ft-h3: 2.5rem;
+  --ft-h4: 2rem;
+  --ft-h5: 1.5rem;
+  --ft-header: 1.25rem;
+  --ft-body: 1rem;
+  --ft-subtitle: 1rem;
+  --ft-button: 1rem;
+  --ft-caption: 0.75rem;
+
+  /* Pesos */
+  --ft-bold: 700;
+  --ft-medium: 500;
+  --ft-regular: 400;
+  --ft-light: 300;
+
+  /* -- Variáveis -- */
+  /* Espaços e tamanhos */
+  --sp4: 0.25rem;
+  --sp8: 0.5rem;
+  --sp12: 0.75rem;
+  --sp16: 1rem;
+  --sp20: 1.25rem;
+  --sp24: 1.5rem;
+  --sp28: 1.75rem;
+  --sp32: 2rem;
+  --sp36: 2.25rem;
+  --sp48: 3rem;
+  --sp56: 3.5rem;
+  --sp64: 4rem;
+  --sp72: 4.5rem;
+  --sp80: 5rem;
+  --sp88: 5.5rem;
+  --sp96: 6rem;
+  --sp112: 7rem;
+  --sp128: 8rem;
+  --sp144: 9rem;
+  --sp160: 10rem;
+  --sp176: 11rem;
+  --sp200: 12.5rem;
+  --sp288: 18rem;
+
+  /* Border */
+  --bd-mn1: 4px solid #2b17de;
+  --bd-mn2: 4px solid #7993e7;
+  --bd-mn4: 4px solid #7c1fcc;
+  --bd-mn5: 4px solid #bf72f2;
+  --bd-aux5: 4px solid #161616;
+  --bd-mn5: 4px solid #ccbe1f;
+
+  /* Border Radius */
+  --bdr-circular: 50%;
+  --bdr32: 32px;
+  --bdr28: 28px;
+  --bdr12: 12px;
+  --bdr8: 8px;
+  --bdr4: 4px;
+
+  /* Opacidade */
+  --op100: 1;
+  --op50: 0.5;
+
+  /* Transições e animações */
+  --tr-normal: 0.3s ease;
+  --tr-animation: 1.2s ease;
+
+  /* Z-Index */
+  --zi-1: 1;
+  --zi-10: 10;
+  --zi-100: 100;
+  --zi-1000: 1000;
+}
