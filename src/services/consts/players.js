@@ -1,0 +1,161 @@
+export const allTimePlayers = [
+  {
+    id: 1,
+    name: "Lionel Messi",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/goats/lio-mss.jpg",
+    link: "https://en.wikipedia.org/wiki/Lionel_Messi",
+  },
+  {
+    id: 2,
+    name: "Cristiano Ronaldo",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/goats/cr-rn.jpg",
+    link: "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+  },
+  {
+    id: 3,
+    name: "Pelé",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/goats/pele.jpg",
+    link: "https://en.wikipedia.org/wiki/Pel%C3%A9",
+  },
+  {
+    id: 4,
+    name: "Johan Cruyff",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/goats/jh-cfy.jpg",
+    link: "https://en.wikipedia.org/wiki/Johan_Cruyff",
+  },
+  {
+    id: 5,
+    name: "Diego Maradona",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/goats/dg-mrd.jpg",
+    link: "https://en.wikipedia.org/wiki/Diego_Maradona",
+  },
+  {
+    id: 6,
+    name: "Ronaldo Nazário",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/goats/rn-nz.jpg",
+    link: "https://en.wikipedia.org/wiki/Ronaldo_(Brazilian_footballer)",
+  },
+  {
+    id: 7,
+    name: "Franz Beckenbauer",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/goats/fz-bck.jpg",
+    link: "https://en.wikipedia.org/wiki/Franz_Beckenbauer",
+  },
+  {
+    id: 8,
+    name: "Manuel Neuer",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/goats/mn-nr.jpg",
+    link: "https://en.wikipedia.org/wiki/Manuel_Neuer",
+  },
+  {
+    id: 9,
+    name: "Zinedine Zidane",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/goats/zd-zd.jpg",
+    link: "https://en.wikipedia.org/wiki/Zinedine_Zidane",
+  },
+  {
+    id: 10,
+    name: "Ronaldinho Gaúcho",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/goats/rn-gch.jpg",
+    link: "https://en.wikipedia.org/wiki/Ronaldinho",
+  },
+  {
+    id: 11,
+    name: "Gianluigi Buffon",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/goats/gl-bff.jpg",
+    link: "https://en.wikipedia.org/wiki/Gianluigi_Buffon",
+  },
+];
+
+export const bestPlayers = [
+  {
+    id: 1,
+    name: "Raphinha",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/raph.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=87870",
+  },
+  {
+    id: 2,
+    name: "Lamine Yamal",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/lm-yml.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=126898",
+  },
+  {
+    id: 3,
+    name: "Robert Lewandowski",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/rbt-lw.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=34893",
+  },
+  {
+    id: 4,
+    name: "Pedri Gonzalez",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/pd-gnz.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=102243",
+  },
+  {
+    id: 5,
+    name: "Pau Cubarsí",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/p-cbs.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=139751",
+  },
+  {
+    id: 6,
+    name: "Vinícius Jr.",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/vini-jr.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=90068",
+  },
+  {
+    id: 7,
+    name: "Jude Bellingham",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/jd-bell.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=101902",
+  },
+  {
+    id: 8,
+    name: "Kylian Mbappé",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/kl-mbp.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=85260",
+  },
+  {
+    id: 9,
+    name: "Fede Valverde",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/fd-vvd.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=81249",
+  },
+  {
+    id: 10,
+    name: "Mohammed Salah",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/mh-slh.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=52690",
+  },
+  {
+    id: 11,
+    name: "Virgil Van Dijk",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/van-djik.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=53468",
+  },
+  {
+    id: 12,
+    name: "Florian Wirtz",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/fr-wtz.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=104514",
+  },
+  {
+    id: 13,
+    name: "Harry Kane",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/hr-kn.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=49590",
+  },
+  {
+    id: 14,
+    name: "Erling Haaland",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/er-hld.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=88100",
+  },
+  {
+    id: 15,
+    name: "Kevin De Bruyne",
+    src: "https://raw.githubusercontent.com/felipeFerreiraffl/portfolio-images/refs/heads/main/football/best/kv-d-byn.jpg",
+    link: "https://pt-br.soccerwiki.org/player.php?pid=41105",
+  },
+];
