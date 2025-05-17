@@ -1,3 +1,5 @@
+import pngImgs from "./services/const/imgs/pngs";
+
 export default function App() {
   return (
     <div>

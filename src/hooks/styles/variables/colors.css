@@ -1,2 +1,27 @@
 :root {
+  /* Cores principais */
+  --main-01: #2b17de;
+  --main-02: #7993e7;
+  --main-03: #0e064f;
+  --main-04: #7c1fcc;
+  --main-05: #bf72f2;
+  --main-06: #280543;
+
+  /* Cores auxiliares */
+  --aux-01: #11a83e;
+  --aux-01: #8fee47;
+  --aux-01: #ccbe1f;
+  --aux-01: #cc1f1f;
+
+  /* Cores neutras */
+  --neu-01: #000000;
+  --neu-02: #161616;
+  --neu-03: #888888;
+  --neu-04: #ffffff;
+
+  /* Cores com opacidade (RGBA) */
+  --rgba-bk80: rgba(0, 0, 0, 0.8);
+  --rgba-bk50: rgba(0, 0, 0, 0.5);
+  --rgba-bl50: rgba(14, 6, 79, 0.5);
+  --rgba-pp50: rgba(40, 5, 67, 0.5);
 }

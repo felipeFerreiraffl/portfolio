@@ -1,2 +1,65 @@
 :root {
+  /* Espaçamento e tamanhos */
+  --sp-4: 0.25rem;
+  --sp-8: 0.5rem;
+  --sp-12: 0.75rem;
+  --sp-16: 1rem;
+  --sp-20: 1.25rem;
+  --sp-24: 1.5rem;
+  --sp-28: 1.75rem;
+  --sp-32: 2rem;
+  --sp-36: 2.25rem;
+  --sp-40: 2.5rem;
+  --sp-48: 3rem;
+  --sp-56: 3.5rem;
+  --sp-64: 4rem;
+  --sp-72: 4.5rem;
+  --sp-80: 5rem;
+  --sp-88: 5.5rem;
+  --sp-96: 6rem;
+  --sp-112: 7rem;
+  --sp-128: 8rem;
+  --sp-144: 9rem;
+  --sp-160: 10rem;
+  --sp-176: 11rem;
+  --sp-192: 12rem;
+  --sp-200: 12.5rem;
+  --sp-288: 18rem;
+
+  /* Bordas */
+  --bd-32: 32px;
+  --bd-12: 12px;
+  --bd-8: 8px;
+  --bd-4: 4px;
+  --bd-circ: 50%;
+
+  /* Border radius */
+  --brad-mn1: solid 4px #2b17de;
+  --brad-mn2: solid 4px #7993e7;
+  --brad-mn5: solid 4px #7c1fcc;
+  --brad-mn6: solid 4px #bf72f2;
+  --brad-nt3: solid 4px #888888;
+  --brad-line-mn1: solid 2px #2b17de;
+  --brad-line-mn2: solid 2px #7993e7;
+  --brad-line-mn6: solid 2px #bf72f2;
+  --brad-line-nt4: solid 2px #ffffff;
+
+  /* Opacidade */
+  --op-100: 1;
+  --op-50: 0.5;
+
+  /* Sombras */
+  --bshw-hdr: inset 0 -24px 30px #161616;
+  --bshw-led-mn2: 0 0 16px rgba(191, 114, 242, 0.6);
+  --bshw-led-mn5: 0 0 16px rgba(121, 147, 231, 0.6);
+
+  /* Z-index */
+  --zind-1: 1;
+  --zind-10: 10;
+  --zind-100: 100;
+  --zind-1000: 1000;
+
+  /* Transições e animações */
+  --ts-def: 0.3s ease;
+  --ts-anim: 1.2s ease;
 }
