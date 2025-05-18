@@ -1,0 +1,15 @@
+{
+  "pages": {
+    "portfolio": "Portfolio",
+    "contacts": "Contacts"
+  },
+  "tradutor": {
+    "pt-br": "Portuguese (BR)",
+    "en": "English"
+  },
+  "alts": {
+    "logo": "Site's logo",
+    "pt-icon": "Translation icon for brazilian portuguese",
+    "en-icon": "Translation icon for english"
+  }
+}

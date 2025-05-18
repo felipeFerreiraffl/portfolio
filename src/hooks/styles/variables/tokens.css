@@ -26,23 +26,23 @@
   --sp-200: 12.5rem;
   --sp-288: 18rem;
 
-  /* Bordas */
-  --bd-32: 32px;
-  --bd-12: 12px;
-  --bd-8: 8px;
-  --bd-4: 4px;
-  --bd-circ: 50%;
-
   /* Border radius */
-  --brad-mn1: solid 4px #2b17de;
-  --brad-mn2: solid 4px #7993e7;
-  --brad-mn5: solid 4px #7c1fcc;
-  --brad-mn6: solid 4px #bf72f2;
-  --brad-nt3: solid 4px #888888;
-  --brad-line-mn1: solid 2px #2b17de;
-  --brad-line-mn2: solid 2px #7993e7;
-  --brad-line-mn6: solid 2px #bf72f2;
-  --brad-line-nt4: solid 2px #ffffff;
+  --brad-32: 32px;
+  --brad-12: 12px;
+  --brad-8: 8px;
+  --brad-4: 4px;
+  --brad-circ: 50%;
+
+  /* Border */
+  --bd-mn1: solid 4px #2b17de;
+  --bd-mn2: solid 4px #7993e7;
+  --bd-mn5: solid 4px #7c1fcc;
+  --bd-mn6: solid 4px #bf72f2;
+  --bd-nt3: solid 4px #888888;
+  --bd-line-mn1: solid 2px #2b17de;
+  --bd-line-mn2: solid 2px #7993e7;
+  --bd-line-mn6: solid 2px #bf72f2;
+  --bd-line-nt4: solid 2px #ffffff;
 
   /* Opacidade */
   --op-100: 1;
@@ -50,8 +50,8 @@
 
   /* Sombras */
   --bshw-hdr: inset 0 -24px 30px #161616;
-  --bshw-led-mn2: 0 0 16px rgba(191, 114, 242, 0.6);
-  --bshw-led-mn5: 0 0 16px rgba(121, 147, 231, 0.6);
+  --bshw-led-mn2: 0 0 16px rgba(121, 147, 231, 0.6);
+  --bshw-led-mn5: 0 0 16px rgba(191, 114, 242, 0.6);
 
   /* Z-index */
   --zind-1: 1;

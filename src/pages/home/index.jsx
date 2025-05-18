@@ -1,7 +1,11 @@
+import Header from "../../hooks/components/Header";
+
 export default function Home() {
- return (
-   <div>
-    <h1>Olá</h1>
-   </div>
- );
+  return (
+    <div>
+      <header>
+        <Header />
+      </header>
+    </div>
+  );
 }
