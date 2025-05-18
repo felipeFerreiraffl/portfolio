@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { FaBarsStaggered } from "react-icons/fa6";
 import langSvg from "../../../services/const/svgs/lang";
 import logo from "../../../services/const/svgs/logo";
 import i18n from "../../../services/i18n";
@@ -6,6 +8,7 @@ import styles from "./style.module.css";
 
 export default function Header() {
   const { t } = useTranslation("header", { useSuspense: true });
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <nav className={styles.header}>
@@ -44,6 +47,59 @@ export default function Header() {
           onClick={() => i18n.changeLanguage("en")}
         />
       </div>
+      <FaBarsStaggered
+        className={styles["menu-i"]}
+        onClick={() => setOpenMenu(true)}
+      />
+
+      {openMenu && (
+        <div className={styles.menu}>
+          <div className={styles["menu-lang-ctn"]}>
+            <img
+              className={styles["lang-i"]}
+              src={langSvg.ptBr}
+              alt={t("alts.pt-icon")}
+              title={t("tradutor.pt-br")}
+              onClick={() => i18n.changeLanguage("pt")}
+            />
+            <img
+              className={styles["lang-i"]}
+              src={langSvg.eng}
+              alt={t("alts.en-icon")}
+              title={t("tradutor.en")}
+              onClick={() => i18n.changeLanguage("en")}
+            />
+          </div>
+
+          <nav>
+            <h2 className={styles["nav-ttl"]}>Navegue</h2>
+            <div className={styles["menu-pages"]}>
+              <a href="/" className={`${styles.link} ${styles["menu-pg"]}`}>
+                Home
+              </a>
+              <a
+                href="/portfolio"
+                className={`${styles.link} ${styles["menu-pg"]}`}
+              >
+                {t("pages.portfolio")}
+              </a>
+              <a
+                href="/hobbies"
+                className={`${styles.link} ${styles["menu-pg"]}`}
+              >
+                Hobbies
+              </a>
+              <a
+                href="/contatos"
+                className={`${styles.link} ${styles["menu-pg"]}`}
+              >
+                {t("pages.contacts")}
+              </a>
+            </div>
+          </nav>
+          <img src={logo.mainLogo2} alt="" className={styles["menu-logo"]} />
+        </div>
+      )}
     </nav>
   );
 }

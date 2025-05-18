@@ -43,7 +43,7 @@
   align-items: center;
   gap: var(--sp-20);
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 }
@@ -54,7 +54,7 @@
   align-content: end;
   gap: var(--sp-12);
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 }
@@ -67,4 +67,74 @@
 
 .lang-i:hover {
   box-shadow: var(--bshw-led-mn2);
+}
+
+.menu-i {
+  display: none;
+  font-size: 3.625rem;
+  color: var(--neu-04);
+  cursor: pointer;
+
+  @media (max-width: 1024px) {
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+  }
+}
+
+.menu-i:hover {
+  color: var(--main-01);
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--neu-01);
+  width: 28.75rem;
+  gap: var(--sp-128);
+}
+
+.menu-lang-ctn {
+  position: absolute;
+  top: 48px;
+  left: 64px;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-12);
+}
+
+.menu > nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--sp-56);
+}
+
+.menu-pages {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--sp-12);
+}
+
+.menu-pg:hover {
+  color: var(--main-01);
+}
+
+.nav-ttl {
+  font: var(--def-h2);
+  color: var(--main-01);
+  padding-bottom: 2px;
+  border-bottom: var(--bd-line-mn1);
+}
+
+.menu-logo {
+  width: 12.25rem;
 }
