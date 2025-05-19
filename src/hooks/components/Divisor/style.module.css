@@ -1,0 +1,22 @@
+.ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-20);
+}
+
+.line {
+  height: var(--sp-4);
+}
+
+.one {
+  width: var(--sp-144);
+}
+
+.two {
+  width: var(--sp-88);
+}
+
+.three {
+  width: var(--sp-56);
+}

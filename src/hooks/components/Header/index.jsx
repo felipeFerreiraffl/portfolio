@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaBarsStaggered } from "react-icons/fa6";
+import { FaBarsStaggered, FaCircleXmark } from "react-icons/fa6";
 import langSvg from "../../../services/const/svgs/lang";
 import logo from "../../../services/const/svgs/logo";
 import i18n from "../../../services/i18n";
 import styles from "./style.module.css";
+import Divisor from "../Divisor";
 
 export default function Header() {
   const { t } = useTranslation("header", { useSuspense: true });
@@ -47,6 +48,7 @@ export default function Header() {
           onClick={() => i18n.changeLanguage("en")}
         />
       </div>
+
       <FaBarsStaggered
         className={styles["menu-i"]}
         onClick={() => setOpenMenu(true)}
@@ -54,6 +56,11 @@ export default function Header() {
 
       {openMenu && (
         <div className={styles.menu}>
+          <div className={styles["menu-overlay"]}></div>
+          <FaCircleXmark
+            className={styles["menu-close"]}
+            onClick={() => setOpenMenu(false)}
+          />
           <div className={styles["menu-lang-ctn"]}>
             <img
               className={styles["lang-i"]}
@@ -97,6 +104,9 @@ export default function Header() {
               </a>
             </div>
           </nav>
+
+          <Divisor marginTop={0} color={"var(--main-01)"} />
+
           <img src={logo.mainLogo2} alt="" className={styles["menu-logo"]} />
         </div>
       )}
