@@ -16,16 +16,41 @@
   text-decoration: none;
 }
 
-.portfolio:hover {
+.home-active {
+  color: var(--main-01);
+}
+
+.portfolio {
+  background: linear-gradient(var(--main-02), var(--main-02)) bottom / 0 2px
+    no-repeat;
+}
+
+.portfolio:hover,
+.portfolio.active {
   color: var(--main-02);
+  background-size: 80% 2px;
 }
 
-.hobbies:hover {
+.hobbies {
+  background: linear-gradient(var(--main-05), var(--main-05)) bottom / 0 2px
+    no-repeat;
+}
+
+.hobbies:hover,
+.hobbies.active {
   color: var(--main-05);
+  background-size: 80% 2px;
 }
 
-.contacts:hover {
+.contacts {
+  background: linear-gradient(var(--neu-03), var(--neu-03)) bottom / 0 2px
+    no-repeat;
+}
+
+.contacts:hover,
+.contacts.active {
   color: var(--neu-03);
+  background-size: 80% 2px;
 }
 
 .logo-ctn {
@@ -73,7 +98,8 @@
   }
 }
 
-.lang-i:hover {
+.lang-i:hover,
+.lang-i.active {
   box-shadow: var(--bshw-led-mn2);
 }
 
@@ -110,7 +136,6 @@
   background-color: var(--neu-01);
   gap: var(--sp-128);
   z-index: var(--zind-1000);
-  transition: var(--ts-def);
 
   @media (max-width: 768px) {
     width: 60vw;
@@ -170,7 +195,8 @@
   gap: var(--sp-12);
 }
 
-.menu-pg:hover {
+.menu-pg:hover,
+.menu-pg.active {
   color: var(--main-01);
 }
 

@@ -2,15 +2,16 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaBarsStaggered, FaCircleXmark } from "react-icons/fa6";
+import { useLocation } from "react-router-dom";
 import langSvg from "../../../services/const/svgs/lang";
 import logo from "../../../services/const/svgs/logo";
 import i18n from "../../../services/i18n";
 import Divisor from "../Divisor";
 import styles from "./style.module.css";
-import { Helmet } from "react-helmet";
 
 export default function Header() {
-  const { t } = useTranslation("header", { useSuspense: true });
+  const { t } = useTranslation("header", { useSuspense: true }); // Tradutor
+  const location = useLocation();
   const [openMenu, setOpenMenu] = useState(false); // Estado do menu aberto
 
   // Evita rolagem com o menu aberto
@@ -45,29 +46,54 @@ export default function Header() {
           src={logo.mainLogo2}
           alt={t("alts.logo")}
         />
-        <p className={styles.link}>Home</p>
+        <p
+          className={`${styles.link} ${
+            location.pathname === "/" ? styles["home-active"] : ""
+          }`}
+        >
+          Home
+        </p>
       </a>
       <div className={styles.pages}>
-        <a href="/portfolio" className={`${styles.link} ${styles.portfolio}`}>
+        <a
+          href="/portfolio"
+          className={`${styles.link} ${styles.portfolio} ${
+            location.pathname === "/portfolio" ? styles.active : ""
+          }`}
+        >
           {t("pages.portfolio")}
         </a>
-        <a href="/hobbies" className={`${styles.link} ${styles.hobbies}`}>
+        <a
+          href="/hobbies"
+          className={`${styles.link} ${styles.hobbies} ${
+            location.pathname === "/hobbies" ? styles.active : ""
+          }`}
+        >
           Hobbies
         </a>
-        <a href="/contatos" className={`${styles.link} ${styles.contacts}`}>
+        <a
+          href="/contatos"
+          className={`${styles.link} ${styles.contacts} ${
+            location.pathname === "/contatos" ? styles.active : ""
+          }`}
+        >
           {t("pages.contacts")}
         </a>
       </div>
       <div className={styles["lang-ctn"]}>
         <img
-          className={styles["lang-i"]}
+          className={`${styles["lang-i"]} ${
+            i18n.language === "pt" ? styles.active : ""
+          }`}
           src={langSvg.ptBr}
           alt={t("alts.pt-icon")}
           title={t("tradutor.pt-br")}
           onClick={() => i18n.changeLanguage("pt")}
         />
         <img
-          className={styles["lang-i"]}
+          className={`${styles["lang-i"]} ${
+            i18n.language === "en" ? styles.active : ""
+          }`}
           src={langSvg.eng}
           alt={t("alts.en-icon")}
           title={t("tradutor.en")}
@@ -90,18 +116,23 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setOpenMenu(false)}
+            aria-hidden="true"
           ></motion.div>
 
           <motion.div
             className={styles.menu}
-            initial={{ transform: "translateX(100%)" }}
-            animate={{ transform: "translateX(0%)" }}
-            exit={{ transform: "translateX(100%)" }}
+            initial={{ x: "100%" }}
+            animate={{ x: "0%" }}
+            exit={{ x: "100%" }}
             transition={{ duration: 0.3 }}
+            aria-modal="true"
+            aria-label={t("menu")}
+            role="dialog"
           >
             <FaCircleXmark
               className={styles["menu-close"]}
               onClick={() => setOpenMenu(false)}
+              role="button"
             />
 
             <div className={styles["menu-lang-ctn"]}>
@@ -125,24 +156,35 @@ export default function Header() {
               <h2 className={styles["nav-ttl"]}>Navegue</h2>
 
               <div className={styles["menu-pages"]}>
-                <a href="/" className={`${styles.link} ${styles["menu-pg"]}`}>
+                <a
+                  href="/"
+                  className={`${styles.link} ${styles["menu-pg"]} ${
+                    location.pathname === "/" ? styles.active : ""
+                  }`}
+                >
                   Home
                 </a>
                 <a
                   href="/portfolio"
-                  className={`${styles.link} ${styles["menu-pg"]}`}
+                  className={`${styles.link} ${styles["menu-pg"]} ${
+                    location.pathname === "/portfolio" ? styles.active : ""
+                  }`}
                 >
                   {t("pages.portfolio")}
                 </a>
                 <a
                   href="/hobbies"
-                  className={`${styles.link} ${styles["menu-pg"]}`}
+                  className={`${styles.link} ${styles["menu-pg"]} ${
+                    location.pathname === "/hobbies" ? styles.active : ""
+                  }`}
                 >
                   Hobbies
                 </a>
                 <a
                   href="/contatos"
-                  className={`${styles.link} ${styles["menu-pg"]}`}
+                  className={`${styles.link} ${styles["menu-pg"]} ${
+                    location.pathname === "/contatos" ? styles.active : ""
+                  }`}
                 >
                   {t("pages.contacts")}
                 </a>
@@ -151,7 +193,13 @@ export default function Header() {
 
             <Divisor marginTop={0} color={"var(--main-01)"} />
 
-            <img src={logo.mainLogo2} alt="" className={styles["menu-logo"]} />
+            <img
+              src={logo.mainLogo2}
+              alt={t("alts.logo")}
+              className={styles["menu-logo"]}
+              role="button"
+              aria-pressed="false"
+            />
           </motion.div>
         </>
       )}
