@@ -3,10 +3,13 @@
   flex-direction: column;
   align-items: center;
   gap: var(--sp-20);
+  z-index: var(--zind-1000);
 }
 
 .line {
   height: var(--sp-4);
+  outline: none;
+  border: none;
 }
 
 .one {

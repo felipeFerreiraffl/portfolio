@@ -58,6 +58,7 @@
   --zind-10: 10;
   --zind-100: 100;
   --zind-1000: 1000;
+  --zind-10000: 10000;
 
   /* Transições e animações */
   --ts-def: 0.3s ease;
