@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaBarsStaggered, FaCircleXmark } from "react-icons/fa6";
 import { useLocation } from "react-router-dom";
-import langSvg from "../../../services/const/svgs/lang";
-import logo from "../../../services/const/svgs/logo";
+import langSvg from "../../../services/constants/svgs/lang";
+import logo from "../../../services/constants/svgs/logo";
 import i18n from "../../../services/i18n";
 import Divisor from "../Divisor";
 import styles from "./style.module.css";
@@ -137,14 +137,18 @@ export default function Header() {
 
             <div className={styles["menu-lang-ctn"]}>
               <img
-                className={styles["lang-i"]}
+                className={`${styles["lang-i"]} ${
+                  i18n.language === "pt" ? styles.active : ""
+                }`}
                 src={langSvg.ptBr}
                 alt={t("alts.pt-icon")}
                 title={t("tradutor.pt-br")}
                 onClick={() => i18n.changeLanguage("pt")}
               />
               <img
-                className={styles["lang-i"]}
+                className={`${styles["lang-i"]} ${
+                  i18n.language === "en" ? styles.active : ""
+                }`}
                 src={langSvg.eng}
                 alt={t("alts.en-icon")}
                 title={t("tradutor.en")}
