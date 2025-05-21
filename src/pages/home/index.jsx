@@ -14,7 +14,12 @@ export default function Home() {
         <Header />
 
         <div className={styles.intro}>
-          <img className={styles.logo} src={logo.altLogo2} alt="" />
+          <img
+            className={styles.logo}
+            src={logo.altLogo2}
+            alt=""
+            loading="lazy"
+          />
           <div className={styles["txt-ctn"]}>
             <h1 className={styles.ttl}>Bem vindo ao meu portfólio!</h1>
             <p className={styles.subttl}>
