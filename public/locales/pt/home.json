@@ -3,5 +3,27 @@
     "title": "Bem vindo ao meu portfólio!",
     "subtitle": "Portfólio profissional com o objetivo de mostrar projetos, cursos e habilidades do usuário deste site, como também conteúdo extra, como hobbies"
   },
-  "sections": {}
+  "sections": {
+    "about-me": {
+      "title": "Sobre mim",
+      "name": "Nome",
+      "birthday": "Data de nascimento",
+      "nationality": {
+        "title": "Nacionalidade",
+        "desc": "Brasileiro"
+      },
+      "goal": {
+        "title": "Objetivo",
+        "desc": "Trabalhar na área de TI, em especial na área Frontend com programação. Como adicional, aprender sobre programação e design de games"
+      }
+    },
+    "portfolio": {
+      "title": "Portfólio",
+      "desc": "Verifique meu currículo, demostrando cursos prestados, cursos extras feitos além da área de TI e minhas habilidades adquiridas, além de projetos realizados."
+    },
+    "hobbies": {
+      "desc-1": "Apresentação das atividades que gosto de praticar no meu tempo livre, apenas como curiosidade.",
+      "desc-2": "Podemos ter o mesmo hobby!"
+    }
+  }
 }

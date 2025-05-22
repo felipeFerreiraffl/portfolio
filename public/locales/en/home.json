@@ -3,5 +3,27 @@
     "title": "Welcome to my portfolio!",
     "subtitle": "A professional portfolio with the goal of showing my projects, courses and skills, as extra content, like my hobbies"
   },
-  "sections": {}
+  "sections": {
+    "about-me": {
+      "title": "About me",
+      "name": "Name",
+      "birthday": "Birthday",
+      "nationality": {
+        "title": "Nacionality",
+        "desc": "Brazilian"
+      },
+      "goal": {
+        "title": "Goal",
+        "desc": "Work in IT area, especially in Frontend with coding. Aditionally, learn about game coding and design."
+      }
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "desc": "Check my curriculum, showing my completed courses, extra courses finished besides IT area and my gained skills, in addition to projects made."
+    },
+    "hobbies": {
+      "desc-1": "Presentation of activities that I like to do in my free time, just for curiosity.",
+      "desc-2": "We can have the same hobby!"
+    }
+  }
 }

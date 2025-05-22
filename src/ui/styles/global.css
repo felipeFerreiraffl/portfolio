@@ -13,4 +13,5 @@
 body {
   height: 100%;
   background-color: var(--neu-02);
+  overflow-x: hidden;
 }
