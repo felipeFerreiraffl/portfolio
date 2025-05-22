@@ -1,0 +1,21 @@
+.btn {
+  max-width: 12.375rem;
+  background-color: var(--btn-color);
+  cursor: pointer;
+  padding: var(--sp-20) var(--sp-36);
+  color: var(--neu-04);
+  font: var(--def-btn);
+  border: none;
+  border-radius: var(--brad-32);
+  box-shadow: none;
+  transition: var(--ts-def);
+}
+
+.btn:hover {
+  filter: brightness(1.5);
+  box-shadow: var(--btn-box-shadow);
+}
+
+.btn:active {
+  background-color: var(--btn-active);
+}

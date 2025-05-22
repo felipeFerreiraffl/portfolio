@@ -19,11 +19,13 @@
     },
     "portfolio": {
       "title": "Portfolio",
-      "desc": "Check my curriculum, showing my completed courses, extra courses finished besides IT area and my gained skills, in addition to projects made."
+      "desc": "Check my curriculum, showing my completed courses, extra courses finished besides IT area and my gained skills, in addition to projects made.",
+      "button": "See portfolio"
     },
     "hobbies": {
       "desc-1": "Presentation of activities that I like to do in my free time, just for curiosity.",
-      "desc-2": "We can have the same hobby!"
+      "desc-2": "We can have the same hobby!",
+      "button": "See hobbies"
     }
   }
 }

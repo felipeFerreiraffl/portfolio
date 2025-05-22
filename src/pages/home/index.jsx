@@ -1,21 +1,19 @@
-import { Helmet } from "react-helmet";
-import Header from "../../ui/components/Header";
-import styles from "./style.module.css";
-import logo from "../../services/constants/svgs/logo";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FaIdCard } from "react-icons/fa6";
+import logo from "../../services/constants/svgs/logo";
+import Button from "../../ui/components/Button";
 import Divisor from "../../ui/components/Divisor";
+import Header from "../../ui/components/Header";
+import styles from "./style.module.css";
+import useDocumentTitle from "../../ui/hooks/useDocumentTitle";
 
 export default function Home() {
+  useDocumentTitle("Home");
   const { t } = useTranslation("home", { useSuspense: true });
 
   return (
     <div className={styles.ctn}>
-      <Helmet>
-        <title>Home</title>
-      </Helmet>
-
       <header className={styles.hdr}>
         <Header />
 

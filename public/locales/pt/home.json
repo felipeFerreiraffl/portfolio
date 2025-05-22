@@ -19,11 +19,13 @@
     },
     "portfolio": {
       "title": "Portfólio",
-      "desc": "Verifique meu currículo, demostrando cursos prestados, cursos extras feitos além da área de TI e minhas habilidades adquiridas, além de projetos realizados."
+      "desc": "Verifique meu currículo, demostrando cursos prestados, cursos extras feitos além da área de TI e minhas habilidades adquiridas, além de projetos realizados.",
+      "button": "Ver portfólio"
     },
     "hobbies": {
       "desc-1": "Apresentação das atividades que gosto de praticar no meu tempo livre, apenas como curiosidade.",
-      "desc-2": "Podemos ter o mesmo hobby!"
+      "desc-2": "Podemos ter o mesmo hobby!",
+      "button": "Ver hobbies"
     }
   }
 }
