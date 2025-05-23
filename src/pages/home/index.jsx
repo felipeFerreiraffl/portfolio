@@ -17,6 +17,7 @@ import Header from "../../ui/components/Header";
 import useDocumentTitle from "../../ui/hooks/useDocumentTitle";
 import styles from "./style.module.css";
 import { style } from "framer-motion/client";
+import Footer from "../../ui/components/Footer";
 
 export default function Home() {
   useDocumentTitle("Home");
@@ -170,7 +171,7 @@ export default function Home() {
             className={`${styles["hbb-icn"]} ${styles.gamepad}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
           >
             <FaIcnGamepad className={styles["hbb-icn-sm"]} />
           </motion.i>
@@ -178,7 +179,7 @@ export default function Home() {
             className={`${styles["hbb-icn"]} ${styles.book}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut", delay: 0.6 }}
+            transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
           >
             <FaIcnBook className={styles["hbb-icn-md"]} />
           </motion.i>
@@ -186,7 +187,7 @@ export default function Home() {
             className={`${styles["hbb-icn"]} ${styles.umb}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut", delay: 0.9 }}
+            transition={{ duration: 1.2, ease: "easeInOut", delay: 0.6 }}
           >
             <FaIcnUmbrellaBeach className={styles["hbb-icn-lg"]} />
           </motion.i>
@@ -194,7 +195,7 @@ export default function Home() {
             className={`${styles["hbb-icn"]} ${styles.futbol}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut", delay: 1.2 }}
+            transition={{ duration: 1.2, ease: "easeInOut", delay: 0.9 }}
           >
             <FaIcnFutbol className={styles["hbb-icn-md"]} />
           </motion.i>
@@ -202,12 +203,14 @@ export default function Home() {
             className={`${styles["hbb-icn"]} ${styles.paint}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut", delay: 1.5 }}
+            transition={{ duration: 1.2, ease: "easeInOut", delay: 1.2 }}
           >
             <FaIcnPaintbrush className={styles["hbb-icn-sm"]} />
           </motion.i>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

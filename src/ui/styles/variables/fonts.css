@@ -9,7 +9,7 @@
   --def-body: 300 1rem "Space Grotesk", sans-serif;
   --def-subttl: 500 1rem "Space Grotesk", sans-serif;
   --def-btn: 700 1rem "Space Grotesk", sans-serif;
-  --def-cpt: 300 1.25rem "Space Grotesk", sans-serif;
+  --def-cpt: 300 0.75rem "Space Grotesk", sans-serif;
 
   /* Fontes para animes e mangás */
   --anmg-h1: 700 4rem "League Gothic", sans-serif;
@@ -21,7 +21,7 @@
   --anmg-body: 300 1rem "Gothic A1", sans-serif;
   --anmg-subttl: 500 1rem "Gothic A1", sans-serif;
   --anmg-btn: 700 1rem "Gothic A1", sans-serif;
-  --anmg-cpt: 300 1.25rem "Gothic A1", sans-serif;
+  --anmg-cpt: 300 0.75rem "Gothic A1", sans-serif;
 
   /* Fontes para jogos */
   --gm-h1: 700 4rem "Handjet", sans-serif;
@@ -33,7 +33,7 @@
   --gm-body: 300 1rem "Oxanium", sans-serif;
   --gm-subttl: 500 1rem "Oxanium", sans-serif;
   --gm-btn: 700 1rem "Oxanium", sans-serif;
-  --gm-cpt: 300 1.25rem "Oxanium", sans-serif;
+  --gm-cpt: 300 0.75rem "Oxanium", sans-serif;
 
   /* Fontes para futebol */
   --fut-h1: 700 4rem "Lexend", sans-serif;
@@ -45,7 +45,7 @@
   --fut-body: 300 1rem "Lexend", sans-serif;
   --fut-subttl: 500 1rem "Lexend", sans-serif;
   --fut-btn: 700 1rem "Lexend", sans-serif;
-  --fut-cpt: 300 1.25rem "Lexend", sans-serif;
+  --fut-cpt: 300 0.75rem "Lexend", sans-serif;
 
   /* Fontes para desenhos */
   --draw-h1: 700 4rem "Charm", sans-serif;
@@ -57,5 +57,5 @@
   --draw-body: 300 1rem "Zain", sans-serif;
   --draw-subttl: 500 1rem "Zain", sans-serif;
   --draw-btn: 700 1rem "Zain", sans-serif;
-  --draw-cpt: 300 1.25rem "Zain", sans-serif;
+  --draw-cpt: 300 0.75rem "Zain", sans-serif;
 }
