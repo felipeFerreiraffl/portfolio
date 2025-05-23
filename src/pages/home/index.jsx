@@ -1,16 +1,22 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { FaIdCard, FaNewspaper } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+import {
+  FaIcnBook,
+  FaIcnFutbol,
+  FaIcnGamepad,
+  FaIcnIdCard,
+  FaIcnNewspaper,
+  FaIcnPaintbrush,
+  FaIcnUmbrellaBeach,
+} from "../../services/constants/icns/fontAwesome";
 import logo from "../../services/constants/svgs/logo";
 import Button from "../../ui/components/Button";
 import Divisor from "../../ui/components/Divisor";
 import Header from "../../ui/components/Header";
-import styles from "./style.module.css";
 import useDocumentTitle from "../../ui/hooks/useDocumentTitle";
-import { useNavigate } from "react-router-dom";
-
-const IcnPortfolio = motion(FaNewspaper);
-const IcnAboutMe = motion(FaIdCard);
+import styles from "./style.module.css";
+import { style } from "framer-motion/client";
 
 export default function Home() {
   useDocumentTitle("Home");
@@ -55,7 +61,7 @@ export default function Home() {
         </motion.h2>
 
         <div className={styles["abt-cont"]}>
-          <IcnAboutMe
+          <FaIcnIdCard
             className={styles["abt-icn"]}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -123,7 +129,7 @@ export default function Home() {
           />
         </motion.div>
 
-        <IcnPortfolio
+        <FaIcnNewspaper
           className={styles["ptf-icn"]}
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -132,6 +138,76 @@ export default function Home() {
       </section>
 
       <Divisor marginTop={128} color={"var(--main-04)"} />
+
+      <section className={styles.hobbies}>
+        <motion.div
+          className={styles["hbb-cont"]}
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+        >
+          <div className={styles["hbb-txt-ctn"]}>
+            <h2 className={`${styles["sec-ttl"]} ${styles["bd-ttl"]}`}>
+              Hobbies
+            </h2>
+            <div>
+              <p className={styles.body}>{t("sections.hobbies.desc-1")}</p>
+              <p className={styles.body}>{t("sections.hobbies.desc-2")}</p>
+            </div>
+          </div>
+
+          <Button
+            text={t("sections.hobbies.button")}
+            color={"var(--main-04)"}
+            active={"var(--main-05)"}
+            boxShadow={"var(--bshw-led-mn5)"}
+            onClick={() => navigate("/hobbies")}
+          />
+        </motion.div>
+
+        <div className={styles["hbb-icn-ctn"]}>
+          <motion.i
+            className={`${styles["hbb-icn"]} ${styles.gamepad}`}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
+          >
+            <FaIcnGamepad className={styles["hbb-icn-sm"]} />
+          </motion.i>
+          <motion.i
+            className={`${styles["hbb-icn"]} ${styles.book}`}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeInOut", delay: 0.6 }}
+          >
+            <FaIcnBook className={styles["hbb-icn-md"]} />
+          </motion.i>
+          <motion.i
+            className={`${styles["hbb-icn"]} ${styles.umb}`}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeInOut", delay: 0.9 }}
+          >
+            <FaIcnUmbrellaBeach className={styles["hbb-icn-lg"]} />
+          </motion.i>
+          <motion.i
+            className={`${styles["hbb-icn"]} ${styles.futbol}`}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeInOut", delay: 1.2 }}
+          >
+            <FaIcnFutbol className={styles["hbb-icn-md"]} />
+          </motion.i>
+          <motion.i
+            className={`${styles["hbb-icn"]} ${styles.paint}`}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeInOut", delay: 1.5 }}
+          >
+            <FaIcnPaintbrush className={styles["hbb-icn-sm"]} />
+          </motion.i>
+        </div>
+      </section>
     </div>
   );
 }

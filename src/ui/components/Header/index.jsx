@@ -8,6 +8,10 @@ import logo from "../../../services/constants/svgs/logo";
 import i18n from "../../../services/i18n";
 import Divisor from "../Divisor";
 import styles from "./style.module.css";
+import {
+  FaIcnBarsStaggered,
+  FaIcnCircleXMark,
+} from "../../../services/constants/icns/fontAwesome";
 
 export default function Header() {
   const { t } = useTranslation("header", { useSuspense: true }); // Tradutor
@@ -101,7 +105,7 @@ export default function Header() {
         />
       </div>
 
-      <FaBarsStaggered
+      <FaIcnBarsStaggered
         className={styles["menu-i"]}
         onClick={() => setOpenMenu(true)}
       />
@@ -129,7 +133,7 @@ export default function Header() {
             aria-label={t("menu")}
             role="dialog"
           >
-            <FaCircleXmark
+            <FaIcnCircleXMark
               className={styles["menu-close"]}
               onClick={() => setOpenMenu(false)}
               role="button"

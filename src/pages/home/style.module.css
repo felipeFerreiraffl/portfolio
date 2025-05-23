@@ -200,7 +200,6 @@
   }
 }
 
-
 .portfolio::before {
   content: "";
   position: absolute;
@@ -252,5 +251,159 @@
 
   @media (max-width: 1080px) {
     font-size: 11.125rem;
+  }
+}
+
+.hobbies {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--sp-96) 0;
+  gap: var(--sp-56);
+}
+
+.hobbies::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/imgs/bg/hobbies.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: cover;
+  opacity: var(--op-50);
+  mix-blend-mode: overlay;
+  z-index: var(--zind-0);
+}
+
+.hobbies > * {
+  max-width: 85vw;
+  z-index: var(--zind-10);
+}
+
+.hbb-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-48);
+}
+
+.hbb-txt-ctn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--sp-32);
+}
+
+.hbb-icn-ctn {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-24);
+
+  @media (max-width: 1080px) {
+    gap: var(--sp-20);
+  }
+
+  @media (max-width: 768px) {
+    gap: var(--sp-8);
+  }
+}
+
+.hbb-icn {
+  background-color: var(--neu-01);
+  border: var(--bd-mn4);
+  border-radius: var(--brad-circ);
+  color: var(--main-04);
+}
+
+.umb,
+.gamepad,
+.paint,
+.futbol,
+.book {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+}
+
+.umb {
+  width: 13.125rem; /* 210px */
+
+  @media (max-width: 1080px) {
+    width: 10.9375rem; /* 175px */
+  }
+
+  @media (max-width: 768px) {
+    width: 4.125rem; /* 66px */
+  }
+}
+
+.book,
+.futbol {
+  width: 9.625rem; /* 154px */
+
+  @media (max-width: 1080px) {
+    width: var(--sp-128);
+  }
+
+  @media (max-width: 768px) {
+    width: var(--sp-48);
+  }
+}
+
+.gamepad,
+.paint {
+  width: 4.8125rem; /* 77px */
+
+  @media (max-width: 1080px) {
+    width: var(--sp-64);
+  }
+
+  @media (max-width: 768px) {
+    width: var(--sp-24);
+  }
+}
+
+.hbb-icn-lg {
+  font-size: 6.625rem; /* 106px */
+
+  @media (max-width: 1080px) {
+    font-size: var(--sp-88);
+  }
+
+  @media (max-width: 768px) {
+    font-size: var(--sp-32);
+  }
+}
+
+.hbb-icn-md {
+  font-size: 4.875rem; /* 78px */
+
+  @media (max-width: 1080px) {
+    font-size: var(--sp-64);
+  }
+
+  @media (max-width: 768px) {
+    font-size: var(--sp-24);
+  }
+}
+
+.hbb-icn-sm {
+  font-size: 2.4375rem; /* 39px */
+
+  @media (max-width: 1080px) {
+    font-size: var(--sp-32);
+  }
+
+  @media (max-width: 768px) {
+    font-size: var(--sp-12);
   }
 }
