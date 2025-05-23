@@ -1,7 +1,8 @@
 {
   "intro": {
     "title": "Bem vindo ao meu portfólio!",
-    "subtitle": "Portfólio profissional com o objetivo de mostrar projetos, cursos e habilidades do usuário deste site, como também conteúdo extra, como hobbies"
+    "subtitle": "Portfólio profissional com o objetivo de mostrar projetos, cursos e habilidades do usuário deste site, como também conteúdo extra, como hobbies",
+    "alt": "Logo do site"
   },
   "sections": {
     "about-me": {

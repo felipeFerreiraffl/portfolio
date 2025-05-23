@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 
-export default function Button({ color, text, active, boxShadow }) {
+export default function Button({ color, text, active, boxShadow, onClick }) {
   return (
     <button
       className={`${styles.btn}`}
@@ -9,6 +9,7 @@ export default function Button({ color, text, active, boxShadow }) {
         "--btn-active": active,
         "--btn-box-shadow": boxShadow,
       }}
+      onClick={onClick}
     >
       {text}
     </button>
