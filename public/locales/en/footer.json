@@ -5,5 +5,14 @@
     "contacts": "Contacts"
   },
   "social": "Social medias",
-  "logo-alt": "Site's logo"
+  "logo-alt": "Site's logo",
+  "aria-labels": {
+    "home": "Ir para a página Home",
+    "portfolio": "Ir para a página Portfólio",
+    "hobbies": "Ir para a página Hobbies",
+    "contacts": "Ir para a página Contatos",
+    "github": "Check my Github",
+    "instagram": "Check my Instagram",
+    "linkedin": "Check my Linkedin"
+  }
 }

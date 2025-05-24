@@ -1,16 +1,16 @@
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import {
   FaIcnLinkedin,
   FaIcnSquareGithub,
   FaIcnSquareInstagram,
-} from "../../../services/constants/icns/fontAwesome";
-import styles from "./styles.module.css";
-import logo from "../../../services/constants/svgs/logo";
-import { useNavigate } from "react-router-dom";
+} from "../../../services/constants/icns/font-awesome/fontAwesome";
 import links from "../../../services/constants/links/links";
+import logo from "../../../services/constants/svgs/logo";
+import styles from "./styles.module.css";
+import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
 
 export default function Footer() {
-  const navigate = useNavigate();
   const { t } = useTranslation("footer", { useSuspense: true });
 
   return (
@@ -23,41 +23,88 @@ export default function Footer() {
           loading="lazy"
         />
         <div className={styles["sec-cont"]}>
-          <nav className={styles.nav}>
-            <h5 className={`${styles["cont-ttl"]} ${styles["nav-ttl"]}`}>
+          <motion.nav
+            className={styles.nav}
+            initial={{ y: -100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+          >
+            <h2 className={`${styles["cont-ttl"]} ${styles["nav-ttl"]}`}>
               {t("nav.title")}
-            </h5>
+            </h2>
             <div className={styles["page-ctn"]}>
-              <a href="/" className={styles.page}>
+              <a
+                href="/"
+                className={styles.page}
+                aria-label={t("aria-labels.home")}
+              >
                 Home
               </a>
-              <a href="/portfolio" className={styles.page}>
+              <a
+                href="/portfolio"
+                className={styles.page}
+                aria-label={t("aria-labels.portfolio")}
+              >
                 {t("nav.portfolio")}
               </a>
-              <a href="/hobbies" className={styles.page}>
+              <a
+                href="/hobbies"
+                className={styles.page}
+                aria-label={t("aria-labels.hobbies")}
+              >
                 Hobbies
               </a>
-              <a href="/contatos" className={styles.page}>
+              <a
+                href="/contatos"
+                className={styles.page}
+                aria-label={t("aria-labels.contacts")}
+              >
                 {t("nav.contacts")}
               </a>
             </div>
-          </nav>
-          <div className={styles.social}>
-            <h5 className={`${styles["cont-ttl"]} ${styles["social-ttl"]}`}>
+          </motion.nav>
+          <motion.div
+            className={styles.social}
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+          >
+            <h2 className={`${styles["cont-ttl"]} ${styles["social-ttl"]}`}>
               {t("social")}
-            </h5>
+            </h2>
             <div className={styles["social-icn-ctn"]}>
-              <a href={links.socialMedias.github} target="_blank">
-                <FaIcnSquareGithub className={styles["social-icn"]} />
+              <a
+                href={links.socialMedias.github}
+                target="_blank"
+                aria-label={t("aria-labels.github")}
+              >
+                <FaIcnSquareGithub
+                  icon={fontAwesome.squareGithub}
+                  className={styles["social-icn"]}
+                />
               </a>
-              <a href={links.socialMedias.instagram} target="_blank">
-                <FaIcnSquareInstagram className={styles["social-icn"]} />
+              <a
+                href={links.socialMedias.instagram}
+                target="_blank"
+                aria-label={t("aria-labels.instagram")}
+              >
+                <FaIcnSquareInstagram
+                  icon={fontAwesome.squareInstagram}
+                  className={styles["social-icn"]}
+                />
               </a>
-              <a href={links.socialMedias.linkedin} target="_blank">
-                <FaIcnLinkedin className={styles["social-icn"]} />
+              <a
+                href={links.socialMedias.linkedin}
+                target="_blank"
+                aria-label={t("aria-labels.linkedin")}
+              >
+                <FaIcnLinkedin
+                  icon={fontAwesome.linkedin}
+                  className={styles["social-icn"]}
+                />
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       <p className={styles.cptn}>&copy; Felipe Ferreira Lima 2025</p>

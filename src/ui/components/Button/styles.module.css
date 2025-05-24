@@ -1,5 +1,5 @@
 .btn {
-  max-width: 12.375rem;
+  width: 12.375rem; /* 198px */
   background-color: var(--btn-color);
   cursor: pointer;
   padding: var(--sp-20) var(--sp-36);

@@ -11,7 +11,8 @@ import styles from "./style.module.css";
 import {
   FaIcnBarsStaggered,
   FaIcnCircleXMark,
-} from "../../../services/constants/icns/fontAwesome";
+} from "../../../services/constants/icns/font-awesome/fontAwesome";
+import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
 
 export default function Header() {
   const { t } = useTranslation("header", { useSuspense: true }); // Tradutor
@@ -51,6 +52,8 @@ export default function Header() {
           alt={t("alts.logo")}
         />
         <p
+          aria-label={t("aria-labels.home")}
+          href="/"
           className={`${styles.link} ${
             location.pathname === "/" ? styles["home-active"] : ""
           }`}
@@ -60,6 +63,7 @@ export default function Header() {
       </a>
       <div className={styles.pages}>
         <a
+          aria-label={t("aria-labels.portfolio")}
           href="/portfolio"
           className={`${styles.link} ${styles.portfolio} ${
             location.pathname === "/portfolio" ? styles.active : ""
@@ -68,6 +72,7 @@ export default function Header() {
           {t("pages.portfolio")}
         </a>
         <a
+          aria-label={t("aria-labels.hobbies")}
           href="/hobbies"
           className={`${styles.link} ${styles.hobbies} ${
             location.pathname === "/hobbies" ? styles.active : ""
@@ -76,6 +81,7 @@ export default function Header() {
           Hobbies
         </a>
         <a
+          aria-label={t("aria-labels.contacts")}
           href="/contatos"
           className={`${styles.link} ${styles.contacts} ${
             location.pathname === "/contatos" ? styles.active : ""
@@ -106,6 +112,7 @@ export default function Header() {
       </div>
 
       <FaIcnBarsStaggered
+        icon={fontAwesome.barsStaggered}
         className={styles["menu-i"]}
         onClick={() => setOpenMenu(true)}
       />
@@ -134,6 +141,7 @@ export default function Header() {
             role="dialog"
           >
             <FaIcnCircleXMark
+              icon={fontAwesome.circleXMark}
               className={styles["menu-close"]}
               onClick={() => setOpenMenu(false)}
               role="button"
@@ -165,6 +173,7 @@ export default function Header() {
 
               <div className={styles["menu-pages"]}>
                 <a
+                  aria-label={t("aria-labels.home")}
                   href="/"
                   className={`${styles.link} ${styles["menu-pg"]} ${
                     location.pathname === "/" ? styles.active : ""
@@ -173,6 +182,7 @@ export default function Header() {
                   Home
                 </a>
                 <a
+                  aria-label={t("aria-labels.portfolio")}
                   href="/portfolio"
                   className={`${styles.link} ${styles["menu-pg"]} ${
                     location.pathname === "/portfolio" ? styles.active : ""
@@ -181,6 +191,7 @@ export default function Header() {
                   {t("pages.portfolio")}
                 </a>
                 <a
+                  aria-label={t("aria-labels.hobbies")}
                   href="/hobbies"
                   className={`${styles.link} ${styles["menu-pg"]} ${
                     location.pathname === "/hobbies" ? styles.active : ""
@@ -189,6 +200,7 @@ export default function Header() {
                   Hobbies
                 </a>
                 <a
+                  aria-label={t("aria-labels.contacts")}
                   href="/contatos"
                   className={`${styles.link} ${styles["menu-pg"]} ${
                     location.pathname === "/contatos" ? styles.active : ""

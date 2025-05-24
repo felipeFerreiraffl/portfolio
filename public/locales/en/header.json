@@ -11,5 +11,11 @@
     "logo": "Site's logo",
     "pt-icon": "Translation icon for brazilian portuguese",
     "en-icon": "Translation icon for english"
+  },
+  "aria-labels": {
+    "home": "Go to Home page",
+    "portfolio": "Go to Portfolio page",
+    "hobbies": "Go to Hobbies page",
+    "contacts": "Go to Contacts page"
   }
 }

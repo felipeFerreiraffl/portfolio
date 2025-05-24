@@ -9,15 +9,15 @@ import {
   FaIcnNewspaper,
   FaIcnPaintbrush,
   FaIcnUmbrellaBeach,
-} from "../../services/constants/icns/fontAwesome";
+} from "../../services/constants/icns/font-awesome/fontAwesome";
+import fontAwesome from "../../services/constants/icns/font-awesome/iconNames";
 import logo from "../../services/constants/svgs/logo";
 import Button from "../../ui/components/Button";
 import Divisor from "../../ui/components/Divisor";
+import Footer from "../../ui/components/Footer";
 import Header from "../../ui/components/Header";
 import useDocumentTitle from "../../ui/hooks/useDocumentTitle";
 import styles from "./style.module.css";
-import { style } from "framer-motion/client";
-import Footer from "../../ui/components/Footer";
 
 export default function Home() {
   useDocumentTitle("Home");
@@ -63,10 +63,8 @@ export default function Home() {
 
         <div className={styles["abt-cont"]}>
           <FaIcnIdCard
+            icon={fontAwesome.idCard}
             className={styles["abt-icn"]}
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
           />
 
           <motion.div
@@ -76,29 +74,29 @@ export default function Home() {
             transition={{ duration: 1.2, ease: "easeInOut" }}
           >
             <div className={styles["abt-info"]}>
-              <h5 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
+              <h3 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
                 {t("sections.about-me.name")}
-              </h5>
+              </h3>
               <p className={styles.body}>Felipe Ferreira Lima</p>
             </div>
             <div className={styles["abt-info"]}>
-              <h5 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
+              <h3 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
                 {t("sections.about-me.birthday")}
-              </h5>
+              </h3>
               <p className={styles.body}>14/07/2004</p>
             </div>
             <div className={styles["abt-info"]}>
-              <h5 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
+              <h3 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
                 {t("sections.about-me.nationality.title")}
-              </h5>
+              </h3>
               <p className={styles.body}>
                 {t("sections.about-me.nationality.desc")}
               </p>
             </div>
             <div className={styles["abt-info"]}>
-              <h5 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
+              <h3 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
                 {t("sections.about-me.goal.title")}
-              </h5>
+              </h3>
               <p className={styles.body}>{t("sections.about-me.goal.desc")}</p>
             </div>
           </motion.div>
@@ -131,10 +129,8 @@ export default function Home() {
         </motion.div>
 
         <FaIcnNewspaper
+          icon={fontAwesome.newspaper}
           className={styles["ptf-icn"]}
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
         />
       </section>
 
@@ -173,7 +169,10 @@ export default function Home() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
           >
-            <FaIcnGamepad className={styles["hbb-icn-sm"]} />
+            <FaIcnGamepad
+              icon={fontAwesome.gamepad}
+              className={styles["hbb-icn-sm"]}
+            />
           </motion.i>
           <motion.i
             className={`${styles["hbb-icn"]} ${styles.book}`}
@@ -181,7 +180,10 @@ export default function Home() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
           >
-            <FaIcnBook className={styles["hbb-icn-md"]} />
+            <FaIcnBook
+              icon={fontAwesome.book}
+              className={styles["hbb-icn-md"]}
+            />
           </motion.i>
           <motion.i
             className={`${styles["hbb-icn"]} ${styles.umb}`}
@@ -189,7 +191,10 @@ export default function Home() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.6 }}
           >
-            <FaIcnUmbrellaBeach className={styles["hbb-icn-lg"]} />
+            <FaIcnUmbrellaBeach
+              icon={fontAwesome.umbrellaBeach}
+              className={styles["hbb-icn-lg"]}
+            />
           </motion.i>
           <motion.i
             className={`${styles["hbb-icn"]} ${styles.futbol}`}
@@ -197,7 +202,10 @@ export default function Home() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.9 }}
           >
-            <FaIcnFutbol className={styles["hbb-icn-md"]} />
+            <FaIcnFutbol
+              icon={fontAwesome.futbol}
+              className={styles["hbb-icn-md"]}
+            />
           </motion.i>
           <motion.i
             className={`${styles["hbb-icn"]} ${styles.paint}`}
@@ -205,7 +213,10 @@ export default function Home() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 1.2 }}
           >
-            <FaIcnPaintbrush className={styles["hbb-icn-sm"]} />
+            <FaIcnPaintbrush
+              icon={fontAwesome.paintbrush}
+              className={styles["hbb-icn-sm"]}
+            />
           </motion.i>
         </div>
       </section>
