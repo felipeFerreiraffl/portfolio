@@ -5,10 +5,10 @@ import {
   FaIcnSquareGithub,
   FaIcnSquareInstagram,
 } from "../../../services/constants/icns/font-awesome/fontAwesome";
+import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
 import links from "../../../services/constants/links/links";
 import logo from "../../../services/constants/svgs/logo";
 import styles from "./styles.module.css";
-import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
 
 export default function Footer() {
   const { t } = useTranslation("footer", { useSuspense: true });
@@ -77,6 +77,7 @@ export default function Footer() {
                 href={links.socialMedias.github}
                 target="_blank"
                 aria-label={t("aria-labels.github")}
+                rel="noopener noreferrer"
               >
                 <FaIcnSquareGithub
                   icon={fontAwesome.squareGithub}
@@ -87,6 +88,7 @@ export default function Footer() {
                 href={links.socialMedias.instagram}
                 target="_blank"
                 aria-label={t("aria-labels.instagram")}
+                rel="noopener noreferrer"
               >
                 <FaIcnSquareInstagram
                   icon={fontAwesome.squareInstagram}
@@ -97,6 +99,7 @@ export default function Footer() {
                 href={links.socialMedias.linkedin}
                 target="_blank"
                 aria-label={t("aria-labels.linkedin")}
+                rel="noopener noreferrer"
               >
                 <FaIcnLinkedin
                   icon={fontAwesome.linkedin}

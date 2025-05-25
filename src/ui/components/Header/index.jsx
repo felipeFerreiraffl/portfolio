@@ -1,18 +1,17 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaBarsStaggered, FaCircleXmark } from "react-icons/fa6";
 import { useLocation } from "react-router-dom";
-import langSvg from "../../../services/constants/svgs/lang";
-import logo from "../../../services/constants/svgs/logo";
-import i18n from "../../../services/i18n";
-import Divisor from "../Divisor";
-import styles from "./style.module.css";
 import {
   FaIcnBarsStaggered,
   FaIcnCircleXMark,
 } from "../../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
+import langSvg from "../../../services/constants/svgs/lang";
+import logo from "../../../services/constants/svgs/logo";
+import i18n from "../../../services/i18n";
+import Divisor from "../Divisor";
+import styles from "./style.module.css";
 
 export default function Header() {
   const { t } = useTranslation("header", { useSuspense: true }); // Tradutor

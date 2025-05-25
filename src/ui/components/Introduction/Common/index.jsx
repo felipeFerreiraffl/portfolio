@@ -1,6 +1,6 @@
+import { motion } from "motion/react";
 import { FaAccessibleIcon } from "react-icons/fa";
 import styles from "./style.module.css";
-import { motion } from "framer-motion";
 
 export default function CommonIntro({ icon, title, subtitle, color, bgImage }) {
   return (
