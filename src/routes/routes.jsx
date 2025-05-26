@@ -1,40 +1,35 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { lazy, useEffect, useState } from "react";
+import { lazy } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Loading from "../ui/components/Loading";
+import LoadingPage from "../ui/components/Loading";
+import { useMinTime } from "../ui/hooks/useProgressValue";
 const Home = lazy(() => import("../pages/home"));
 
 export default function AppRoutes() {
-  const [loading, setLoading] = useState(true);
   const location = useLocation();
+  const { isMinTimePassed, progress } = useMinTime(2000);
 
-  useEffect(() => {
-    setLoading(true);
-
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, [location]);
+  const loading = !isMinTimePassed;
 
   return (
     <AnimatePresence mode="wait">
       {loading ? (
         <motion.div
-          key={"loading-screen"}
+          key={"loading"}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
         >
-          <Loading />
+          <LoadingPage progress={progress} />
         </motion.div>
       ) : (
         <motion.div
           key={location.pathname}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
         >
           <Routes location={location} key={location.pathname}>
             <Route element={<Home />} path="/" lazy={true} />

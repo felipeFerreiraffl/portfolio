@@ -48,6 +48,7 @@
   /* Opacidade */
   --op-100: 1;
   --op-50: 0.5;
+  --op-10: 0.1;
 
   /* Sombras */
   --bshw-hdr: inset 0 -24px 30px #161616;

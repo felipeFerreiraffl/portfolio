@@ -7,51 +7,115 @@
   height: 100vh;
 }
 
-.ctn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../../../assets/imgs/bg/loading.gif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-clip: border-box;
-  background-size: cover;
-  opacity: var(--op-50);
-  mix-blend-mode: multiply;
-  z-index: var(--zind-0);
-}
-
 .ctn > * {
   z-index: var(--zind-10);
 }
 
-.spinner {
-  position: relative;
+.load-ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-32);
+}
+
+.icn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--sp-288);
-  aspect-ratio: 1 / 1;
-  animation: spin var(--ts-anim) infinite;
+  position: relative;
 }
 
+.icn > img {
+  width: 14.5rem; /* 232px */
+  aspect-ratio: 1 / 1;
+  border-radius: var(--brad-circ);
+  animation: spin infinite 8s linear, led infinite 2s ease;
+
+  @media (max-width: 768px) {
+    width: 11.125rem;
+  }
+}
+
+.spinner-icn {
+  position: absolute;
+  font-size: 6.75rem; /* 108px */
+  color: var(--main-01);
+  animation: icn-spin var(--ts-anim);
+  animation-delay: 1.5s;
+
+  @media (max-width: 768px) {
+    font-size: 5.125rem; /* 82px */
+  }
+}
+
+/* Animação para o ícone do óculos */
+@keyframes icn-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Animações para o SVG da borda */
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 
-.icn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 8.375rem;
-  color: var(--main-01);
+@keyframes led {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: var(--bshw-led-mn2);
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+.load-ind {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-8);
+}
+
+progress {
+  width: 70vw;
+  height: var(--sp-28);
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--rgba-bl50);
+  padding: var(--sp-8);
+  border-radius: var(--brad-32);
+  border: var(--bd-line-mn1);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--main-01);
+  border-radius: var(--brad-32);
+  transition: var(--ts-def);
+}
+
+p {
+  font: var(--def-body);
+  color: var(--neu-04);
 }

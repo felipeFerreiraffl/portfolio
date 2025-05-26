@@ -1,18 +1,24 @@
+import spinner from "../../../assets/svgs/loading-spinner.svg";
 import { FaIcnGlasses } from "../../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
 import styles from "./styles.module.css";
-import spinner from "../../../assets/svgs/loading-spinner.svg";
 
-export default function Loading() {
+export default function LoadingPage({ progress }) {
   return (
     <div className={styles.ctn}>
-      <img
-        src={spinner}
-        alt="Spinner"
-        className={styles.spinner}
-        loading="lazy"
-      />
-      <FaIcnGlasses icon={fontAwesome.glasses} className={styles.icn} />
+      <div className={styles["load-ctn"]}>
+        <span className={styles.icn}>
+          <img src={spinner} alt="Spinner" />
+          <FaIcnGlasses
+            icon={fontAwesome.glasses}
+            className={styles["spinner-icn"]}
+          />
+        </span>
+        <div className={styles["load-ind"]}>
+          <progress max={100} value={Math.floor(progress)}></progress>
+          <p>{Math.floor(progress)}%</p>
+        </div>
+      </div>
     </div>
   );
 }
