@@ -1,0 +1,29 @@
+{
+  "intro": {
+    "title": "Portfolio",
+    "subtitle": "Demonstration of courses made, acquired skills and projects made, mainly in the Information Technology area"
+  },
+  "sections": {
+    "courses": {
+      "title": "Courses",
+      "tech": {
+        "title": "Information Technology",
+        "devSys": "Technician in System Development",
+        "designer": "Web Interface Designer",
+        "devFront": "Frontend Developer"
+      },
+      "other": {
+        "title": "Other courses",
+        "mech": "Vehicular Production Mechanical"
+      }
+    },
+    "schools": "Schools",
+    "skills": "Skills",
+    "projects": "Projects",
+    "curriculum": {
+      "title": "Curriculum Vitae",
+      "desc": "A curriculum with a little abstract about me in a professional way, shpwing my goals, academic background, experience and competences",
+      "button": "Access CV"
+    }
+  }
+}

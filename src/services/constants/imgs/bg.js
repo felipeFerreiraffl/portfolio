@@ -11,7 +11,6 @@ import gameShowcase from "../../../assets/imgs/bg/game-showcase.webp";
 import games from "../../../assets/imgs/bg/games.webp";
 import hobbies from "../../../assets/imgs/bg/hobbies.webp";
 import it from "../../../assets/imgs/bg/it.webp";
-import loading from "../../../assets/imgs/bg/loading.gif";
 import mangaShowcase from "../../../assets/imgs/bg/manga-showcase.webp";
 import manga from "../../../assets/imgs/bg/manga.webp";
 import portfolio from "../../../assets/imgs/bg/portfolio.webp";
@@ -34,7 +33,6 @@ const bgImgs = {
   games,
   hobbies,
   it,
-  loading,
   mangaShowcase,
   manga,
   portfolio,

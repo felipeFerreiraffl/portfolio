@@ -1,0 +1,29 @@
+{
+  "intro": {
+    "title": "Portfólio",
+    "subtitle": "Demonstração dos cursos administrados, habilidades adquiridas e projetos realizados, principalmente na área de Tecnologia da Informação"
+  },
+  "sections": {
+    "courses": {
+      "title": "Cursos",
+      "tech": {
+        "title": "Tecnologia da Informação",
+        "devSys": "Técnico em Desenvolvimento de Sistemas",
+        "designer": "Designer de Interface Web",
+        "devFront": "Desenvolvedor Frontend"
+      },
+      "other": {
+        "title": "Outros cursos",
+        "mech": "Mecânico de Produção Veicular"
+      }
+    },
+    "schools": "Escolas",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "curriculum": {
+      "title": "Curriculum Vitae",
+      "desc": "Um currículo com um pequeno resumo sobre mim de maneira profissional, demonstrando os objetivos, formação acadêmica, experiência e as competências",
+      "button": "Acessar CV"
+    }
+  }
+}

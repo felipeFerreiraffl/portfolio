@@ -78,8 +78,7 @@
   background-repeat: no-repeat;
   background-clip: border-box;
   background-size: cover;
-  opacity: var(--op-50);
-  mix-blend-mode: overlay;
+  opacity: 0.15;
   z-index: var(--zind-0);
 }
 
@@ -126,8 +125,7 @@
   background-repeat: no-repeat;
   background-clip: border-box;
   background-size: cover;
-  opacity: var(--op-50);
-  mix-blend-mode: overlay;
+  opacity: var(--op-10);
   z-index: var(--zind-0);
 }
 
@@ -212,8 +210,7 @@
   background-repeat: no-repeat;
   background-clip: border-box;
   background-size: cover;
-  opacity: var(--op-50);
-  mix-blend-mode: overlay;
+  opacity: var(--op-10);
   z-index: var(--zind-0);
 }
 
@@ -276,8 +273,7 @@
   background-repeat: no-repeat;
   background-clip: border-box;
   background-size: cover;
-  opacity: var(--op-50);
-  mix-blend-mode: overlay;
+  opacity: var(--op-10);
   z-index: var(--zind-0);
 }
 
