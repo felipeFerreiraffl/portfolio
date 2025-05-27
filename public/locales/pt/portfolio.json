@@ -19,7 +19,20 @@
     },
     "schools": "Escolas",
     "skills": "Habilidades",
-    "projects": "Projetos",
+    "projects": {
+      "title": "Projetos",
+      "apiInfos": {
+        "68254c981dd1d7529ee7487e": "Primeira página com HTML e CSS",
+        "68254ccf1dd1d7529ee7487f": "Boletim escolar",
+        "68254d141dd1d7529ee74880": "Página de cardápio",
+        "68254d581dd1d7529ee74881": "Página de API de clima-tempo",
+        "68254d871dd1d7529ee74882": "Primeiro portfólio profissional",
+        "68254db51dd1d7529ee74883": "Página de API de clima com React",
+        "68254ddf1dd1d7529ee74884": "Cálculos matemáticos",
+        "68254e0e1dd1d7529ee74885": "CRUD com Livraria",
+        "68254e4f1dd1d7529ee74886": "Informações de animes e mangás com API da Kitsu"
+      }
+    },
     "curriculum": {
       "title": "Curriculum Vitae",
       "desc": "Um currículo com um pequeno resumo sobre mim de maneira profissional, demonstrando os objetivos, formação acadêmica, experiência e as competências",
