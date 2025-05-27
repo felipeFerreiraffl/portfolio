@@ -1,13 +1,10 @@
-import { useEffect } from "react";
-import styles from "./style.module.css";
-import { getProjects } from "../../services/api/other";
-import CommonIntro from "../../ui/components/Introduction/Common";
+import { useTranslation } from "react-i18next";
 import { FaIcnNewspaper } from "../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../services/constants/icns/font-awesome/iconNames";
-import bgImgs from "../../services/constants/imgs/bg";
 import headerImgs from "../../services/constants/imgs/header";
 import Header from "../../ui/components/Header";
-import { useTranslation } from "react-i18next";
+import CommonIntro from "../../ui/components/Introduction/Common";
+import styles from "./style.module.css";
 
 export default function Portfolio() {
   const { t } = useTranslation("portfolio", { useSuspense: true });

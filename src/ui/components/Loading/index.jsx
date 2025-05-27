@@ -15,8 +15,12 @@ export default function LoadingPage({ progress }) {
           />
         </span>
         <div className={styles["load-ind"]}>
-          <progress max={100} value={Math.floor(progress)}></progress>
-          <p>{Math.floor(progress)}%</p>
+          <progress
+            className={styles["load-pgss"]}
+            max={100}
+            value={Math.floor(progress)}
+          ></progress>
+          <p className={styles.pgss}>{Math.floor(progress)}%</p>
         </div>
       </div>
     </div>
