@@ -4,6 +4,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import LoadingPage from "../ui/components/Loading";
 import { useMinTime } from "../ui/hooks/useProgressValue";
 const Home = lazy(() => import("../pages/home"));
+const Portfolio = lazy(() => import("../pages/portfolio"));
 
 export default function AppRoutes() {
   const location = useLocation();
@@ -33,6 +34,7 @@ export default function AppRoutes() {
         >
           <Routes location={location} key={location.pathname}>
             <Route element={<Home />} path="/" lazy={true} />
+            <Route element={<Portfolio />} path="/portfolio" lazy={true} />
           </Routes>
         </motion.div>
       )}

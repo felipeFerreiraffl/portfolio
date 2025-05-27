@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { FaAccessibleIcon } from "react-icons/fa";
 import styles from "./style.module.css";
 
 export default function CommonIntro({ icon, title, subtitle, color, bgImage }) {
@@ -8,9 +7,9 @@ export default function CommonIntro({ icon, title, subtitle, color, bgImage }) {
       className={styles.ctn}
       style={{ "--bg-image": `url(${bgImage})` }}
     >
-      <i className={styles.icn} style={{ color: color, borderColor: color }}>
-        <FaAccessibleIcon />
-      </i>
+      <span className={styles.icn} style={{ color: color, borderColor: color }}>
+        {icon}
+      </span>
       <div className={styles["txt-ctn"]}>
         <h1 className={styles.ttl} style={{ color: color, borderColor: color }}>
           {title}
