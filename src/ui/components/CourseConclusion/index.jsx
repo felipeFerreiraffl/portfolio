@@ -1,4 +1,5 @@
 import styles from "./style.module.css";
+import { motion } from "framer-motion";
 
 export default function CourseConclusion({
   name,
@@ -9,7 +10,12 @@ export default function CourseConclusion({
   endYear,
 }) {
   return (
-    <div className={styles.ctn}>
+    <motion.div
+      className={styles.ctn}
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1.2, ease: "easeInOut" }}
+    >
       <div className={styles["pgss-ctn"]}>
         <h4 className={styles.ttl}>{name}</h4>
         <progress
@@ -27,6 +33,6 @@ export default function CourseConclusion({
         <p className={styles.pgss}>{progress}%</p>
         <p className={styles.date}>{endYear}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }

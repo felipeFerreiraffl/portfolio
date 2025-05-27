@@ -97,7 +97,7 @@ export default function Header() {
           src={langSvg.ptBr}
           alt={t("alts.pt-icon")}
           title={t("tradutor.pt-br")}
-          onClick={() => i18n.changeLanguage("pt")}
+          onClick={() => i18n.changeLanguage("pt-br")}
         />
         <img
           className={`${styles["lang-i"]} ${

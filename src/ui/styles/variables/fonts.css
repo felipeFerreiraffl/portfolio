@@ -2,7 +2,7 @@
   /* Fontes padrão */
   --def-h1: 700 4rem "Space Grotesk", sans-serif;
   --def-h2: 700 3rem "Space Grotesk", sans-serif;
-  --def-h3: 700 3.5rem "Space Grotesk", sans-serif;
+  --def-h3: 700 2.5rem "Space Grotesk", sans-serif;
   --def-h4: 500 2rem "Space Grotesk", sans-serif;
   --def-h5: 500 1.5rem "Space Grotesk", sans-serif;
   --def-hdr: 500 1.25rem "Space Grotesk", sans-serif;
@@ -14,7 +14,7 @@
   /* Fontes para animes e mangás */
   --anmg-h1: 700 4rem "League Gothic", sans-serif;
   --anmg-h2: 700 3rem "League Gothic", sans-serif;
-  --anmg-h3: 700 3.5rem "League Gothic", sans-serif;
+  --anmg-h3: 700 2.5rem "League Gothic", sans-serif;
   --anmg-h4: 500 2rem "League Gothic", sans-serif;
   --anmg-h5: 500 1.5rem "League Gothic", sans-serif;
   --anmg-hdr: 500 1.25rem "Gothic A1", sans-serif;
@@ -26,7 +26,7 @@
   /* Fontes para jogos */
   --gm-h1: 700 4rem "Handjet", sans-serif;
   --gm-h2: 700 3rem "Handjet", sans-serif;
-  --gm-h3: 700 3.5rem "Handjet", sans-serif;
+  --gm-h3: 700 2.5rem "Handjet", sans-serif;
   --gm-h4: 500 2rem "Handjet", sans-serif;
   --gm-h5: 500 1.5rem "Handjet", sans-serif;
   --gm-hdr: 500 1.25rem "Oxanium", sans-serif;
@@ -38,7 +38,7 @@
   /* Fontes para futebol */
   --fut-h1: 700 4rem "Lexend", sans-serif;
   --fut-h2: 700 3rem "Lexend", sans-serif;
-  --fut-h3: 700 3.5rem "Lexend", sans-serif;
+  --fut-h3: 700 2.5rem "Lexend", sans-serif;
   --fut-h4: 500 2rem "Lexend", sans-serif;
   --fut-h5: 500 1.5rem "Lexend", sans-serif;
   --fut-hdr: 500 1.25rem "Lexend", sans-serif;
@@ -50,7 +50,7 @@
   /* Fontes para desenhos */
   --draw-h1: 700 4rem "Charm", sans-serif;
   --draw-h2: 700 3rem "Charm", sans-serif;
-  --draw-h3: 700 3.5rem "Charm", sans-serif;
+  --draw-h3: 700 2.5rem "Charm", sans-serif;
   --draw-h4: 500 2rem "Charm", sans-serif;
   --draw-h5: 500 1.5rem "Charm", sans-serif;
   --draw-hdr: 500 1.25rem "Zain", sans-serif;

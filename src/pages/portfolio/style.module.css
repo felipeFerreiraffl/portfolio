@@ -1,3 +1,173 @@
 .ctn {
-    
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sec-ttl {
+  font: var(--def-h2);
+  color: var(--main-02);
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font: var(--def-h3);
+  }
+}
+
+.crs-thrd-ttl {
+  font: var(--def-h3);
+  color: var(--neu-04);
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font: var(--def-h4);
+  }
+}
+
+.tech {
+  text-shadow: var(--bshw-led-mn2);
+}
+
+.mec {
+  text-shadow: var(--bshw-led-mn5);
+}
+
+.ttl-brd {
+  width: 100%;
+  border-bottom: var(--bd-line-mn2);
+  padding-bottom: var(--sp-4);
+}
+
+.crs {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--sp-48) var(--sp-88);
+  gap: var(--sp-56);
+  margin-top: var(--sp-128);
+
+  @media (max-width: 1080px) {
+    padding: var(--sp-48) var(--sp-64);
+  }
+
+  @media (max-width: 768px) {
+    padding: var(--sp-48) var(--sp-40);
+  }
+}
+
+.crs::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/imgs/bg/it.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: cover;
+  opacity: var(--op-10);
+  z-index: var(--zind-0);
+}
+
+.crs > * {
+  z-index: var(--zind-10);
+}
+
+.all-crs-ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-64);
+}
+
+.crs-ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-48);
+}
+
+.crs-ttl-ctn {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: var(--sp-16);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.crs-icn {
+  font-size: var(--sp-72);
+  color: var(--neu-04);
+
+  @media (max-width: 768px) {
+    font-size: var(--sp-48);
+  }
+}
+
+.crs-spec-crs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.75rem; /* 44px */
+}
+
+.sch {
+  position: relative;
+  display: flex;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--sp-48) var(--sp-88);
+  gap: var(--sp-56);
+
+  @media (max-width: 1080px) {
+    padding: var(--sp-48) var(--sp-64);
+  }
+
+  @media (max-width: 768px) {
+    padding: var(--sp-48) var(--sp-40);
+  }
+}
+
+.sch::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/imgs/bg/schools.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: cover;
+  opacity: var(--op-10);
+  z-index: var(--zind-0);
+}
+
+.sch > * {
+  z-index: var(--zind-10);
+}
+
+.sch-card-ctn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  @media (max-width: 1080px) {
+    flex-direction: column;
+    justify-content: none;
+    gap: var(--sp-56);
+  }
 }
