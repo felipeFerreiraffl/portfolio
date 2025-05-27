@@ -2,8 +2,14 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import {
   FaIcnCirclePlus,
+  FaIcnCss3Alt,
+  FaIcnFigma,
+  FaIcnHtml5,
+  FaIcnJava,
   FaIcnLaptopCode,
   FaIcnNewspaper,
+  FaIcnReact,
+  FaIcnSquareJs,
 } from "../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../services/constants/icns/font-awesome/iconNames";
 import headerImgs from "../../services/constants/imgs/header";
@@ -14,6 +20,7 @@ import Header from "../../ui/components/Header";
 import CommonIntro from "../../ui/components/Introduction/Common";
 import SchoolCard from "../../ui/components/SchoolCard";
 import styles from "./style.module.css";
+import Skill from "../../ui/components/Skill";
 
 export default function Portfolio() {
   const { t } = useTranslation("portfolio", { useSuspense: true });
@@ -121,7 +128,7 @@ export default function Portfolio() {
             img={
               "https://cronos-media.sesisenaisp.org.br//api/media/1-0/files?img=img_1_230210_a391e771-b907-4a76-969f-3f4b68dea849_o.jpg&tipo=p"
             }
-            name={"SENAI Suiço-Brasileira"}
+            name={"SENAI Suíço-Brasileira"}
           />
           <SchoolCard
             href={links.schools.mercedes}
@@ -134,6 +141,78 @@ export default function Portfolio() {
       </section>
 
       <Divisor marginTop={128} color={"var(--main-02)"} />
+
+      <section className={styles.skls}>
+        <h2 className={styles["sec-ttl"]}>{t("sections.skills")}</h2>
+        <div className={styles["skls-all-ctn"]}>
+          <motion.div
+            className={styles["skls-ctn"]}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+          >
+            <h3 className={styles["skls-ttl"]}>Frontend</h3>
+            <div className={styles["skls-spec-ctn"]}>
+              <Skill
+                name={"HTML"}
+                icon={<FaIcnHtml5 icon={fontAwesome.html5} />}
+                rating={4}
+              />
+              <Skill
+                name={"CSS"}
+                icon={<FaIcnCss3Alt icon={fontAwesome.css3Alt} />}
+                rating={4}
+              />
+              <Skill
+                name={"JavaScript"}
+                icon={<FaIcnSquareJs icon={fontAwesome.squareJs} />}
+                rating={3}
+              />
+              <Skill
+                name={"React"}
+                icon={<FaIcnReact icon={fontAwesome.react} />}
+                rating={4}
+              />
+            </div>
+          </motion.div>
+
+          <motion.div
+            className={styles["skls-ctn"]}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+          >
+            <h3 className={styles["skls-ttl"]}>Backend</h3>
+            <div className={styles["skls-spec-ctn"]}>
+              <Skill
+                name={"Java"}
+                icon={<FaIcnJava icon={fontAwesome.java} />}
+                rating={3}
+              />
+            </div>
+          </motion.div>
+
+          <motion.div
+            className={styles["skls-ctn"]}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+          >
+            <h3 className={styles["skls-ttl"]}>Design</h3>
+            <div className={styles["skls-spec-ctn"]}>
+              <Skill
+                name={"Figma"}
+                icon={<FaIcnFigma icon={fontAwesome.figma} />}
+                rating={4}
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <Divisor marginTop={128} color={"var(--main-02)"} />
+
+      
     </div>
   );
 }

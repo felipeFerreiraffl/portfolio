@@ -1,0 +1,40 @@
+.ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-16);
+}
+
+.icn-ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-8);
+  color: var(--neu-04);
+}
+
+.icn {
+  display: flex;
+  font-size: var(--sp-144);
+}
+
+.name {
+  font: var(--def-subttl);
+}
+
+.star-ctn {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: var(--sp-4);
+}
+
+.star {
+  font-size: var(--sp-32);
+  color: var(--rgba-bk80);
+}
+
+.star-colored {
+  font-size: var(--sp-32);
+  color: var(--aux-03);
+}
