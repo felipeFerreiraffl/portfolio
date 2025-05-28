@@ -30,6 +30,11 @@ import Footer from "../../ui/components/Footer";
 export default function Portfolio() {
   const { t } = useTranslation("portfolio", { useSuspense: true });
 
+  // Abre um arquivo em PDF
+  const openPdf = () => {
+    window.open("/archives/curriculum-vitae.pdf", "_blank");
+  };
+
   return (
     <div className={styles.ctn}>
       <header>
@@ -238,7 +243,7 @@ export default function Portfolio() {
           <Button
             color={"var(--main-01)"}
             text={t("sections.curriculum.button")}
-            onClick={""}
+            onClick={openPdf}
           />
         </div>
         <span className={styles["crr-icn"]}>
