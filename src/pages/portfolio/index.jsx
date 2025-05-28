@@ -8,6 +8,7 @@ import {
   FaIcnJava,
   FaIcnLaptopCode,
   FaIcnNewspaper,
+  FaIcnPaperclip,
   FaIcnReact,
   FaIcnSquareJs,
 } from "../../services/constants/icns/font-awesome/fontAwesome";
@@ -23,6 +24,8 @@ import styles from "./style.module.css";
 import Skill from "../../ui/components/Skill";
 import ProjectsSlides from "../../ui/components/Slides/Projects";
 import extraImgs from "../../services/constants/imgs/extra";
+import Button from "../../ui/components/Button";
+import Footer from "../../ui/components/Footer";
 
 export default function Portfolio() {
   const { t } = useTranslation("portfolio", { useSuspense: true });
@@ -221,6 +224,29 @@ export default function Portfolio() {
       </section>
 
       <Divisor marginTop={128} color={"var(--main-02)"} />
+
+      <section className={styles.crr}>
+        <div className={styles["crr-cont"]}>
+          <div className={styles["crr-txt-ctn"]}>
+            <h2 className={`${styles["crr-ttl"]} ${styles["ttl-brd"]}`}>
+              {t("sections.curriculum.title")}
+            </h2>
+            <p className={styles["crr-subttl"]}>
+              {t("sections.curriculum.desc")}
+            </p>
+          </div>
+          <Button
+            color={"var(--main-01)"}
+            text={t("sections.curriculum.button")}
+            onClick={""}
+          />
+        </div>
+        <span className={styles["crr-icn"]}>
+          <FaIcnPaperclip icon={fontAwesome.paperclip} />
+        </span>
+      </section>
+
+      <Footer />
     </div>
   );
 }

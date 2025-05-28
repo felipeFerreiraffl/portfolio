@@ -122,8 +122,6 @@ export default function Home() {
           <Button
             text={t("sections.portfolio.button")}
             color={"var(--main-01)"}
-            active={"var(--main-02)"}
-            boxShadow={"var(--bshw-led-mn2)"}
             onClick={() => navigate("/portfolio")}
           />
         </motion.div>
@@ -156,8 +154,6 @@ export default function Home() {
           <Button
             text={t("sections.hobbies.button")}
             color={"var(--main-04)"}
-            active={"var(--main-05)"}
-            boxShadow={"var(--bshw-led-mn5)"}
             onClick={() => navigate("/hobbies")}
           />
         </motion.div>
