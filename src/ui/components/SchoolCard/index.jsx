@@ -1,7 +1,7 @@
 import styles from "./style.module.css";
 import { motion } from "framer-motion";
 
-export default function SchoolCard({ img, name, href }) {
+export default function SchoolCard({ img, name, href, alt }) {
   return (
     <motion.a
       href={href}
@@ -13,7 +13,7 @@ export default function SchoolCard({ img, name, href }) {
       transition={{ duration: 0.6, ease: "easeInOut" }}
     >
       <p className={styles.name}>{name}</p>
-      <img src={img} alt={name} className={styles.img} />
+      <img src={img} alt={alt} className={styles.img} />
     </motion.a>
   );
 }

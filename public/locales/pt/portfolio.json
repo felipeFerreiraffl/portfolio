@@ -38,5 +38,11 @@
       "desc": "Um currículo com um pequeno resumo sobre mim de maneira profissional, demonstrando os objetivos, formação acadêmica, experiência e as competências",
       "button": "Acessar CV"
     }
+  },
+  "alts": {
+    "schools": {
+      "swiss": "Imagem da escola SENAI Suiço-Brasileira",
+      "mercedes": "Imagem da escola SENAI Mercedes-Benz"
+    }
   }
 }

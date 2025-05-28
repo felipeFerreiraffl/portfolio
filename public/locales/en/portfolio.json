@@ -20,7 +20,7 @@
     "schools": "Schools",
     "skills": "Skills",
     "projects": {
-      "title": "Projetos",
+      "title": "Projects",
       "apiInfos": {
         "68254c981dd1d7529ee7487e": "First page with HTML and CSS",
         "68254ccf1dd1d7529ee7487f": "School report",
@@ -37,6 +37,12 @@
       "title": "Curriculum Vitae",
       "desc": "A curriculum with a little abstract about me in a professional way, shpwing my goals, academic background, experience and competences",
       "button": "Access CV"
+    }
+  },
+  "alts": {
+    "schools": {
+      "swiss": "Image of the school SENAI Suiço-Brasileira",
+      "mercedes": "Image of the school SENAI Mercedes-Benz"
     }
   }
 }

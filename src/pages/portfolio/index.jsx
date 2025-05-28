@@ -22,6 +22,7 @@ import SchoolCard from "../../ui/components/SchoolCard";
 import styles from "./style.module.css";
 import Skill from "../../ui/components/Skill";
 import ProjectsSlides from "../../ui/components/Slides/Projects";
+import extraImgs from "../../services/constants/imgs/extra";
 
 export default function Portfolio() {
   const { t } = useTranslation("portfolio", { useSuspense: true });
@@ -126,17 +127,15 @@ export default function Portfolio() {
         <div className={styles["sch-card-ctn"]}>
           <SchoolCard
             href={links.schools.swiss}
-            img={
-              "https://cronos-media.sesisenaisp.org.br//api/media/1-0/files?img=img_1_230210_a391e771-b907-4a76-969f-3f4b68dea849_o.jpg&tipo=p"
-            }
-            name={"SENAI Suíço-Brasileira"}
+            img={extraImgs.snSwiss}
+            name={"Suíço-Brasileira"}
+            alt={t("alts.schools.swiss")}
           />
           <SchoolCard
             href={links.schools.mercedes}
-            img={
-              "https://cronos-media.sesisenaisp.org.br//api/media/1-0/files?img=img_1_240229_1b55cfdb-0d45-40a7-976f-8e5879237199_o.avif"
-            }
+            img={extraImgs.snMercedes}
             name={"SENAI Mercedes-Benz"}
+            alt={t("alts.schools.mercedes")}
           />
         </div>
       </section>

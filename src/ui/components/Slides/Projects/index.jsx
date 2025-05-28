@@ -25,6 +25,7 @@ export default function ProjectsSlides() {
   // Inicia o Embla
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "center",
+    loop: false,
   });
 
   //   Estados dos botões desabilitados
@@ -90,7 +91,9 @@ export default function ProjectsSlides() {
               <div className={styles["img-wrapper"]}>
                 <img
                   src={project.imgSrc}
-                  alt={t(`sections.projects.apiInfos.${project.id}`)}
+                  alt={`Github - ${t(
+                    `sections.projects.apiInfos.${project.id}`
+                  )}`}
                   loading="lazy"
                   className={styles.img}
                 />
