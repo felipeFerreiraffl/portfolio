@@ -39,6 +39,8 @@
   padding-bottom: var(--sp-4);
 }
 
+/* Estilos da seção Cursos */
+
 .crs {
   position: relative;
   width: 100%;
@@ -119,6 +121,8 @@
   gap: 2.75rem; /* 44px */
 }
 
+/* Estilos da seção Escolas */
+
 .sch {
   position: relative;
   display: flex;
@@ -172,6 +176,8 @@
   }
 }
 
+/* Estilos da seção Habilidades */
+
 .skls {
   width: 85vw;
   display: flex;
@@ -213,4 +219,44 @@
   justify-content: space-around;
   flex-wrap: wrap;
   gap: var(--sp-32);
+}
+
+/* Estilos da seção Projetos */
+
+.pjts {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-28);
+  padding: var(--sp-48) var(--sp-88);
+
+  @media (max-width: 1080px) {
+    padding: var(--sp-48) var(--sp-64);
+  }
+
+  @media (max-width: 768px) {
+    padding: var(--sp-48) var(--sp-40);
+  }
+}
+
+.pjts::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/imgs/bg/projects.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: cover;
+  opacity: var(--op-10);
+  z-index: var(--zind-0);
+}
+
+.pjts > * {
+  z-index: var(--zind-10);
 }

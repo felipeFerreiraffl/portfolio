@@ -3,7 +3,7 @@ const API_URL = "https://portfolio-backend-ex33.onrender.com/api";
 export const getProjects = async () => {
   try {
     const response = await fetch(`${API_URL}/project`);
-    const data = response.json();
+    const data = await response.json();
 
     return data;
   } catch (error) {
@@ -15,7 +15,7 @@ export const getProjects = async () => {
 export const getPlayers = async () => {
   try {
     const response = await fetch(`${API_URL}/player`);
-    const data = response.json();
+    const data = await response.json();
 
     return data;
   } catch (error) {
@@ -27,7 +27,7 @@ export const getPlayers = async () => {
 export const getPositions = async () => {
   try {
     const response = await fetch(`${API_URL}/position`);
-    const data = response.json();
+    const data = await response.json();
 
     return data;
   } catch (error) {
@@ -39,7 +39,7 @@ export const getPositions = async () => {
 export const getDrawings = async () => {
   try {
     const response = await fetch(`${API_URL}/drawing`);
-    const data = response.json();
+    const data = await response.json();
 
     return data;
   } catch (error) {

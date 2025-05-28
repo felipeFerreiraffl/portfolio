@@ -20,6 +20,7 @@ export default function Skill({ icon, name, rating }) {
       <div className={styles["star-ctn"]}>
         {[1, 2, 3, 4, 5].map((star) => (
           <span
+            key={star}
             className={star <= rating ? styles["star-colored"] : styles.star}
             role="img"
           >

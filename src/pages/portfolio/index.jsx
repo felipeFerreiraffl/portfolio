@@ -21,6 +21,7 @@ import CommonIntro from "../../ui/components/Introduction/Common";
 import SchoolCard from "../../ui/components/SchoolCard";
 import styles from "./style.module.css";
 import Skill from "../../ui/components/Skill";
+import ProjectsSlides from "../../ui/components/Slides/Projects";
 
 export default function Portfolio() {
   const { t } = useTranslation("portfolio", { useSuspense: true });
@@ -212,7 +213,13 @@ export default function Portfolio() {
 
       <Divisor marginTop={128} color={"var(--main-02)"} />
 
-      
+      <section className={styles.pjts}>
+        <h2 className={`${styles["sec-ttl"]} ${styles["ttl-brd"]}`}>
+          {t("sections.projects.title")}
+        </h2>
+
+        <ProjectsSlides />
+      </section>
     </div>
   );
 }
