@@ -220,6 +220,8 @@ export default function Portfolio() {
 
         <ProjectsSlides />
       </section>
+
+      <Divisor marginTop={128} color={"var(--main-02)"} />
     </div>
   );
 }
