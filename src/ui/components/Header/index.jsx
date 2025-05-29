@@ -17,6 +17,33 @@ export default function Header() {
   const { t } = useTranslation("header", { useSuspense: true }); // Tradutor
   const location = useLocation();
   const [openMenu, setOpenMenu] = useState(false); // Estado do menu aberto
+  const [isScrolled, setIsScrolled] = useState(false); // Estado de rolagem para background
+
+  // Controla o fundo do header baseado na rolgaem
+  useEffect(() => {
+    const handleBackgroundScroll = () => {
+      const scrolled = window.scrollY > 300;
+      setIsScrolled(scrolled);
+    };
+
+    window.addEventListener("scroll", handleBackgroundScroll);
+    handleBackgroundScroll();
+
+    return () => window.removeEventListener("scroll", handleBackgroundScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleShowHeader = () => {
+      if (window.scrollY < 0) {
+        setShowHeader(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleShowHeader);
+    handleShowHeader();
+
+    return () => window.removeEventListener("scroll", handleShowHeader);
+  }, []);
 
   // Evita rolagem com o menu aberto
   useEffect(() => {
@@ -29,21 +56,8 @@ export default function Header() {
     return () => (document.body.style.overflow = "");
   }, [openMenu]);
 
-  // Fecha o menu no redimensionamento de tela
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 1080 && openMenu) {
-        setOpenMenu(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, [openMenu]);
-
   return (
-    <nav className={styles.header}>
+    <nav className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <a href="/" className={styles["logo-ctn"]}>
         <img
           className={styles["logo-i"]}

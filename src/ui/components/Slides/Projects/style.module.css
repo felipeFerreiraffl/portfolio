@@ -76,9 +76,12 @@
 }
 
 .icn-sklt {
-  font: var(--sp-64);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--sp-64);
   color: var(--main-02);
-  animation: spin var(--ts-anim) infinite linear;
+  animation: spin var(--ts-anim) infinite;
 }
 
 @keyframes spin {

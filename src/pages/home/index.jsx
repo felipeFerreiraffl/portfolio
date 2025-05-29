@@ -57,6 +57,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           {t("sections.about-me.title")}
         </motion.h2>
@@ -72,6 +73,7 @@ export default function Home() {
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             <div className={styles["abt-info"]}>
               <h3 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
@@ -111,6 +113,7 @@ export default function Home() {
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <div className={styles["ptf-text-ctn"]}>
             <h2 className={`${styles["sec-ttl"]} ${styles["bd-ttl"]}`}>
@@ -140,6 +143,7 @@ export default function Home() {
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <div className={styles["hbb-txt-ctn"]}>
             <h2 className={`${styles["sec-ttl"]} ${styles["bd-ttl"]}`}>
@@ -164,6 +168,7 @@ export default function Home() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             <FaIcnGamepad
               icon={fontAwesome.gamepad}
@@ -175,6 +180,7 @@ export default function Home() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             <FaIcnBook
               icon={fontAwesome.book}
@@ -186,6 +192,7 @@ export default function Home() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.6 }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             <FaIcnUmbrellaBeach
               icon={fontAwesome.umbrellaBeach}
@@ -197,6 +204,7 @@ export default function Home() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.9 }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             <FaIcnFutbol
               icon={fontAwesome.futbol}
@@ -208,6 +216,7 @@ export default function Home() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 1.2 }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             <FaIcnPaintbrush
               icon={fontAwesome.paintbrush}

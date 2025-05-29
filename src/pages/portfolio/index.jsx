@@ -60,6 +60,7 @@ export default function Portfolio() {
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.2, ease: "easeInOut" }}
+              viewport={{ once: true, amount: 0.5 }}
             >
               <h3 className={`${styles["crs-thrd-ttl"]} ${styles.tech}`}>
                 {t("sections.courses.tech.title")}
@@ -103,6 +104,7 @@ export default function Portfolio() {
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.2, ease: "easeInOut" }}
+              viewport={{ once: true, amount: 0.5 }}
             >
               <h3 className={`${styles["crs-thrd-ttl"]} ${styles.mec}`}>
                 {t("sections.courses.other.title")}
@@ -158,6 +160,7 @@ export default function Portfolio() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             <h3 className={styles["skls-ttl"]}>Frontend</h3>
             <div className={styles["skls-spec-ctn"]}>
@@ -189,6 +192,7 @@ export default function Portfolio() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             <h3 className={styles["skls-ttl"]}>Backend</h3>
             <div className={styles["skls-spec-ctn"]}>
@@ -205,6 +209,7 @@ export default function Portfolio() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             <h3 className={styles["skls-ttl"]}>Design</h3>
             <div className={styles["skls-spec-ctn"]}>
@@ -231,7 +236,13 @@ export default function Portfolio() {
       <Divisor marginTop={128} color={"var(--main-02)"} />
 
       <section className={styles.crr}>
-        <div className={styles["crr-cont"]}>
+        <motion.div
+          className={styles["crr-cont"]}
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <div className={styles["crr-txt-ctn"]}>
             <h2 className={`${styles["crr-ttl"]} ${styles["ttl-brd"]}`}>
               {t("sections.curriculum.title")}
@@ -245,10 +256,16 @@ export default function Portfolio() {
             text={t("sections.curriculum.button")}
             onClick={openPdf}
           />
-        </div>
-        <span className={styles["crr-icn"]}>
+        </motion.div>
+        <motion.span
+          className={styles["crr-icn"]}
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <FaIcnPaperclip icon={fontAwesome.paperclip} />
-        </span>
+        </motion.span>
       </section>
 
       <Footer />

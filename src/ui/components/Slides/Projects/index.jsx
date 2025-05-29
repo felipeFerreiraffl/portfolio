@@ -15,17 +15,18 @@ export default function ProjectsSlides() {
   const { t } = useTranslation("portfolio", { useSuspense: true });
 
   // Uso de cache e performace com useQuery
-  const { data, isLoading, error } = useQuery({
+  const { data, isPending, error } = useQuery({
     queryKey: ["projects"],
     queryFn: getProjects,
     retry: 3, // Tenta 3 vezes
     retryDelay: (attp) => Math.min(100 * 2 ** attp, 30000), // Delay exponencial
+    staleTime: 1000 * 60 * 5, // Cache por 5 minutos
+    placeholderData: [],
   });
 
   // Inicia o Embla
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "center",
-    loop: false,
   });
 
   //   Estados dos botões desabilitados
@@ -50,17 +51,21 @@ export default function ProjectsSlides() {
 
   useEffect(() => {
     if (!emblaApi) return;
+    if (!data || data.length === 0) return;
+
+    emblaApi.reInit(); // Garante re-inicialização quandos os slides mudam
     onSelect();
     emblaApi.on("select", onSelect);
-  }, [emblaApi, onSelect]);
 
-  if (isLoading) {
+    return () => emblaApi.off("select", onSelect);
+  }, [emblaApi, onSelect, data]);
+
+  if (isPending) {
     return (
       <div className={styles["img-sklt"]}>
-        <FaIcnSpinner
-          icon={fontAwesome.spinner}
-          className={styles["icn-sklt"]}
-        />
+        <span className={styles["icn-sklt"]}>
+          <FaIcnSpinner icon={fontAwesome.spinner} />
+        </span>
       </div>
     );
   }

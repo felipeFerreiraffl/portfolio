@@ -28,6 +28,7 @@ export default function Footer() {
             initial={{ y: -100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             <h2 className={`${styles["cont-ttl"]} ${styles["nav-ttl"]}`}>
               {t("nav.title")}
@@ -68,6 +69,7 @@ export default function Footer() {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             <h2 className={`${styles["cont-ttl"]} ${styles["social-ttl"]}`}>
               {t("social")}
