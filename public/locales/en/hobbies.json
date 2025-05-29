@@ -1,0 +1,24 @@
+{
+  "intro": {
+    "subtitle": "Navigate in one of the routes below to an extra content of my hobbies, with a creative presentation of each theme."
+  },
+  "hobbie-pages": {
+    "anime-manga": {
+      "title": "Animes & Mangas",
+      "description": "Animes and mangas are, respectively, cartoons and HQs made in Japan, having unique animations and looks, with several existing genres"
+    },
+    "games": {
+      "title": "Games",
+      "description": "One of the forms of entertainment nowadays with the most interactivity, with an impressive immersion and captivanting stories in many devices"
+    },
+    "football": {
+      "title": "Football",
+      "description": "Football is the most popular at the moment, because of the transmitted emotion, game intensity and, mainly, the randomness of the plays"
+    },
+    "drawings": {
+      "title": "Drawings",
+      "description": "Drawing is one of the most known forms of expressing feelings, showing through pencil and paper or digitally"
+    }
+  },
+  "button": "See more"
+}
