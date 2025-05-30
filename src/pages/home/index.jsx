@@ -1,15 +1,7 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import {
-  FaIcnBook,
-  FaIcnFutbol,
-  FaIcnGamepad,
-  FaIcnIdCard,
-  FaIcnNewspaper,
-  FaIcnPaintbrush,
-  FaIcnUmbrellaBeach,
-} from "../../services/constants/icns/font-awesome/fontAwesome";
+import FaIcon from "../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../services/constants/icns/font-awesome/iconNames";
 import logo from "../../services/constants/svgs/logo";
 import Button from "../../ui/components/Button";
@@ -63,10 +55,7 @@ export default function Home() {
         </motion.h2>
 
         <div className={styles["abt-cont"]}>
-          <FaIcnIdCard
-            icon={fontAwesome.idCard}
-            className={styles["abt-icn"]}
-          />
+          <FaIcon icon={fontAwesome.idCard} className={styles["abt-icn"]} />
 
           <motion.div
             className={styles["abt-txt-ctn"]}
@@ -129,10 +118,7 @@ export default function Home() {
           />
         </motion.div>
 
-        <FaIcnNewspaper
-          icon={fontAwesome.newspaper}
-          className={styles["ptf-icn"]}
-        />
+        <FaIcon icon={fontAwesome.newspaper} className={styles["ptf-icn"]} />
       </section>
 
       <Divisor marginTop={128} color={"var(--main-04)"} />
@@ -170,7 +156,7 @@ export default function Home() {
             transition={{ duration: 1.2, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <FaIcnGamepad
+            <FaIcon
               icon={fontAwesome.gamepad}
               className={styles["hbb-icn-sm"]}
             />
@@ -182,10 +168,7 @@ export default function Home() {
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <FaIcnBook
-              icon={fontAwesome.book}
-              className={styles["hbb-icn-md"]}
-            />
+            <FaIcon icon={fontAwesome.book} className={styles["hbb-icn-md"]} />
           </motion.i>
           <motion.i
             className={`${styles["hbb-icn"]} ${styles.umb}`}
@@ -194,7 +177,7 @@ export default function Home() {
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.6 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <FaIcnUmbrellaBeach
+            <FaIcon
               icon={fontAwesome.umbrellaBeach}
               className={styles["hbb-icn-lg"]}
             />
@@ -206,7 +189,7 @@ export default function Home() {
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.9 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <FaIcnFutbol
+            <FaIcon
               icon={fontAwesome.futbol}
               className={styles["hbb-icn-md"]}
             />
@@ -218,7 +201,7 @@ export default function Home() {
             transition={{ duration: 1.2, ease: "easeInOut", delay: 1.2 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <FaIcnPaintbrush
+            <FaIcon
               icon={fontAwesome.paintbrush}
               className={styles["hbb-icn-sm"]}
             />

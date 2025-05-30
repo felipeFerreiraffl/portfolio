@@ -1,5 +1,5 @@
 import spinner from "../../../assets/svgs/loading-spinner.svg";
-import { FaIcnGlasses } from "../../../services/constants/icns/font-awesome/fontAwesome";
+import FaIcon from "../../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import styles from "./styles.module.css";
@@ -12,7 +12,7 @@ export default function LoadingPage({ progress }) {
       <div className={styles["load-ctn"]}>
         <span className={styles.icn}>
           <img src={spinner} alt="Spinner" />
-          <FaIcnGlasses
+          <FaIcon
             icon={fontAwesome.glasses}
             className={styles["spinner-icn"]}
           />

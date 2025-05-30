@@ -1,7 +1,7 @@
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Button from "../Button";
 import styles from "./style.module.css";
-import { motion } from "framer-motion";
 
 export default function HobbyPage({
   icon,

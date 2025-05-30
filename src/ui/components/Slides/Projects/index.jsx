@@ -3,11 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { getProjects } from "../../../../services/api/other";
-import {
-  FaIcnCircleLeft,
-  FaIcnCircleRight,
-  FaIcnSpinner,
-} from "../../../../services/constants/icns/font-awesome/fontAwesome";
+import FaIcon from "../../../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../../../services/constants/icns/font-awesome/iconNames";
 import styles from "./style.module.css";
 
@@ -64,7 +60,7 @@ export default function ProjectsSlides() {
     return (
       <div className={styles["img-sklt"]}>
         <span className={styles["icn-sklt"]}>
-          <FaIcnSpinner icon={fontAwesome.spinner} />
+          <FaIcon icon={fontAwesome.spinner} />
         </span>
       </div>
     );
@@ -80,7 +76,7 @@ export default function ProjectsSlides() {
         disabled={prevDisabled}
         aria-label="Previous"
       >
-        <FaIcnCircleLeft icon={fontAwesome.circleLeft} />
+        <FaIcon icon={fontAwesome.circleLeft} />
       </button>
 
       <div className={styles["slides-wrapper"]} ref={emblaRef}>
@@ -120,7 +116,7 @@ export default function ProjectsSlides() {
         disabled={nextDisabled}
         aria-label="Next"
       >
-        <FaIcnCircleRight icon={fontAwesome.circleRight} />
+        <FaIcon icon={fontAwesome.circleRight} />
       </button>
     </div>
   );

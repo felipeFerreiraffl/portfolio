@@ -1,10 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import {
-  FaIcnLinkedin,
-  FaIcnSquareGithub,
-  FaIcnSquareInstagram,
-} from "../../../services/constants/icns/font-awesome/fontAwesome";
+import FaIcon from "../../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
 import links from "../../../services/constants/links/links";
 import logo from "../../../services/constants/svgs/logo";
@@ -81,7 +77,7 @@ export default function Footer() {
                 aria-label={t("aria-labels.github")}
                 rel="noopener noreferrer"
               >
-                <FaIcnSquareGithub
+                <FaIcon
                   icon={fontAwesome.squareGithub}
                   className={styles["social-icn"]}
                 />
@@ -92,7 +88,7 @@ export default function Footer() {
                 aria-label={t("aria-labels.instagram")}
                 rel="noopener noreferrer"
               >
-                <FaIcnSquareInstagram
+                <FaIcon
                   icon={fontAwesome.squareInstagram}
                   className={styles["social-icn"]}
                 />
@@ -103,7 +99,7 @@ export default function Footer() {
                 aria-label={t("aria-labels.linkedin")}
                 rel="noopener noreferrer"
               >
-                <FaIcnLinkedin
+                <FaIcon
                   icon={fontAwesome.linkedin}
                   className={styles["social-icn"]}
                 />

@@ -2,10 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
-import {
-  FaIcnBarsStaggered,
-  FaIcnCircleXMark,
-} from "../../../services/constants/icns/font-awesome/fontAwesome";
+import FaIcon from "../../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
 import langSvg from "../../../services/constants/svgs/lang";
 import logo from "../../../services/constants/svgs/logo";
@@ -124,7 +121,7 @@ export default function Header() {
         />
       </div>
 
-      <FaIcnBarsStaggered
+      <FaIcon
         icon={fontAwesome.barsStaggered}
         className={styles["menu-i"]}
         onClick={() => setOpenMenu(true)}
@@ -153,7 +150,7 @@ export default function Header() {
             aria-label={t("menu")}
             role="dialog"
           >
-            <FaIcnCircleXMark
+            <FaIcon
               icon={fontAwesome.circleXMark}
               className={styles["menu-close"]}
               onClick={() => setOpenMenu(false)}

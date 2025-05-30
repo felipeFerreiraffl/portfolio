@@ -1,9 +1,4 @@
 import { useTranslation } from "react-i18next";
-import {
-  FaIcnBook,
-  FaIcnGamepad,
-  FaIcnUmbrellaBeach,
-} from "../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../services/constants/icns/font-awesome/iconNames";
 import headerImgs from "../../services/constants/imgs/header";
 import Header from "../../ui/components/Header";
@@ -13,6 +8,7 @@ import HobbyPage from "../../ui/components/HobbyPage";
 import bgImgs from "../../services/constants/imgs/bg";
 import { useNavigate } from "react-router-dom";
 import useDocumentTitle from "../../ui/hooks/useDocumentTitle";
+import FaIcon from "../../services/constants/icns/font-awesome/fontAwesome";
 
 export default function Hobbies() {
   useDocumentTitle("Hobbies | Felipe Ferreira");
@@ -27,7 +23,7 @@ export default function Hobbies() {
         <CommonIntro
           bgImage={headerImgs.hobbies}
           color={"var(--main-05)"}
-          icon={<FaIcnUmbrellaBeach icon={fontAwesome.umbrellaBeach} />}
+          icon={<FaIcon icon={fontAwesome.umbrellaBeach} />}
           title={"Hobbies"}
           subtitle={t("intro.subtitle")}
         />
@@ -37,7 +33,7 @@ export default function Hobbies() {
         <HobbyPage
           bgImage={bgImgs.animesMangas}
           color={"var(--main-02)"}
-          icon={<FaIcnBook icon={fontAwesome.book} />}
+          icon={<FaIcon icon={fontAwesome.book} />}
           border={"var(--bd-mn2)"}
           title={t("hobbie-pages.anime-manga.title")}
           ttlFont={"var(--anmg-h2)"}
@@ -49,7 +45,7 @@ export default function Hobbies() {
         <HobbyPage
           bgImage={bgImgs.games}
           color={"var(--main-05)"}
-          icon={<FaIcnGamepad icon={fontAwesome.gamepad} />}
+          icon={<FaIcon icon={fontAwesome.gamepad} />}
           border={"var(--bd-mn5)"}
           title={t("hobbie-pages.games.title")}
           ttlFont={"var(--gm-h2)"}
@@ -61,7 +57,7 @@ export default function Hobbies() {
         <HobbyPage
           bgImage={bgImgs.football}
           color={"var(--main-02)"}
-          icon={<FaIcnBook icon={fontAwesome.book} />}
+          icon={<FaIcon icon={fontAwesome.futbol} />}
           border={"var(--bd-mn2)"}
           title={t("hobbie-pages.football.title")}
           ttlFont={"var(--fut-h2)"}
@@ -73,7 +69,7 @@ export default function Hobbies() {
         <HobbyPage
           bgImage={bgImgs.drawings}
           color={"var(--main-05)"}
-          icon={<FaIcnBook icon={fontAwesome.book} />}
+          icon={<FaIcon icon={fontAwesome.paintbrush} />}
           border={"var(--bd-mn5)"}
           title={t("hobbie-pages.drawings.title")}
           ttlFont={"var(--draw-h2)"}

@@ -1,32 +1,21 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import {
-  FaIcnCirclePlus,
-  FaIcnCss3Alt,
-  FaIcnFigma,
-  FaIcnHtml5,
-  FaIcnJava,
-  FaIcnLaptopCode,
-  FaIcnNewspaper,
-  FaIcnPaperclip,
-  FaIcnReact,
-  FaIcnSquareJs,
-} from "../../services/constants/icns/font-awesome/fontAwesome";
+import FaIcon from "../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../services/constants/icns/font-awesome/iconNames";
+import extraImgs from "../../services/constants/imgs/extra";
 import headerImgs from "../../services/constants/imgs/header";
 import links from "../../services/constants/links/links";
+import Button from "../../ui/components/Button";
 import CourseConclusion from "../../ui/components/CourseConclusion";
 import Divisor from "../../ui/components/Divisor";
+import Footer from "../../ui/components/Footer";
 import Header from "../../ui/components/Header";
 import CommonIntro from "../../ui/components/Introduction/Common";
 import SchoolCard from "../../ui/components/SchoolCard";
-import styles from "./style.module.css";
 import Skill from "../../ui/components/Skill";
 import ProjectsSlides from "../../ui/components/Slides/Projects";
-import extraImgs from "../../services/constants/imgs/extra";
-import Button from "../../ui/components/Button";
-import Footer from "../../ui/components/Footer";
 import useDocumentTitle from "../../ui/hooks/useDocumentTitle";
+import styles from "./style.module.css";
 
 export default function Portfolio() {
   useDocumentTitle("Portfólio | Felipe Ferreira");
@@ -43,7 +32,7 @@ export default function Portfolio() {
         <Header />
 
         <CommonIntro
-          icon={<FaIcnNewspaper icon={fontAwesome.newspaper} />}
+          icon={<FaIcon icon={fontAwesome.newspaper} />}
           bgImage={headerImgs.portfolio}
           color={"var(--main-02)"}
           title={t("intro.title")}
@@ -67,7 +56,7 @@ export default function Portfolio() {
               <h3 className={`${styles["crs-thrd-ttl"]} ${styles.tech}`}>
                 {t("sections.courses.tech.title")}
               </h3>
-              <FaIcnLaptopCode
+              <FaIcon
                 icon={fontAwesome.laptopCode}
                 className={styles["crs-icn"]}
               />
@@ -111,7 +100,7 @@ export default function Portfolio() {
               <h3 className={`${styles["crs-thrd-ttl"]} ${styles.mec}`}>
                 {t("sections.courses.other.title")}
               </h3>
-              <FaIcnCirclePlus
+              <FaIcon
                 icon={fontAwesome.circlePlus}
                 className={styles["crs-icn"]}
               />
@@ -140,7 +129,7 @@ export default function Portfolio() {
           <SchoolCard
             href={links.schools.swiss}
             img={extraImgs.snSwiss}
-            name={"Suíço-Brasileira"}
+            name={"SENAI Suíço-Brasileira"}
             alt={t("alts.schools.swiss")}
           />
           <SchoolCard
@@ -168,22 +157,22 @@ export default function Portfolio() {
             <div className={styles["skls-spec-ctn"]}>
               <Skill
                 name={"HTML"}
-                icon={<FaIcnHtml5 icon={fontAwesome.html5} />}
+                icon={<FaIcon icon={fontAwesome.html5} />}
                 rating={4}
               />
               <Skill
                 name={"CSS"}
-                icon={<FaIcnCss3Alt icon={fontAwesome.css3Alt} />}
+                icon={<FaIcon icon={fontAwesome.css3Alt} />}
                 rating={4}
               />
               <Skill
                 name={"JavaScript"}
-                icon={<FaIcnSquareJs icon={fontAwesome.squareJs} />}
+                icon={<FaIcon icon={fontAwesome.squareJs} />}
                 rating={3}
               />
               <Skill
                 name={"React"}
-                icon={<FaIcnReact icon={fontAwesome.react} />}
+                icon={<FaIcon icon={fontAwesome.react} />}
                 rating={4}
               />
             </div>
@@ -200,7 +189,7 @@ export default function Portfolio() {
             <div className={styles["skls-spec-ctn"]}>
               <Skill
                 name={"Java"}
-                icon={<FaIcnJava icon={fontAwesome.java} />}
+                icon={<FaIcon icon={fontAwesome.java} />}
                 rating={3}
               />
             </div>
@@ -217,7 +206,7 @@ export default function Portfolio() {
             <div className={styles["skls-spec-ctn"]}>
               <Skill
                 name={"Figma"}
-                icon={<FaIcnFigma icon={fontAwesome.figma} />}
+                icon={<FaIcon icon={fontAwesome.figma} />}
                 rating={4}
               />
             </div>
@@ -266,7 +255,7 @@ export default function Portfolio() {
           transition={{ duration: 1.2, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <FaIcnPaperclip icon={fontAwesome.paperclip} />
+          <FaIcon icon={fontAwesome.paperclip} />
         </motion.span>
       </section>
 

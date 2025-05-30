@@ -1,7 +1,7 @@
-import { FaIcnStar } from "../../../services/constants/icns/font-awesome/fontAwesome";
+import { motion } from "framer-motion";
 import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
 import styles from "./style.module.css";
-import { motion } from "framer-motion";
+import FaIcon from "../../../services/constants/icns/font-awesome/fontAwesome.js";
 
 export default function Skill({ icon, name, rating }) {
   return (
@@ -25,7 +25,7 @@ export default function Skill({ icon, name, rating }) {
             className={star <= rating ? styles["star-colored"] : styles.star}
             role="img"
           >
-            <FaIcnStar icon={fontAwesome.star} />
+            <FaIcon icon={fontAwesome.star} />
           </span>
         ))}
       </div>

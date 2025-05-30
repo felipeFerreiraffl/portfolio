@@ -29,7 +29,7 @@ export const getPlayers = async () => {
 
     return data;
   } catch (error) {
-    console.error("Erro ao buscar API /projects: ", error);
+    console.error("Erro ao buscar API /players: ", error);
     return [];
   }
 };
@@ -46,7 +46,7 @@ export const getPositions = async () => {
 
     return data;
   } catch (error) {
-    console.error("Erro ao buscar API /projects: ", error);
+    console.error("Erro ao buscar API /positions: ", error);
     return [];
   }
 };
@@ -63,7 +63,7 @@ export const getDrawings = async () => {
 
     return data;
   } catch (error) {
-    console.error("Erro ao buscar API /projects: ", error);
+    console.error("Erro ao buscar API /drawings: ", error);
     return [];
   }
 };
