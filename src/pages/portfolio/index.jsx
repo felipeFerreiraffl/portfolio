@@ -26,8 +26,10 @@ import ProjectsSlides from "../../ui/components/Slides/Projects";
 import extraImgs from "../../services/constants/imgs/extra";
 import Button from "../../ui/components/Button";
 import Footer from "../../ui/components/Footer";
+import useDocumentTitle from "../../ui/hooks/useDocumentTitle";
 
 export default function Portfolio() {
+  useDocumentTitle("Portfólio | Felipe Ferreira");
   const { t } = useTranslation("portfolio", { useSuspense: true });
 
   // Abre um arquivo em PDF

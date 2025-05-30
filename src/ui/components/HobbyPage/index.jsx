@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Button from "../Button";
 import styles from "./style.module.css";
+import { motion } from "framer-motion";
 
 export default function HobbyPage({
   icon,
@@ -17,7 +18,14 @@ export default function HobbyPage({
   const { t } = useTranslation("hobbies", { useSuspense: true });
 
   return (
-    <div className={styles.ctn} style={{ "--bg-image": `url(${bgImage})` }}>
+    <motion.div
+      className={styles.ctn}
+      style={{ "--bg-image": `url(${bgImage})` }}
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1.2, ease: "easeInOut" }}
+      viewport={{ once: true, amount: 0.5 }}
+    >
       <span
         className={styles.icn}
         style={{ "--icn-color": color, "--icn-border": border }}
@@ -44,6 +52,6 @@ export default function HobbyPage({
         text={t("button")}
         onClick={onClick}
       />
-    </div>
+    </motion.div>
   );
 }

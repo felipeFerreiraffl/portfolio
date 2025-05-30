@@ -17,11 +17,6 @@
   border-bottom: var(--bd-line-mn1);
 }
 
-.header.show {
-  visibility: hidden;
-  animation: appear var(--ts-def);
-}
-
 @keyframes appear {
   from {
     transform: none;
@@ -56,7 +51,6 @@
 .portfolio:hover,
 .portfolio.active {
   color: var(--main-02);
-  background-size: 80% 2px;
 }
 
 .hobbies {
@@ -67,7 +61,6 @@
 .hobbies:hover,
 .hobbies.active {
   color: var(--main-05);
-  background-size: 80% 2px;
 }
 
 .contacts {
@@ -78,7 +71,6 @@
 .contacts:hover,
 .contacts.active {
   color: var(--neu-03);
-  background-size: 80% 2px;
 }
 
 .logo-ctn {

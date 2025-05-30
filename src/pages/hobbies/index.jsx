@@ -11,9 +11,13 @@ import CommonIntro from "../../ui/components/Introduction/Common";
 import styles from "./styles.module.css";
 import HobbyPage from "../../ui/components/HobbyPage";
 import bgImgs from "../../services/constants/imgs/bg";
+import { useNavigate } from "react-router-dom";
+import useDocumentTitle from "../../ui/hooks/useDocumentTitle";
 
 export default function Hobbies() {
+  useDocumentTitle("Hobbies | Felipe Ferreira");
   const { t } = useTranslation("hobbies", { useSuspense: true });
+  const navigate = useNavigate();
 
   return (
     <div className={styles.ctn}>
@@ -40,6 +44,7 @@ export default function Hobbies() {
           mobTtlFont={"var(--anmg-h3)"}
           desc={t("hobbie-pages.anime-manga.description")}
           descFont={"var(--anmg-subttl)"}
+          onClick={() => navigate("/hobbies/animes-mangas")}
         />
         <HobbyPage
           bgImage={bgImgs.games}
@@ -51,6 +56,7 @@ export default function Hobbies() {
           mobTtlFont={"var(--gm-h3)"}
           desc={t("hobbie-pages.games.description")}
           descFont={"var(--gm-subttl)"}
+          onClick={() => navigate("/hobbies/games")}
         />
         <HobbyPage
           bgImage={bgImgs.football}
@@ -62,6 +68,7 @@ export default function Hobbies() {
           mobTtlFont={"var(--fut-h3)"}
           desc={t("hobbie-pages.football.description")}
           descFont={"var(--fut-subttl)"}
+          onClick={() => navigate("/hobbies/football")}
         />
         <HobbyPage
           bgImage={bgImgs.drawings}
@@ -73,6 +80,7 @@ export default function Hobbies() {
           mobTtlFont={"var(--draw-h3)"}
           desc={t("hobbie-pages.drawings.description")}
           descFont={"var(--draw-subttl)"}
+          onClick={() => navigate("/hobbies/drawings")}
         />
       </div>
     </div>

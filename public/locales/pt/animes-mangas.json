@@ -1,0 +1,30 @@
+{
+  "choose": {
+    "title": "Qual deseja ver?",
+    "mangas": "Mangás"
+  },
+  "animes": {
+    "pop": {
+      "title": "Mais populares",
+      "subtitle": "Animes com maior popularidade da história, que até quem não é muito fã conhecem alguns deles"
+    },
+    "best": {
+      "title": "Melhores avaliados",
+      "subtitle": "Os animes com as notas mais altas no MyAnimeList, ou seja, os melhores de todos os tempos"
+    }
+  },
+  "mangas": {
+    "pop": {
+      "title": "Mais populares",
+      "subtitle": "Mangás com maior popularidade da história, que até quem não é muito fã conhecem alguns deles"
+    },
+    "best": {
+      "title": "Melhores avaliados",
+      "subtitle": "Os mangás com as notas mais altas no MyAnimeList, ou seja, os melhores de todos os tempos"
+    },
+    "mangadex": {
+      "desc": "Site que recomendo para ler mangás, caso tenha interesse, com uma interface agradável e com uma enorme disponibilidade de mangás para todos os públicos",
+      "button": "Ver site"
+    }
+  }
+}

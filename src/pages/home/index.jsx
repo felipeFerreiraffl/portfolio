@@ -20,7 +20,7 @@ import useDocumentTitle from "../../ui/hooks/useDocumentTitle";
 import styles from "./style.module.css";
 
 export default function Home() {
-  useDocumentTitle("Home");
+  useDocumentTitle("Home | Felipe Ferreira");
   const navigate = useNavigate();
   const { t } = useTranslation("home", { useSuspense: true });
 

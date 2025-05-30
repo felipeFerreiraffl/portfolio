@@ -6,6 +6,10 @@ import { useMinTime } from "../ui/hooks/useProgressValue";
 const Home = lazy(() => import("../pages/home"));
 const Portfolio = lazy(() => import("../pages/portfolio"));
 const Hobbies = lazy(() => import("../pages/hobbies"));
+const AnimesMangas = lazy(() => import("../pages/hobbies/animes-mangas"));
+const Games = lazy(() => import("../pages/hobbies/games"));
+const Football = lazy(() => import("../pages/hobbies/football"));
+const Drawings = lazy(() => import("../pages/hobbies/drawings"));
 
 export default function AppRoutes() {
   const location = useLocation();
@@ -37,6 +41,22 @@ export default function AppRoutes() {
             <Route element={<Home />} path="/" lazy={true} />
             <Route element={<Portfolio />} path="/portfolio" lazy={true} />
             <Route element={<Hobbies />} path="/hobbies" lazy={true} />
+            <Route
+              element={<AnimesMangas />}
+              path="/hobbies/animes-mangas"
+              lazy={true}
+            />
+            <Route element={<Games />} path="/hobbies/games" lazy={true} />
+            <Route
+              element={<Football />}
+              path="/hobbies/football"
+              lazy={true}
+            />
+            <Route
+              element={<Drawings />}
+              path="/hobbies/drawings"
+              lazy={true}
+            />
           </Routes>
         </motion.div>
       )}

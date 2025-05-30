@@ -1,9 +1,12 @@
 import spinner from "../../../assets/svgs/loading-spinner.svg";
 import { FaIcnGlasses } from "../../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 import styles from "./styles.module.css";
 
 export default function LoadingPage({ progress }) {
+  useDocumentTitle("Carregando...");
+
   return (
     <div className={styles.ctn}>
       <div className={styles["load-ctn"]}>
