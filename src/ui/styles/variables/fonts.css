@@ -12,11 +12,11 @@
   --def-cpt: 300 0.75rem "Space Grotesk", sans-serif;
 
   /* Fontes para animes e mangás */
-  --anmg-h1: 700 4rem "League Gothic", sans-serif;
-  --anmg-h2: 700 3rem "League Gothic", sans-serif;
-  --anmg-h3: 700 2.5rem "League Gothic", sans-serif;
-  --anmg-h4: 500 2rem "League Gothic", sans-serif;
-  --anmg-h5: 500 1.5rem "League Gothic", sans-serif;
+  --anmg-h1: 400 4rem "League Gothic", sans-serif;
+  --anmg-h2: 400 3rem "League Gothic", sans-serif;
+  --anmg-h3: 400 2.5rem "League Gothic", sans-serif;
+  --anmg-h4: 400 2rem "League Gothic", sans-serif;
+  --anmg-h5: 400 1.5rem "League Gothic", sans-serif;
   --anmg-hdr: 500 1.25rem "Gothic A1", sans-serif;
   --anmg-body: 300 1rem "Gothic A1", sans-serif;
   --anmg-subttl: 500 1rem "Gothic A1", sans-serif;

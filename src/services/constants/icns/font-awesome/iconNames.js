@@ -2,6 +2,7 @@ const fontAwesome = {
   addressBook: "fa6-solid:address-book",
   barsStaggered: "fa6-solid:bars-staggered",
   book: "fa6-solid:book",
+  bookOpenReader: "fa6-solid:book-open-reader",
   glasses: "fa6-solid:glasses",
   circleLeft: "fa6-solid:circle-left",
   circleRight: "fa6-solid:circle-right",
