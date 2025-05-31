@@ -243,9 +243,9 @@ export default function Portfolio() {
             </p>
           </div>
           <Button
+            onClick={openPdf}
             color={"var(--main-01)"}
             text={t("sections.curriculum.button")}
-            onClick={openPdf}
           />
         </motion.div>
         <motion.span

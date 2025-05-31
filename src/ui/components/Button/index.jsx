@@ -1,8 +1,9 @@
 import styles from "./styles.module.css";
 
-export default function Button({ color, text, onClick }) {
+export default function Button({ color, text, href, onClick }) {
   return (
-    <button
+    <a
+      href={href}
       className={`${styles.btn}`}
       style={{
         "--btn-color": color,
@@ -14,8 +15,9 @@ export default function Button({ color, text, onClick }) {
             : "var(--bshw-led-mn5)",
       }}
       onClick={onClick}
+      role="button"
     >
       {text}
-    </button>
+    </a>
   );
 }

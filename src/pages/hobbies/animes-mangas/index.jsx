@@ -1,5 +1,5 @@
 import { useQueries } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   getAnimeByFilter,
@@ -28,6 +28,7 @@ export default function AnimesMangas() {
         staleTime: 1000 * 60 * 5,
         retry: 3,
         retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
+        placeholderData: [],
       },
       {
         queryKey: ["mangas-pop", "bypopularity", 12],
@@ -35,6 +36,7 @@ export default function AnimesMangas() {
         staleTime: 1000 * 60 * 5,
         retry: 3,
         retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
+        placeholderData: [],
       },
     ],
   });
@@ -59,11 +61,6 @@ export default function AnimesMangas() {
     ],
   });
 
-  const animeisPending =
-    popularityQueries[0].isPending || mostScoredQueries[0].isPending;
-  const mangaisPending =
-    popularityQueries[1].isPending || mostScoredQueries[1].isPending;
-
   const [type, setType] = useState("");
 
   return (
@@ -87,7 +84,7 @@ export default function AnimesMangas() {
         <div className={styles["chs-card-ctn"]}>
           <div
             className={`${styles.chs} ${styles.anime} ${
-              type === "anime" ? styles.active : ""
+              type === "animes" ? styles.active : ""
             }`}
             style={{ backgroundImage: `url(${bgImgs.anime})` }}
             onClick={() => setType("animes")}
@@ -100,7 +97,9 @@ export default function AnimesMangas() {
           </div>
 
           <div
-            className={`${styles.chs} ${styles.manga} ${styles}`}
+            className={`${styles.chs} ${styles.manga} ${
+              type === "mangas" ? styles.active : ""
+            }`}
             style={{ backgroundImage: `url(${bgImgs.manga})` }}
             onClick={() => setType("mangas")}
             role="button"

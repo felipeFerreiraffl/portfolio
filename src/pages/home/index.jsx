@@ -112,9 +112,9 @@ export default function Home() {
           </div>
 
           <Button
+            href={"/portfolio"}
             text={t("sections.portfolio.button")}
             color={"var(--main-01)"}
-            onClick={() => navigate("/portfolio")}
           />
         </motion.div>
 
@@ -142,9 +142,9 @@ export default function Home() {
           </div>
 
           <Button
+            href={"/hobbies"}
             text={t("sections.hobbies.button")}
             color={"var(--main-04)"}
-            onClick={() => navigate("/hobbies")}
           />
         </motion.div>
 

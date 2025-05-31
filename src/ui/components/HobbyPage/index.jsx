@@ -13,7 +13,7 @@ export default function HobbyPage({
   descFont,
   bgImage,
   border,
-  onClick,
+  href,
 }) {
   const { t } = useTranslation("hobbies", { useSuspense: true });
 
@@ -48,9 +48,9 @@ export default function HobbyPage({
         </p>
       </div>
       <Button
+        href={href}
         color={color === "var(--main-02)" ? "var(--main-01)" : "var(--main-04)"}
         text={t("button")}
-        onClick={onClick}
       />
     </motion.div>
   );

@@ -31,7 +31,7 @@ export default function AnimesMangasShowcase({
   const handleInView = useCallback(
     debounce(() => {
       if (inView) setIsVisible(true);
-    }, 800),
+    }, 1500),
     [inView]
   );
 
