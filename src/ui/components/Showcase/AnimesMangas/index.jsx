@@ -13,7 +13,8 @@ export default function AnimesMangasShowcase({
   href,
 }) {
   const [emblaRef] = useEmblaCarousel({
-    align: "start",
+    align: flexDirection === "row" ? "start" : "end",
+    direction: flexDirection === "row" ? "ltr" : "rtl",
   });
 
   return (

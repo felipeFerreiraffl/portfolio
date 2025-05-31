@@ -108,7 +108,10 @@ export default function AnimesMangas() {
 
       {type === "animes" && (
         <>
-          <section className={styles.shwc}>
+          <section
+            className={styles.shwc}
+            style={{ "--bg-image": `url(${bgImgs.animeShowcase})` }}
+          >
             <AnimesMangasShowcase
               type={"anime"}
               title={t("animes.pop.title")}
