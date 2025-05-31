@@ -108,13 +108,25 @@ export default function AnimesMangas() {
 
       {type === "animes" && (
         <>
-          <section className={styles}>
+          <section className={styles.shwc}>
             <AnimesMangasShowcase
+              type={"anime"}
               title={t("animes.pop.title")}
               desc={t("animes.pop.subtitle")}
               icon={fontAwesome.rankingStar}
               flexDirection={"row"}
               alignItems={"flex-start"}
+              data={popularityQueries[0].data}
+            />
+
+            <AnimesMangasShowcase
+              type={"anime"}
+              title={t("animes.best.title")}
+              desc={t("animes.best.subtitle")}
+              icon={fontAwesome.medal}
+              flexDirection={"row-reverse"}
+              alignItems={"flex-end"}
+              data={mostScoredQueries[0].data}
             />
           </section>
         </>
