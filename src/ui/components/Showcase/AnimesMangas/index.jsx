@@ -1,9 +1,10 @@
 import useEmblaCarousel from "embla-carousel-react";
+import { debounce } from "lodash";
+import { useCallback, useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import FaIcon from "../../../../services/constants/icns/font-awesome/fontAwesome";
 import styles from "./style.module.css";
-import { useInView } from "react-intersection-observer";
-import { useCallback, useEffect, useState } from "react";
-import { debounce } from "lodash";
+import fontAwesome from "../../../../services/constants/icns/font-awesome/iconNames";
 
 export default function AnimesMangasShowcase({
   type,
@@ -30,7 +31,7 @@ export default function AnimesMangasShowcase({
   const handleInView = useCallback(
     debounce(() => {
       if (inView) setIsVisible(true);
-    }, 600),
+    }, 800),
     [inView]
   );
 
@@ -79,8 +80,10 @@ export default function AnimesMangasShowcase({
                 </a>
               ))
             ) : (
-              <div>
-                <p>Carregando...</p>
+              <div className={styles.load}>
+                <span className={styles["load-spin"]}>
+                  <FaIcon icon={fontAwesome.spinner} />
+                </span>
               </div>
             )}
           </div>
