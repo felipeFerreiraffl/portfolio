@@ -5,15 +5,15 @@ import {
   getAnimeByFilter,
   getMangaByFilter,
 } from "../../../services/api/jikan";
+import FaIcon from "../../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
 import bgImgs from "../../../services/constants/imgs/bg";
 import headerImgs from "../../../services/constants/imgs/header";
 import Header from "../../../ui/components/Header";
 import HobbiesIntro from "../../../ui/components/Introduction/Hobbies";
+import AnimesMangasShowcase from "../../../ui/components/Showcase/AnimesMangas";
 import useDocumentTitle from "../../../ui/hooks/useDocumentTitle";
 import styles from "./style.module.css";
-import AnimesMangasShowcase from "../../../ui/components/Showcase/AnimesMangas";
-import FaIcon from "../../../services/constants/icns/font-awesome/fontAwesome";
 
 export default function AnimesMangas() {
   useDocumentTitle("Animes & Mangás | Felipe Ferreira");
@@ -58,6 +58,11 @@ export default function AnimesMangas() {
       },
     ],
   });
+
+  const animeIsLoading =
+    popularityQueries[0].isLoading || mostScoredQueries[0].isLoading;
+  const mangaIsLoading =
+    popularityQueries[1].isLoading || mostScoredQueries[1].isLoading;
 
   const [type, setType] = useState("");
 
@@ -112,25 +117,35 @@ export default function AnimesMangas() {
             className={styles.shwc}
             style={{ "--bg-image": `url(${bgImgs.animeShowcase})` }}
           >
-            <AnimesMangasShowcase
-              type={"anime"}
-              title={t("animes.pop.title")}
-              desc={t("animes.pop.subtitle")}
-              icon={fontAwesome.rankingStar}
-              flexDirection={"row"}
-              alignItems={"flex-start"}
-              data={popularityQueries[0].data}
-            />
+            {animeIsLoading ? (
+              <div className={styles}>
+                <span className={styles}>
+                  <FaIcon icon={fontAwesome.spinner} />
+                </span>
+              </div>
+            ) : (
+              <>
+                <AnimesMangasShowcase
+                  type={"anime"}
+                  title={t("animes.pop.title")}
+                  desc={t("animes.pop.subtitle")}
+                  icon={fontAwesome.rankingStar}
+                  flexDirection={"row"}
+                  alignItems={"flex-start"}
+                  data={popularityQueries[0].data}
+                />
 
-            <AnimesMangasShowcase
-              type={"anime"}
-              title={t("animes.best.title")}
-              desc={t("animes.best.subtitle")}
-              icon={fontAwesome.medal}
-              flexDirection={"row-reverse"}
-              alignItems={"flex-end"}
-              data={mostScoredQueries[0].data}
-            />
+                <AnimesMangasShowcase
+                  type={"anime"}
+                  title={t("animes.best.title")}
+                  desc={t("animes.best.subtitle")}
+                  icon={fontAwesome.medal}
+                  flexDirection={"row-reverse"}
+                  alignItems={"flex-end"}
+                  data={mostScoredQueries[0].data}
+                />
+              </>
+            )}
           </section>
         </>
       )}
