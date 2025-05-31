@@ -1,5 +1,5 @@
 import { useQueries } from "@tanstack/react-query";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   getAnimeByFilter,
@@ -59,10 +59,10 @@ export default function AnimesMangas() {
     ],
   });
 
-  const animeIsLoading =
-    popularityQueries[0].isLoading || mostScoredQueries[0].isLoading;
-  const mangaIsLoading =
-    popularityQueries[1].isLoading || mostScoredQueries[1].isLoading;
+  const animeisPending =
+    popularityQueries[0].isPending || mostScoredQueries[0].isPending;
+  const mangaisPending =
+    popularityQueries[1].isPending || mostScoredQueries[1].isPending;
 
   const [type, setType] = useState("");
 
@@ -86,7 +86,9 @@ export default function AnimesMangas() {
         <h2 className={styles["sec-ttl"]}>{t("choose.title")}</h2>
         <div className={styles["chs-card-ctn"]}>
           <div
-            className={`${styles.chs} ${styles.anime}`}
+            className={`${styles.chs} ${styles.anime} ${
+              type === "anime" ? styles.active : ""
+            }`}
             style={{ backgroundImage: `url(${bgImgs.anime})` }}
             onClick={() => setType("animes")}
             role="button"
@@ -98,7 +100,7 @@ export default function AnimesMangas() {
           </div>
 
           <div
-            className={`${styles.chs} ${styles.manga}`}
+            className={`${styles.chs} ${styles.manga} ${styles}`}
             style={{ backgroundImage: `url(${bgImgs.manga})` }}
             onClick={() => setType("mangas")}
             role="button"
@@ -117,9 +119,9 @@ export default function AnimesMangas() {
             className={styles.shwc}
             style={{ "--bg-image": `url(${bgImgs.animeShowcase})` }}
           >
-            {animeIsLoading ? (
-              <div className={styles}>
-                <span className={styles}>
+            {animeisPending ? (
+              <div className={styles.load}>
+                <span className={styles["load-spin"]}>
                   <FaIcon icon={fontAwesome.spinner} />
                 </span>
               </div>
