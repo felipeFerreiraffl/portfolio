@@ -13,7 +13,14 @@ export const getAnimeById = async (id) => {
 
     return data.data;
   } catch (error) {
-    console.error(`Erro ao buscar anime pelo ID ${id}`, error);
+    if (error.message.includes("429")) {
+      console.error("Erro 429");
+    } else if (error.message.includes("500")) {
+      console.error("Erro 500");
+    } else {
+      console.error("Erro desconhecido");
+    }
+
     return [];
   }
 };
@@ -32,7 +39,14 @@ export const getAnimeByFilter = async (filter, limit) => {
 
     return data.data;
   } catch (error) {
-    console.error(`Erro ao buscar animes pelo filtro ${filter}`, error);
+    if (error.message.includes("429")) {
+      console.error("Erro 429");
+    } else if (error.message.includes("500")) {
+      console.error("Erro 500");
+    } else {
+      console.error("Erro desconhecido");
+    }
+
     return [];
   }
 };
@@ -50,7 +64,14 @@ export const getMangaById = async (id) => {
 
     return data.data;
   } catch (error) {
-    console.error(`Erro ao buscar mangá pelo ID ${id}`, error);
+    if (error.message.includes("429")) {
+      console.error("Erro 429");
+    } else if (error.message.includes("500")) {
+      console.error("Erro 500");
+    } else {
+      console.error("Erro desconhecido");
+    }
+
     return [];
   }
 };
@@ -69,7 +90,14 @@ export const getMangaByFilter = async (filter, limit) => {
 
     return data.data;
   } catch (error) {
-    console.error(`Erro ao buscar mangás pelo filtro ${filter}`, error);
+    if (error.message.includes("429")) {
+      console.error("Erro 429");
+    } else if (error.message.includes("500")) {
+      console.error("Erro 500");
+    } else {
+      console.error("Erro desconhecido");
+    }
+
     return [];
   }
 };
