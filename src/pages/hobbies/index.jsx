@@ -1,19 +1,17 @@
 import { useTranslation } from "react-i18next";
+import FaIcon from "../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../services/constants/icns/font-awesome/iconNames";
+import bgImgs from "../../services/constants/imgs/bg";
 import headerImgs from "../../services/constants/imgs/header";
 import Header from "../../ui/components/Header";
-import CommonIntro from "../../ui/components/Introduction/Common";
-import styles from "./styles.module.css";
 import HobbyPage from "../../ui/components/HobbyPage";
-import bgImgs from "../../services/constants/imgs/bg";
-import { useNavigate } from "react-router-dom";
+import CommonIntro from "../../ui/components/Introduction/Common";
 import useDocumentTitle from "../../ui/hooks/useDocumentTitle";
-import FaIcon from "../../services/constants/icns/font-awesome/fontAwesome";
+import styles from "./styles.module.css";
 
 export default function Hobbies() {
   useDocumentTitle("Hobbies | Felipe Ferreira");
   const { t } = useTranslation("hobbies", { useSuspense: true });
-  const navigate = useNavigate();
 
   return (
     <div className={styles.ctn}>

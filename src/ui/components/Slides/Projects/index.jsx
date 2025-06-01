@@ -6,9 +6,12 @@ import { getProjects } from "../../../../services/api/other";
 import FaIcon from "../../../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../../../services/constants/icns/font-awesome/iconNames";
 import styles from "./style.module.css";
+import { useInView } from "react-intersection-observer";
+import { debounce } from "lodash";
 
 export default function ProjectsSlides() {
   const { t } = useTranslation("portfolio", { useSuspense: true });
+  const [isVisible, setIsVisible] = useState(false);
 
   // Uso de cache e performace com useQuery
   const { data, isPending, error } = useQuery({
@@ -19,6 +22,18 @@ export default function ProjectsSlides() {
     staleTime: 1000 * 60 * 5, // Cache por 5 minutos
     placeholderData: [],
   });
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  const handleInView = useCallback(
+    debounce(() => {
+      if (inView) setIsVisible(true);
+    }, 1500),
+    [inView]
+  );
 
   // Inicia o Embla
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -66,6 +81,10 @@ export default function ProjectsSlides() {
     );
   }
 
+  useEffect(() => {
+    handleInView();
+  }, [inView, handleInView]);
+
   if (error) return <p>Erro: {error.message}</p>;
 
   return (
@@ -80,33 +99,41 @@ export default function ProjectsSlides() {
       </button>
 
       <div className={styles["slides-wrapper"]} ref={emblaRef}>
-        <div className={styles["slides-ctn"]}>
-          {data.map((project) => (
-            <a
-              key={project.id}
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferer"
-              className={styles.slide}
-            >
-              <div className={styles["img-wrapper"]}>
-                <img
-                  src={project.imgSrc}
-                  alt={`Github - ${t(
-                    `sections.projects.apiInfos.${project.id}`
-                  )}`}
-                  loading="lazy"
-                  className={styles.img}
-                />
+        <div className={styles["slides-ctn"]} ref={ref}>
+          {data.map((project) =>
+            isVisible ? (
+              <a
+                key={project.id}
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferer"
+                className={styles.slide}
+              >
+                <div className={styles["img-wrapper"]}>
+                  <img
+                    src={project.imgSrc}
+                    alt={`Github - ${t(
+                      `sections.projects.apiInfos.${project.id}`
+                    )}`}
+                    loading="lazy"
+                    className={styles.img}
+                  />
 
-                <div className={styles.overlay}>
-                  <p className={styles["img-name"]}>
-                    {t(`sections.projects.apiInfos.${project.id}`)}
-                  </p>
+                  <div className={styles.overlay}>
+                    <p className={styles["img-name"]}>
+                      {t(`sections.projects.apiInfos.${project.id}`)}
+                    </p>
+                  </div>
                 </div>
+              </a>
+            ) : (
+              <div className={styles["img-sklt"]}>
+                <span className={styles["icn-sklt"]}>
+                  <FaIcon icon={fontAwesome.spinner} />
+                </span>
               </div>
-            </a>
-          ))}
+            )
+          )}
         </div>
       </div>
 

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 import FaIcon from "../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../services/constants/icns/font-awesome/iconNames";
 import logo from "../../services/constants/svgs/logo";
@@ -13,7 +12,6 @@ import styles from "./style.module.css";
 
 export default function Home() {
   useDocumentTitle("Home | Felipe Ferreira");
-  const navigate = useNavigate();
   const { t } = useTranslation("home", { useSuspense: true });
 
   return (

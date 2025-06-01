@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import FaIcon from "../../../../services/constants/icns/font-awesome/fontAwesome";
 import styles from "./style.module.css";
 import fontAwesome from "../../../../services/constants/icns/font-awesome/iconNames";
+import AutoScroll from "embla-carousel-auto-scroll";
 
 export default function AnimesMangasShowcase({
   type,
@@ -23,11 +24,24 @@ export default function AnimesMangasShowcase({
     threshold: 0.3,
   });
 
-  const [emblaRef] = useEmblaCarousel({
-    align: flexDirection === "row" ? "start" : "end",
-    direction: flexDirection === "row" ? "ltr" : "rtl",
-  });
+  const [emblaRef] = useEmblaCarousel(
+    {
+      align: flexDirection === "row" ? "start" : "end",
+      direction: flexDirection === "row" ? "ltr" : "rtl",
+      loop: true,
+    },
+    [
+      AutoScroll({
+        playOnInit: true,
+        speed: 1.2,
+        stopOnMouseEnter: true,
+        stopOnInteraction: false,
+      }),
+    ]
+  );
 
+  // Gera debounce para carregamento controlado
+  // Callback para evitar re-renderização
   const handleInView = useCallback(
     debounce(() => {
       if (inView) setIsVisible(true);
@@ -35,6 +49,7 @@ export default function AnimesMangasShowcase({
     [inView]
   );
 
+  // Inicia a função de debounce ao recarregar
   useEffect(() => {
     handleInView();
   }, [inView, handleInView]);
