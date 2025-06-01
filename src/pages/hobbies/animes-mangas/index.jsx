@@ -140,6 +140,35 @@ export default function AnimesMangas() {
           </section>
         </>
       )}
+
+      {type === "mangas" && (
+        <>
+          <section
+            className={styles.shwc}
+            style={{ "--bg-image": `url(${bgImgs.mangaShowcase})` }}
+          >
+            <AnimesMangasShowcase
+              type={"manga"}
+              title={t("mangas.pop.title")}
+              desc={t("mangas.pop.subtitle")}
+              icon={fontAwesome.rankingStar}
+              flexDirection={"row"}
+              alignItems={"flex-start"}
+              data={popularityQueries[1].data}
+            />
+
+            <AnimesMangasShowcase
+              type={"manga"}
+              title={t("mangas.best.title")}
+              desc={t("mangas.best.subtitle")}
+              icon={fontAwesome.medal}
+              flexDirection={"row-reverse"}
+              alignItems={"flex-end"}
+              data={mostScoredQueries[1].data}
+            />
+          </section>
+        </>
+      )}
     </div>
   );
 }
