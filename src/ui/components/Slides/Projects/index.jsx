@@ -127,7 +127,7 @@ export default function ProjectsSlides() {
                 </div>
               </a>
             ) : (
-              <div className={styles["img-sklt"]}>
+              <div key={project.id} className={styles["img-sklt"]}>
                 <span className={styles["icn-sklt"]}>
                   <FaIcon icon={fontAwesome.spinner} />
                 </span>

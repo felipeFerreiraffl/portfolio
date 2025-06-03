@@ -30,10 +30,8 @@ export default function AnimesMangas() {
   const [popularity, mostScored] = queries.map((q) => q.data ?? []);
 
   const ids = jikanIds.anime.favorites;
-
   const idsQueries = useJikanById({ type, ids: ids });
-
-  const favoriteAnimes = idsQueries.map((q) => q.data ?? []);
+  const favoriteAnimes = idsQueries.data;
 
   return (
     <div className={styles.ctn}>
@@ -91,7 +89,7 @@ export default function AnimesMangas() {
             style={{ "--bg-image": `url(${bgImgs.animeShowcase})` }}
           >
             <AnimesMangasShowcase
-              type={"anime"}
+              type={type}
               title={t("animes.pop.title")}
               desc={t("animes.pop.subtitle")}
               icon={fontAwesome.rankingStar}
@@ -101,7 +99,7 @@ export default function AnimesMangas() {
             />
 
             <AnimesMangasShowcase
-              type={"anime"}
+              type={type}
               title={t("animes.best.title")}
               desc={t("animes.best.subtitle")}
               icon={fontAwesome.medal}
@@ -115,7 +113,7 @@ export default function AnimesMangas() {
 
           <section className={styles}>
             <HobbyCarousel
-              type={"anime-manga"}
+              type={type}
               title={"Animes"}
               icon={<FaIcon icon={fontAwesome.clockRotateLeft} />}
               color={"var(--main-02)"}
@@ -135,7 +133,7 @@ export default function AnimesMangas() {
             style={{ "--bg-image": `url(${bgImgs.mangaShowcase})` }}
           >
             <AnimesMangasShowcase
-              type={"manga"}
+              type={type}
               title={t("mangas.pop.title")}
               desc={t("mangas.pop.subtitle")}
               icon={fontAwesome.rankingStar}
@@ -145,7 +143,7 @@ export default function AnimesMangas() {
             />
 
             <AnimesMangasShowcase
-              type={"manga"}
+              type={type}
               title={t("mangas.best.title")}
               desc={t("mangas.best.subtitle")}
               icon={fontAwesome.medal}

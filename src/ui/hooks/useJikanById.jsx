@@ -1,34 +1,37 @@
-import { useQueries } from "@tanstack/react-query";
+import { useQueries, useQuery } from "@tanstack/react-query";
 import { getAnimeById, getMangaById } from "../../services/api/jikan";
 
 export const useJikanById = ({ type, ids }) => {
   const fetchFn =
     type === "animes" ? getAnimeById : type === "mangas" ? getMangaById : null;
 
-  const delay = (ms) => new Promise((res) => setTimeout(res, ms));
+  // Promise para chamadas individuais
+  const fetchAll = async () => {
+    if (!fetchFn) return [];
 
-  const fetchWithDelay = async (ids) => {
     const results = [];
 
     for (const id of ids) {
-      const { data } = await fetchFn(id);
-      results.push(data);
-      await delay(1500);
+      try {
+        const result = await fetchFn(id);
+        results.push(result);
+      } catch (error) {
+        console.error(`Erro ao buscar ID ${id}: `, error);
+      }
+
+      await new Promise((res) => setTimeout(res, 1200));
     }
 
     return results;
   };
 
-  return useQueries({
-    queries: !!type
-      ? ids.map((id) => ({
-          queryKey: [type, "Byid", id],
-          queryFn: () => fetchWithDelay(ids),
-          staleTime: 1000 * 60 * 30,
-          retry: false,
-          placeholderData: [],
-          enabled: !!type, //  Só ativa se type tiver valor
-        }))
-      : [],
+  return useQuery({
+    queryKey: [type, "ids", ids],
+    queryFn: fetchAll,
+    staleTime: 1000 * 60 * 60 * 24,
+    cacheTime: 1000 * 60 * 60 * 24,
+    retry: false,
+    placeholderData: [],
+    enabled: !!type && ids.length > 0,
   });
 };

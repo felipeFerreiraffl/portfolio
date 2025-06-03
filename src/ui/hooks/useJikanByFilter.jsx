@@ -10,7 +10,8 @@ export const useJikanByFilter = ({ type, filters }) => {
     queries: filters.map(({ filter, size, key }) => ({
       queryKey: [type, filter, size, key],
       queryFn: () => fetchFn(filter, size),
-      staleTime: 1000 * 60 * 30,
+      staleTime: 1000 * 60 * 60 * 24,
+      cacheTime: 1000 * 60 * 60 * 24,
       retry: false,
       placeholderData: [],
       enabled: !!type, //  Só ativa se type tiver valor
