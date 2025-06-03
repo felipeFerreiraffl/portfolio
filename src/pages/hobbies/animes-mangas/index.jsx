@@ -30,8 +30,9 @@ export default function AnimesMangas() {
   const [popularity, mostScored] = queries.map((q) => q.data ?? []);
 
   const ids = jikanIds.anime.favorites;
-  const idsQueries = useJikanById({ type, ids: ids });
-  const favoriteAnimes = idsQueries.data;
+  const favoriteIds = useJikanById({ type, ids: ids });
+  const favoritePending = favoriteIds.isPending;
+  const favoriteAnimes = favoriteIds.data;
 
   return (
     <div className={styles.ctn}>
@@ -112,7 +113,7 @@ export default function AnimesMangas() {
           <Divisor marginTop={128} color={"var(--main-02)"} />
 
           <section className={styles}>
-            <HobbyCarousel
+            {/* <HobbyCarousel
               type={type}
               title={"Animes"}
               icon={<FaIcon icon={fontAwesome.clockRotateLeft} />}
@@ -121,7 +122,9 @@ export default function AnimesMangas() {
               mbFont={"var(--anmg-h3)"}
               borderBtm={"var(--bd-line-mn2)"}
               data={favoriteAnimes}
-            />
+              isDataPending={favoritePending}
+              minLoadingTime={2500}
+            /> */}
           </section>
         </>
       )}

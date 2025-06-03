@@ -19,7 +19,7 @@ export const useJikanById = ({ type, ids }) => {
         console.error(`Erro ao buscar ID ${id}: `, error);
       }
 
-      await new Promise((res) => setTimeout(res, 1200));
+      await new Promise((res) => setTimeout(res, 500));
     }
 
     return results;

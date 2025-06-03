@@ -1,4 +1,3 @@
-import { debounce } from "lodash";
 import { useCallback, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import FaIcon from "../../../../../services/constants/icns/font-awesome/fontAwesome";
@@ -6,6 +5,13 @@ import fontAwesome from "../../../../../services/constants/icns/font-awesome/ico
 import GiIcon from "../../../../../services/constants/icns/game-icons/gameIcons";
 import gameIcons from "../../../../../services/constants/icns/game-icons/iconNames";
 import styles from "./style.module.css";
+import {
+  getImage,
+  getKeys,
+  getLink,
+  getName,
+} from "../../../../../services/functions/apiData";
+import useEmblaCarousel from "embla-carousel-react";
 
 export default function HobbyCarousel({
   type,
@@ -16,24 +22,58 @@ export default function HobbyCarousel({
   mbFont,
   borderBtm,
   data = [],
+  isDataPending,
+  minLoadingTime,
 }) {
-  const [isVisible, setIsVisible] = useState(false);
+  const [minTimePassed, setMinTimePassed] = useState(false);
 
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
 
-  const handleInView = useCallback(
-    debounce(() => {
-      if (inView) setIsVisible(true);
-    }, 1200),
-    [inView]
-  );
+  useEffect(() => {
+    if (inView) {
+      const timer = setTimeout(() => setMinTimePassed(true), minLoadingTime);
+      return () => clearTimeout(timer);
+    }
+  }, [inView]);
+
+  // Inicia o Embla
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+  });
+
+  //   Estados dos botões desabilitados
+  const [prevDisabled, setPrevDisabled] = useState(true);
+  const [nextDisabled, setNextDisabled] = useState(true);
+
+  // Permitem o scroll (avançar e voltar)
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  // Permite a rolagem
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setPrevDisabled(!emblaApi.canScrollPrev());
+    setNextDisabled(!emblaApi.canScrollNext());
+  }, [emblaApi]);
 
   useEffect(() => {
-    handleInView();
-  }, [inView, handleInView]);
+    if (!emblaApi) return;
+    if (!data || data.length === 0) return;
+
+    emblaApi.reInit(); // Garante re-inicialização quandos os slides mudam
+    onSelect();
+    emblaApi.on("select", onSelect);
+
+    return () => emblaApi.off("select", onSelect);
+  }, [emblaApi, onSelect, data]);
 
   return (
     <div className={styles.ctn} style={{ "--color": color }}>
@@ -47,54 +87,49 @@ export default function HobbyCarousel({
         <span className={styles.icn}>{icon}</span>
       </div>
       <div className={styles.crsl}>
-        <div className={styles["slide-wppr"]}>
+        <div className={styles["slide-wppr"]} ref={emblaRef}>
           <div ref={ref} className={styles["slide-ctn"]}>
-            {data.map((dt) =>
-              isVisible ? (
-                <a
-                  key={`${type} - ${type === "games" ? dt.id : dt.mal_id}`}
-                  className={styles.slide}
-                  href={""}
-                >
-                  <div className={styles["img-wppr"]}>
-                    <img
-                      className={styles.img}
-                      src={
-                        type === "games"
-                          ? dt?.background_image
-                          : type === ("animes" || "mangas")
-                          ? dt?.images?.webp?.image_url ||
-                            dt?.images?.jpg?.image_url
-                          : dt?.imgSrc
-                      }
-                      alt={`${type} - ${
-                        type === "games"
-                          ? dt?.name || dt?.name_original
-                          : dt?.title || dt?.title_english
-                      }`}
-                      loading="lazy"
-                    />
+            {inView && !isDataPending && minTimePassed
+              ? data.map((dt) => (
+                  <a
+                    key={getKeys(type, dt)}
+                    className={styles.slide}
+                    href={getLink(type, dt)}
+                  >
+                    <div className={styles["img-wppr"]}>
+                      <img
+                        className={styles.img}
+                        src={getImage(type, dt)}
+                        alt={`${type} - ${getName(type, dt)}`}
+                        loading="lazy"
+                      />
+
+                      <div className={styles.ovly}>
+                        <p className={styles.name}>{getName(type, dt)}</p>
+                      </div>
+                    </div>
+                  </a>
+                ))
+              : [...Array(4)].map((_, i) => (
+                  <div className={styles["img-sklt"]} key={i}>
+                    <span className={styles["img-spin"]}>
+                      {type === "games" ? (
+                        <GiIcon icon={gameIcons.circleClaws} />
+                      ) : (
+                        <FaIcon icon={fontAwesome.spinner} />
+                      )}
+                    </span>
                   </div>
-                </a>
-              ) : (
-                <div
-                  className={styles["img-sklt"]}
-                  key={`${type} - ${type === "games" ? dt.id : dt.mal_id}`}
-                >
-                  <span className={styles["img-spin"]}>
-                    {type === "games" ? (
-                      <GiIcon icon={gameIcons.circleClaws} />
-                    ) : (
-                      <FaIcon icon={fontAwesome.spinner} />
-                    )}
-                  </span>
-                </div>
-              )
-            )}
+                ))}
           </div>
         </div>
 
-        <button className={styles}>
+        <button
+          className={`${styles.btn} ${styles.prev}`}
+          disabled={prevDisabled}
+          onClick={scrollPrev}
+          aria-label="Previous"
+        >
           {type === "games" ? (
             <GiIcon
               icon={gameIcons.playButton}
@@ -105,7 +140,12 @@ export default function HobbyCarousel({
           )}
         </button>
 
-        <button className={styles}>
+        <button
+          className={`${styles.btn} ${styles.next}`}
+          disabled={nextDisabled}
+          onClick={scrollNext}
+          aria-label="Next"
+        >
           {type === "games" ? (
             <GiIcon icon={gameIcons.playButton} />
           ) : (
