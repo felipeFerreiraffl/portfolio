@@ -45,7 +45,7 @@ export default function AnimesMangasShowcase({
   const handleInView = useCallback(
     debounce(() => {
       if (inView) setIsVisible(true);
-    }, 1500),
+    }, 1200),
     [inView]
   );
 
@@ -67,8 +67,10 @@ export default function AnimesMangasShowcase({
           <h2 className={styles.ttl}>{title}</h2>
           <p className={styles.desc}>{desc}</p>
         </div>
+
         <span className={styles.icn}>{<FaIcon icon={icon} />}</span>
       </div>
+
       <div className={styles.crsl}>
         <div className={styles["slide-wppr"]} ref={emblaRef}>
           <div ref={ref} className={styles["slides-ctn"]}>
