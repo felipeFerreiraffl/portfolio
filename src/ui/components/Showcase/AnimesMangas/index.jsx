@@ -15,7 +15,6 @@ export default function AnimesMangasShowcase({
   desc,
   icon,
   data = [],
-  href,
 }) {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -76,7 +75,11 @@ export default function AnimesMangasShowcase({
           <div ref={ref} className={styles["slides-ctn"]}>
             {isVisible ? (
               data.map((dt) => (
-                <a key={dt.mal_id} className={styles.slide} href={href}>
+                <a
+                  key={dt.mal_id}
+                  className={styles.slide}
+                  href={`/hobbies/animes-mangas/anime/${dt.mal_id}`}
+                >
                   <div className={styles["img-wppr"]}>
                     <img
                       src={dt.images.webp.image_url || dt.images.jpg.image_url}

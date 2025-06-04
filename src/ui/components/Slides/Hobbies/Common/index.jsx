@@ -86,9 +86,9 @@ export default function HobbyCarousel({
         </h2>
         <span className={styles.icn}>{icon}</span>
       </div>
-      <div className={styles.crsl}>
+      <div ref={ref} className={styles.crsl}>
         <div className={styles["slide-wppr"]} ref={emblaRef}>
-          <div ref={ref} className={styles["slide-ctn"]}>
+          <div className={styles["slide-ctn"]}>
             {inView && !isDataPending && minTimePassed
               ? data.map((dt) => (
                   <a

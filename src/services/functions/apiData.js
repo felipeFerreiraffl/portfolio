@@ -12,7 +12,7 @@ export const getKeys = (type, item) => {
 // Imagem
 export const getImage = (type, item) => {
   if (type === "animes" || type === "mangas") {
-    return item?.images?.webp?.image_url || dt?.images?.jpg?.image_url;
+    return item?.images?.webp?.image_url || item?.images?.jpg?.image_url;
   }
 
   if (type === "games") {

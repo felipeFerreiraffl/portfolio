@@ -1,5 +1,5 @@
-import { useQueries, useQuery } from "@tanstack/react-query";
-import { getAnimeById, getMangaById } from "../../services/api/jikan";
+import { useQuery } from "@tanstack/react-query";
+import { getAnimeById, getMangaById } from "../../../../services/api/jikan";
 
 export const useJikanById = ({ type, ids }) => {
   const fetchFn =
@@ -19,7 +19,7 @@ export const useJikanById = ({ type, ids }) => {
         console.error(`Erro ao buscar ID ${id}: `, error);
       }
 
-      await new Promise((res) => setTimeout(res, 500));
+      await new Promise((res) => setTimeout(res, 800));
     }
 
     return results;
@@ -28,10 +28,10 @@ export const useJikanById = ({ type, ids }) => {
   return useQuery({
     queryKey: [type, "ids", ids],
     queryFn: fetchAll,
-    staleTime: 1000 * 60 * 60 * 24,
+    staleTime: 1000 * 60 * 60,
     cacheTime: 1000 * 60 * 60 * 24,
     retry: false,
     placeholderData: [],
-    enabled: !!type && ids.length > 0,
+    enabled: !!type,
   });
 };

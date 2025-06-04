@@ -4,35 +4,16 @@ import FaIcon from "../../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
 import bgImgs from "../../../services/constants/imgs/bg";
 import headerImgs from "../../../services/constants/imgs/header";
-import Divisor from "../../../ui/components/Divisor";
 import Header from "../../../ui/components/Header";
 import HobbiesIntro from "../../../ui/components/Introduction/Hobbies";
-import AnimesMangasShowcase from "../../../ui/components/Showcase/AnimesMangas";
-import HobbyCarousel from "../../../ui/components/Slides/Hobbies/Common";
 import useDocumentTitle from "../../../ui/hooks/useDocumentTitle";
-import { useJikanByFilter } from "../../../ui/hooks/useJikanByFilter";
 import styles from "./style.module.css";
-import jikanIds from "../../../services/constants/ids/jikanIds";
-import { useJikanById } from "../../../ui/hooks/useJikanById";
+import AnimeContent from "../../../ui/components/Content/AnimeContent";
 
 export default function AnimesMangas() {
   useDocumentTitle("Animes & Mangás | Felipe Ferreira");
   const { t } = useTranslation("animes-mangas", { useSuspense: true });
   const [type, setType] = useState("");
-
-  // Definição dos filtros para mapping
-  const filters = [
-    { filter: "bypopularity", size: 12, key: "pop" },
-    { filter: "", size: 12, key: "score" },
-  ];
-
-  const queries = useJikanByFilter({ type, filters });
-  const [popularity, mostScored] = queries.map((q) => q.data ?? []);
-
-  const ids = jikanIds.anime.favorites;
-  const favoriteIds = useJikanById({ type, ids: ids });
-  const favoritePending = favoriteIds.isPending;
-  const favoriteAnimes = favoriteIds.data;
 
   return (
     <div className={styles.ctn}>
@@ -83,82 +64,7 @@ export default function AnimesMangas() {
         </div>
       </section>
 
-      {type === "animes" && (
-        <>
-          <section
-            className={styles.shwc}
-            style={{ "--bg-image": `url(${bgImgs.animeShowcase})` }}
-          >
-            <AnimesMangasShowcase
-              type={type}
-              title={t("animes.pop.title")}
-              desc={t("animes.pop.subtitle")}
-              icon={fontAwesome.rankingStar}
-              flexDirection={"row"}
-              alignItems={"flex-start"}
-              data={popularity}
-            />
-
-            <AnimesMangasShowcase
-              type={type}
-              title={t("animes.best.title")}
-              desc={t("animes.best.subtitle")}
-              icon={fontAwesome.medal}
-              flexDirection={"row-reverse"}
-              alignItems={"flex-end"}
-              data={mostScored}
-            />
-          </section>
-
-          <Divisor marginTop={128} color={"var(--main-02)"} />
-
-          <section className={styles}>
-            {/* <HobbyCarousel
-              type={type}
-              title={"Animes"}
-              icon={<FaIcon icon={fontAwesome.clockRotateLeft} />}
-              color={"var(--main-02)"}
-              font={"var(--anmg-h2)"}
-              mbFont={"var(--anmg-h3)"}
-              borderBtm={"var(--bd-line-mn2)"}
-              data={favoriteAnimes}
-              isDataPending={favoritePending}
-              minLoadingTime={2500}
-            /> */}
-          </section>
-        </>
-      )}
-
-      {type === "mangas" && (
-        <>
-          <section
-            className={styles.shwc}
-            style={{ "--bg-image": `url(${bgImgs.mangaShowcase})` }}
-          >
-            <AnimesMangasShowcase
-              type={type}
-              title={t("mangas.pop.title")}
-              desc={t("mangas.pop.subtitle")}
-              icon={fontAwesome.rankingStar}
-              flexDirection={"row"}
-              alignItems={"flex-start"}
-              data={popularity}
-            />
-
-            <AnimesMangasShowcase
-              type={type}
-              title={t("mangas.best.title")}
-              desc={t("mangas.best.subtitle")}
-              icon={fontAwesome.medal}
-              flexDirection={"row-reverse"}
-              alignItems={"flex-end"}
-              data={mostScored}
-            />
-          </section>
-
-          <Divisor marginTop={128} color={"var(--main-02)"} />
-        </>
-      )}
+      {type === "animes" && <AnimeContent />}
     </div>
   );
 }

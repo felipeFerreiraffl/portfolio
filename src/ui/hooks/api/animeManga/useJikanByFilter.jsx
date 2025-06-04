@@ -1,5 +1,5 @@
 import { useQueries } from "@tanstack/react-query";
-import { getAnimeByFilter, getMangaByFilter } from "../../services/api/jikan";
+import { getAnimeByFilter, getMangaByFilter } from "../../../../services/api/jikan";
 
 // Hook para o fetch dos filtros
 export const useJikanByFilter = ({ type, filters }) => {
