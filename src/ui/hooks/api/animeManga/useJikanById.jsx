@@ -57,6 +57,7 @@ export const useJikanById = ({ type, ids = [] }) => {
         error.response?.status === 404 ||
         error.response?.status === 403
       ) {
+        console.error(`Erro ${error.response.status} detectado!`);
         return false;
       }
 
@@ -67,5 +68,6 @@ export const useJikanById = ({ type, ids = [] }) => {
     enabled: !!type && ids.length > 0,
     refetchOnWindowFocus: false, // Evita refetch desnecessário
     refetchOnReconnect: false,
+    refetchOnMount: false,
   });
 };

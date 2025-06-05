@@ -9,8 +9,6 @@ export default function AnimeContent() {
   const { popularity, mostScored, sections, isPending, hasError } =
     useAnimeMangaData("animes");
 
-  console.log("Animes mais populares: ", popularity);
-
   if (isPending) {
     return <div>Carregando...</div>;
   }
