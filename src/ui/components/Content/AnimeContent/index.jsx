@@ -3,6 +3,9 @@ import { useAnimeMangaData } from "../../../hooks/api/animeManga/useAnimeMangaDa
 import AnimesMangasShowcase from "../../Showcase/AnimesMangas";
 import styles from "./style.module.css";
 import fontAwesome from "../../../../services/constants/icns/font-awesome/iconNames";
+import Divisor from "../../Divisor";
+import HobbyCarousel from "../../Slides/Hobbies/Common";
+import FaIcon from "../../../../services/constants/icns/font-awesome/fontAwesome";
 
 export default function AnimeContent() {
   const { t } = useTranslation("animes-mangas", { useSuspense: true });
@@ -37,6 +40,55 @@ export default function AnimeContent() {
           desc={t("animes.best.subtitle")}
           icon={fontAwesome.medal}
           data={Array.isArray(mostScored) ? mostScored : []}
+        />
+      </section>
+
+      <Divisor marginTop={128} color={"var(--main-02)"} />
+
+      <section className={styles["slide-ctn"]}>
+        <HobbyCarousel
+          type={"animes"}
+          title={t("animes.sections.watchedRecently")}
+          font={"var(--anmg-h2)"}
+          mbFont={"var(--anmg-h3)"}
+          color={"var(--main-02)"}
+          borderBtm={"var(--bd-line-mn2)"}
+          icon={<FaIcon icon={fontAwesome.clockRotateLeft} />}
+          isDataPending={isPending}
+          minLoadingTime={3000}
+          data={
+            Array.isArray(sections.watchedRecently.data)
+              ? sections.watchedRecently.data
+              : []
+          }
+        />
+        <HobbyCarousel
+          type={"animes"}
+          title={t("animes.sections.pendent")}
+          font={"var(--anmg-h2)"}
+          mbFont={"var(--anmg-h3)"}
+          color={"var(--main-02)"}
+          borderBtm={"var(--bd-line-mn2)"}
+          icon={<FaIcon icon={fontAwesome.spinner} />}
+          isDataPending={isPending}
+          minLoadingTime={3000}
+          data={
+            Array.isArray(sections.pendent.data) ? sections.pendent.data : []
+          }
+        />
+        <HobbyCarousel
+          type={"animes"}
+          title={t("animes.sections.favorite")}
+          font={"var(--anmg-h2)"}
+          mbFont={"var(--anmg-h3)"}
+          color={"var(--main-02)"}
+          borderBtm={"var(--bd-line-mn2)"}
+          icon={<FaIcon icon={fontAwesome.heart} />}
+          isDataPending={isPending}
+          minLoadingTime={3000}
+          data={
+            Array.isArray(sections.favorite.data) ? sections.favorite.data : []
+          }
         />
       </section>
     </div>

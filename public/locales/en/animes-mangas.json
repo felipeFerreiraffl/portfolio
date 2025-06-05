@@ -12,6 +12,11 @@
     "best": {
       "title": "Better scored",
       "subtitle": "The animes with the highest scores on MyAnimeList, in other words, the best of all time"
+    },
+    "sections": {
+      "watchedRecently": "Watched recently",
+      "pendent": "Pendent",
+      "favorite": "My favorite animes"
     }
   },
   "mangas": {
@@ -22,6 +27,11 @@
     "best": {
       "title": "Better scored",
       "subtitle": "The mangas with the highest scores on MyAnimeList, in other words, the best of all time"
+    },
+    "sections": {
+      "finished": "Finished",
+      "readingNow": "Reading now",
+      "favorite": "My favorite mangas"
     },
     "mangadex": {
       "desc": "Website that I recomended to read mangas, in case you have interest, with an pretty interface and an enormous availability of mangas to all publics",

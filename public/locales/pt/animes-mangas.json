@@ -12,6 +12,11 @@
     "best": {
       "title": "Melhores avaliados",
       "subtitle": "Os animes com as notas mais altas no MyAnimeList, ou seja, os melhores de todos os tempos"
+    },
+    "sections": {
+      "watchedRecently": "Assistidos recentemente",
+      "pendent": "Pendentes",
+      "favorite": "Meus animes favoritos"
     }
   },
   "mangas": {
@@ -22,6 +27,11 @@
     "best": {
       "title": "Melhores avaliados",
       "subtitle": "Os mangás com as notas mais altas no MyAnimeList, ou seja, os melhores de todos os tempos"
+    },
+    "sections": {
+      "finished": "Concluídos",
+      "readingNow": "Lendo agora",
+      "favorite": "Meus mangás favoritos"
     },
     "mangadex": {
       "desc": "Site que recomendo para ler mangás, caso tenha interesse, com uma interface agradável e com uma enorme disponibilidade de mangás para todos os públicos",
