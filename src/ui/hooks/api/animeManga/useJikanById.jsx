@@ -1,37 +1,71 @@
 import { useQuery } from "@tanstack/react-query";
 import { getAnimeById, getMangaById } from "../../../../services/api/jikan";
 
-export const useJikanById = ({ type, ids }) => {
+export const useJikanById = ({ type, ids = [] }) => {
   const fetchFn =
     type === "animes" ? getAnimeById : type === "mangas" ? getMangaById : null;
 
   // Promise para chamadas individuais
   const fetchAll = async () => {
-    if (!fetchFn) return [];
-
-    const results = [];
-
-    for (const id of ids) {
-      try {
-        const result = await fetchFn(id);
-        results.push(result);
-      } catch (error) {
-        console.error(`Erro ao buscar ID ${id}: `, error);
-      }
-
-      await new Promise((res) => setTimeout(res, 800));
+    if (!fetchFn || !ids || ids.length === 0) {
+      return [];
     }
 
-    return results;
+    const results = [];
+    const DELAY_BETWEEN_REQS = 2500; // 2,5 seg entre requisições
+
+    for (let i = 0; i < ids.length; i++) {
+      const id = ids[i];
+
+      try {
+        const result = await fetchFn(id);
+
+        if (result) {
+          results.push(result);
+        } else {
+          console.warn(`Resultado nulo para ID ${id}`);
+        }
+
+        // Delay apenas se não for o último tiem
+        if (id !== ids[ids.length - 1]) {
+          await new Promise((res) => setTimeout(res, DELAY_BETWEEN_REQS));
+        }
+      } catch (error) {
+        console.error(`Erro ao buscar ID ${id}: `, error);
+
+        if (error.response?.status === 429) {
+          console.warn("Rate limit detectado, aumentando delay..."); // Aumenta o delay caso aatinga rate limit
+          await new Promise((res) => setTimeout(res, DELAY_BETWEEN_REQS * 2));
+        }
+
+        continue;
+      }
+    }
+
+    return results.filter(Boolean); // Remove nulls
   };
 
   return useQuery({
     queryKey: [type, "ids", ids],
     queryFn: fetchAll,
-    staleTime: 1000 * 60 * 60,
+    staleTime: 1000 * 60 * 60 * 2,
     cacheTime: 1000 * 60 * 60 * 24,
-    retry: false,
+    retry: (failureCount, error) => {
+      // Não faz retry em caso de erros 429, 404 ou 03
+      if (
+        error.response?.status === 429 ||
+        error.response?.status === 404 ||
+        error.response?.status === 403
+      ) {
+        return false;
+      }
+
+      return failureCount < 1; // Tenta repetir apenas uma vez
+    },
+    retryDelay: (attemptIndex) => Math.min(3000 * 2 ** attemptIndex, 10000),
     placeholderData: [],
-    enabled: !!type,
+    enabled: !!type && ids.length > 0,
+    refetchOnWindowFocus: false, // Evita refetch desnecessário
+    refetchOnReconnect: false,
   });
 };

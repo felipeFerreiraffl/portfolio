@@ -6,7 +6,18 @@ import fontAwesome from "../../../../services/constants/icns/font-awesome/iconNa
 
 export default function AnimeContent() {
   const { t } = useTranslation("animes-mangas", { useSuspense: true });
-  const { popularity, mostScored, sections } = useAnimeMangaData("animes");
+  const { popularity, mostScored, sections, isPending, hasError } =
+    useAnimeMangaData("animes");
+
+  console.log("Animes mais populares: ", popularity);
+
+  if (isPending) {
+    return <div>Carregando...</div>;
+  }
+
+  if (hasError) {
+    return <div>Erro ao carregar dados</div>;
+  }
 
   return (
     <div className={styles.ctn}>
@@ -18,7 +29,7 @@ export default function AnimeContent() {
           title={t("animes.pop.title")}
           desc={t("animes.pop.subtitle")}
           icon={fontAwesome.rankingStar}
-          data={popularity}
+          data={Array.isArray(popularity) ? popularity : []}
         />
         <AnimesMangasShowcase
           type={"animes"}
@@ -27,7 +38,7 @@ export default function AnimeContent() {
           title={t("animes.best.title")}
           desc={t("animes.best.subtitle")}
           icon={fontAwesome.medal}
-          data={mostScored}
+          data={Array.isArray(mostScored) ? mostScored : []}
         />
       </section>
     </div>
