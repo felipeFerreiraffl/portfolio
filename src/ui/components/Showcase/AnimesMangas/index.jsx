@@ -28,6 +28,7 @@ export default function AnimesMangasShowcase({
       align: flexDirection === "row" ? "start" : "end",
       direction: flexDirection === "row" ? "ltr" : "rtl",
       loop: true,
+      dragFree: true,
     },
     [
       AutoScroll({

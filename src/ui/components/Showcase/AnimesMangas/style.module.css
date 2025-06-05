@@ -49,8 +49,8 @@
   font: var(--anmg-body);
   color: var(--neu-04);
 
-  @media (max-width: 767.98px){
-  	text-align: center;
+  @media (max-width: 767.98px) {
+    text-align: center;
   }
 }
 
@@ -72,6 +72,7 @@
   align-items: center;
   justify-content: center;
   width: 40%;
+  cursor: grab;
   z-index: var(--zind-10);
 
   @media (max-width: 767.98px) {
@@ -114,7 +115,7 @@
   aspect-ratio: 100 / 143;
 
   @media (max-width: 767.98px) {
-    width: var(--sp-176);
+    width: var(--sp-144);
   }
 }
 

@@ -1,19 +1,49 @@
-import { useState } from "react";
+import { debounce } from "lodash";
+import { useCallback, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import FaIcon from "../../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
 import bgImgs from "../../../services/constants/imgs/bg";
 import headerImgs from "../../../services/constants/imgs/header";
+import AnimeContent from "../../../ui/components/Content/AnimeContent";
+import MangaContent from "../../../ui/components/Content/MangaContent";
 import Header from "../../../ui/components/Header";
 import HobbiesIntro from "../../../ui/components/Introduction/Hobbies";
 import useDocumentTitle from "../../../ui/hooks/useDocumentTitle";
 import styles from "./style.module.css";
-import AnimeContent from "../../../ui/components/Content/AnimeContent";
 
 export default function AnimesMangas() {
   useDocumentTitle("Animes & Mangás | Felipe Ferreira");
   const { t } = useTranslation("animes-mangas", { useSuspense: true });
   const [type, setType] = useState("");
+  const [debouncedType, setDebouncedType] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Função para não carregar o conteúdo de uma vez
+  const debounceSetType = useCallback(
+    debounce((selectedType) => {
+      setDebouncedType(selectedType);
+      setIsLoading(false);
+    }, 1200),
+    []
+  );
+
+  // Função de seleção do tipo de conteúdo
+  const handleTypeSelection = (selectedType) => {
+    setType(selectedType);
+    setIsLoading(true);
+
+    // Cancela debounce anterior para começar um novo
+    debounceSetType.cancel();
+    debounceSetType(selectedType);
+  };
+
+  // Cancela o debounce ao desmontar o componente
+  useEffect(() => {
+    return () => {
+      debounceSetType.cancel();
+    };
+  }, [debounceSetType]);
 
   return (
     <div className={styles.ctn}>
@@ -30,7 +60,6 @@ export default function AnimesMangas() {
           mobTitleFont={"var(--anmg-h2)"}
         />
       </header>
-
       <section className={styles["chs-ctn"]}>
         <h2 className={styles["sec-ttl"]}>{t("choose.title")}</h2>
         <div className={styles["chs-card-ctn"]}>
@@ -39,7 +68,7 @@ export default function AnimesMangas() {
               type === "animes" ? styles.active : ""
             }`}
             style={{ backgroundImage: `url(${bgImgs.anime})` }}
-            onClick={() => setType("animes")}
+            onClick={() => handleTypeSelection("animes")}
             role="button"
           >
             <span className={styles["chs-icn"]}>
@@ -53,7 +82,7 @@ export default function AnimesMangas() {
               type === "mangas" ? styles.active : ""
             }`}
             style={{ backgroundImage: `url(${bgImgs.manga})` }}
-            onClick={() => setType("mangas")}
+            onClick={() => handleTypeSelection("mangas")}
             role="button"
           >
             <span className={styles["chs-icn"]}>
@@ -64,7 +93,15 @@ export default function AnimesMangas() {
         </div>
       </section>
 
-      {type === "animes" && <AnimeContent />}
+      {isLoading && (
+        <div>
+          <p>Carregando...</p>
+        </div>
+      )}
+
+      {/* Renderiza baseado no tipo escolhido */}
+      {debouncedType === "animes" && !isLoading && <AnimeContent />}
+      {debouncedType === "mangas" && !isLoading && <MangaContent />}
     </div>
   );
 }

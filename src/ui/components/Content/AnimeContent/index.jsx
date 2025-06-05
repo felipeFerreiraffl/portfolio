@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
-import { useAnimeMangaData } from "../../../hooks/api/animeManga/useAnimeMangaData";
-import AnimesMangasShowcase from "../../Showcase/AnimesMangas";
-import styles from "./style.module.css";
-import fontAwesome from "../../../../services/constants/icns/font-awesome/iconNames";
-import Divisor from "../../Divisor";
-import HobbyCarousel from "../../Slides/Hobbies/Common";
 import FaIcon from "../../../../services/constants/icns/font-awesome/fontAwesome";
+import fontAwesome from "../../../../services/constants/icns/font-awesome/iconNames";
+import { useAnimeMangaData } from "../../../hooks/api/animeManga/useAnimeMangaData";
+import Divisor from "../../Divisor";
+import AnimesMangasShowcase from "../../Showcase/AnimesMangas";
+import HobbyCarousel from "../../Slides/Hobbies/Common";
+import styles from "./style.module.css";
 
 export default function AnimeContent() {
   const { t } = useTranslation("animes-mangas", { useSuspense: true });
@@ -13,11 +13,11 @@ export default function AnimeContent() {
     useAnimeMangaData("animes");
 
   if (isPending) {
-    return <div>Carregando...</div>;
+    return console.log("Carregando dados...");
   }
 
   if (hasError) {
-    return <div>Erro ao carregar dados</div>;
+    return console.error("Erro ao buscar dados!");
   }
 
   return (
