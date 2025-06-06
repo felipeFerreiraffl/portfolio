@@ -180,8 +180,12 @@
 
 .menu-close {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--main-01);
   font-size: var(--sp-32);
+  z-index: var(--zind-10000);
   top: var(--sp-12);
   right: var(--sp-12);
   cursor: pointer;

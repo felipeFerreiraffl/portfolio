@@ -3,12 +3,21 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+
+  @media (max-width: 767.98px) {
+    flex-direction: column-reverse;
+    gap: var(--sp-20);
+  }
 }
 
 .img {
   width: 27.625rem; /* 442px */
   aspect-ratio: 1 / 1;
   object-fit: cover;
+
+  @media (max-width: 767.98px) {
+    width: 14rem; /* 224px */
+  }
 }
 
 .ttl {

@@ -26,7 +26,7 @@ export default function MangaContent() {
     <div className={styles.ctn}>
       <section className={styles.shwc}>
         <AnimesMangasShowcase
-          type={"animes"}
+          type={"mangas"}
           alignItems={"flex-start"}
           flexDirection={"row"}
           title={t("mangas.pop.title")}
@@ -35,7 +35,7 @@ export default function MangaContent() {
           data={Array.isArray(popularity) ? popularity : []}
         />
         <AnimesMangasShowcase
-          type={"animes"}
+          type={"mangas"}
           alignItems={"flex-end"}
           flexDirection={"row-reverse"}
           title={t("mangas.best.title")}
@@ -49,7 +49,7 @@ export default function MangaContent() {
 
       <section className={styles["slide-ctn"]}>
         <HobbyCarousel
-          type={"animes"}
+          type={"mangas"}
           title={t("mangas.sections.finished")}
           font={"var(--anmg-h2)"}
           mbFont={"var(--anmg-h3)"}
@@ -63,7 +63,7 @@ export default function MangaContent() {
           }
         />
         <HobbyCarousel
-          type={"animes"}
+          type={"mangas"}
           title={t("mangas.sections.readingNow")}
           font={"var(--anmg-h2)"}
           mbFont={"var(--anmg-h3)"}

@@ -1,0 +1,35 @@
+.ctn {
+  position: absolute;
+  top: 204px;
+  left: 15vw;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-16);
+  color: var(--neu-04);
+  z-index: var(--zind-100);
+  cursor: pointer;
+  transition: var(--ts-def);
+}
+
+.ctn:hover {
+  color: var(--color);
+}
+
+.icn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--sp-56);
+
+  @media (max-width: 767.98px) {
+    font-size: var(--sp-32);
+  }
+}
+
+.text {
+  font: var(--font);
+
+  @media (max-width: 767.98px) {
+    font: var(--mg-font);
+  }
+}

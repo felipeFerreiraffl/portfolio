@@ -7,6 +7,7 @@ const Home = lazy(() => import("../pages/home"));
 const Portfolio = lazy(() => import("../pages/portfolio"));
 const Hobbies = lazy(() => import("../pages/hobbies"));
 const AnimesMangas = lazy(() => import("../pages/hobbies/animes-mangas"));
+const AnimeMangaContent = lazy(() => import("../pages/content/animes-mangas"));
 const Games = lazy(() => import("../pages/hobbies/games"));
 const Football = lazy(() => import("../pages/hobbies/football"));
 const Drawings = lazy(() => import("../pages/hobbies/drawings"));
@@ -44,6 +45,11 @@ export default function AppRoutes() {
             <Route
               element={<AnimesMangas />}
               path="/hobbies/animes-mangas"
+              lazy={true}
+            />
+            <Route
+              element={<AnimeMangaContent />}
+              path="/hobbies/animes-mangas/:type/:id"
               lazy={true}
             />
             <Route element={<Games />} path="/hobbies/games" lazy={true} />

@@ -7,14 +7,11 @@ import bgImgs from "../../../services/constants/imgs/bg";
 import headerImgs from "../../../services/constants/imgs/header";
 import AnimeContent from "../../../ui/components/Content/AnimeContent";
 import MangaContent from "../../../ui/components/Content/MangaContent";
+import Footer from "../../../ui/components/Footer";
 import Header from "../../../ui/components/Header";
 import HobbiesIntro from "../../../ui/components/Introduction/Hobbies";
 import useDocumentTitle from "../../../ui/hooks/useDocumentTitle";
 import styles from "./style.module.css";
-import Divisor from "../../../ui/components/Divisor";
-import HobbyFinal from "../../../ui/components/HobbyFinal";
-import pngImgs from "../../../services/constants/imgs/pngs";
-import Footer from "../../../ui/components/Footer";
 
 export default function AnimesMangas() {
   useDocumentTitle("Animes & Mangás | Felipe Ferreira");

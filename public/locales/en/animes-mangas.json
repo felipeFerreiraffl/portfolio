@@ -37,5 +37,22 @@
       "desc": "Website that I recomended to read mangas, in case you have interest, with an pretty interface and an enormous availability of mangas to all publics",
       "button": "View website"
     }
+  },
+  "content": {
+    "synopsis": "Synopsis",
+    "popRank": "Popularity ranking",
+    "scoreRank": "Score ranking",
+    "data": "Data extracted from Jikan API",
+    "anime": {
+      "studio": "Studio",
+      "launchDate": "Launch date",
+      "episodes": "Episodes"
+    },
+    "manga": {
+      "author": "Author",
+      "publication": "Publication period",
+      "chapters": "Chapters"
+    },
+    "button": "Return"
   }
 }

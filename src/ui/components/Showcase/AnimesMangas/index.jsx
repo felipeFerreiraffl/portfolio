@@ -79,7 +79,11 @@ export default function AnimesMangasShowcase({
                 <a
                   key={dt.mal_id}
                   className={styles.slide}
-                  href={`/hobbies/animes-mangas/anime/${dt.mal_id}`}
+                  href={
+                    type === "animes"
+                      ? `/hobbies/animes-mangas/anime/${dt.mal_id}`
+                      : `/hobbies/animes-mangas/manga/${dt.mal_id}`
+                  }
                 >
                   <div className={styles["img-wppr"]}>
                     <img

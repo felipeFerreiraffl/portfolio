@@ -6,7 +6,7 @@ const fontAwesome = {
   glasses: "fa6-solid:glasses",
   circleLeft: "fa6-solid:circle-left",
   circleRight: "fa6-solid:circle-right",
-  circleXMark: "fa6-solid:circle-x-mark",
+  circleXMark: "fa6-solid:circle-xmark",
   circleInfo: "fa6-solid:circle-info",
   circlePlay: "fa6-solid:circle-play",
   circlePlus: "fa6-solid:circle-plus",

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import styles from "./style.module.css";
 import MainButton from "../Button/Main";
-import SecondaryButton from "../Button";
+import SecondaryButton from "../Button/Secondary";
 
 export default function HobbyFinal({ img, alt, color, font, mbFont }) {
   const { t } = useTranslation("hobbies", { useSuspense: true });

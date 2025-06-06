@@ -53,6 +53,19 @@ export default function Header() {
     return () => (document.body.style.overflow = "");
   }, [openMenu]);
 
+  // Fecha o menu ao redimensionar a tela
+  useEffect(() => {
+    const handleResize = () => {
+      if (openMenu) {
+        setOpenMenu(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => removeEventListener("resize", handleResize);
+  }, [openMenu]);
+
   return (
     <nav className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <a href="/" className={styles["logo-ctn"]}>
@@ -150,12 +163,13 @@ export default function Header() {
             aria-label={t("menu")}
             role="dialog"
           >
-            <FaIcon
-              icon={fontAwesome.circleXMark}
+            <span
               className={styles["menu-close"]}
               onClick={() => setOpenMenu(false)}
               role="button"
-            />
+            >
+              <FaIcon icon={fontAwesome.circleXMark} />
+            </span>
 
             <div className={styles["menu-lang-ctn"]}>
               <img
