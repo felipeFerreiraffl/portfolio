@@ -3,12 +3,12 @@
   align-items: center;
   justify-content: center;
   width: 12.375rem; /* 198px */
-  background-color: transparent;
+  background-color: var(--btn-color);
   cursor: pointer;
-  padding: var(--sp-20) 0;
-  color: var(--btn-color);
+  padding: var(--sp-20) var(--sp-36);
+  color: var(--neu-04);
   font: var(--def-btn);
-  border: var(--btn-border);
+  border: none;
   border-radius: var(--brad-32);
   box-shadow: none;
   transition: var(--ts-def);
@@ -17,11 +17,8 @@
 .btn:hover {
   filter: brightness(1.5);
   box-shadow: var(--btn-box-shadow);
-  background-color: var(--btn-color);
-  color: var(--neu-04);
 }
 
 .btn:active {
   background-color: var(--btn-active);
-  border: 4px solid var(--btn-active);
 }

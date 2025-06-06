@@ -1,19 +1,12 @@
 import styles from "./styles.module.css";
 
-export default function SecondaryButton({
-  color,
-  text,
-  border,
-  href,
-  onClick,
-}) {
+export default function MainButton({ color, text, href, onClick }) {
   return (
     <a
       href={href}
       className={`${styles.btn}`}
       style={{
         "--btn-color": color,
-        "--btn-border": border,
         "--btn-active":
           color === "var(--main-01)" ? "var(--main-02)" : "var(--main-05)",
         "--btn-box-shadow":

@@ -90,3 +90,27 @@
   }
 }
 
+.load-ctn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--sp-128) 0;
+}
+
+.load-spin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--sp-64);
+  color: var(--main-02);
+  animation: spin var(--ts-anim) infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

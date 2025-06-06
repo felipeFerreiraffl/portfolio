@@ -6,8 +6,8 @@
   width: 100%;
   background-color: var(--neu-01);
   border-top: var(--bd-mn1);
-  margin-top: var(--sp-128);
   padding: var(--sp-56) 0 var(--sp-20) 0;
+  z-index: var(--zind-100);
 }
 
 .ftr > * {

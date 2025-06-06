@@ -5,7 +5,7 @@ import fontAwesome from "../../services/constants/icns/font-awesome/iconNames";
 import extraImgs from "../../services/constants/imgs/extra";
 import headerImgs from "../../services/constants/imgs/header";
 import links from "../../services/constants/links/links";
-import Button from "../../ui/components/Button";
+import MainButton from "../../ui/components/Button/Main";
 import CourseConclusion from "../../ui/components/CourseConclusion";
 import Divisor from "../../ui/components/Divisor";
 import Footer from "../../ui/components/Footer";
@@ -242,7 +242,7 @@ export default function Portfolio() {
               {t("sections.curriculum.desc")}
             </p>
           </div>
-          <Button
+          <MainButton
             onClick={openPdf}
             color={"var(--main-01)"}
             text={t("sections.curriculum.button")}
@@ -259,7 +259,7 @@ export default function Portfolio() {
         </motion.span>
       </section>
 
-      <Footer />
+      <Footer marginTop={128} />
     </div>
   );
 }

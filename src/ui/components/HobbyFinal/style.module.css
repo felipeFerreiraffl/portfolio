@@ -1,0 +1,35 @@
+.ctn {
+  width: 85vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.img {
+  width: 27.625rem; /* 442px */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.ttl {
+  font: var(--font);
+  color: var(--color);
+
+  @media (max-width: 767.98px) {
+    font: var(--mb-font);
+  }
+}
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-32);
+}
+
+.btn-ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-20);
+}

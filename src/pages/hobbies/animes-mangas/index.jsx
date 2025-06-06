@@ -11,6 +11,10 @@ import Header from "../../../ui/components/Header";
 import HobbiesIntro from "../../../ui/components/Introduction/Hobbies";
 import useDocumentTitle from "../../../ui/hooks/useDocumentTitle";
 import styles from "./style.module.css";
+import Divisor from "../../../ui/components/Divisor";
+import HobbyFinal from "../../../ui/components/HobbyFinal";
+import pngImgs from "../../../services/constants/imgs/pngs";
+import Footer from "../../../ui/components/Footer";
 
 export default function AnimesMangas() {
   useDocumentTitle("Animes & Mangás | Felipe Ferreira");
@@ -24,7 +28,7 @@ export default function AnimesMangas() {
     debounce((selectedType) => {
       setDebouncedType(selectedType);
       setIsLoading(false);
-    }, 1200),
+    }, 1500),
     []
   );
 
@@ -94,14 +98,18 @@ export default function AnimesMangas() {
       </section>
 
       {isLoading && (
-        <div>
-          <p>Carregando...</p>
+        <div className={styles["load-ctn"]}>
+          <span className={styles["load-spin"]}>
+            <FaIcon icon={fontAwesome.spinner} />
+          </span>
         </div>
       )}
 
       {/* Renderiza baseado no tipo escolhido */}
       {debouncedType === "animes" && !isLoading && <AnimeContent />}
       {debouncedType === "mangas" && !isLoading && <MangaContent />}
+
+      <Footer marginTop={type === "animes" || type === "mangas" ? 0 : 128} />
     </div>
   );
 }

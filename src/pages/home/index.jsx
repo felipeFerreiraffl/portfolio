@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import FaIcon from "../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../services/constants/icns/font-awesome/iconNames";
 import logo from "../../services/constants/svgs/logo";
-import Button from "../../ui/components/Button";
+import MainButton from "../../ui/components/Button/Main";
 import Divisor from "../../ui/components/Divisor";
 import Footer from "../../ui/components/Footer";
 import Header from "../../ui/components/Header";
@@ -109,7 +109,7 @@ export default function Home() {
             <p className={styles.body}>{t("sections.portfolio.desc")}</p>
           </div>
 
-          <Button
+          <MainButton
             href={"/portfolio"}
             text={t("sections.portfolio.button")}
             color={"var(--main-01)"}
@@ -139,7 +139,7 @@ export default function Home() {
             </div>
           </div>
 
-          <Button
+          <MainButton
             href={"/hobbies"}
             text={t("sections.hobbies.button")}
             color={"var(--main-04)"}
@@ -207,7 +207,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
+      <Footer marginTop={128} />
     </div>
   );
 }

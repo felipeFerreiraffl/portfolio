@@ -6,6 +6,8 @@ import Divisor from "../../Divisor";
 import AnimesMangasShowcase from "../../Showcase/AnimesMangas";
 import HobbyCarousel from "../../Slides/Hobbies/Common";
 import styles from "./style.module.css";
+import pngImgs from "../../../../services/constants/imgs/pngs";
+import HobbyFinal from "../../HobbyFinal";
 
 export default function MangaContent() {
   const { t } = useTranslation("animes-mangas", { useSuspense: true });
@@ -91,6 +93,16 @@ export default function MangaContent() {
           }
         />
       </section>
+
+      <Divisor marginTop={128} color={"var(--main-02)"} />
+
+      <HobbyFinal
+        img={pngImgs.manga}
+        alt={"Marin Kitagawa (Sono Bisque Doll wa Suru)"}
+        font={"var(--anmg-h2)"}
+        mbFont={"var(--anmg-h3)"}
+        color={"var(--main-02)"}
+      />
     </div>
   );
 }

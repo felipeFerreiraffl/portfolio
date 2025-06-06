@@ -20,5 +20,10 @@
       "description": "Drawing is one of the most known forms of expressing feelings, showing through pencil and paper or digitally"
     }
   },
-  "button": "See more"
+  "button": "See more",
+  "final": {
+    "title": "Return to start?",
+    "mainButton": "Return to start",
+    "secButton": "Return to Hobbies"
+  }
 }

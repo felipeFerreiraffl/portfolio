@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import Button from "../Button";
+import MainButton from "../Button/Main";
 import styles from "./style.module.css";
 
 export default function HobbyPage({
@@ -47,7 +47,7 @@ export default function HobbyPage({
           {desc}
         </p>
       </div>
-      <Button
+      <MainButton
         href={href}
         color={color === "var(--main-02)" ? "var(--main-01)" : "var(--main-04)"}
         text={t("button")}

@@ -20,5 +20,10 @@
       "description": "Desenhar é uma das formas de expressar sentimentos mais conhecidas da história, sendo demonstrado através de lápis e papel ou digitalmente"
     }
   },
-  "button": "Ver mais"
+  "button": "Ver mais",
+  "final": {
+    "title": "Voltar ao início?",
+    "mainButton": "Voltar ao início",
+    "secButton": "Voltar ao Hobbies"
+  }
 }

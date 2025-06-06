@@ -61,22 +61,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: var(--sp-200);
   height: 100%;
+  aspect-ratio: 100 / 143;
   flex: 0 0 25%;
   box-sizing: border-box;
   margin-right: var(--sp-20);
+
+  @media (max-width: 767.98px) {
+    width: var(--sp-144);
+    flex: 0 0 50%;
+  }
 }
 
 .img-wppr {
   position: relative;
-  width: var(--sp-200);
-  aspect-ratio: 100 / 143;
+  width: 100%;
   border-radius: var(--sp-4);
-
-  @media (max-width: 767.98px) {
-    width: var(--sp-144);
-  }
 }
 
 .img {

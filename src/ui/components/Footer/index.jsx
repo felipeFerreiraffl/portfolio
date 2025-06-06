@@ -6,11 +6,11 @@ import links from "../../../services/constants/links/links";
 import logo from "../../../services/constants/svgs/logo";
 import styles from "./styles.module.css";
 
-export default function Footer() {
+export default function Footer({ marginTop }) {
   const { t } = useTranslation("footer", { useSuspense: true });
 
   return (
-    <footer className={styles.ftr}>
+    <footer className={styles.ftr} style={{ marginTop: marginTop }}>
       <div className={styles.cont}>
         <img
           src={logo.mainLogo2}
