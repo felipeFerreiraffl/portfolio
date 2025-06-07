@@ -6,6 +6,8 @@ import FaIcon from "../../../../services/constants/icns/font-awesome/fontAwesome
 import fontAwesome from "../../../../services/constants/icns/font-awesome/iconNames";
 import { useTranslation } from "react-i18next";
 import langSvg from "../../../../services/constants/svgs/lang";
+import Footer from "../../Footer";
+import YouTube from "react-youtube";
 
 export default function AnimeMangaDetails({ type, data }) {
   const { t } = useTranslation("animes-mangas", { useSuspense: true });
@@ -15,6 +17,11 @@ export default function AnimeMangaDetails({ type, data }) {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const trailerOpts = {
+    width: "100%",
+    height: "100%",
+  };
 
   const handleInView = useCallback(
     debounce(() => {
@@ -131,7 +138,9 @@ export default function AnimeMangaDetails({ type, data }) {
             <div className={styles["demo-gen-ctn"]}>
               <div className={styles["demo-ctn"]}>
                 <h2 className={styles["sec-ttl"]}>{t("content.demography")}</h2>
-                <p className={styles.demo}>{data.demographics[0]?.name}</p>
+                <p className={styles.demo}>
+                  {data.demographics[0]?.name || "..."}
+                </p>
               </div>
 
               <div className={styles["gen-ctn"]}>
@@ -169,14 +178,20 @@ export default function AnimeMangaDetails({ type, data }) {
                       ? t("content.anime.launchDate")
                       : t("content.manga.publication")}
                   </h3>
-                  <p className={styles["body-txt"]}></p>
+                  <p className={styles["body-txt"]}>
+                    {type === "anime"
+                      ? data.aired?.prop?.from?.year || "?"
+                      : `${data.published?.prop?.from?.year || "?"} - ${
+                          data.published?.prop?.to?.year || "?"
+                        }`}
+                  </p>
                 </div>
 
                 <div className={styles.other}>
                   <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
                     Status
                   </h3>
-                  <p className={styles["body-txt"]}></p>
+                  <p className={styles["body-txt"]}>{data.status || "?"}</p>
                 </div>
 
                 <div className={styles.other}>
@@ -185,27 +200,58 @@ export default function AnimeMangaDetails({ type, data }) {
                       ? t("content.anime.episodes")
                       : t("content.manga.chapters")}
                   </h3>
-                  <p className={styles["body-txt"]}></p>
+                  <p className={styles["body-txt"]}>
+                    {type === "anime"
+                      ? data.episodes || "?"
+                      : data.chapters || "?"}
+                  </p>
                 </div>
 
                 <div className={styles.other}>
                   <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
                     {t("content.popRank")}
                   </h3>
-                  <p className={styles["body-txt"]}></p>
+                  <p className={styles["body-txt"]}>
+                    {`${data.popularity}º` || "?"}
+                  </p>
                 </div>
 
                 <div className={styles.other}>
                   <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
                     {t("content.scoreRank")}
                   </h3>
-                  <p className={styles["body-txt"]}></p>
+                  <p className={styles["body-txt"]}>{`${data.rank}º` || "?"}</p>
                 </div>
               </div>
             </div>
+
+            {type === "anime" && (
+              <div className={styles["trailer-ctn"]}>
+                <div
+                  className={`${styles["trlr-ttl-ctn"]} ${styles["bd-ttl"]}`}
+                >
+                  <h2 className={`${styles["sec-ttl"]}`}>Trailer</h2>
+                  <span className={styles["trlr-icn"]}>
+                    <FaIcon icon={fontAwesome.circlePlay} />
+                  </span>
+                </div>
+
+                <div className={styles["trlr-vid-ctn"]}>
+                  <YouTube
+                    opts={trailerOpts}
+                    videoId={data.trailer?.youtube_id}
+                    className={styles["trlr-vid"]}
+                  />
+                </div>
+              </div>
+            )}
+
+            <span className={styles.cpt}>{t("content.data")}</span>
           </div>
         </section>
       )}
+
+      <Footer marginTop={128} />
     </div>
   );
 }
