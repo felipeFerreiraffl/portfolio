@@ -38,13 +38,13 @@ export const getName = (type, item) => {
 // Link para os sites
 export const getLink = (type, item) => {
   if (type === "animes") {
-    return `hobbies/animes-mangas/anime/${item?.mal_id}`;
+    return `/hobbies/animes-mangas/anime/${item?.mal_id}`;
   } else if (type === "mangas") {
-    return `hobbies/animes-mangas/manga/${item?.mal_id}`;
+    return `/hobbies/animes-mangas/manga/${item?.mal_id}`;
   }
 
   if (type === "games") {
-    return `hobbies/games/game/${item?.id}`;
+    return `/hobbies/games/game/${item?.id}`;
   }
 
   return item?.link;

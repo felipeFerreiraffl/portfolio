@@ -28,5 +28,9 @@
       "desc-2": "Podemos ter o mesmo hobby!",
       "button": "Ver hobbies"
     }
+  },
+  "buttonTitles": {
+    "portfolio": "Ir para Portfólio",
+    "hobbies": "Ir para Hobbies"
   }
 }

@@ -139,7 +139,9 @@ export default function AnimeMangaDetails({ type, data }) {
               <div className={styles["demo-ctn"]}>
                 <h2 className={styles["sec-ttl"]}>{t("content.demography")}</h2>
                 <p className={styles.demo}>
-                  {data.demographics[0]?.name || "..."}
+                  {data.type === "TV" || data.type === "Manga"
+                    ? data.demographics[0]?.name || "..."
+                    : data.type || "..."}
                 </p>
               </div>
 

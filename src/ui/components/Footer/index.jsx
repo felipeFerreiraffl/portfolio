@@ -34,6 +34,7 @@ export default function Footer({ marginTop }) {
                 href="/"
                 className={styles.page}
                 aria-label={t("aria-labels.home")}
+                title={t("aria-labels.home")}
               >
                 Home
               </a>
@@ -41,6 +42,7 @@ export default function Footer({ marginTop }) {
                 href="/portfolio"
                 className={styles.page}
                 aria-label={t("aria-labels.portfolio")}
+                title={t("aria-labels.portfolio")}
               >
                 {t("nav.portfolio")}
               </a>
@@ -48,6 +50,7 @@ export default function Footer({ marginTop }) {
                 href="/hobbies"
                 className={styles.page}
                 aria-label={t("aria-labels.hobbies")}
+                title={t("aria-labels.hobbies")}
               >
                 Hobbies
               </a>
@@ -55,6 +58,7 @@ export default function Footer({ marginTop }) {
                 href="/contatos"
                 className={styles.page}
                 aria-label={t("aria-labels.contacts")}
+                title={t("aria-labels.contacts")}
               >
                 {t("nav.contacts")}
               </a>
@@ -75,6 +79,7 @@ export default function Footer({ marginTop }) {
                 href={links.socialMedias.github}
                 target="_blank"
                 aria-label={t("aria-labels.github")}
+                title={t("aria-labels.github")}
                 rel="noopener noreferrer"
               >
                 <FaIcon
@@ -86,6 +91,7 @@ export default function Footer({ marginTop }) {
                 href={links.socialMedias.instagram}
                 target="_blank"
                 aria-label={t("aria-labels.instagram")}
+                title={t("aria-labels.instagram")}
                 rel="noopener noreferrer"
               >
                 <FaIcon
@@ -97,6 +103,7 @@ export default function Footer({ marginTop }) {
                 href={links.socialMedias.linkedin}
                 target="_blank"
                 aria-label={t("aria-labels.linkedin")}
+                title={t("aria-labels.linkedin")}
                 rel="noopener noreferrer"
               >
                 <FaIcon

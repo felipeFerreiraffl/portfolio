@@ -19,7 +19,7 @@ export default function Header() {
   // Controla o fundo do header baseado na rolgaem
   useEffect(() => {
     const handleBackgroundScroll = () => {
-      const scrolled = window.scrollY > 300;
+      const scrolled = window.scrollY > 80;
       setIsScrolled(scrolled);
     };
 
@@ -68,7 +68,7 @@ export default function Header() {
 
   return (
     <nav className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
-      <a href="/" className={styles["logo-ctn"]}>
+      <a href="/" title={t("aria-labels.home")} className={styles["logo-ctn"]}>
         <img
           className={styles["logo-i"]}
           src={logo.mainLogo2}
@@ -86,6 +86,7 @@ export default function Header() {
       </a>
       <div className={styles.pages}>
         <a
+          title={t("aria-labels.portfolio")}
           aria-label={t("aria-labels.portfolio")}
           href="/portfolio"
           className={`${styles.link} ${styles.portfolio} ${
@@ -95,6 +96,7 @@ export default function Header() {
           {t("pages.portfolio")}
         </a>
         <a
+          title={t("aria-labels.hobbies")}
           aria-label={t("aria-labels.hobbies")}
           href="/hobbies"
           className={`${styles.link} ${styles.hobbies} ${
@@ -104,6 +106,7 @@ export default function Header() {
           Hobbies
         </a>
         <a
+          title={t("aria-labels.contacts")}
           aria-label={t("aria-labels.contacts")}
           href="/contatos"
           className={`${styles.link} ${styles.contacts} ${
@@ -122,6 +125,7 @@ export default function Header() {
           alt={t("alts.pt-icon")}
           title={t("tradutor.pt-br")}
           onClick={() => i18n.changeLanguage("pt")}
+          tabIndex={0}
         />
         <img
           className={`${styles["lang-i"]} ${
@@ -131,6 +135,7 @@ export default function Header() {
           alt={t("alts.en-icon")}
           title={t("tradutor.en")}
           onClick={() => i18n.changeLanguage("en")}
+          tabIndex={0}
         />
       </div>
 
@@ -197,6 +202,7 @@ export default function Header() {
 
               <div className={styles["menu-pages"]}>
                 <a
+                  title={t("aria-labels.home")}
                   aria-label={t("aria-labels.home")}
                   href="/"
                   className={`${styles.link} ${styles["menu-pg"]} ${
@@ -206,6 +212,7 @@ export default function Header() {
                   Home
                 </a>
                 <a
+                  title={t("aria-labels.portfolio")}
                   aria-label={t("aria-labels.portfolio")}
                   href="/portfolio"
                   className={`${styles.link} ${styles["menu-pg"]} ${
@@ -215,6 +222,7 @@ export default function Header() {
                   {t("pages.portfolio")}
                 </a>
                 <a
+                  title={t("aria-labels.hobbies")}
                   aria-label={t("aria-labels.hobbies")}
                   href="/hobbies"
                   className={`${styles.link} ${styles["menu-pg"]} ${
@@ -224,6 +232,7 @@ export default function Header() {
                   Hobbies
                 </a>
                 <a
+                  title={t("aria-labels.contacts")}
                   aria-label={t("aria-labels.contacts")}
                   href="/contatos"
                   className={`${styles.link} ${styles["menu-pg"]} ${

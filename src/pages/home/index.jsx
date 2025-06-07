@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className={styles["about-me"]}>
+      <section className={styles["about-me"]} tabIndex={0}>
         <motion.h2
           className={styles["sec-ttl"]}
           initial={{ opacity: 0 }}
@@ -94,7 +94,7 @@ export default function Home() {
 
       <Divisor marginTop={128} color={"var(--main-01)"} />
 
-      <section className={styles.portfolio}>
+      <section className={styles.portfolio} tabIndex={0}>
         <motion.div
           className={styles["ptf-cont"]}
           initial={{ x: -100, opacity: 0 }}
@@ -112,6 +112,7 @@ export default function Home() {
           <MainButton
             href={"/portfolio"}
             text={t("sections.portfolio.button")}
+            title={t("buttonTitles.portfolio")}
             color={"var(--main-01)"}
           />
         </motion.div>
@@ -121,7 +122,7 @@ export default function Home() {
 
       <Divisor marginTop={128} color={"var(--main-04)"} />
 
-      <section className={styles.hobbies}>
+      <section className={styles.hobbies} tabIndex={0}>
         <motion.div
           className={styles["hbb-cont"]}
           initial={{ y: -100, opacity: 0 }}
@@ -142,6 +143,7 @@ export default function Home() {
           <MainButton
             href={"/hobbies"}
             text={t("sections.hobbies.button")}
+            title={t("buttonTitles.hobbies")}
             color={"var(--main-04)"}
           />
         </motion.div>

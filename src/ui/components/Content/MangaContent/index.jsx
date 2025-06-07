@@ -79,7 +79,7 @@ export default function MangaContent() {
           }
         />
         <HobbyCarousel
-          type={"animes"}
+          type={"mangas"}
           title={t("mangas.sections.favorite")}
           font={"var(--anmg-h2)"}
           mbFont={"var(--anmg-h3)"}

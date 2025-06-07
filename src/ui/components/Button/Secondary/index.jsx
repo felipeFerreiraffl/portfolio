@@ -1,10 +1,18 @@
 import styles from "./styles.module.css";
 
-export default function MainButton({ color, border, text, href, onClick }) {
+export default function MainButton({
+  color,
+  border,
+  text,
+  href,
+  onClick,
+  title,
+}) {
   return (
     <a
       href={href}
       className={`${styles.btn}`}
+      title={title}
       style={{
         "--btn-color": color,
         "--btn-border": border,

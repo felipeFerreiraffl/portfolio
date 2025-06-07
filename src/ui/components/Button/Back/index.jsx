@@ -3,7 +3,7 @@ import FaIcon from "../../../../services/constants/icns/font-awesome/fontAwesome
 import GiIcon from "../../../../services/constants/icns/game-icons/gameIcons";
 import styles from "./style.module.css";
 
-export default function BackButton({ type, icon, color, font, mbFont }) {
+export default function BackButton({ type, icon, color, font, mbFont, title }) {
   const { t } = useTranslation("animes-mangas", { useSuspense: true });
 
   return (
@@ -11,6 +11,7 @@ export default function BackButton({ type, icon, color, font, mbFont }) {
       className={styles.ctn}
       href={type === "game" ? "/hobbies/games" : "/hobbies/animes-mangas"}
       style={{ "--color": color }}
+      title={title}
       role="button"
     >
       <span className={styles.icn}>
