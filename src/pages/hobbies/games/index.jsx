@@ -6,6 +6,8 @@ import Header from "../../../ui/components/Header";
 import HobbiesIntro from "../../../ui/components/Introduction/Hobbies";
 import useDocumentTitle from "../../../ui/hooks/useDocumentTitle";
 import styles from "./style.module.css";
+import GameType from "../../../ui/components/GameType";
+import gameIcons from "../../../services/constants/icns/game-icons/iconNames";
 
 export default function Games() {
   useDocumentTitle("Jogos | Felipe Ferreira");
@@ -22,15 +24,32 @@ export default function Games() {
           border={"var(--bd-mn5)"}
           icon={<FaIcon icon={fontAwesome.gamepad} />}
           title={t("games.intro")}
+          titleFont={"var(--gm-h1)"}
+          mobTitleFont={"var(--gm-h2)"}
         />
       </header>
 
       <section className={styles["gm-type"]}>
-        <h2 className={`${styles["sec-ttl"]} ${styles["bd-ttl"]}`}>
-          {t("games.sections.gamerType")}
-        </h2>
+        <h2 className={styles["sec-ttl"]}>{t("games.sections.gamerType")}</h2>
 
-        <div className={styles["gm-brands-ctn"]}></div>
+        <div className={styles["gm-brands-ctn"]}>
+          <GameType
+            icon={gameIcons.rank1}
+            type={"Casual"}
+            tooltip={t("games.sections.ranks.casual")}
+          />
+          <GameType
+            icon={gameIcons.rank2}
+            type={"Normal"}
+            tooltip={t("games.sections.ranks.normal")}
+            active={true}
+          />
+          <GameType
+            icon={gameIcons.rank3}
+            type={"Hardcore"}
+            tooltip={t("games.sections.ranks.hardcore")}
+          />
+        </div>
       </section>
     </div>
   );

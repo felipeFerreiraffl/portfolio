@@ -2,7 +2,12 @@
   "games": {
     "intro": "Jogos",
     "sections": {
-      "gamerType": "Tipo gamer"
+      "gamerType": "Tipo gamer",
+      "ranks": {
+        "casual": "Joga de vez em quando, apenas para relaxar. Prefere jogos calmos e sem desafios.",
+        "normal": "O mais equilibrado, curtindo um desafio, mas também apreciando a história. Geralmente, joga jogos singleplayer.",
+        "hardcore": "Profissional no jogo, tendo videogame como sua rotina. Joga jogos para competir, geralmente onlines."
+      }
     },
     "content": {
       "desc": "Descrição",

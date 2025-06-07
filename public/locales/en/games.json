@@ -2,7 +2,12 @@
   "games": {
     "intro": "Games",
     "sections": {
-      "gamerType": "Gamer type"
+      "gamerType": "Gamer type",
+      "ranks": {
+        "casual": "Play sometimes, just to relax. Prefers calm and challengeless games.",
+        "normal": "The most balanced, enjoying an challenge, but also appreciating the story. Usually, play singleplayer games.",
+        "hardcore": "Game professional, having videogame as your rotine. Play games to compete, mostly onlines."
+      }
     },
     "content": {
       "desc": "Description",
