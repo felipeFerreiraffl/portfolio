@@ -12,7 +12,7 @@ export default function Games() {
   const { t } = useTranslation("games", { useSuspense: true });
 
   return (
-    <div>
+    <div className={styles.ctn}>
       <header>
         <Header />
 
@@ -24,6 +24,14 @@ export default function Games() {
           title={t("games.intro")}
         />
       </header>
+
+      <section className={styles["gm-type"]}>
+        <h2 className={`${styles["sec-ttl"]} ${styles["bd-ttl"]}`}>
+          {t("games.sections.gamerType")}
+        </h2>
+
+        <div className={styles["gm-brands-ctn"]}></div>
+      </section>
     </div>
   );
 }
