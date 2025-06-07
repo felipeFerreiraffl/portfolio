@@ -11,6 +11,7 @@ export default function BackButton({ type, icon, color, font, mbFont }) {
       className={styles.ctn}
       href={type === "game" ? "/hobbies/games" : "/hobbies/animes-mangas"}
       style={{ "--color": color }}
+      role="button"
     >
       <span className={styles.icn}>
         {type !== "game" ? <FaIcon icon={icon} /> : <GiIcon icon={icon} />}

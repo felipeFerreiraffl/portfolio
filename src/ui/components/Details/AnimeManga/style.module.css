@@ -1,0 +1,161 @@
+.ctn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 24.25rem;
+}
+
+.load-ctn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--sp-128) 0;
+}
+
+.load-spin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--sp-64);
+  color: var(--main-02);
+  animation: spin var(--ts-anim) infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+.cont {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: var(--sp-96) 0;
+}
+
+.cont::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--bg-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: cover;
+  opacity: var(--op-10);
+  z-index: var(--zind-0);
+}
+
+.cont > * {
+  z-index: var(--zind-10);
+}
+
+.hdr {
+  width: 85vw;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-20);
+}
+
+.cover {
+  width: var(--sp-288);
+  aspect-ratio: 100 / 143;
+  object-fit: cover;
+  border-radius: var(--sp-4);
+}
+
+.info-ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-56);
+}
+
+.txt-ctn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-32);
+}
+
+.ttl-ctn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-20);
+}
+
+.ttl {
+  font: var(--anmg-h1);
+  color: var(--neu-04);
+}
+
+.alt-ttl-ctn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-12);
+}
+
+.alt-lang-ctn {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-16);
+}
+
+.alt-ttl {
+  font: var(--anmg-h3);
+  color: var(--neu-04);
+}
+
+.alt-lang {
+  width: 2.75rem; /* 44px */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.add {
+  font: var(--anmg-hdr);
+  color: var(--neu-04);
+}
+
+.score-lvl-ctn {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-20);
+}
+
+.score-ctn {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-16);
+}
+
+.score-icn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--sp-64);
+  color: var(--aux-03);
+}
+
+.score {
+  font: var(--anmg-h2);
+  color: var(--neu-04);
+}
+
+.score-lvl {
+  background-color: var(--bg-color);
+  width: var(--sp-32);
+  aspect-ratio: 1 / 1;
+  border-radius: var(--brad-circ);
+}

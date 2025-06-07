@@ -6,13 +6,16 @@ import { useParams } from "react-router-dom";
 import { useJikanBySpecificId } from "../../../ui/hooks/api/animeManga/useJikanBySpecificId";
 import BackButton from "../../../ui/components/Button/Back";
 import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
+import AnimeMangaDetails from "../../../ui/components/Details/AnimeManga";
 
 export default function AnimeMangaContent() {
   useDocumentTitle("Anime | Felipe Ferreira");
-  const { t } = useTranslation("animes-mangas", { useSuspense: true });
   const { type, id } = useParams();
 
-  const { data, isPending, isError } = useJikanBySpecificId(type, id);
+  const { data, isPending, isError } = useJikanBySpecificId({
+    type: type,
+    id: parseInt(id),
+  });
 
   if (isPending) {
     console.log("Carregando...");
@@ -35,6 +38,8 @@ export default function AnimeMangaContent() {
           mbFont={"var(--anmg-h5)"}
         />
       </header>
+
+      <AnimeMangaDetails type={type} data={data} />
     </div>
   );
 }
