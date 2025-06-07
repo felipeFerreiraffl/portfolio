@@ -1,0 +1,17 @@
+{
+  "games": {
+    "intro": "Jogos",
+    "sections": {
+      "gamerType": "Tipo gamer"
+    },
+    "content": {
+      "desc": "Descrição",
+      "platform": "Plataformas",
+      "genres": "Gêneros",
+      "other": "Outras informações",
+      "score": "Pontuação",
+      "launchDate": "Data de lançamento",
+      "dev": "Desenvolvedor"
+    }
+  }
+}

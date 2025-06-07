@@ -130,14 +130,16 @@ export default function AnimeMangaDetails({ type, data }) {
           <div className={styles["details-ctn"]}>
             <div className={styles["synps-ctn"]}>
               <h2 className={`${styles["sec-ttl"]} ${styles["bd-ttl"]}`}>
-                {t("content.synopsis")}
+                {t("animesMangas.content.synopsis")}
               </h2>
               <p className={styles["body-txt"]}>{data.synopsis || "..."}</p>
             </div>
 
             <div className={styles["demo-gen-ctn"]}>
               <div className={styles["demo-ctn"]}>
-                <h2 className={styles["sec-ttl"]}>{t("content.demography")}</h2>
+                <h2 className={styles["sec-ttl"]}>
+                  {t("animesMangas.content.demography")}
+                </h2>
                 <p className={styles.demo}>
                   {data.type === "TV" || data.type === "Manga"
                     ? data.demographics[0]?.name || "..."
@@ -146,7 +148,9 @@ export default function AnimeMangaDetails({ type, data }) {
               </div>
 
               <div className={styles["gen-ctn"]}>
-                <h2 className={styles["sec-ttl"]}>{t("content.genre")}</h2>
+                <h2 className={styles["sec-ttl"]}>
+                  {t("animesMangas.content.genre")}
+                </h2>
                 <div className={styles.genres}>
                   {data.genres.map((genre) => (
                     <p className={styles.gen}>{genre.name}</p>
@@ -157,15 +161,15 @@ export default function AnimeMangaDetails({ type, data }) {
 
             <div className={styles["other-ctn"]}>
               <h2 className={`${styles["sec-ttl"]} ${styles["bd-ttl"]}`}>
-                {t("content.other")}
+                {t("animesMangas.content.other")}
               </h2>
 
               <div className={styles["other-info"]}>
                 <div className={styles.other}>
                   <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
                     {type === "anime"
-                      ? t("content.anime.studio")
-                      : t("content.manga.author")}
+                      ? t("animesMangas.content.anime.studio")
+                      : t("animesMangas.content.manga.author")}
                   </h3>
                   <p className={styles["body-txt"]}>
                     {type === "anime"
@@ -177,8 +181,8 @@ export default function AnimeMangaDetails({ type, data }) {
                 <div className={styles.other}>
                   <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
                     {type === "anime"
-                      ? t("content.anime.launchDate")
-                      : t("content.manga.publication")}
+                      ? t("animesMangas.content.anime.launchDate")
+                      : t("animesMangas.content.manga.publication")}
                   </h3>
                   <p className={styles["body-txt"]}>
                     {type === "anime"
@@ -199,8 +203,8 @@ export default function AnimeMangaDetails({ type, data }) {
                 <div className={styles.other}>
                   <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
                     {type === "anime"
-                      ? t("content.anime.episodes")
-                      : t("content.manga.chapters")}
+                      ? t("animesMangas.content.anime.episodes")
+                      : t("animesMangas.content.manga.chapters")}
                   </h3>
                   <p className={styles["body-txt"]}>
                     {type === "anime"
@@ -211,7 +215,7 @@ export default function AnimeMangaDetails({ type, data }) {
 
                 <div className={styles.other}>
                   <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
-                    {t("content.popRank")}
+                    {t("animesMangas.content.popRank")}
                   </h3>
                   <p className={styles["body-txt"]}>
                     {`${data.popularity}º` || "?"}
@@ -220,7 +224,7 @@ export default function AnimeMangaDetails({ type, data }) {
 
                 <div className={styles.other}>
                   <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
-                    {t("content.scoreRank")}
+                    {t("animesMangas.content.scoreRank")}
                   </h3>
                   <p className={styles["body-txt"]}>{`${data.rank}º` || "?"}</p>
                 </div>
@@ -248,7 +252,7 @@ export default function AnimeMangaDetails({ type, data }) {
               </div>
             )}
 
-            <span className={styles.cpt}>{t("content.data")}</span>
+            <span className={styles.cpt}>{t("animesMangas.content.data")}</span>
           </div>
         </section>
       )}

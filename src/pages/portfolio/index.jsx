@@ -35,17 +35,17 @@ export default function Portfolio() {
           icon={<FaIcon icon={fontAwesome.newspaper} />}
           bgImage={headerImgs.portfolio}
           color={"var(--main-02)"}
-          title={t("intro.title")}
-          subtitle={t("intro.subtitle")}
+          title={t("portfolio.intro.title")}
+          subtitle={t("portfolio.intro.subtitle")}
         />
       </header>
 
-      <section className={styles.crs}>
+      <section className={styles.crs} tabIndex={0}>
         <h2 className={`${styles["sec-ttl"]} ${styles["ttl-brd"]}`}>
-          {t("sections.courses.title")}
+          {t("portfolio.sections.courses.title")}
         </h2>
         <div className={styles["all-crs-ctn"]}>
-          <div className={styles["crs-ctn"]}>
+          <div className={styles["crs-ctn"]} tabIndex={0}>
             <motion.div
               className={styles["crs-ttl-ctn"]}
               initial={{ x: -100, opacity: 0 }}
@@ -54,7 +54,7 @@ export default function Portfolio() {
               viewport={{ once: true, amount: 0.5 }}
             >
               <h3 className={`${styles["crs-thrd-ttl"]} ${styles.tech}`}>
-                {t("sections.courses.tech.title")}
+                {t("portfolio.sections.courses.tech.title")}
               </h3>
               <FaIcon
                 icon={fontAwesome.laptopCode}
@@ -63,7 +63,7 @@ export default function Portfolio() {
             </motion.div>
             <div className={styles["crs-spec-crs"]}>
               <CourseConclusion
-                name={t("sections.courses.tech.devSys")}
+                name={t("portfolio.sections.courses.tech.devSys")}
                 progress={100}
                 progressBgColor={"var(--rgba-bl50)"}
                 progressColor={"var(--main-02)"}
@@ -71,7 +71,7 @@ export default function Portfolio() {
                 endYear={2024}
               />
               <CourseConclusion
-                name={t("sections.courses.tech.designer")}
+                name={t("portfolio.sections.courses.tech.designer")}
                 progress={100}
                 progressBgColor={"var(--rgba-bl50)"}
                 progressColor={"var(--main-02)"}
@@ -79,7 +79,7 @@ export default function Portfolio() {
                 endYear={2025}
               />
               <CourseConclusion
-                name={t("sections.courses.tech.devFront")}
+                name={t("portfolio.sections.courses.tech.devFront")}
                 progress={5}
                 progressBgColor={"var(--rgba-bl50)"}
                 progressColor={"var(--main-02)"}
@@ -89,7 +89,7 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <div className={styles["crs-ctn"]}>
+          <div className={styles["crs-ctn"]} tabIndex={0}>
             <motion.div
               className={styles["crs-ttl-ctn"]}
               initial={{ x: -100, opacity: 0 }}
@@ -98,7 +98,7 @@ export default function Portfolio() {
               viewport={{ once: true, amount: 0.5 }}
             >
               <h3 className={`${styles["crs-thrd-ttl"]} ${styles.mec}`}>
-                {t("sections.courses.other.title")}
+                {t("portfolio.sections.courses.other.title")}
               </h3>
               <FaIcon
                 icon={fontAwesome.circlePlus}
@@ -107,7 +107,7 @@ export default function Portfolio() {
             </motion.div>
             <div className={styles["crs-spec-crs"]}>
               <CourseConclusion
-                name={t("sections.courses.other.mech")}
+                name={t("portfolio.sections.courses.other.mech")}
                 progress={90}
                 progressBgColor={"var(--rgba-pp50)"}
                 progressColor={"var(--main-05)"}
@@ -121,30 +121,30 @@ export default function Portfolio() {
 
       <Divisor marginTop={128} color={"var(--main-02)"} />
 
-      <section className={styles.sch}>
+      <section className={styles.sch} tabIndex={0}>
         <h2 className={`${styles["sec-ttl"]} ${styles["ttl-brd"]}`}>
-          {t("sections.schools")}
+          {t("portfolio.sections.schools")}
         </h2>
-        <div className={styles["sch-card-ctn"]}>
+        <div className={styles["sch-card-ctn"]} tabIndex={0}>
           <SchoolCard
             href={links.schools.swiss}
             img={extraImgs.snSwiss}
             name={"SENAI Suíço-Brasileira"}
-            alt={t("alts.schools.swiss")}
+            alt={t("portfolio.alts.schools.swiss")}
           />
           <SchoolCard
             href={links.schools.mercedes}
             img={extraImgs.snMercedes}
             name={"SENAI Mercedes-Benz"}
-            alt={t("alts.schools.mercedes")}
+            alt={t("portfolio.alts.schools.mercedes")}
           />
         </div>
       </section>
 
       <Divisor marginTop={128} color={"var(--main-02)"} />
 
-      <section className={styles.skls}>
-        <h2 className={styles["sec-ttl"]}>{t("sections.skills")}</h2>
+      <section className={styles.skls} tabIndex={0}>
+        <h2 className={styles["sec-ttl"]}>{t("portfolio.sections.skills")}</h2>
         <div className={styles["skls-all-ctn"]}>
           <motion.div
             className={styles["skls-ctn"]}
@@ -152,6 +152,7 @@ export default function Portfolio() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.5 }}
+            tabIndex={0}
           >
             <h3 className={styles["skls-ttl"]}>Frontend</h3>
             <div className={styles["skls-spec-ctn"]}>
@@ -184,6 +185,7 @@ export default function Portfolio() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.5 }}
+            tabIndex={0}
           >
             <h3 className={styles["skls-ttl"]}>Backend</h3>
             <div className={styles["skls-spec-ctn"]}>
@@ -201,6 +203,7 @@ export default function Portfolio() {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.5 }}
+            tabIndex={0}
           >
             <h3 className={styles["skls-ttl"]}>Design</h3>
             <div className={styles["skls-spec-ctn"]}>
@@ -216,9 +219,9 @@ export default function Portfolio() {
 
       <Divisor marginTop={128} color={"var(--main-02)"} />
 
-      <section className={styles.pjts}>
+      <section className={styles.pjts} tabIndex={0}>
         <h2 className={`${styles["sec-ttl"]} ${styles["ttl-brd"]}`}>
-          {t("sections.projects.title")}
+          {t("portfolio.sections.projects.title")}
         </h2>
 
         <ProjectsSlides />
@@ -226,7 +229,7 @@ export default function Portfolio() {
 
       <Divisor marginTop={128} color={"var(--main-02)"} />
 
-      <section className={styles.crr}>
+      <section className={styles.crr} tabIndex={0}>
         <motion.div
           className={styles["crr-cont"]}
           initial={{ x: -100, opacity: 0 }}
@@ -236,16 +239,17 @@ export default function Portfolio() {
         >
           <div className={styles["crr-txt-ctn"]}>
             <h2 className={`${styles["crr-ttl"]} ${styles["ttl-brd"]}`}>
-              {t("sections.curriculum.title")}
+              {t("portfolio.sections.curriculum.title")}
             </h2>
             <p className={styles["crr-subttl"]}>
-              {t("sections.curriculum.desc")}
+              {t("portfolio.sections.curriculum.desc")}
             </p>
           </div>
           <MainButton
             onClick={openPdf}
             color={"var(--main-01)"}
-            text={t("sections.curriculum.button")}
+            text={t("portfolio.sections.curriculum.button")}
+            title={t("portfolio.sections.curriculum.buttonTitle")}
           />
         </motion.div>
         <motion.span

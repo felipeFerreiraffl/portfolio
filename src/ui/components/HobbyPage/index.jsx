@@ -50,7 +50,8 @@ export default function HobbyPage({
       <MainButton
         href={href}
         color={color === "var(--main-02)" ? "var(--main-01)" : "var(--main-04)"}
-        text={t("button")}
+        title={`${t("hobbies.buttonTitle")} ${title}`}
+        text={t("hobbies.button")}
       />
     </motion.div>
   );

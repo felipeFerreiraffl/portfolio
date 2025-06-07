@@ -56,13 +56,13 @@ export default function AnimesMangas() {
           color={"var(--main-02)"}
           border={"var(--bd-mn2)"}
           icon={<FaIcon icon={fontAwesome.book} />}
-          title={t("title")}
+          title={t("animesMangas.title")}
           titleFont={"var(--anmg-h1)"}
           mobTitleFont={"var(--anmg-h2)"}
         />
       </header>
       <section className={styles["chs-ctn"]}>
-        <h2 className={styles["sec-ttl"]}>{t("choose.title")}</h2>
+        <h2 className={styles["sec-ttl"]}>{t("animesMangas.choose.title")}</h2>
         <div className={styles["chs-card-ctn"]}>
           <div
             className={`${styles.chs} ${styles.anime} ${
@@ -70,6 +70,7 @@ export default function AnimesMangas() {
             }`}
             style={{ backgroundImage: `url(${bgImgs.anime})` }}
             onClick={() => handleTypeSelection("animes")}
+            title={"Animes"}
             role="button"
           >
             <span className={styles["chs-icn"]}>
@@ -84,12 +85,15 @@ export default function AnimesMangas() {
             }`}
             style={{ backgroundImage: `url(${bgImgs.manga})` }}
             onClick={() => handleTypeSelection("mangas")}
+            title={t("animesMangas.choose.mangas")}
             role="button"
           >
             <span className={styles["chs-icn"]}>
               <FaIcon icon={fontAwesome.bookOpenReader} />
             </span>
-            <h3 className={styles["sec-ttl"]}>{t("choose.mangas")}</h3>
+            <h3 className={styles["sec-ttl"]}>
+              {t("animesMangas.choose.mangas")}
+            </h3>
           </div>
         </div>
       </section>

@@ -1,61 +1,63 @@
 {
-  "title": "Animes & Mangás",
-  "choose": {
-    "title": "Qual deseja ver?",
-    "mangas": "Mangás"
-  },
-  "animes": {
-    "pop": {
-      "title": "Mais populares",
-      "subtitle": "Animes com maior popularidade da história, que até quem não é muito fã conhecem alguns deles"
+  "animesMangas": {
+    "title": "Animes & Mangás",
+    "choose": {
+      "title": "Qual deseja ver?",
+      "mangas": "Mangás"
     },
-    "best": {
-      "title": "Melhores avaliados",
-      "subtitle": "Os animes com as notas mais altas no MyAnimeList, ou seja, os melhores de todos os tempos"
+    "animes": {
+      "pop": {
+        "title": "Mais populares",
+        "subtitle": "Animes com maior popularidade da história, que até quem não é muito fã conhecem alguns deles"
+      },
+      "best": {
+        "title": "Melhores avaliados",
+        "subtitle": "Os animes com as notas mais altas no MyAnimeList, ou seja, os melhores de todos os tempos"
+      },
+      "sections": {
+        "watchedRecently": "Assistidos recentemente",
+        "pendent": "Pendentes",
+        "favorite": "Meus animes favoritos"
+      }
     },
-    "sections": {
-      "watchedRecently": "Assistidos recentemente",
-      "pendent": "Pendentes",
-      "favorite": "Meus animes favoritos"
+    "mangas": {
+      "pop": {
+        "title": "Mais populares",
+        "subtitle": "Mangás com maior popularidade da história, que até quem não é muito fã conhecem alguns deles"
+      },
+      "best": {
+        "title": "Melhores avaliados",
+        "subtitle": "Os mangás com as notas mais altas no MyAnimeList, ou seja, os melhores de todos os tempos"
+      },
+      "sections": {
+        "finished": "Concluídos",
+        "readingNow": "Lendo agora",
+        "favorite": "Meus mangás favoritos"
+      },
+      "mangadex": {
+        "desc": "Site que recomendo para ler mangás, caso tenha interesse, com uma interface agradável e com uma enorme disponibilidade de mangás para todos os públicos",
+        "button": "Ver site"
+      }
+    },
+    "content": {
+      "synopsis": "Sinopse",
+      "demography": "Demografia",
+      "genre": "Gênero",
+      "other": "Outras informações",
+      "popRank": "Rank de popularidade",
+      "scoreRank": "Rank de pontuação",
+      "data": "Dados extraídos da API da Jikan",
+      "anime": {
+        "studio": "Estúdio",
+        "launchDate": "Ano de lançamento",
+        "episodes": "Episódios"
+      },
+      "manga": {
+        "author": "Autor",
+        "publication": "Período de publicação",
+        "chapters": "Capítulos"
+      },
+      "button": "Voltar"
     }
-  },
-  "mangas": {
-    "pop": {
-      "title": "Mais populares",
-      "subtitle": "Mangás com maior popularidade da história, que até quem não é muito fã conhecem alguns deles"
-    },
-    "best": {
-      "title": "Melhores avaliados",
-      "subtitle": "Os mangás com as notas mais altas no MyAnimeList, ou seja, os melhores de todos os tempos"
-    },
-    "sections": {
-      "finished": "Concluídos",
-      "readingNow": "Lendo agora",
-      "favorite": "Meus mangás favoritos"
-    },
-    "mangadex": {
-      "desc": "Site que recomendo para ler mangás, caso tenha interesse, com uma interface agradável e com uma enorme disponibilidade de mangás para todos os públicos",
-      "button": "Ver site"
-    }
-  },
-  "content": {
-    "synopsis": "Sinopse",
-    "demography": "Demografia",
-    "genre": "Gênero",
-    "other": "Outras informações",
-    "popRank": "Rank de popularidade",
-    "scoreRank": "Rank de pontuação",
-    "data": "Dados extraídos da API da Jikan",
-    "anime": {
-      "studio": "Estúdio",
-      "launchDate": "Ano de lançamento",
-      "episodes": "Episódios"
-    },
-    "manga": {
-      "author": "Autor",
-      "publication": "Período de publicação",
-      "chapters": "Capítulos"
-    },
-    "button": "Voltar"
   }
 }

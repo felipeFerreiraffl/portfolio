@@ -1,48 +1,51 @@
 {
-  "intro": {
-    "title": "Portfolio",
-    "subtitle": "Demonstration of courses made, acquired skills and projects made, mainly in the Information Technology area"
-  },
-  "sections": {
-    "courses": {
-      "title": "Courses",
-      "tech": {
-        "title": "Information Technology",
-        "devSys": "Technician in System Development",
-        "designer": "Web Interface Designer",
-        "devFront": "Frontend Developer"
+  "portfolio": {
+    "intro": {
+      "title": "Portfolio",
+      "subtitle": "Demonstration of courses made, acquired skills and projects made, mainly in the Information Technology area"
+    },
+    "sections": {
+      "courses": {
+        "title": "Courses",
+        "tech": {
+          "title": "Information Technology",
+          "devSys": "Technician in System Development",
+          "designer": "Web Interface Designer",
+          "devFront": "Frontend Developer"
+        },
+        "other": {
+          "title": "Other courses",
+          "mech": "Vehicular Production Mechanical"
+        }
       },
-      "other": {
-        "title": "Other courses",
-        "mech": "Vehicular Production Mechanical"
+      "schools": "Schools",
+      "skills": "Skills",
+      "projects": {
+        "title": "Projects",
+        "apiInfos": {
+          "68254c981dd1d7529ee7487e": "First page with HTML and CSS",
+          "68254ccf1dd1d7529ee7487f": "School report",
+          "68254d141dd1d7529ee74880": "Restaurant menu page",
+          "68254d581dd1d7529ee74881": "Weather API page",
+          "68254d871dd1d7529ee74882": "Fr=irst professional portfolio",
+          "68254db51dd1d7529ee74883": "Weather API page with React",
+          "68254ddf1dd1d7529ee74884": "Math calculations",
+          "68254e0e1dd1d7529ee74885": "CRUD with Bookstore",
+          "68254e4f1dd1d7529ee74886": "Informations about animes and mangas with Kitsu API"
+        }
+      },
+      "curriculum": {
+        "title": "Curriculum Vitae",
+        "desc": "A curriculum with a little abstract about me in a professional way, shpwing my goals, academic background, experience and competences",
+        "button": "Access CV",
+        "buttonTitle": "View curriculum"
       }
     },
-    "schools": "Schools",
-    "skills": "Skills",
-    "projects": {
-      "title": "Projects",
-      "apiInfos": {
-        "68254c981dd1d7529ee7487e": "First page with HTML and CSS",
-        "68254ccf1dd1d7529ee7487f": "School report",
-        "68254d141dd1d7529ee74880": "Restaurant menu page",
-        "68254d581dd1d7529ee74881": "Weather API page",
-        "68254d871dd1d7529ee74882": "Fr=irst professional portfolio",
-        "68254db51dd1d7529ee74883": "Weather API page with React",
-        "68254ddf1dd1d7529ee74884": "Math calculations",
-        "68254e0e1dd1d7529ee74885": "CRUD with Bookstore",
-        "68254e4f1dd1d7529ee74886": "Informations about animes and mangas with Kitsu API"
+    "alts": {
+      "schools": {
+        "swiss": "Image of the school SENAI Suiço-Brasileira",
+        "mercedes": "Image of the school SENAI Mercedes-Benz"
       }
-    },
-    "curriculum": {
-      "title": "Curriculum Vitae",
-      "desc": "A curriculum with a little abstract about me in a professional way, shpwing my goals, academic background, experience and competences",
-      "button": "Access CV"
-    }
-  },
-  "alts": {
-    "schools": {
-      "swiss": "Image of the school SENAI Suiço-Brasileira",
-      "mercedes": "Image of the school SENAI Mercedes-Benz"
     }
   }
 }

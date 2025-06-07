@@ -23,7 +23,7 @@ export default function Home() {
           <motion.img
             className={styles.logo}
             src={logo.altLogo2}
-            alt={t("intro.alt")}
+            alt={t("home.intro.alt")}
             loading="lazy"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -35,8 +35,8 @@ export default function Home() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.3, ease: "easeInOut" }}
           >
-            <h1 className={styles.ttl}>{t("intro.title")}</h1>
-            <p className={styles.subttl}>{t("intro.subtitle")}</p>
+            <h1 className={styles.ttl}>{t("home.intro.title")}</h1>
+            <p className={styles.subttl}>{t("home.intro.subtitle")}</p>
           </motion.div>
         </div>
       </header>
@@ -49,7 +49,7 @@ export default function Home() {
           transition={{ duration: 1.2, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          {t("sections.about-me.title")}
+          {t("home.sections.about-me.title")}
         </motion.h2>
 
         <div className={styles["abt-cont"]}>
@@ -64,29 +64,29 @@ export default function Home() {
           >
             <div className={styles["abt-info"]}>
               <h3 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
-                {t("sections.about-me.name")}
+                {t("home.sections.about-me.name")}
               </h3>
               <p className={styles.body}>Felipe Ferreira Lima</p>
             </div>
             <div className={styles["abt-info"]}>
               <h3 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
-                {t("sections.about-me.birthday")}
+                {t("home.sections.about-me.birthday")}
               </h3>
               <p className={styles.body}>14/07/2004</p>
             </div>
             <div className={styles["abt-info"]}>
               <h3 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
-                {t("sections.about-me.nationality.title")}
+                {t("home.sections.about-me.nationality.title")}
               </h3>
               <p className={styles.body}>
-                {t("sections.about-me.nationality.desc")}
+                {t("home.sections.about-me.nationality.desc")}
               </p>
             </div>
             <div className={styles["abt-info"]}>
               <h3 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
-                {t("sections.about-me.goal.title")}
+                {t("home.sections.about-me.goal.title")}
               </h3>
-              <p className={styles.body}>{t("sections.about-me.goal.desc")}</p>
+              <p className={styles.body}>{t("home.sections.about-me.goal.desc")}</p>
             </div>
           </motion.div>
         </div>
@@ -104,15 +104,15 @@ export default function Home() {
         >
           <div className={styles["ptf-text-ctn"]}>
             <h2 className={`${styles["sec-ttl"]} ${styles["bd-ttl"]}`}>
-              {t("sections.portfolio.title")}
+              {t("home.sections.portfolio.title")}
             </h2>
-            <p className={styles.body}>{t("sections.portfolio.desc")}</p>
+            <p className={styles.body}>{t("home.sections.portfolio.desc")}</p>
           </div>
 
           <MainButton
             href={"/portfolio"}
-            text={t("sections.portfolio.button")}
-            title={t("buttonTitles.portfolio")}
+            text={t("home.sections.portfolio.button")}
+            title={t("home.buttonTitles.portfolio")}
             color={"var(--main-01)"}
           />
         </motion.div>
@@ -135,15 +135,15 @@ export default function Home() {
               Hobbies
             </h2>
             <div>
-              <p className={styles.body}>{t("sections.hobbies.desc-1")}</p>
-              <p className={styles.body}>{t("sections.hobbies.desc-2")}</p>
+              <p className={styles.body}>{t("home.sections.hobbies.desc-1")}</p>
+              <p className={styles.body}>{t("home.sections.hobbies.desc-2")}</p>
             </div>
           </div>
 
           <MainButton
             href={"/hobbies"}
-            text={t("sections.hobbies.button")}
-            title={t("buttonTitles.hobbies")}
+            text={t("home.sections.hobbies.button")}
+            title={t("home.buttonTitles.hobbies")}
             color={"var(--main-04)"}
           />
         </motion.div>

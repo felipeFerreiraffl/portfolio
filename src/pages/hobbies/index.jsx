@@ -23,7 +23,7 @@ export default function Hobbies() {
           color={"var(--main-05)"}
           icon={<FaIcon icon={fontAwesome.umbrellaBeach} />}
           title={"Hobbies"}
-          subtitle={t("intro.subtitle")}
+          subtitle={t("hobbies.intro.subtitle")}
         />
       </header>
 
@@ -33,10 +33,10 @@ export default function Hobbies() {
           color={"var(--main-02)"}
           icon={<FaIcon icon={fontAwesome.book} />}
           border={"var(--bd-mn2)"}
-          title={t("hobbie-pages.anime-manga.title")}
+          title={t("hobbies.hobbie-pages.anime-manga.title")}
           ttlFont={"var(--anmg-h2)"}
           mobTtlFont={"var(--anmg-h3)"}
-          desc={t("hobbie-pages.anime-manga.description")}
+          desc={t("hobbies.hobbie-pages.anime-manga.description")}
           descFont={"var(--anmg-subttl)"}
           href={"/hobbies/animes-mangas"}
         />
@@ -45,10 +45,10 @@ export default function Hobbies() {
           color={"var(--main-05)"}
           icon={<FaIcon icon={fontAwesome.gamepad} />}
           border={"var(--bd-mn5)"}
-          title={t("hobbie-pages.games.title")}
+          title={t("hobbies.hobbie-pages.games.title")}
           ttlFont={"var(--gm-h2)"}
           mobTtlFont={"var(--gm-h3)"}
-          desc={t("hobbie-pages.games.description")}
+          desc={t("hobbies.hobbie-pages.games.description")}
           descFont={"var(--gm-subttl)"}
           href={"/hobbies/games"}
         />
@@ -57,10 +57,10 @@ export default function Hobbies() {
           color={"var(--main-02)"}
           icon={<FaIcon icon={fontAwesome.futbol} />}
           border={"var(--bd-mn2)"}
-          title={t("hobbie-pages.football.title")}
+          title={t("hobbies.hobbie-pages.football.title")}
           ttlFont={"var(--fut-h2)"}
           mobTtlFont={"var(--fut-h3)"}
-          desc={t("hobbie-pages.football.description")}
+          desc={t("hobbies.hobbie-pages.football.description")}
           descFont={"var(--fut-subttl)"}
           href={"/hobbies/football"}
         />
@@ -69,10 +69,10 @@ export default function Hobbies() {
           color={"var(--main-05)"}
           icon={<FaIcon icon={fontAwesome.paintbrush} />}
           border={"var(--bd-mn5)"}
-          title={t("hobbie-pages.drawings.title")}
+          title={t("hobbies.hobbie-pages.drawings.title")}
           ttlFont={"var(--draw-h2)"}
           mobTtlFont={"var(--draw-h3)"}
-          desc={t("hobbie-pages.drawings.description")}
+          desc={t("hobbies.hobbie-pages.drawings.description")}
           descFont={"var(--draw-subttl)"}
           href={"/hobbies/drawings"}
         />

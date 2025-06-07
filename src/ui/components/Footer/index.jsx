@@ -14,7 +14,7 @@ export default function Footer({ marginTop }) {
       <div className={styles.cont}>
         <img
           src={logo.mainLogo2}
-          alt={t("logo-alt")}
+          alt={t("footer.logo-alt")}
           className={styles.logo}
           loading="lazy"
         />
@@ -27,40 +27,40 @@ export default function Footer({ marginTop }) {
             viewport={{ once: true, amount: 0.5 }}
           >
             <h2 className={`${styles["cont-ttl"]} ${styles["nav-ttl"]}`}>
-              {t("nav.title")}
+              {t("footer.nav.title")}
             </h2>
             <div className={styles["page-ctn"]}>
               <a
                 href="/"
                 className={styles.page}
-                aria-label={t("aria-labels.home")}
-                title={t("aria-labels.home")}
+                aria-label={t("footer.aria-labels.home")}
+                title={t("footer.aria-labels.home")}
               >
                 Home
               </a>
               <a
                 href="/portfolio"
                 className={styles.page}
-                aria-label={t("aria-labels.portfolio")}
-                title={t("aria-labels.portfolio")}
+                aria-label={t("footer.aria-labels.portfolio")}
+                title={t("footer.aria-labels.portfolio")}
               >
-                {t("nav.portfolio")}
+                {t("footer.nav.portfolio")}
               </a>
               <a
                 href="/hobbies"
                 className={styles.page}
-                aria-label={t("aria-labels.hobbies")}
-                title={t("aria-labels.hobbies")}
+                aria-label={t("footer.aria-labels.hobbies")}
+                title={t("footer.aria-labels.hobbies")}
               >
                 Hobbies
               </a>
               <a
                 href="/contatos"
                 className={styles.page}
-                aria-label={t("aria-labels.contacts")}
-                title={t("aria-labels.contacts")}
+                aria-label={t("footer.aria-labels.contacts")}
+                title={t("footer.aria-labels.contacts")}
               >
-                {t("nav.contacts")}
+                {t("footer.nav.contacts")}
               </a>
             </div>
           </motion.nav>
@@ -72,14 +72,14 @@ export default function Footer({ marginTop }) {
             viewport={{ once: true, amount: 0.5 }}
           >
             <h2 className={`${styles["cont-ttl"]} ${styles["social-ttl"]}`}>
-              {t("social")}
+              {t("footer.social")}
             </h2>
             <div className={styles["social-icn-ctn"]}>
               <a
                 href={links.socialMedias.github}
                 target="_blank"
-                aria-label={t("aria-labels.github")}
-                title={t("aria-labels.github")}
+                aria-label={t("footer.aria-labels.github")}
+                title={t("footer.aria-labels.github")}
                 rel="noopener noreferrer"
               >
                 <FaIcon
@@ -90,8 +90,8 @@ export default function Footer({ marginTop }) {
               <a
                 href={links.socialMedias.instagram}
                 target="_blank"
-                aria-label={t("aria-labels.instagram")}
-                title={t("aria-labels.instagram")}
+                aria-label={t("footer.aria-labels.instagram")}
+                title={t("footer.aria-labels.instagram")}
                 rel="noopener noreferrer"
               >
                 <FaIcon
@@ -102,8 +102,8 @@ export default function Footer({ marginTop }) {
               <a
                 href={links.socialMedias.linkedin}
                 target="_blank"
-                aria-label={t("aria-labels.linkedin")}
-                title={t("aria-labels.linkedin")}
+                aria-label={t("footer.aria-labels.linkedin")}
+                title={t("footer.aria-labels.linkedin")}
                 rel="noopener noreferrer"
               >
                 <FaIcon

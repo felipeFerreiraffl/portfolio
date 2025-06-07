@@ -33,21 +33,21 @@ export default function HobbyFinal({ img, alt, color, font, mbFont }) {
           className={styles.ttl}
           style={{ "--font": font, "--mb-font": mbFont, "--color": color }}
         >
-          {t("final.title")}
+          {t("hobbies.final.title")}
         </h2>
         <div className={styles["btn-ctn"]}>
           <MainButton
             color={
               color === "var(--main-02)" ? "var(--main-01)" : "var(--main-04)"
             }
-            text={t("final.mainButton")}
+            text={t("hobbies.final.mainButton")}
             onClick={scrollToTop}
           />
 
           <SecondaryButton
             color={"var(--main-01)"}
             border={"var(--bd-mn1)"}
-            text={t("final.secButton")}
+            text={t("hobbies.final.secButton")}
             href={"/hobbies"}
           />
         </div>

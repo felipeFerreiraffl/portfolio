@@ -1,21 +1,23 @@
 {
-  "pages": {
-    "portfolio": "Portfólio",
-    "contacts": "Contatos"
-  },
-  "tradutor": {
-    "pt-br": "Português (BR)",
-    "en": "Inglês"
-  },
-  "alts": {
-    "logo": "Logo do site",
-    "pt-icon": "Ícone de tradução para português do Brasil",
-    "en-icon": "Ícone de tradução para inglês"
-  },
-  "aria-labels": {
-    "home": "Ir para a página Home",
-    "portfolio": "Ir para a página Portfólio",
-    "hobbies": "Ir para a página Hobbies",
-    "contacts": "Ir para a página Contatos"
+  "header": {
+    "pages": {
+      "portfolio": "Portfólio",
+      "contacts": "Contatos"
+    },
+    "tradutor": {
+      "pt-br": "Português (BR)",
+      "en": "Inglês"
+    },
+    "alts": {
+      "logo": "Logo do site",
+      "pt-icon": "Ícone de tradução para português do Brasil",
+      "en-icon": "Ícone de tradução para inglês"
+    },
+    "aria-labels": {
+      "home": "Ir para a página Home",
+      "portfolio": "Ir para a página Portfólio",
+      "hobbies": "Ir para a página Hobbies",
+      "contacts": "Ir para a página Contatos"
+    }
   }
 }

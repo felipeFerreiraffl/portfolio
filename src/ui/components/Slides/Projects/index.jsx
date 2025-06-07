@@ -113,7 +113,7 @@ export default function ProjectsSlides() {
                   <img
                     src={project.imgSrc}
                     alt={`Github - ${t(
-                      `sections.projects.apiInfos.${project.id}`
+                      `portfolio.sections.projects.apiInfos.${project.id}`
                     )}`}
                     loading="lazy"
                     className={styles.img}
@@ -121,7 +121,7 @@ export default function ProjectsSlides() {
 
                   <div className={styles.overlay}>
                     <p className={styles["img-name"]}>
-                      {t(`sections.projects.apiInfos.${project.id}`)}
+                      {t(`portfolio.sections.projects.apiInfos.${project.id}`)}
                     </p>
                   </div>
                 </div>

@@ -68,14 +68,14 @@ export default function Header() {
 
   return (
     <nav className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
-      <a href="/" title={t("aria-labels.home")} className={styles["logo-ctn"]}>
+      <a href="/" title={t("header.aria-labels.home")} className={styles["logo-ctn"]}>
         <img
           className={styles["logo-i"]}
           src={logo.mainLogo2}
-          alt={t("alts.logo")}
+          alt={t("header.alts.logo")}
         />
         <p
-          aria-label={t("aria-labels.home")}
+          aria-label={t("header.aria-labels.home")}
           href="/"
           className={`${styles.link} ${
             location.pathname === "/" ? styles["home-active"] : ""
@@ -86,18 +86,18 @@ export default function Header() {
       </a>
       <div className={styles.pages}>
         <a
-          title={t("aria-labels.portfolio")}
-          aria-label={t("aria-labels.portfolio")}
+          title={t("header.aria-labels.portfolio")}
+          aria-label={t("header.aria-labels.portfolio")}
           href="/portfolio"
           className={`${styles.link} ${styles.portfolio} ${
             location.pathname === "/portfolio" ? styles.active : ""
           }`}
         >
-          {t("pages.portfolio")}
+          {t("header.pages.portfolio")}
         </a>
         <a
-          title={t("aria-labels.hobbies")}
-          aria-label={t("aria-labels.hobbies")}
+          title={t("header.aria-labels.hobbies")}
+          aria-label={t("header.aria-labels.hobbies")}
           href="/hobbies"
           className={`${styles.link} ${styles.hobbies} ${
             location.pathname === "/hobbies" ? styles.active : ""
@@ -106,14 +106,14 @@ export default function Header() {
           Hobbies
         </a>
         <a
-          title={t("aria-labels.contacts")}
-          aria-label={t("aria-labels.contacts")}
+          title={t("header.aria-labels.contacts")}
+          aria-label={t("header.aria-labels.contacts")}
           href="/contatos"
           className={`${styles.link} ${styles.contacts} ${
             location.pathname === "/contatos" ? styles.active : ""
           }`}
         >
-          {t("pages.contacts")}
+          {t("header.pages.contacts")}
         </a>
       </div>
       <div className={styles["lang-ctn"]}>
@@ -122,8 +122,8 @@ export default function Header() {
             i18n.language === "pt" ? styles.active : ""
           }`}
           src={langSvg.ptBr}
-          alt={t("alts.pt-icon")}
-          title={t("tradutor.pt-br")}
+          alt={t("header.alts.pt-icon")}
+          title={t("header.tradutor.pt-br")}
           onClick={() => i18n.changeLanguage("pt")}
           tabIndex={0}
         />
@@ -132,8 +132,8 @@ export default function Header() {
             i18n.language === "en" ? styles.active : ""
           }`}
           src={langSvg.eng}
-          alt={t("alts.en-icon")}
-          title={t("tradutor.en")}
+          alt={t("header.alts.en-icon")}
+          title={t("header.tradutor.en")}
           onClick={() => i18n.changeLanguage("en")}
           tabIndex={0}
         />
@@ -165,7 +165,7 @@ export default function Header() {
             exit={{ x: "100%" }}
             transition={{ duration: 0.3 }}
             aria-modal="true"
-            aria-label={t("menu")}
+            aria-label={t("header.menu")}
             role="dialog"
           >
             <span
@@ -182,8 +182,8 @@ export default function Header() {
                   i18n.language === "pt" ? styles.active : ""
                 }`}
                 src={langSvg.ptBr}
-                alt={t("alts.pt-icon")}
-                title={t("tradutor.pt-br")}
+                alt={t("header.alts.pt-icon")}
+                title={t("header.tradutor.pt-br")}
                 onClick={() => i18n.changeLanguage("pt")}
               />
               <img
@@ -191,8 +191,8 @@ export default function Header() {
                   i18n.language === "en" ? styles.active : ""
                 }`}
                 src={langSvg.eng}
-                alt={t("alts.en-icon")}
-                title={t("tradutor.en")}
+                alt={t("header.alts.en-icon")}
+                title={t("header.tradutor.en")}
                 onClick={() => i18n.changeLanguage("en")}
               />
             </div>
@@ -202,8 +202,8 @@ export default function Header() {
 
               <div className={styles["menu-pages"]}>
                 <a
-                  title={t("aria-labels.home")}
-                  aria-label={t("aria-labels.home")}
+                  title={t("header.aria-labels.home")}
+                  aria-label={t("header.aria-labels.home")}
                   href="/"
                   className={`${styles.link} ${styles["menu-pg"]} ${
                     location.pathname === "/" ? styles.active : ""
@@ -212,18 +212,18 @@ export default function Header() {
                   Home
                 </a>
                 <a
-                  title={t("aria-labels.portfolio")}
-                  aria-label={t("aria-labels.portfolio")}
+                  title={t("header.aria-labels.portfolio")}
+                  aria-label={t("header.aria-labels.portfolio")}
                   href="/portfolio"
                   className={`${styles.link} ${styles["menu-pg"]} ${
                     location.pathname === "/portfolio" ? styles.active : ""
                   }`}
                 >
-                  {t("pages.portfolio")}
+                  {t("header.pages.portfolio")}
                 </a>
                 <a
-                  title={t("aria-labels.hobbies")}
-                  aria-label={t("aria-labels.hobbies")}
+                  title={t("header.aria-labels.hobbies")}
+                  aria-label={t("header.aria-labels.hobbies")}
                   href="/hobbies"
                   className={`${styles.link} ${styles["menu-pg"]} ${
                     location.pathname === "/hobbies" ? styles.active : ""
@@ -232,14 +232,14 @@ export default function Header() {
                   Hobbies
                 </a>
                 <a
-                  title={t("aria-labels.contacts")}
-                  aria-label={t("aria-labels.contacts")}
+                  title={t("header.aria-labels.contacts")}
+                  aria-label={t("header.aria-labels.contacts")}
                   href="/contatos"
                   className={`${styles.link} ${styles["menu-pg"]} ${
                     location.pathname === "/contatos" ? styles.active : ""
                   }`}
                 >
-                  {t("pages.contacts")}
+                  {t("header.pages.contacts")}
                 </a>
               </div>
             </nav>
@@ -248,7 +248,7 @@ export default function Header() {
 
             <img
               src={logo.mainLogo2}
-              alt={t("alts.logo")}
+              alt={t("header.alts.logo")}
               className={styles["menu-logo"]}
               role="button"
               aria-pressed="false"

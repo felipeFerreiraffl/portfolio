@@ -4,14 +4,16 @@ import GiIcon from "../../../../services/constants/icns/game-icons/gameIcons";
 import styles from "./style.module.css";
 
 export default function BackButton({ type, icon, color, font, mbFont, title }) {
-  const { t } = useTranslation("animes-mangas", { useSuspense: true });
+  const { t } = useTranslation(["animes-mangas", "games"], {
+    useSuspense: true,
+  });
 
   return (
     <a
       className={styles.ctn}
       href={type === "game" ? "/hobbies/games" : "/hobbies/animes-mangas"}
       style={{ "--color": color }}
-      title={title}
+      title={t("animesMangas.content.button" || t("games.content.button"))}
       role="button"
     >
       <span className={styles.icn}>
@@ -19,7 +21,9 @@ export default function BackButton({ type, icon, color, font, mbFont, title }) {
       </span>
 
       <p className={styles.text} style={{ font: font, "--mb-font": mbFont }}>
-        {t("content.button")}
+        {type !== "game"
+          ? t("animesMangas.content.button")
+          : t("games.content.button")}
       </p>
     </a>
   );

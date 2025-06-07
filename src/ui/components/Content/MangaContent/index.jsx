@@ -29,8 +29,8 @@ export default function MangaContent() {
           type={"mangas"}
           alignItems={"flex-start"}
           flexDirection={"row"}
-          title={t("mangas.pop.title")}
-          desc={t("mangas.pop.subtitle")}
+          title={t("animesMangas.mangas.pop.title")}
+          desc={t("animesMangas.mangas.pop.subtitle")}
           icon={fontAwesome.rankingStar}
           data={Array.isArray(popularity) ? popularity : []}
         />
@@ -38,8 +38,8 @@ export default function MangaContent() {
           type={"mangas"}
           alignItems={"flex-end"}
           flexDirection={"row-reverse"}
-          title={t("mangas.best.title")}
-          desc={t("mangas.best.subtitle")}
+          title={t("animesMangas.mangas.best.title")}
+          desc={t("animesMangas.mangas.best.subtitle")}
           icon={fontAwesome.medal}
           data={Array.isArray(mostScored) ? mostScored : []}
         />
@@ -50,7 +50,7 @@ export default function MangaContent() {
       <section className={styles["slide-ctn"]}>
         <HobbyCarousel
           type={"mangas"}
-          title={t("mangas.sections.finished")}
+          title={t("animesMangas.mangas.sections.finished")}
           font={"var(--anmg-h2)"}
           mbFont={"var(--anmg-h3)"}
           color={"var(--main-02)"}
@@ -64,7 +64,7 @@ export default function MangaContent() {
         />
         <HobbyCarousel
           type={"mangas"}
-          title={t("mangas.sections.readingNow")}
+          title={t("animesMangas.mangas.sections.readingNow")}
           font={"var(--anmg-h2)"}
           mbFont={"var(--anmg-h3)"}
           color={"var(--main-02)"}
@@ -80,7 +80,7 @@ export default function MangaContent() {
         />
         <HobbyCarousel
           type={"mangas"}
-          title={t("mangas.sections.favorite")}
+          title={t("animesMangas.mangas.sections.favorite")}
           font={"var(--anmg-h2)"}
           mbFont={"var(--anmg-h3)"}
           color={"var(--main-02)"}
