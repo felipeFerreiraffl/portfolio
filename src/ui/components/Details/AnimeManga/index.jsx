@@ -143,6 +143,66 @@ export default function AnimeMangaDetails({ type, data }) {
                 </div>
               </div>
             </div>
+
+            <div className={styles["other-ctn"]}>
+              <h2 className={`${styles["sec-ttl"]} ${styles["bd-ttl"]}`}>
+                {t("content.other")}
+              </h2>
+
+              <div className={styles["other-info"]}>
+                <div className={styles.other}>
+                  <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
+                    {type === "anime"
+                      ? t("content.anime.studio")
+                      : t("content.manga.author")}
+                  </h3>
+                  <p className={styles["body-txt"]}>
+                    {type === "anime"
+                      ? data.studios[0]?.name || "?"
+                      : data.authors[0]?.name || "?"}
+                  </p>
+                </div>
+
+                <div className={styles.other}>
+                  <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
+                    {type === "anime"
+                      ? t("content.anime.launchDate")
+                      : t("content.manga.publication")}
+                  </h3>
+                  <p className={styles["body-txt"]}></p>
+                </div>
+
+                <div className={styles.other}>
+                  <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
+                    Status
+                  </h3>
+                  <p className={styles["body-txt"]}></p>
+                </div>
+
+                <div className={styles.other}>
+                  <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
+                    {type === "anime"
+                      ? t("content.anime.episodes")
+                      : t("content.manga.chapters")}
+                  </h3>
+                  <p className={styles["body-txt"]}></p>
+                </div>
+
+                <div className={styles.other}>
+                  <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
+                    {t("content.popRank")}
+                  </h3>
+                  <p className={styles["body-txt"]}></p>
+                </div>
+
+                <div className={styles.other}>
+                  <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
+                    {t("content.scoreRank")}
+                  </h3>
+                  <p className={styles["body-txt"]}></p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       )}

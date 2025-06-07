@@ -314,3 +314,45 @@
   font: var(--anmg-hdr);
   color: var(--neu-01);
 }
+
+.other-ctn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-20);
+}
+
+.other-ttl {
+  width: 100%;
+  font: var(--anmg-h4);
+  color: var(--neu-04);
+
+  @media (max-width: 767.98px) {
+    font: var(--anmg-h5);
+  }
+}
+
+.other-info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: var(--sp-20);
+  column-gap: var(--sp-20);
+
+  @media (max-width: 1080px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 767.98px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.other {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-12);
+}
