@@ -26,9 +26,9 @@ export default function AnimeMangaDetails({ type, data }) {
   );
 
   const handleLevelColor = () => {
-    if (data.score >= 9) {
+    if (data.score >= 8.5) {
       return "var(--aux-01)";
-    } else if (data.score < 9 && data.score >= 7.5) {
+    } else if (data.score < 8.5 && data.score >= 7.5) {
       return "var(--aux-02)";
     } else if (data.score < 7.5 && data.score >= 6.5) {
       return "var(--aux-03)";
