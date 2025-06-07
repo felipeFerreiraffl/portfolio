@@ -40,6 +40,9 @@
   },
   "content": {
     "synopsis": "Sinopse",
+    "demography": "Demografia",
+    "genre": "Gênero",
+    "other": "Outras informações",
     "popRank": "Rank de popularidade",
     "scoreRank": "Rank de pontuação",
     "data": "Dados extraídos da API da Jikan",

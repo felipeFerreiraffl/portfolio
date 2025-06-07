@@ -119,6 +119,31 @@ export default function AnimeMangaDetails({ type, data }) {
               </div>
             </div>
           </div>
+
+          <div className={styles["details-ctn"]}>
+            <div className={styles["synps-ctn"]}>
+              <h2 className={`${styles["sec-ttl"]} ${styles["bd-ttl"]}`}>
+                {t("content.synopsis")}
+              </h2>
+              <p className={styles["body-txt"]}>{data.synopsis || "..."}</p>
+            </div>
+
+            <div className={styles["demo-gen-ctn"]}>
+              <div className={styles["demo-ctn"]}>
+                <h2 className={styles["sec-ttl"]}>{t("content.demography")}</h2>
+                <p className={styles.demo}>{data.demographics[0]?.name}</p>
+              </div>
+
+              <div className={styles["gen-ctn"]}>
+                <h2 className={styles["sec-ttl"]}>{t("content.genre")}</h2>
+                <div className={styles.genres}>
+                  {data.genres.map((genre) => (
+                    <p className={styles.gen}>{genre.name}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       )}
     </div>
