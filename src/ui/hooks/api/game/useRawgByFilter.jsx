@@ -1,33 +1,23 @@
 import { useQueries } from "@tanstack/react-query";
-import {
-  getAnimeByFilter,
-  getMangaByFilter,
-} from "../../../../services/api/jikan";
+import { getGameByFilter } from "../../../../services/api/rawg";
 
-// Hook para o fetch dos filtros
-export const useJikanByFilter = ({ type, filters = [] }) => {
-  const fetchFn = type === "animes" ? getAnimeByFilter : getMangaByFilter;
+export const useRawgByFilter = ({ filters = [] }) => {
+  const fetchFn = getGameByFilter || null;
 
-  // Utiliza queries em paralelo dependendo do tipo (animes ou mangás)
   return useQueries({
-    queries: filters.map(({ filter, size, key }, index) => ({
-      queryKey: [type, filter, size, key],
+    queries: filters.map(({ ordering, pageSize, key }, index) => ({
+      queryKey: ["game", ordering, pageSize, key],
       queryFn: async () => {
         if (index > 0) {
-          // Delay progressivo
-          const delay = Math.min(3000 * (index + 1), 10000); // Começa com 3s e vai multiplicando pelo número do index
-          console.log(
-            `Aguardando ${delay}ms antes de requisição ${index + 1}...`
-          );
-          await new Promise((res) => setTimeout(res, delay)); // Delay de 1500ms entre requests
+          const delay = Math.min(3000 * (index + 1), 10000);
+          await new Promise((res) => setTimeout(res, delay));
         }
 
         try {
-          const result = await fetchFn(filter, size);
+          const result = await fetchFn(ordering, pageSize);
           return result;
         } catch (error) {
-          console.error(`Erro ao buscar requisição ${filter}`, error);
-
+          console.error(`Erro ao buscar requisição ${ordering}`, error);
           throw error;
         }
       },
