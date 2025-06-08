@@ -7,7 +7,20 @@
         "casual": "Joga de vez em quando, apenas para relaxar. Prefere jogos calmos e sem desafios.",
         "normal": "O mais equilibrado, curtindo um desafio, mas também apreciando a história. Geralmente, joga jogos singleplayer.",
         "hardcore": "Profissional no jogo, tendo videogame como sua rotina. Joga jogos para competir, geralmente onlines."
-      }
+      },
+      "mostPopular": {
+        "title": "Mais populares",
+        "subtitle": "Com certeza você já ouviu falar nesses jogos, ou até já jogou em algum momento da vida"
+      },
+      "best": {
+        "title": "Melhores avaliados",
+        "subtitle": "Os jogos com as melhores avaliações, segundo o rating dos jogos pela RAWG"
+      },
+      "pastFuture": {
+        "title": "Passado e futuro",
+        "subtitle": "Jogos que joguei recentemente ou que joguarei em um futuro próximo"
+      },
+      "favorite": "Meus jogos favoritos"
     },
     "content": {
       "desc": "Descrição",

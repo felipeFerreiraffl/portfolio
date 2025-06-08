@@ -5,7 +5,7 @@
   gap: 0.625rem; /* 10px */
 }
 
-.pgss-ctn {
+.pgssCtn {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -26,24 +26,24 @@
   }
 }
 
-.pgss-bar {
+.pgssBar {
   width: 85vw;
   height: var(--sp-32);
   appearance: none;
 }
 
-.pgss-bar::-webkit-progress-bar {
+.pgssBar::-webkit-progress-bar {
   background-color: var(--pgss-bg-color);
   border-radius: var(--brad-32);
   padding: var(--sp-8);
 }
 
-.pgss-bar::-webkit-progress-value {
+.pgssBar::-webkit-progress-value {
   background-color: var(--pgss-color);
   border-radius: var(--brad-32);
 }
 
-.conclu-ctn {
+.concluCtn {
   width: 85vw;
   display: flex;
   flex-direction: row;

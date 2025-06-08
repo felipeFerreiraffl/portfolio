@@ -29,8 +29,8 @@ export default function AnimeContent() {
           type={"animes"}
           alignItems={"flex-start"}
           flexDirection={"row"}
-          title={t(".animesMangas.animes.pop.title")}
-          desc={t(".animesMangas.animes.pop.subtitle")}
+          title={t("animesMangas.animes.pop.title")}
+          desc={t("animesMangas.animes.pop.subtitle")}
           icon={fontAwesome.rankingStar}
           data={Array.isArray(popularity) ? popularity : []}
         />
@@ -38,8 +38,8 @@ export default function AnimeContent() {
           type={"animes"}
           alignItems={"flex-end"}
           flexDirection={"row-reverse"}
-          title={t(".animesMangas.animes.best.title")}
-          desc={t(".animesMangas.animes.best.subtitle")}
+          title={t("animesMangas.animes.best.title")}
+          desc={t("animesMangas.animes.best.subtitle")}
           icon={fontAwesome.medal}
           data={Array.isArray(mostScored) ? mostScored : []}
         />
@@ -47,10 +47,10 @@ export default function AnimeContent() {
 
       <Divisor marginTop={128} color={"var(--main-02)"} />
 
-      <section className={styles["slide-ctn"]}>
+      <section className={styles.slideCtn}>
         <HobbyCarousel
           type={"animes"}
-          title={t(".animesMangas.animes.sections.watchedRecently")}
+          title={t("animesMangas.animes.sections.watchedRecently")}
           font={"var(--anmg-h2)"}
           mbFont={"var(--anmg-h3)"}
           color={"var(--main-02)"}
@@ -66,7 +66,7 @@ export default function AnimeContent() {
         />
         <HobbyCarousel
           type={"animes"}
-          title={t(".animesMangas.animes.sections.pendent")}
+          title={t("animesMangas.animes.sections.pendent")}
           font={"var(--anmg-h2)"}
           mbFont={"var(--anmg-h3)"}
           color={"var(--main-02)"}
@@ -80,7 +80,7 @@ export default function AnimeContent() {
         />
         <HobbyCarousel
           type={"animes"}
-          title={t(".animesMangas.animes.sections.favorite")}
+          title={t("animesMangas.animes.sections.favorite")}
           font={"var(--anmg-h2)"}
           mbFont={"var(--anmg-h3)"}
           color={"var(--main-02)"}

@@ -68,9 +68,13 @@ export default function Header() {
 
   return (
     <nav className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
-      <a href="/" title={t("header.aria-labels.home")} className={styles["logo-ctn"]}>
+      <a
+        href="/"
+        title={t("header.aria-labels.home")}
+        className={styles.logoCtn}
+      >
         <img
-          className={styles["logo-i"]}
+          className={styles.logoI}
           src={logo.mainLogo2}
           alt={t("header.alts.logo")}
         />
@@ -116,9 +120,9 @@ export default function Header() {
           {t("header.pages.contacts")}
         </a>
       </div>
-      <div className={styles["lang-ctn"]}>
+      <div className={styles.langCtn}>
         <img
-          className={`${styles["lang-i"]} ${
+          className={`${styles.langI} ${
             i18n.language === "pt" ? styles.active : ""
           }`}
           src={langSvg.ptBr}
@@ -128,7 +132,7 @@ export default function Header() {
           tabIndex={0}
         />
         <img
-          className={`${styles["lang-i"]} ${
+          className={`${styles.langI} ${
             i18n.language === "en" ? styles.active : ""
           }`}
           src={langSvg.eng}
@@ -141,16 +145,14 @@ export default function Header() {
 
       <FaIcon
         icon={fontAwesome.barsStaggered}
-        className={styles["menu-i"]}
+        className={styles.menuI}
         onClick={() => setOpenMenu(true)}
       />
 
       {openMenu && (
         <>
           <motion.div
-            className={`${styles["menu-overlay"]} ${
-              openMenu ? styles.show : ""
-            }`}
+            className={`${styles.menuOverlay} ${openMenu ? styles.show : ""}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -169,16 +171,16 @@ export default function Header() {
             role="dialog"
           >
             <span
-              className={styles["menu-close"]}
+              className={styles.menuClose}
               onClick={() => setOpenMenu(false)}
               role="button"
             >
               <FaIcon icon={fontAwesome.circleXMark} />
             </span>
 
-            <div className={styles["menu-lang-ctn"]}>
+            <div className={styles.menuLangCtn}>
               <img
-                className={`${styles["lang-i"]} ${
+                className={`${styles.langI} ${
                   i18n.language === "pt" ? styles.active : ""
                 }`}
                 src={langSvg.ptBr}
@@ -187,7 +189,7 @@ export default function Header() {
                 onClick={() => i18n.changeLanguage("pt")}
               />
               <img
-                className={`${styles["lang-i"]} ${
+                className={`${styles.langI} ${
                   i18n.language === "en" ? styles.active : ""
                 }`}
                 src={langSvg.eng}
@@ -198,14 +200,14 @@ export default function Header() {
             </div>
 
             <nav>
-              <h2 className={styles["nav-ttl"]}>Navegue</h2>
+              <h2 className={styles.navTtl}>Navegue</h2>
 
-              <div className={styles["menu-pages"]}>
+              <div className={styles.menuPages}>
                 <a
                   title={t("header.aria-labels.home")}
                   aria-label={t("header.aria-labels.home")}
                   href="/"
-                  className={`${styles.link} ${styles["menu-pg"]} ${
+                  className={`${styles.link} ${styles.menuPg} ${
                     location.pathname === "/" ? styles.active : ""
                   }`}
                 >
@@ -215,7 +217,7 @@ export default function Header() {
                   title={t("header.aria-labels.portfolio")}
                   aria-label={t("header.aria-labels.portfolio")}
                   href="/portfolio"
-                  className={`${styles.link} ${styles["menu-pg"]} ${
+                  className={`${styles.link} ${styles.menuPg} ${
                     location.pathname === "/portfolio" ? styles.active : ""
                   }`}
                 >
@@ -225,7 +227,7 @@ export default function Header() {
                   title={t("header.aria-labels.hobbies")}
                   aria-label={t("header.aria-labels.hobbies")}
                   href="/hobbies"
-                  className={`${styles.link} ${styles["menu-pg"]} ${
+                  className={`${styles.link} ${styles.menuPg} ${
                     location.pathname === "/hobbies" ? styles.active : ""
                   }`}
                 >
@@ -235,7 +237,7 @@ export default function Header() {
                   title={t("header.aria-labels.contacts")}
                   aria-label={t("header.aria-labels.contacts")}
                   href="/contatos"
-                  className={`${styles.link} ${styles["menu-pg"]} ${
+                  className={`${styles.link} ${styles.menuPg} ${
                     location.pathname === "/contatos" ? styles.active : ""
                   }`}
                 >
@@ -249,7 +251,7 @@ export default function Header() {
             <img
               src={logo.mainLogo2}
               alt={t("header.alts.logo")}
-              className={styles["menu-logo"]}
+              className={styles.menuLogo}
               role="button"
               aria-pressed="false"
             />

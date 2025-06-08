@@ -5,7 +5,7 @@
   justify-content: center;
 }
 
-.sec-ttl {
+.secTtl {
   font: var(--def-h2);
   color: var(--main-02);
   text-align: center;
@@ -15,7 +15,7 @@
   }
 }
 
-.crs-thrd-ttl {
+.crsThrdTtl {
   font: var(--def-h3);
   color: var(--neu-04);
   text-align: center;
@@ -33,7 +33,7 @@
   text-shadow: var(--bshw-led-mn5);
 }
 
-.ttl-brd {
+.ttlBrd {
   width: 100%;
   border-bottom: var(--bd-line-mn2);
   padding-bottom: var(--sp-4);
@@ -80,21 +80,21 @@
   z-index: var(--zind-10);
 }
 
-.all-crs-ctn {
+.allCrsCtn {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--sp-64);
 }
 
-.crs-ctn {
+.crsCtn {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--sp-48);
 }
 
-.crs-ttl-ctn {
+.crsTtlCtn {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -105,7 +105,7 @@
   }
 }
 
-.crs-icn {
+.crsIcn {
   font-size: var(--sp-72);
   color: var(--neu-04);
 
@@ -114,7 +114,7 @@
   }
 }
 
-.crs-spec-crs {
+.crsSpecCrs {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -162,7 +162,7 @@
   z-index: var(--zind-10);
 }
 
-.sch-card-ctn {
+.schCardCtn {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -186,7 +186,7 @@
   gap: var(--sp-56);
 }
 
-.skls-all-ctn {
+.sklsAllCtn {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -194,7 +194,7 @@
   gap: var(--sp-64);
 }
 
-.skls-ctn {
+.sklsCtn {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -202,7 +202,7 @@
   gap: var(--sp-48);
 }
 
-.skls-ttl {
+.sklsTtl {
   width: 100%;
   font: var(--def-h3);
   color: var(--neu-04);
@@ -210,7 +210,7 @@
   border-bottom: var(--bd-line-nt4);
 }
 
-.skls-spec-ctn {
+.sklsSpecCtn {
   width: 100%;
   display: flex;
   align-items: center;
@@ -303,7 +303,7 @@
   z-index: var(--zind-10);
 }
 
-.crr-cont {
+.crrCont {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -316,14 +316,14 @@
   }
 }
 
-.crr-txt-ctn {
+.crrTxtCtn {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--sp-24);
 }
 
-.crr-ttl {
+.crrTtl {
   font: var(--def-h2);
   color: var(--main-02);
   text-align: left;
@@ -337,7 +337,7 @@
   }
 }
 
-.crr-subttl {
+.crrSubttl {
   font: var(--def-subttl);
   color: var(--neu-04);
   text-align: left;
@@ -347,7 +347,7 @@
   }
 }
 
-.crr-icn {
+.crrIcn {
   display: flex;
   align-items: center;
   justify-content: center;

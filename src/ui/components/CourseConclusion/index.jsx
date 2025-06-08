@@ -17,10 +17,10 @@ export default function CourseConclusion({
       transition={{ duration: 1.2, ease: "easeInOut" }}
       viewport={{ once: true, amount: 0.5 }}
     >
-      <div className={styles["pgss-ctn"]}>
+      <div className={styles.pgssCtn}>
         <h4 className={styles.ttl}>{name}</h4>
         <progress
-          className={styles["pgss-bar"]}
+          className={styles.pgssBar}
           style={{
             "--pgss-bg-color": progressBgColor,
             "--pgss-color": progressColor,
@@ -29,7 +29,7 @@ export default function CourseConclusion({
           value={progress}
         ></progress>
       </div>
-      <div className={styles["conclu-ctn"]}>
+      <div className={styles.concluCtn}>
         <p className={styles.date}>{startYear}</p>
         <p className={styles.pgss}>{progress}%</p>
         <p className={styles.date}>{endYear}</p>

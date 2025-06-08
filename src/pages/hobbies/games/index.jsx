@@ -8,6 +8,8 @@ import useDocumentTitle from "../../../ui/hooks/useDocumentTitle";
 import styles from "./style.module.css";
 import GameType from "../../../ui/components/GameType";
 import gameIcons from "../../../services/constants/icns/game-icons/iconNames";
+import GamesShowcase from "../../../ui/components/Showcase/Games";
+import Divisor from "../../../ui/components/Divisor";
 
 export default function Games() {
   useDocumentTitle("Jogos | Felipe Ferreira");
@@ -29,10 +31,10 @@ export default function Games() {
         />
       </header>
 
-      <section className={styles["gm-type"]}>
-        <h2 className={styles["sec-ttl"]}>{t("games.sections.gamerType")}</h2>
+      <section className={styles.gmType}>
+        <h2 className={styles.secTtl}>{t("games.sections.gamerType")}</h2>
 
-        <div className={styles["gm-brands-ctn"]}>
+        <div className={styles.gmBrandsCtn}>
           <GameType
             icon={gameIcons.rank1}
             type={"Casual"}
@@ -50,6 +52,16 @@ export default function Games() {
             tooltip={t("games.sections.ranks.hardcore")}
           />
         </div>
+      </section>
+
+      <Divisor marginTop={128} color={"var(--main-05)"} />
+
+      <section className={styles.swcs}>
+        <GamesShowcase
+          title={t("games.sections.mostPopular.title")}
+          subtitle={t("games.sections.mostPopular.subtitle")}
+          icon={gameIcons.starFormation}
+        />
       </section>
     </div>
   );

@@ -98,8 +98,8 @@ export default function ProjectsSlides() {
         <FaIcon icon={fontAwesome.circleLeft} />
       </button>
 
-      <div className={styles["slides-wrapper"]} ref={emblaRef}>
-        <div className={styles["slides-ctn"]} ref={ref}>
+      <div className={styles.slidesWrapper} ref={emblaRef}>
+        <div className={styles.slidesCtn} ref={ref}>
           {data.map((project) =>
             isVisible ? (
               <a
@@ -109,7 +109,7 @@ export default function ProjectsSlides() {
                 rel="noopener noreferer"
                 className={styles.slide}
               >
-                <div className={styles["img-wrapper"]}>
+                <div className={styles.imgWrapper}>
                   <img
                     src={project.imgSrc}
                     alt={`Github - ${t(
@@ -120,15 +120,15 @@ export default function ProjectsSlides() {
                   />
 
                   <div className={styles.overlay}>
-                    <p className={styles["img-name"]}>
+                    <p className={styles.imgName}>
                       {t(`portfolio.sections.projects.apiInfos.${project.id}`)}
                     </p>
                   </div>
                 </div>
               </a>
             ) : (
-              <div key={project.id} className={styles["img-sklt"]}>
-                <span className={styles["icn-sklt"]}>
+              <div key={project.id} className={styles.imgSklt}>
+                <span className={styles.icnSklt}>
                   <FaIcon icon={fontAwesome.spinner} />
                 </span>
               </div>

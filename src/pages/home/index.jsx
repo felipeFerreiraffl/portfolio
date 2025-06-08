@@ -30,7 +30,7 @@ export default function Home() {
             transition={{ duration: 1.2, delay: 0.3, ease: "easeInOut" }}
           />
           <motion.div
-            className={styles["txt-ctn"]}
+            className={styles.txtCtn}
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.3, ease: "easeInOut" }}
@@ -41,9 +41,9 @@ export default function Home() {
         </div>
       </header>
 
-      <section className={styles["about-me"]} tabIndex={0}>
+      <section className={styles.aboutMe} tabIndex={0}>
         <motion.h2
-          className={styles["sec-ttl"]}
+          className={styles.secTtl}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
@@ -52,41 +52,43 @@ export default function Home() {
           {t("home.sections.about-me.title")}
         </motion.h2>
 
-        <div className={styles["abt-cont"]}>
-          <FaIcon icon={fontAwesome.idCard} className={styles["abt-icn"]} />
+        <div className={styles.abtCont}>
+          <FaIcon icon={fontAwesome.idCard} className={styles.abtIcn} />
 
           <motion.div
-            className={styles["abt-txt-ctn"]}
+            className={styles.abtTxtCtn}
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <div className={styles["abt-info"]}>
-              <h3 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
+            <div className={styles.abtInfo}>
+              <h3 className={`${styles.quintTtl} ${styles.bdTtl}`}>
                 {t("home.sections.about-me.name")}
               </h3>
               <p className={styles.body}>Felipe Ferreira Lima</p>
             </div>
-            <div className={styles["abt-info"]}>
-              <h3 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
+            <div className={styles.abtInfo}>
+              <h3 className={`${styles.quintTtl} ${styles.bdTtl}`}>
                 {t("home.sections.about-me.birthday")}
               </h3>
               <p className={styles.body}>14/07/2004</p>
             </div>
-            <div className={styles["abt-info"]}>
-              <h3 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
+            <div className={styles.abtInfo}>
+              <h3 className={`${styles.quintTtl} ${styles.bdTtl}`}>
                 {t("home.sections.about-me.nationality.title")}
               </h3>
               <p className={styles.body}>
                 {t("home.sections.about-me.nationality.desc")}
               </p>
             </div>
-            <div className={styles["abt-info"]}>
-              <h3 className={`${styles["quint-ttl"]} ${styles["bd-ttl"]}`}>
+            <div className={styles.abtInfo}>
+              <h3 className={`${styles.quintTtl} ${styles.bdTtl}`}>
                 {t("home.sections.about-me.goal.title")}
               </h3>
-              <p className={styles.body}>{t("home.sections.about-me.goal.desc")}</p>
+              <p className={styles.body}>
+                {t("home.sections.about-me.goal.desc")}
+              </p>
             </div>
           </motion.div>
         </div>
@@ -96,14 +98,14 @@ export default function Home() {
 
       <section className={styles.portfolio} tabIndex={0}>
         <motion.div
-          className={styles["ptf-cont"]}
+          className={styles.ptfCont}
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <div className={styles["ptf-text-ctn"]}>
-            <h2 className={`${styles["sec-ttl"]} ${styles["bd-ttl"]}`}>
+          <div className={styles.ptfTextCtn}>
+            <h2 className={`${styles.secTtl} ${styles.bdTtl}`}>
               {t("home.sections.portfolio.title")}
             </h2>
             <p className={styles.body}>{t("home.sections.portfolio.desc")}</p>
@@ -117,23 +119,21 @@ export default function Home() {
           />
         </motion.div>
 
-        <FaIcon icon={fontAwesome.newspaper} className={styles["ptf-icn"]} />
+        <FaIcon icon={fontAwesome.newspaper} className={styles.ptfIcn} />
       </section>
 
       <Divisor marginTop={128} color={"var(--main-04)"} />
 
       <section className={styles.hobbies} tabIndex={0}>
         <motion.div
-          className={styles["hbb-cont"]}
+          className={styles.hbbCont}
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <div className={styles["hbb-txt-ctn"]}>
-            <h2 className={`${styles["sec-ttl"]} ${styles["bd-ttl"]}`}>
-              Hobbies
-            </h2>
+          <div className={styles.hbbTxtCtn}>
+            <h2 className={`${styles.secTtl} ${styles.bdTtl}`}>Hobbies</h2>
             <div>
               <p className={styles.body}>{t("home.sections.hobbies.desc-1")}</p>
               <p className={styles.body}>{t("home.sections.hobbies.desc-2")}</p>
@@ -148,30 +148,27 @@ export default function Home() {
           />
         </motion.div>
 
-        <div className={styles["hbb-icn-ctn"]}>
-          <motion.i
-            className={`${styles["hbb-icn"]} ${styles.gamepad}`}
+        <div className={styles.hbbIcnCtn}>
+          <motion.span
+            className={`${styles.hbbIcn} ${styles.gamepad}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <FaIcon
-              icon={fontAwesome.gamepad}
-              className={styles["hbb-icn-sm"]}
-            />
-          </motion.i>
+            <FaIcon icon={fontAwesome.gamepad} className={styles.hbbIcnSm} />
+          </motion.span>
           <motion.i
-            className={`${styles["hbb-icn"]} ${styles.book}`}
+            className={`${styles.hbbIcn} ${styles.book}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <FaIcon icon={fontAwesome.book} className={styles["hbb-icn-md"]} />
+            <FaIcon icon={fontAwesome.book} className={styles.hbbIcnMd} />
           </motion.i>
           <motion.i
-            className={`${styles["hbb-icn"]} ${styles.umb}`}
+            className={`${styles.hbbIcn} ${styles.umb}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.6 }}
@@ -179,32 +176,26 @@ export default function Home() {
           >
             <FaIcon
               icon={fontAwesome.umbrellaBeach}
-              className={styles["hbb-icn-lg"]}
+              className={styles.hbbIcnLg}
             />
           </motion.i>
           <motion.i
-            className={`${styles["hbb-icn"]} ${styles.futbol}`}
+            className={`${styles.hbbIcn} ${styles.futbol}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.9 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <FaIcon
-              icon={fontAwesome.futbol}
-              className={styles["hbb-icn-md"]}
-            />
+            <FaIcon icon={fontAwesome.futbol} className={styles.hbbIcnMd} />
           </motion.i>
           <motion.i
-            className={`${styles["hbb-icn"]} ${styles.paint}`}
+            className={`${styles.hbbIcn} ${styles.paint}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 1.2 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <FaIcon
-              icon={fontAwesome.paintbrush}
-              className={styles["hbb-icn-sm"]}
-            />
+            <FaIcon icon={fontAwesome.paintbrush} className={styles.hbbIcnSm} />
           </motion.i>
         </div>
       </section>

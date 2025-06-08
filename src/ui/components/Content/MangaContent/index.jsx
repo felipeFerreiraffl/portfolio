@@ -47,7 +47,7 @@ export default function MangaContent() {
 
       <Divisor marginTop={128} color={"var(--main-02)"} />
 
-      <section className={styles["slide-ctn"]}>
+      <section className={styles.slideCtn}>
         <HobbyCarousel
           type={"mangas"}
           title={t("animesMangas.mangas.sections.finished")}

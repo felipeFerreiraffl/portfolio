@@ -11,7 +11,7 @@
   z-index: var(--zind-10);
 }
 
-.load-ctn {
+.loadCtn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +36,7 @@
   }
 }
 
-.spinner-icn {
+.spinnerIcn {
   position: absolute;
   font-size: 6.75rem; /* 108px */
   color: var(--main-01);
@@ -89,27 +89,27 @@
   }
 }
 
-.load-ind {
+.loadInd {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--sp-8);
 }
 
-.load-pgss {
+.loadPgss {
   width: 70vw;
   height: var(--sp-28);
   appearance: none;
 }
 
-.load-pgss::-webkit-progress-bar {
+.loadPgss::-webkit-progress-bar {
   background-color: var(--rgba-bl50);
   padding: var(--sp-8);
   border-radius: var(--brad-32);
   border: var(--bd-line-mn1);
 }
 
-.load-pgss::-webkit-progress-value {
+.loadPgss::-webkit-progress-value {
   background-color: var(--main-01);
   border-radius: var(--brad-32);
   transition: var(--ts-def);

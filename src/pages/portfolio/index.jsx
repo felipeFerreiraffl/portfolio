@@ -41,27 +41,24 @@ export default function Portfolio() {
       </header>
 
       <section className={styles.crs} tabIndex={0}>
-        <h2 className={`${styles["sec-ttl"]} ${styles["ttl-brd"]}`}>
+        <h2 className={`${styles.secTtl} ${styles.ttlBrd}`}>
           {t("portfolio.sections.courses.title")}
         </h2>
-        <div className={styles["all-crs-ctn"]}>
-          <div className={styles["crs-ctn"]} tabIndex={0}>
+        <div className={styles.allCrsCtn}>
+          <div className={styles.crsCtn} tabIndex={0}>
             <motion.div
-              className={styles["crs-ttl-ctn"]}
+              className={styles.crsTtlCtn}
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.2, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.5 }}
             >
-              <h3 className={`${styles["crs-thrd-ttl"]} ${styles.tech}`}>
+              <h3 className={`${styles.crsThrdTtl} ${styles.tech}`}>
                 {t("portfolio.sections.courses.tech.title")}
               </h3>
-              <FaIcon
-                icon={fontAwesome.laptopCode}
-                className={styles["crs-icn"]}
-              />
+              <FaIcon icon={fontAwesome.laptopCode} className={styles.crsIcn} />
             </motion.div>
-            <div className={styles["crs-spec-crs"]}>
+            <div className={styles.crsSpecCrs}>
               <CourseConclusion
                 name={t("portfolio.sections.courses.tech.devSys")}
                 progress={100}
@@ -89,23 +86,20 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <div className={styles["crs-ctn"]} tabIndex={0}>
+          <div className={styles.crsCtn} tabIndex={0}>
             <motion.div
-              className={styles["crs-ttl-ctn"]}
+              className={styles.crsTtlCtn}
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.2, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.5 }}
             >
-              <h3 className={`${styles["crs-thrd-ttl"]} ${styles.mec}`}>
+              <h3 className={`${styles.crsThrdTtl} ${styles.mec}`}>
                 {t("portfolio.sections.courses.other.title")}
               </h3>
-              <FaIcon
-                icon={fontAwesome.circlePlus}
-                className={styles["crs-icn"]}
-              />
+              <FaIcon icon={fontAwesome.circlePlus} className={styles.crsIcn} />
             </motion.div>
-            <div className={styles["crs-spec-crs"]}>
+            <div className={styles.crsSpecCrs}>
               <CourseConclusion
                 name={t("portfolio.sections.courses.other.mech")}
                 progress={90}
@@ -122,10 +116,10 @@ export default function Portfolio() {
       <Divisor marginTop={128} color={"var(--main-02)"} />
 
       <section className={styles.sch} tabIndex={0}>
-        <h2 className={`${styles["sec-ttl"]} ${styles["ttl-brd"]}`}>
+        <h2 className={`${styles.secTtl} ${styles.ttlBrd}`}>
           {t("portfolio.sections.schools")}
         </h2>
-        <div className={styles["sch-card-ctn"]} tabIndex={0}>
+        <div className={styles.schCardCtn} tabIndex={0}>
           <SchoolCard
             href={links.schools.swiss}
             img={extraImgs.snSwiss}
@@ -144,18 +138,18 @@ export default function Portfolio() {
       <Divisor marginTop={128} color={"var(--main-02)"} />
 
       <section className={styles.skls} tabIndex={0}>
-        <h2 className={styles["sec-ttl"]}>{t("portfolio.sections.skills")}</h2>
-        <div className={styles["skls-all-ctn"]}>
+        <h2 className={styles.secTtl}>{t("portfolio.sections.skills")}</h2>
+        <div className={styles.sklsAllCtn}>
           <motion.div
-            className={styles["skls-ctn"]}
+            className={styles.sklsCtn}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.5 }}
             tabIndex={0}
           >
-            <h3 className={styles["skls-ttl"]}>Frontend</h3>
-            <div className={styles["skls-spec-ctn"]}>
+            <h3 className={styles.sklsTtl}>Frontend</h3>
+            <div className={styles.sklsSpecCtn}>
               <Skill
                 name={"HTML"}
                 icon={<FaIcon icon={fontAwesome.html5} />}
@@ -180,15 +174,15 @@ export default function Portfolio() {
           </motion.div>
 
           <motion.div
-            className={styles["skls-ctn"]}
+            className={styles.sklsCtn}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.5 }}
             tabIndex={0}
           >
-            <h3 className={styles["skls-ttl"]}>Backend</h3>
-            <div className={styles["skls-spec-ctn"]}>
+            <h3 className={styles.sklsTtl}>Backend</h3>
+            <div className={styles.sklsSpecCtn}>
               <Skill
                 name={"Java"}
                 icon={<FaIcon icon={fontAwesome.java} />}
@@ -198,15 +192,15 @@ export default function Portfolio() {
           </motion.div>
 
           <motion.div
-            className={styles["skls-ctn"]}
+            className={styles.sklsCtn}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.5 }}
             tabIndex={0}
           >
-            <h3 className={styles["skls-ttl"]}>Design</h3>
-            <div className={styles["skls-spec-ctn"]}>
+            <h3 className={styles.sklsTtl}>Design</h3>
+            <div className={styles.sklsSpecCtn}>
               <Skill
                 name={"Figma"}
                 icon={<FaIcon icon={fontAwesome.figma} />}
@@ -220,7 +214,7 @@ export default function Portfolio() {
       <Divisor marginTop={128} color={"var(--main-02)"} />
 
       <section className={styles.pjts} tabIndex={0}>
-        <h2 className={`${styles["sec-ttl"]} ${styles["ttl-brd"]}`}>
+        <h2 className={`${styles.secTtl} ${styles.ttlBrd}`}>
           {t("portfolio.sections.projects.title")}
         </h2>
 
@@ -231,17 +225,17 @@ export default function Portfolio() {
 
       <section className={styles.crr} tabIndex={0}>
         <motion.div
-          className={styles["crr-cont"]}
+          className={styles.crrCont}
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <div className={styles["crr-txt-ctn"]}>
-            <h2 className={`${styles["crr-ttl"]} ${styles["ttl-brd"]}`}>
+          <div className={styles.crrTxtCtn}>
+            <h2 className={`${styles.crrTtl} ${styles.ttlBrd}`}>
               {t("portfolio.sections.curriculum.title")}
             </h2>
-            <p className={styles["crr-subttl"]}>
+            <p className={styles.crrSubttl}>
               {t("portfolio.sections.curriculum.desc")}
             </p>
           </div>
@@ -253,7 +247,7 @@ export default function Portfolio() {
           />
         </motion.div>
         <motion.span
-          className={styles["crr-icn"]}
+          className={styles.crrIcn}
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}

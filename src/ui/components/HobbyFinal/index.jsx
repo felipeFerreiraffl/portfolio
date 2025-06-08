@@ -35,7 +35,7 @@ export default function HobbyFinal({ img, alt, color, font, mbFont }) {
         >
           {t("hobbies.final.title")}
         </h2>
-        <div className={styles["btn-ctn"]}>
+        <div className={styles.btnCtn}>
           <MainButton
             color={
               color === "var(--main-02)" ? "var(--main-01)" : "var(--main-04)"

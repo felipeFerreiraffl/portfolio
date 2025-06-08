@@ -7,7 +7,20 @@
         "casual": "Play sometimes, just to relax. Prefers calm and challengeless games.",
         "normal": "The most balanced, enjoying an challenge, but also appreciating the story. Usually, play singleplayer games.",
         "hardcore": "Game professional, having videogame as your rotine. Play games to compete, mostly onlines."
-      }
+      },
+      "mostPopular": {
+        "title": "Most popular",
+        "subtitle": "You've probably heard of these game, or even played them at some point of your life"
+      },
+      "best": {
+        "title": "Best rated",
+        "subtitle": "The games with the best score, according to the RAWG rating"
+      },
+      "pastFuture": {
+        "title": "Past and future",
+        "subtitle": "Games that I played recently or will play in a near future"
+      },
+      "favorite": "My favorite games"
     },
     "content": {
       "desc": "Description",

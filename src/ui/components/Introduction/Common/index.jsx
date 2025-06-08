@@ -14,7 +14,7 @@ export default function CommonIntro({ icon, title, subtitle, color, bgImage }) {
         {icon}
       </motion.span>
       <motion.div
-        className={styles["txt-ctn"]}
+        className={styles.txtCtn}
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}

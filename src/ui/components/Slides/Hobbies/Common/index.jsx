@@ -77,7 +77,7 @@ export default function HobbyCarousel({
 
   return (
     <div className={styles.ctn} style={{ "--color": color }}>
-      <div className={styles["ttl-ctn"]} style={{ "--border-btm": borderBtm }}>
+      <div className={styles.ttlCtn} style={{ "--border-btm": borderBtm }}>
         <h2
           className={styles.ttl}
           style={{ "--font": font, "--mob-font": mbFont }}
@@ -87,8 +87,8 @@ export default function HobbyCarousel({
         <span className={styles.icn}>{icon}</span>
       </div>
       <div ref={ref} className={styles.crsl}>
-        <div className={styles["slide-wppr"]} ref={emblaRef}>
-          <div className={styles["slide-ctn"]}>
+        <div className={styles.slideWppr} ref={emblaRef}>
+          <div className={styles.slideCtn}>
             {inView && !isDataPending && minTimePassed
               ? data.map((dt) => (
                   <a
@@ -96,7 +96,7 @@ export default function HobbyCarousel({
                     className={styles.slide}
                     href={getLink(type, dt)}
                   >
-                    <div className={styles["img-wppr"]}>
+                    <div className={styles.imgWppr}>
                       <img
                         className={styles.img}
                         src={getImage(type, dt)}
@@ -111,8 +111,8 @@ export default function HobbyCarousel({
                   </a>
                 ))
               : [...Array(4)].map((_, i) => (
-                  <div className={styles["img-sklt"]} key={i}>
-                    <span className={styles["img-spin"]}>
+                  <div className={styles.imgSklt} key={i}>
+                    <span className={styles.imgSpin}>
                       {type === "games" ? (
                         <GiIcon icon={gameIcons.circleClaws} />
                       ) : (

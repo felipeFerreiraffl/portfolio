@@ -5,7 +5,7 @@
   justify-content: center;
 }
 
-.sec-ttl {
+.secTtl {
   font: var(--gm-h2);
   color: var(--main-05);
 
@@ -14,13 +14,13 @@
   }
 }
 
-.bd-ttl {
+.bdTtl {
   width: 100%;
   border-bottom: var(--bd-line-mn5);
   padding-bottom: var(--sp-4);
 }
 
-.gm-type {
+.gmType {
   width: 85vw;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@
   gap: var(--sp-56);
 }
 
-.gm-brands-ctn {
+.gmBrandsCtn {
   width: 100%;
   display: flex;
   align-items: center;
@@ -39,4 +39,34 @@
     flex-direction: column;
     gap: var(--sp-20);
   }
+}
+
+.swcs {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--sp-96) 0;
+  gap: var(--sp-80);
+}
+
+.swcs::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../assets/imgs/bg/game-showcase.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: cover;
+  opacity: var(--op-10);
+  z-index: var(--zind-0);
+}
+
+.swcs > * {
+  z-index: var(--zind-10);
 }

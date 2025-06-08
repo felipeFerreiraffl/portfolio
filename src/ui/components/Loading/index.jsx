@@ -9,17 +9,14 @@ export default function LoadingPage({ progress }) {
 
   return (
     <div className={styles.ctn}>
-      <div className={styles["load-ctn"]}>
+      <div className={styles.loadCtn}>
         <span className={styles.icn}>
           <img src={spinner} alt="Spinner" />
-          <FaIcon
-            icon={fontAwesome.glasses}
-            className={styles["spinner-icn"]}
-          />
+          <FaIcon icon={fontAwesome.glasses} className={styles.spinnerIcn} />
         </span>
-        <div className={styles["load-ind"]}>
+        <div className={styles.loadInd}>
           <progress
-            className={styles["load-pgss"]}
+            className={styles.loadPgss}
             max={100}
             value={Math.floor(progress)}
           ></progress>

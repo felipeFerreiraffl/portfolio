@@ -12,17 +12,17 @@ export default function Skill({ icon, name, rating }) {
       transition={{ duration: 1.2, ease: "easeInOut" }}
       viewport={{ once: true, amount: 0.5 }}
     >
-      <div className={styles["icn-ctn"]}>
+      <div className={styles.icnCtn}>
         <span className={styles.icn} role="img">
           {icon}
         </span>
         <p className={styles.name}>{name}</p>
       </div>
-      <div className={styles["star-ctn"]}>
+      <div className={styles.starCtn}>
         {[1, 2, 3, 4, 5].map((star) => (
           <span
             key={star}
-            className={star <= rating ? styles["star-colored"] : styles.star}
+            className={star <= rating ? styles.starColored : styles.star}
             role="img"
           >
             <FaIcon icon={fontAwesome.star} />

@@ -27,7 +27,7 @@ export default function Hobbies() {
         />
       </header>
 
-      <div className={styles["routes-ctn"]}>
+      <div className={styles.routesCtn}>
         <HobbyPage
           bgImage={bgImgs.animesMangas}
           color={"var(--main-02)"}

@@ -59,9 +59,9 @@ export default function AnimesMangasShowcase({
       className={styles.ctn}
       style={{ "--flex-direc": flexDirection, "--align-items": alignItems }}
     >
-      <div className={styles["cont-ctn"]}>
+      <div className={styles.contCtn}>
         <div
-          className={styles["txt-ctn"]}
+          className={styles.txtCtn}
           style={{ textAlign: alignItems === "flex-start" ? "start" : "end" }}
         >
           <h2 className={styles.ttl}>{title}</h2>
@@ -72,8 +72,8 @@ export default function AnimesMangasShowcase({
       </div>
 
       <div className={styles.crsl}>
-        <div className={styles["slide-wppr"]} ref={emblaRef}>
-          <div ref={ref} className={styles["slides-ctn"]}>
+        <div className={styles.slideWppr} ref={emblaRef}>
+          <div ref={ref} className={styles.slidesCtn}>
             {isVisible ? (
               data.map((dt) => (
                 <a
@@ -85,7 +85,7 @@ export default function AnimesMangasShowcase({
                       : `/hobbies/animes-mangas/manga/${dt.mal_id}`
                   }
                 >
-                  <div className={styles["img-wppr"]}>
+                  <div className={styles.imgWppr}>
                     <img
                       src={dt.images.webp.image_url || dt.images.jpg.image_url}
                       alt={
@@ -106,7 +106,7 @@ export default function AnimesMangasShowcase({
               ))
             ) : (
               <div className={styles.load}>
-                <span className={styles["load-spin"]}>
+                <span className={styles.loadSpin}>
                   <FaIcon icon={fontAwesome.spinner} />
                 </span>
               </div>

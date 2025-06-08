@@ -42,6 +42,7 @@
     "content": {
       "synopsis": "Synopsis",
       "demography": "Demography",
+      "type": "Tipo",
       "genre": "Genres",
       "other": "Other informations",
       "popRank": "Popularity ranking",

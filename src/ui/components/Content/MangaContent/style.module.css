@@ -37,7 +37,7 @@
   z-index: var(--zind-10);
 }
 
-.slide-ctn {
+.slideCtn {
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -51,8 +51,8 @@ export default function AnimeMangaDetails({ type, data }) {
   return (
     <div ref={ref} className={styles.ctn}>
       {!isVisible ? (
-        <div className={styles["load-ctn"]}>
-          <span className={styles["load-spin"]}>
+        <div className={styles.loadCtn}>
+          <span className={styles.loadSpin}>
             <FaIcon icon={fontAwesome.spinner} />
           </span>
         </div>
@@ -72,32 +72,32 @@ export default function AnimeMangaDetails({ type, data }) {
               alt={`${type} - ${data.title || data.title_english}`}
               className={styles.cover}
             />
-            <div className={styles["info-ctn"]}>
-              <div className={styles["txt-ctn"]}>
-                <div className={styles["ttl-ctn"]}>
+            <div className={styles.infoCtn}>
+              <div className={styles.txtCtn}>
+                <div className={styles.ttlCtn}>
                   <h1 className={styles.ttl}>
                     {data.title || data.title_english}
                   </h1>
 
-                  <div className={styles["alt-ttl-ctn"]}>
-                    <div className={styles["alt-lang-ctn"]}>
+                  <div className={styles.altTtlCtn}>
+                    <div className={styles.altLangCtn}>
                       <img
                         src={langSvg.eng}
                         alt={"English icon"}
-                        className={styles["alt-lang"]}
+                        className={styles.altLang}
                       />
-                      <h2 className={styles["alt-ttl"]}>
+                      <h2 className={styles.altTtl}>
                         {data.title_english || "?"}
                       </h2>
                     </div>
 
-                    <div className={styles["alt-lang-ctn"]}>
+                    <div className={styles.altLangCtn}>
                       <img
                         src={langSvg.jp}
                         alt={"Japanese icon"}
-                        className={styles["alt-lang"]}
+                        className={styles.altLang}
                       />
-                      <h2 className={styles["alt-ttl"]}>
+                      <h2 className={styles.altTtl}>
                         {data.title_japanese || "?"}
                       </h2>
                     </div>
@@ -111,44 +111,49 @@ export default function AnimeMangaDetails({ type, data }) {
                 </p>
               </div>
 
-              <div className={styles["score-lvl-ctn"]}>
-                <div className={styles["score-ctn"]}>
-                  <span className={styles["score-icn"]}>
+              <div className={styles.scoreLvlCtn}>
+                <div className={styles.scoreCtn}>
+                  <span className={styles.scoreIcn}>
                     <FaIcon icon={fontAwesome.star} />
                   </span>
                   <p className={styles.score}>{data.score}</p>
                 </div>
 
                 <div
-                  className={styles["score-lvl"]}
+                  className={styles.scoreLvl}
                   style={{ "--bg-color": handleLevelColor() }}
                 />
               </div>
             </div>
           </div>
 
-          <div className={styles["details-ctn"]}>
-            <div className={styles["synps-ctn"]}>
-              <h2 className={`${styles["sec-ttl"]} ${styles["bd-ttl"]}`}>
+          <div className={styles.detailsCtn}>
+            <div className={styles.synpsCtn}>
+              <h2 className={`${styles.secTtl} ${styles.bdTtl}`}>
                 {t("animesMangas.content.synopsis")}
               </h2>
-              <p className={styles["body-txt"]}>{data.synopsis || "..."}</p>
+              <p className={styles.bodyTxt}>{data.synopsis || "..."}</p>
             </div>
 
-            <div className={styles["demo-gen-ctn"]}>
-              <div className={styles["demo-ctn"]}>
-                <h2 className={styles["sec-ttl"]}>
+            <div className={styles.demoGenCtn}>
+              <div className={styles.demoCtn}>
+                <h2 className={styles.secTtl}>
                   {t("animesMangas.content.demography")}
                 </h2>
                 <p className={styles.demo}>
-                  {data.type === "TV" || data.type === "Manga"
-                    ? data.demographics[0]?.name || "..."
-                    : data.type || "..."}
+                  {data.demographics[0]?.name || "..."}
                 </p>
               </div>
 
-              <div className={styles["gen-ctn"]}>
-                <h2 className={styles["sec-ttl"]}>
+              <div className={styles.demoCtn}>
+                <h2 className={styles.secTtl}>
+                  {t("animesMangas.content.type")}
+                </h2>
+                <p className={styles.demo}>{data.type || "..."}</p>
+              </div>
+
+              <div className={styles.genCtn}>
+                <h2 className={styles.secTtl}>
                   {t("animesMangas.content.genre")}
                 </h2>
                 <div className={styles.genres}>
@@ -159,19 +164,19 @@ export default function AnimeMangaDetails({ type, data }) {
               </div>
             </div>
 
-            <div className={styles["other-ctn"]}>
-              <h2 className={`${styles["sec-ttl"]} ${styles["bd-ttl"]}`}>
+            <div className={styles.otherCtn}>
+              <h2 className={`${styles.secTtl} ${styles.bdTtl}`}>
                 {t("animesMangas.content.other")}
               </h2>
 
-              <div className={styles["other-info"]}>
+              <div className={styles.otherInfo}>
                 <div className={styles.other}>
-                  <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
+                  <h3 className={`${styles.otherTtl} ${styles.bdTtl}`}>
                     {type === "anime"
                       ? t("animesMangas.content.anime.studio")
                       : t("animesMangas.content.manga.author")}
                   </h3>
-                  <p className={styles["body-txt"]}>
+                  <p className={styles.bodyTxt}>
                     {type === "anime"
                       ? data.studios[0]?.name || "?"
                       : data.authors[0]?.name || "?"}
@@ -179,12 +184,12 @@ export default function AnimeMangaDetails({ type, data }) {
                 </div>
 
                 <div className={styles.other}>
-                  <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
+                  <h3 className={`${styles.otherTtl} ${styles.bdTtl}`}>
                     {type === "anime"
                       ? t("animesMangas.content.anime.launchDate")
                       : t("animesMangas.content.manga.publication")}
                   </h3>
-                  <p className={styles["body-txt"]}>
+                  <p className={styles.bodyTxt}>
                     {type === "anime"
                       ? data.aired?.prop?.from?.year || "?"
                       : `${data.published?.prop?.from?.year || "?"} - ${
@@ -194,19 +199,19 @@ export default function AnimeMangaDetails({ type, data }) {
                 </div>
 
                 <div className={styles.other}>
-                  <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
+                  <h3 className={`${styles.otherTtl} ${styles.bdTtl}`}>
                     Status
                   </h3>
-                  <p className={styles["body-txt"]}>{data.status || "?"}</p>
+                  <p className={styles.bodyTxt}>{data.status || "?"}</p>
                 </div>
 
                 <div className={styles.other}>
-                  <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
+                  <h3 className={`${styles.otherTtl} ${styles.bdTtl}`}>
                     {type === "anime"
                       ? t("animesMangas.content.anime.episodes")
                       : t("animesMangas.content.manga.chapters")}
                   </h3>
-                  <p className={styles["body-txt"]}>
+                  <p className={styles.bodyTxt}>
                     {type === "anime"
                       ? data.episodes || "?"
                       : data.chapters || "?"}
@@ -214,39 +219,37 @@ export default function AnimeMangaDetails({ type, data }) {
                 </div>
 
                 <div className={styles.other}>
-                  <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
+                  <h3 className={`${styles.otherTtl} ${styles.bdTtl}`}>
                     {t("animesMangas.content.popRank")}
                   </h3>
-                  <p className={styles["body-txt"]}>
+                  <p className={styles.bodyTxt}>
                     {`${data.popularity}º` || "?"}
                   </p>
                 </div>
 
                 <div className={styles.other}>
-                  <h3 className={`${styles["other-ttl"]} ${styles["bd-ttl"]}`}>
+                  <h3 className={`${styles.otherTtl} ${styles.bdTtl}`}>
                     {t("animesMangas.content.scoreRank")}
                   </h3>
-                  <p className={styles["body-txt"]}>{`${data.rank}º` || "?"}</p>
+                  <p className={styles.bodyTxt}>{`${data.rank}º` || "?"}</p>
                 </div>
               </div>
             </div>
 
             {type === "anime" && (
-              <div className={styles["trailer-ctn"]}>
-                <div
-                  className={`${styles["trlr-ttl-ctn"]} ${styles["bd-ttl"]}`}
-                >
-                  <h2 className={`${styles["sec-ttl"]}`}>Trailer</h2>
-                  <span className={styles["trlr-icn"]}>
+              <div className={styles.trailerCtn}>
+                <div className={`${styles.trlrTtlCtn} ${styles.bdTtl}`}>
+                  <h2 className={`${styles.secTtl}`}>Trailer</h2>
+                  <span className={styles.trlrIcn}>
                     <FaIcon icon={fontAwesome.circlePlay} />
                   </span>
                 </div>
 
-                <div className={styles["trlr-vid-ctn"]}>
+                <div className={styles.trlrVidCtn}>
                   <YouTube
                     opts={trailerOpts}
                     videoId={data.trailer?.youtube_id}
-                    className={styles["trlr-vid"]}
+                    className={styles.trlrVid}
                   />
                 </div>
               </div>

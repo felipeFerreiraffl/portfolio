@@ -18,7 +18,7 @@ export default function Footer({ marginTop }) {
           className={styles.logo}
           loading="lazy"
         />
-        <div className={styles["sec-cont"]}>
+        <div className={styles.secCont}>
           <motion.nav
             className={styles.nav}
             initial={{ y: -100, opacity: 0 }}
@@ -26,10 +26,10 @@ export default function Footer({ marginTop }) {
             transition={{ duration: 1.2, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <h2 className={`${styles["cont-ttl"]} ${styles["nav-ttl"]}`}>
+            <h2 className={`${styles.contTtl} ${styles.navTtl}`}>
               {t("footer.nav.title")}
             </h2>
-            <div className={styles["page-ctn"]}>
+            <div className={styles.pageCtn}>
               <a
                 href="/"
                 className={styles.page}
@@ -71,10 +71,10 @@ export default function Footer({ marginTop }) {
             transition={{ duration: 1.2, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <h2 className={`${styles["cont-ttl"]} ${styles["social-ttl"]}`}>
+            <h2 className={`${styles.contTtl} ${styles.socialTtl}`}>
               {t("footer.social")}
             </h2>
-            <div className={styles["social-icn-ctn"]}>
+            <div className={styles.socialIcnCtn}>
               <a
                 href={links.socialMedias.github}
                 target="_blank"
@@ -84,7 +84,7 @@ export default function Footer({ marginTop }) {
               >
                 <FaIcon
                   icon={fontAwesome.squareGithub}
-                  className={styles["social-icn"]}
+                  className={styles.socialIcn}
                 />
               </a>
               <a
@@ -96,7 +96,7 @@ export default function Footer({ marginTop }) {
               >
                 <FaIcon
                   icon={fontAwesome.squareInstagram}
-                  className={styles["social-icn"]}
+                  className={styles.socialIcn}
                 />
               </a>
               <a
@@ -108,7 +108,7 @@ export default function Footer({ marginTop }) {
               >
                 <FaIcon
                   icon={fontAwesome.linkedin}
-                  className={styles["social-icn"]}
+                  className={styles.socialIcn}
                 />
               </a>
             </div>

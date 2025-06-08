@@ -61,9 +61,9 @@ export default function AnimesMangas() {
           mobTitleFont={"var(--anmg-h2)"}
         />
       </header>
-      <section className={styles["chs-ctn"]}>
-        <h2 className={styles["sec-ttl"]}>{t("animesMangas.choose.title")}</h2>
-        <div className={styles["chs-card-ctn"]}>
+      <section className={styles.chsCtn}>
+        <h2 className={styles.secTtl}>{t("animesMangas.choose.title")}</h2>
+        <div className={styles.chsCardCtn}>
           <div
             className={`${styles.chs} ${styles.anime} ${
               type === "animes" ? styles.active : ""
@@ -73,10 +73,10 @@ export default function AnimesMangas() {
             title={"Animes"}
             role="button"
           >
-            <span className={styles["chs-icn"]}>
+            <span className={styles.chsIcn}>
               <FaIcon icon={fontAwesome.language} />
             </span>
-            <h3 className={styles["sec-ttl"]}>Animes</h3>
+            <h3 className={styles["secTtl"]}>Animes</h3>
           </div>
 
           <div
@@ -88,10 +88,10 @@ export default function AnimesMangas() {
             title={t("animesMangas.choose.mangas")}
             role="button"
           >
-            <span className={styles["chs-icn"]}>
+            <span className={styles.chsIcn}>
               <FaIcon icon={fontAwesome.bookOpenReader} />
             </span>
-            <h3 className={styles["sec-ttl"]}>
+            <h3 className={styles["secTtl"]}>
               {t("animesMangas.choose.mangas")}
             </h3>
           </div>
@@ -99,8 +99,8 @@ export default function AnimesMangas() {
       </section>
 
       {isLoading && (
-        <div className={styles["load-ctn"]}>
-          <span className={styles["load-spin"]}>
+        <div className={styles.loadCtn}>
+          <span className={styles.loadSpin}>
             <FaIcon icon={fontAwesome.spinner} />
           </span>
         </div>

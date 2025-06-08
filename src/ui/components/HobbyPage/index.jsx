@@ -32,7 +32,7 @@ export default function HobbyPage({
       >
         {icon}
       </span>
-      <div className={styles["txt-ctn"]}>
+      <div className={styles.txtCtn}>
         <h2
           className={styles.ttl}
           style={{

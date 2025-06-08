@@ -14,7 +14,7 @@
   max-width: 85vw;
 }
 
-.cont-ttl {
+.contTtl {
   font: var(--def-h5);
   padding-bottom: var(--sp-4);
   text-align: center;
@@ -46,7 +46,7 @@
   }
 }
 
-.sec-cont {
+.secCont {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -71,12 +71,12 @@
   gap: var(--sp-24);
 }
 
-.nav-ttl {
+.navTtl {
   color: var(--main-01);
   border-bottom: var(--bd-line-mn1);
 }
 
-.page-ctn {
+.pageCtn {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,18 +104,18 @@
   gap: var(--sp-16);
 }
 
-.social-ttl {
+.socialTtl {
   color: var(--main-04);
   border-bottom: var(--bd-line-mn4);
 }
 
-.social-icn-ctn {
+.socialIcnCtn {
   display: flex;
   align-items: center;
   gap: var(--sp-48);
 }
 
-.social-icn {
+.socialIcn {
   font-size: var(--sp-56);
   color: var(--neu-04);
   cursor: pointer;
