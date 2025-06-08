@@ -10,10 +10,20 @@ import GameType from "../../../ui/components/GameType";
 import gameIcons from "../../../services/constants/icns/game-icons/iconNames";
 import GamesShowcase from "../../../ui/components/Showcase/Games";
 import Divisor from "../../../ui/components/Divisor";
+import { useGameData } from "../../../ui/hooks/api/game/useGameData";
 
 export default function Games() {
   useDocumentTitle("Jogos | Felipe Ferreira");
   const { t } = useTranslation("games", { useSuspense: true });
+  const { popularity, bestRated, isPending, hasError } = useGameData();
+
+  if (isPending) {
+    return console.log("Carregando...");
+  }
+
+  if (hasError) {
+    return console.error("Erro ao buscar dados");
+  }
 
   return (
     <div className={styles.ctn}>
@@ -61,6 +71,18 @@ export default function Games() {
           title={t("games.sections.mostPopular.title")}
           subtitle={t("games.sections.mostPopular.subtitle")}
           icon={gameIcons.starFormation}
+          data={Array.isArray(popularity) ? popularity : []}
+        />
+
+        <GamesShowcase
+          title={t("games.sections.best.title")}
+          subtitle={t("games.sections.best.subtitle")}
+          icon={gameIcons.medal}
+          data={
+            Array.isArray(bestRated)
+              ? bestRated.filter((q) => q.reviews_count > 100).slice(0, 12)
+              : []
+          }
         />
       </section>
     </div>

@@ -6,11 +6,9 @@ import { useInView } from "react-intersection-observer";
 import GiIcon from "../../../../services/constants/icns/game-icons/gameIcons";
 import gameIcons from "../../../../services/constants/icns/game-icons/iconNames";
 import styles from "./style.module.css";
-import { useGameData } from "../../../hooks/api/game/useGameData";
 
 export default function GamesShowcase({ title, subtitle, icon, data = [] }) {
   const [isVisible, setIsVisible] = useState(false);
-  const { popularity, bestRated, isPending, hasError } = useGameData();
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -59,9 +57,9 @@ export default function GamesShowcase({ title, subtitle, icon, data = [] }) {
         </span>
       </div>
 
-      <div ref={ref} className={styles.crsl}>
-        <div className={styles.slideWppr}>
-          <div className={styles.slidesCtn}>
+      <div className={styles.crsl}>
+        <div className={styles.slideWppr} ref={emblaRef}>
+          <div ref={ref} className={styles.slidesCtn}>
             {isVisible ? (
               data.map((game) => (
                 <a

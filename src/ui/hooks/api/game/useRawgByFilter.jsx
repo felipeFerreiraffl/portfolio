@@ -15,7 +15,7 @@ export const useRawgByFilter = ({ filters = [] }) => {
 
         try {
           const result = await fetchFn(ordering, pageSize);
-          return result;
+          return result.results;
         } catch (error) {
           console.error(`Erro ao buscar requisição ${ordering}`, error);
           throw error;
@@ -68,7 +68,7 @@ export const useRawgByFilter = ({ filters = [] }) => {
         return 1000;
       },
       placeholderData: [],
-      enabled: !!type, //  Só ativa se type tiver valor
+      enabled: !!filters.length > 0, //  Só ativa se filters for maior de 0
       refetchOnWindowFocus: false, // Evita refetch desnecessário
       refetchOnReconnect: false,
       refetchOnMount: false,

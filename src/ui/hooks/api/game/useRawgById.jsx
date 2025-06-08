@@ -44,7 +44,7 @@ export const useRawgById = ({ ids = [] }) => {
   };
 
   return useQuery({
-    queryKey: [type, "ids", ids],
+    queryKey: ["game", "ids", ids],
     queryFn: fetchAll,
     staleTime: 1000 * 60 * 60 * 2,
     cacheTime: 1000 * 60 * 60 * 24,
@@ -63,7 +63,7 @@ export const useRawgById = ({ ids = [] }) => {
     },
     retryDelay: (attemptIndex) => Math.min(3000 * 2 ** attemptIndex, 10000),
     placeholderData: [],
-    enabled: !!type && ids.length > 0,
+    enabled: !!ids.length > 0,
     refetchOnWindowFocus: false, // Evita refetch desnecessário
     refetchOnReconnect: false,
     refetchOnMount: false,

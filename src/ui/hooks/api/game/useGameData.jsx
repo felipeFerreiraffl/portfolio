@@ -4,8 +4,8 @@ import { useRawgById } from "./useRawgById";
 
 export const useGameData = () => {
   const filters = [
-    { filter: "-added", pageSize: 12, key: "pop" },
-    { filter: "-rating" || "-metacritic", pageSize: 12, key: "rating" },
+    { ordering: "-added", pageSize: 12, key: "pop" },
+    { ordering: "-rating", pageSize: 100, key: "rating" },
   ];
 
   const queries = useRawgByFilter({ filters });
