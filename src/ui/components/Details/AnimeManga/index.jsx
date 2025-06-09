@@ -32,15 +32,25 @@ export default function AnimeMangaDetails({ type, data }) {
     [inView]
   );
 
+  /*
+   * Função que lida com a cor do card de nota
+   * Verde escuro - Excelente/Ótimo
+   * Verde claro - Bom
+   * Amarelo - Regular
+   * Vermelho - Ruim
+   * Cinza - Não possui nota
+   */
   const handleLevelColor = () => {
     if (data.score >= 8.5) {
       return "var(--aux-01)";
     } else if (data.score < 8.5 && data.score >= 7.5) {
       return "var(--aux-02)";
-    } else if (data.score < 7.5 && data.score >= 6.5) {
+    } else if (data.score < 7.5 && data.score >= 6) {
       return "var(--aux-03)";
-    } else {
+    } else if (data.score < 6) {
       return "var(--aux-04)";
+    } else {
+      return "var(--neu-03)";
     }
   };
 

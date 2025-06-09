@@ -13,11 +13,6 @@ export default function GameDetails({ data }) {
     threshold: 0.1,
   });
 
-  const trailerOpts = {
-    width: "100%",
-    height: "100%",
-  };
-
   const handleInView = useCallback(
     debounce(() => {
       if (inView) {
@@ -27,24 +22,27 @@ export default function GameDetails({ data }) {
     [inView]
   );
 
+  /*
+   * Função que lida com a cor do card de Metacritic
+   * Verde escuro - Excelente/Ótimo
+   * Verde claro - Bom
+   * Amarelo - Regular
+   * Vermelho - Ruim
+   * Cinza - Não possui nota
+   */
   const handleMetacriticColor = () => {
     let metacritic = data.metacritic;
 
-    switch (metacritic) {
-      case metacritic >= 85:
-        return "var(--aux-01)";
-
-      case metacritic < 85 && metacritic >= 75:
-        return "var(--aux-02)";
-
-      case metacritic < 75 && metacritic >= 60:
-        return "var(--aux-03)";
-
-      case metacritic < 60:
-        return "var(--aux-04)";
-
-      default:
-        return "var(--neu-03)";
+    if (metacritic >= 85) {
+      return "var(--aux-01)";
+    } else if (metacritic < 85 && metacritic >= 75) {
+      return "var(--aux-02)";
+    } else if (metacritic < 75 && metacritic >= 60) {
+      return "var(--aux-03)";
+    } else if (metacritic < 60) {
+      return "var(--aux-04)";
+    } else {
+      return "var(--neu-03)";
     }
   };
 
@@ -79,7 +77,41 @@ export default function GameDetails({ data }) {
                 <p className={styles.dev}>{data.developers[0]?.name || "?"}</p>
               </div>
               <div className={styles.scoreCtn}>
-                <div className={styles.ratingCtn}></div>
+                <div className={styles.ratingCtn}>
+                  {Array.from({ length: 5 }).map((_, i) => {
+                    // Deixa com a quantidade exata de estrelas que o jogo possui
+                    const starNum = i + 1;
+
+                    /**
+                     * Porcentagem da estrela preenchida
+                     * 100% se estiver menor ou igual ao valor inteiro
+                     * Parcialmente caso seja a próxima após o número inteiro
+                     * Ex: 4.6 -> A última estrela fica com 60% de preenchimento ((4.2 - 4) * 100)
+                     */
+                    const porcentage =
+                      starNum <= data.rating
+                        ? 100
+                        : starNum - 1 < data.rating
+                        ? (data.rating - (starNum - 1)) * 100
+                        : 0;
+
+                    return (
+                      <div key={i} className={styles.starCtn}>
+                        <span className={`${styles.star} ${styles.normal}`}>
+                          <GiIcon icon={gameIcons.alliedStar} />
+                        </span>
+                        <span
+                          className={`${styles.star} ${styles.colored}`}
+                          style={{
+                            "--fill-width": `${porcentage}%`,
+                          }}
+                        >
+                          <GiIcon icon={gameIcons.alliedStar} />
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
                 <p
                   className={styles.mtcrtc}
                   style={{ "--meta-color": handleMetacriticColor() }}

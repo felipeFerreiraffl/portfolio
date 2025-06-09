@@ -1,11 +1,12 @@
 import { useQueries } from "@tanstack/react-query";
 import { getGameByFilter } from "../../../../services/api/rawg";
 
-export const useRawgByFilter = ({ filters = [] }) => {
+// Hook para fetch por ordem
+export const useRawgByFilter = ({ orderings = [] }) => {
   const fetchFn = getGameByFilter || null;
 
   return useQueries({
-    queries: filters.map(({ ordering, pageSize, key }, index) => ({
+    queries: orderings.map(({ ordering, pageSize, key }, index) => ({
       queryKey: ["game", ordering, pageSize, key],
       queryFn: async () => {
         if (index > 0) {
@@ -68,7 +69,7 @@ export const useRawgByFilter = ({ filters = [] }) => {
         return 1000;
       },
       placeholderData: [],
-      enabled: !!filters.length > 0, //  Só ativa se filters for maior de 0
+      enabled: !!orderings.length > 0, //  Só ativa se orderings for maior de 0
       refetchOnWindowFocus: false, // Evita refetch desnecessário
       refetchOnReconnect: false,
       refetchOnMount: false,

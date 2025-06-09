@@ -137,12 +137,43 @@
 }
 
 .ratingCtn {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-8);
+}
+
+.starCtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--sp-40);
+  height: var(--sp-40);
 }
 
 .star {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--sp-40);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
-.starClr {
+.star.normal {
+  color: var(--neu-03);
+  z-index: var(--zind-1);
+}
+
+.star.colored {
+  color: var(--aux-03);
+  z-index: var(--zind-10);
+
+  /* Preenchimento das estrelas pela porcentagem */
+  clip-path: inset(0 calc(100% - var(--fill-width)) 0 0);
 }
 
 .mtcrtc {

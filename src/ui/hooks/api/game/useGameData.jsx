@@ -2,13 +2,14 @@ import rawgIds from "../../../../services/constants/ids/rawgIds";
 import { useRawgByFilter } from "./useRawgByFilter";
 import { useRawgById } from "./useRawgById";
 
+// Hook para retornar os dados provenientes dos fetchs por ordem e ID da RAWG
 export const useGameData = () => {
-  const filters = [
+  const orderings = [
     { ordering: "-added", pageSize: 20, key: "pop" },
     { ordering: "-rating", pageSize: 100, key: "rating" },
   ];
 
-  const queries = useRawgByFilter({ filters });
+  const queries = useRawgByFilter({ orderings });
   const [popularity, bestRated] = queries.map((q) => q.data ?? []);
 
   const sectionIds = rawgIds;

@@ -13,6 +13,7 @@ const GameContent = lazy(() => import("../pages/content/games"));
 const Football = lazy(() => import("../pages/hobbies/football"));
 const Drawings = lazy(() => import("../pages/hobbies/drawings"));
 
+// Rotas (react-router-dom)
 export default function AppRoutes() {
   const location = useLocation();
   const { isMinTimePassed, progress } = useMinTime(2000);
