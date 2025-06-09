@@ -45,8 +45,10 @@ export default function HobbyFinal({ img, alt, color, font, mbFont }) {
           />
 
           <SecondaryButton
-            color={"var(--main-01)"}
-            border={"var(--bd-mn1)"}
+            color={
+              color === "var(--main-02)" ? "var(--main-01)" : "var(--main-04)"
+            }
+            border={color === "var(--main-02)" ? "var(--bd-mn1)" : "var(--bd-mn4)"}
             text={t("hobbies.final.secButton")}
             href={"/hobbies"}
           />

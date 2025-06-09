@@ -70,3 +70,10 @@
 .swcs > * {
   z-index: var(--zind-10);
 }
+
+.slds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-64);
+}

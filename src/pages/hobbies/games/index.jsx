@@ -11,11 +11,18 @@ import gameIcons from "../../../services/constants/icns/game-icons/iconNames";
 import GamesShowcase from "../../../ui/components/Showcase/Games";
 import Divisor from "../../../ui/components/Divisor";
 import { useGameData } from "../../../ui/hooks/api/game/useGameData";
+import GameRecentFuture from "../../../ui/components/Slides/Hobbies/GameSpecial";
+import HobbyCarousel from "../../../ui/components/Slides/Hobbies/Common";
+import GiIcon from "../../../services/constants/icns/game-icons/gameIcons";
+import HobbyFinal from "../../../ui/components/HobbyFinal";
+import pngImgs from "../../../services/constants/imgs/pngs";
+import Footer from "../../../ui/components/Footer";
 
 export default function Games() {
   useDocumentTitle("Jogos | Felipe Ferreira");
   const { t } = useTranslation("games", { useSuspense: true });
-  const { popularity, bestRated, isPending, hasError } = useGameData();
+  const { popularity, bestRated, sections, isPending, hasError } =
+    useGameData();
 
   if (isPending) {
     return console.log("Carregando...");
@@ -80,11 +87,51 @@ export default function Games() {
           icon={gameIcons.medal}
           data={
             Array.isArray(bestRated)
-              ? bestRated.filter((q) => q.reviews_count > 100).slice(0, 12)
+              ? bestRated.filter((q) => q.reviews_count > 100).slice(0, 20)
               : []
           }
         />
       </section>
+
+      <Divisor marginTop={128} color={"var(--main-05)"} />
+
+      <section className={styles.slds}>
+        <GameRecentFuture
+          data={
+            Array.isArray(sections.pastFuture.data)
+              ? sections.pastFuture.data
+              : []
+          }
+          minLoadingTime={1500}
+        />
+
+        <HobbyCarousel
+          type={"games"}
+          color={"var(--main-05)"}
+          borderBtm={"var(--bd-line-mn5)"}
+          title={t("games.sections.favorite")}
+          font={"var(--gm-h2)"}
+          mbFont={"var(--gm-h3)"}
+          icon={<GiIcon icon={gameIcons.hearts} />}
+          isDataPending={isPending}
+          minLoadingTime={1500}
+          data={
+            Array.isArray(sections.favorite.data) ? sections.favorite.data : []
+          }
+        />
+      </section>
+
+      <Divisor marginTop={128} color={"var(--main-05)"} />
+
+      <HobbyFinal
+        color={"var(--main-05)"}
+        img={pngImgs.games}
+        alt={"Aloy (Horizon Zero Dawn)"}
+        font={"var(--gm-h2)"}
+        mbFont={"var(--gm-h3)"}
+      />
+
+      <Footer marginTop={0} />
     </div>
   );
 }

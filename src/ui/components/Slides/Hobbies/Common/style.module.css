@@ -63,8 +63,8 @@
   justify-content: center;
   width: var(--sp-200);
   height: 100%;
-  aspect-ratio: 100 / 143;
-  flex: 0 0 25%;
+  aspect-ratio: var(--aspect-ratio);
+  flex: 0 0 40%;
   box-sizing: border-box;
   margin-right: var(--sp-20);
 
@@ -77,6 +77,8 @@
 .imgWppr {
   position: relative;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: var(--sp-4);
 }
 
@@ -121,7 +123,7 @@
   width: 100%;
   height: 100%;
   flex: 0 0 25%;
-  aspect-ratio: 100 / 143;
+  aspect-ratio: var(--aspect-ratio);
   box-sizing: border-box;
   background-color: var(--rgba-bk80);
   margin-right: var(--sp-20);

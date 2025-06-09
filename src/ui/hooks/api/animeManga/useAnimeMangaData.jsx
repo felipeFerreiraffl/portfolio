@@ -5,8 +5,8 @@ import { useJikanById } from "./useJikanById";
 export const useAnimeMangaData = (type) => {
   // Definição dos filtros para mapping
   const filters = [
-    { filter: "bypopularity", size: 12, key: "pop" },
-    { filter: "", size: 12, key: "score" },
+    { filter: "bypopularity", size: 20, key: "pop" },
+    { filter: "", size: 20, key: "score" },
   ];
 
   const queries = useJikanByFilter({ type, filters });

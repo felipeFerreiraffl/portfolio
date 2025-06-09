@@ -4,7 +4,7 @@ import { useRawgById } from "./useRawgById";
 
 export const useGameData = () => {
   const filters = [
-    { ordering: "-added", pageSize: 12, key: "pop" },
+    { ordering: "-added", pageSize: 20, key: "pop" },
     { ordering: "-rating", pageSize: 100, key: "rating" },
   ];
 

@@ -96,7 +96,13 @@ export default function HobbyCarousel({
                     className={styles.slide}
                     href={getLink(type, dt)}
                   >
-                    <div className={styles.imgWppr}>
+                    <div
+                      className={styles.imgWppr}
+                      style={{
+                        "--aspect-ratio":
+                          type === "games" ? "16 / 9" : "100 / 143",
+                      }}
+                    >
                       <img
                         className={styles.img}
                         src={getImage(type, dt)}
@@ -111,7 +117,14 @@ export default function HobbyCarousel({
                   </a>
                 ))
               : [...Array(4)].map((_, i) => (
-                  <div className={styles.imgSklt} key={i}>
+                  <div
+                    className={styles.imgSklt}
+                    key={i}
+                    style={{
+                      "--aspect-ratio":
+                        type === "games" ? "16 / 9" : "100 / 143",
+                    }}
+                  >
                     <span className={styles.imgSpin}>
                       {type === "games" ? (
                         <GiIcon icon={gameIcons.circleClaws} />
@@ -133,7 +146,7 @@ export default function HobbyCarousel({
           {type === "games" ? (
             <GiIcon
               icon={gameIcons.playButton}
-              style={{ transform: "rotateX(180deg)" }}
+              style={{ transform: "rotate(180deg)" }}
             />
           ) : (
             <FaIcon icon={fontAwesome.circleLeft} />
