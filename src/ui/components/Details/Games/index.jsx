@@ -4,8 +4,10 @@ import { useInView } from "react-intersection-observer";
 import GiIcon from "../../../../services/constants/icns/game-icons/gameIcons";
 import gameIcons from "../../../../services/constants/icns/game-icons/iconNames";
 import styles from "./style.module.css";
+import { useTranslation } from "react-i18next";
 
 export default function GameDetails({ data }) {
+  const { t } = useTranslation("games", { useSuspense: true });
   const [isVisible, setIsVisible] = useState(false);
 
   const { ref, inView } = useInView({
@@ -65,16 +67,16 @@ export default function GameDetails({ data }) {
             style={{ "--bg-image": `url(${data.background_image_additional})` }}
           >
             <img
-              src={data.background_image}
-              alt={data.name || data.name_original || "?"}
+              src={data?.background_image}
+              alt={data?.name || data?.name_original || "?"}
               className={styles.cover}
             />
             <div className={styles.mnInfosCtn}>
               <div className={styles.txtCtn}>
                 <h1 className={styles.ttl}>
-                  {data.name || data.name_original || "...?"}
+                  {data?.name || data?.name_original || "...?"}
                 </h1>
-                <p className={styles.dev}>{data.developers[0]?.name || "?"}</p>
+                <p className={styles.dev}>{data?.developers[0]?.name || "?"}</p>
               </div>
               <div className={styles.scoreCtn}>
                 <div className={styles.ratingCtn}>
@@ -89,10 +91,10 @@ export default function GameDetails({ data }) {
                      * Ex: 4.6 -> A última estrela fica com 60% de preenchimento ((4.2 - 4) * 100)
                      */
                     const porcentage =
-                      starNum <= data.rating
+                      starNum <= data?.rating
                         ? 100
-                        : starNum - 1 < data.rating
-                        ? (data.rating - (starNum - 1)) * 100
+                        : starNum - 1 < data?.rating
+                        ? (data?.rating - (starNum - 1)) * 100
                         : 0;
 
                     return (
@@ -116,8 +118,90 @@ export default function GameDetails({ data }) {
                   className={styles.mtcrtc}
                   style={{ "--meta-color": handleMetacriticColor() }}
                 >
-                  {data.metacritic || "?"}
+                  {data?.metacritic || "?"}
                 </p>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.infosCtn}>
+            <div className={styles.secCtn}>
+              <div className={styles.infoTtlCtn}>
+                <h2 className={styles.secTtl}>{t("games.content.desc")}</h2>
+                <span className={styles.infoIcn}>
+                  <GiIcon icon={gameIcons.foldedPaper} />
+                </span>
+              </div>
+
+              <p className={styles.bodyTxt}>
+                {data?.description_raw || "...?"}
+              </p>
+            </div>
+
+            <div className={styles.secCtn}>
+              <div className={styles.infoTtlCtn}>
+                <h2 className={styles.secTtl}>{t("games.content.platform")}</h2>
+                <span className={styles.infoIcn}>
+                  <GiIcon icon={gameIcons.gameConsole} />
+                </span>
+              </div>
+
+              <div className={styles.pltfmCtn}>
+                {data?.platforms?.map((plat) => (
+                  <p className={styles.pltfm}>{plat.platform?.name}</p>
+                )) || "?"}
+              </div>
+            </div>
+
+            <div className={styles.secCtn}>
+              <div className={styles.infoTtlCtn}>
+                <h2 className={styles.secTtl}>{t("games.content.genres")}</h2>
+                <span className={styles.infoIcn}>
+                  <GiIcon icon={gameIcons.dramaMasks} />
+                </span>
+              </div>
+
+              <div className={styles.gnrCtn}>
+                {data?.genres?.map((gen) => (
+                  <p className={styles.gnr}>{gen?.name}</p>
+                )) || "?"}
+              </div>
+            </div>
+
+            <div className={styles.secCtn}>
+              <div className={styles.infoTtlCtn}>
+                <h2 className={styles.secTtl}>{t("games.content.other")}</h2>
+                <span className={styles.infoIcn}>
+                  <GiIcon icon={gameIcons.info} />
+                </span>
+              </div>
+
+              <div className={styles.cmplmInfoCtn}>
+                <div className={styles.other}>
+                  <h3 className={styles.otherTtl}>Metacritic</h3>
+                  <p className={styles.bodyTxt}>{data?.metacritic || "?"}</p>
+                </div>
+
+                <div className={styles.other}>
+                  <h3 className={styles.otherTtl}>
+                    {t("games.content.score")}
+                  </h3>
+                  <p className={styles.bodyTxt}>{data?.rating || "?"} / 5</p>
+                </div>
+
+                <div className={styles.other}>
+                  <h3 className={styles.otherTtl}>
+                    {t("games.content.launchDate")}
+                  </h3>
+                  <p className={styles.bodyTxt}>{data?.released || "?"}</p>
+                </div>
+
+                <div className={styles.other}>
+                  <h3 className={styles.otherTtl}>{t("games.content.dev")}</h3>
+                  <p className={styles.bodyTxt}>
+                    {data?.developers[0]?.name || "?"}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

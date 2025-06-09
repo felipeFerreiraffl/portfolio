@@ -186,3 +186,139 @@
   background-color: var(--meta-color);
   border-radius: var(--brad-20);
 }
+
+.infosCtn {
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--sp-96);
+  gap: var(--sp-64);
+
+  @media (max-width: 767.98px) {
+    align-items: center;
+  }
+}
+
+.infoTtlCtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-16);
+  color: var(--neu-04);
+  border-bottom: var(--bd-line-nt4);
+  padding-bottom: var(--sp-4);
+
+  @media (max-width: 767.98px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.secTtl {
+  font: var(--gm-h2);
+
+  @media (max-width: 767.98px) {
+    font: var(--gm-h3);
+  }
+}
+
+.otherTtl {
+  font: var(--gm-h3);
+  color: var(--neu-04);
+  border-bottom: var(--bd-line-nt4);
+
+  @media (max-width: 767.98px) {
+    font: var(--gm-h4);
+  }
+}
+
+.bodyTxt {
+  font: var(--gm-body);
+  color: var(--neu-04);
+
+  @media (max-width: 767.98px) {
+    text-align: center;
+  }
+}
+
+.infoIcn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--sp-48);
+
+  @media (max-width: 767.98px) {
+    font-size: var(--sp-40);
+  }
+}
+
+.secCtn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-20);
+
+  @media (max-width: 767.98px) {
+    align-items: center;
+  }
+}
+
+.pltfmCtn,
+.gnrCtn {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-12);
+  flex-wrap: wrap;
+
+  @media (max-width: 767.98px) {
+    flex-direction: column;
+  }
+}
+
+.pltfm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--gm-h4);
+  background-color: var(--main-04);
+  color: var(--neu-04);
+  padding: var(--sp-12) var(--sp-48);
+  border-radius: var(--brad-8);
+}
+
+.gnr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--gm-hdr);
+  background-color: var(--main-05);
+  color: var(--neu-01);
+  padding: var(--sp-8) var(--sp-32);
+  border-radius: var(--brad-8);
+}
+
+.cmplmInfoCtn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-20);
+
+  @media (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 767.98px) {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.other {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-12);
+
+  @media (max-width: 767.98px) {
+    align-items: center;
+  }
+}
