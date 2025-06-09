@@ -11,7 +11,7 @@ export default function SchoolCard({ img, name, href, alt }) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeInOut" }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.3 }}
       title={alt}
     >
       <p className={styles.name}>{name}</p>

@@ -47,7 +47,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           {t("home.sections.about-me.title")}
         </motion.h2>
@@ -60,7 +60,7 @@ export default function Home() {
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <div className={styles.abtInfo}>
               <h3 className={`${styles.quintTtl} ${styles.bdTtl}`}>
@@ -102,7 +102,7 @@ export default function Home() {
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <div className={styles.ptfTextCtn}>
             <h2 className={`${styles.secTtl} ${styles.bdTtl}`}>
@@ -130,7 +130,7 @@ export default function Home() {
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <div className={styles.hbbTxtCtn}>
             <h2 className={`${styles.secTtl} ${styles.bdTtl}`}>Hobbies</h2>
@@ -154,7 +154,7 @@ export default function Home() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <FaIcon icon={fontAwesome.gamepad} className={styles.hbbIcnSm} />
           </motion.span>
@@ -163,7 +163,7 @@ export default function Home() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <FaIcon icon={fontAwesome.book} className={styles.hbbIcnMd} />
           </motion.i>
@@ -172,7 +172,7 @@ export default function Home() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.6 }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <FaIcon
               icon={fontAwesome.umbrellaBeach}
@@ -184,7 +184,7 @@ export default function Home() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 0.9 }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <FaIcon icon={fontAwesome.futbol} className={styles.hbbIcnMd} />
           </motion.i>
@@ -193,7 +193,7 @@ export default function Home() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut", delay: 1.2 }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <FaIcon icon={fontAwesome.paintbrush} className={styles.hbbIcnSm} />
           </motion.i>

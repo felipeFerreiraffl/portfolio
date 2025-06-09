@@ -24,7 +24,7 @@ export default function HobbyPage({
       initial={{ x: -100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 1.2, ease: "easeInOut" }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       <span
         className={styles.icn}

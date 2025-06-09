@@ -24,7 +24,7 @@ export default function Footer({ marginTop }) {
             initial={{ y: -100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <h2 className={`${styles.contTtl} ${styles.navTtl}`}>
               {t("footer.nav.title")}
@@ -69,7 +69,7 @@ export default function Footer({ marginTop }) {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <h2 className={`${styles.contTtl} ${styles.socialTtl}`}>
               {t("footer.social")}

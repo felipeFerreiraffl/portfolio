@@ -51,7 +51,7 @@ export default function Portfolio() {
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.2, ease: "easeInOut" }}
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.3 }}
             >
               <h3 className={`${styles.crsThrdTtl} ${styles.tech}`}>
                 {t("portfolio.sections.courses.tech.title")}
@@ -92,7 +92,7 @@ export default function Portfolio() {
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.2, ease: "easeInOut" }}
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.3 }}
             >
               <h3 className={`${styles.crsThrdTtl} ${styles.mec}`}>
                 {t("portfolio.sections.courses.other.title")}
@@ -145,7 +145,7 @@ export default function Portfolio() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
             tabIndex={0}
           >
             <h3 className={styles.sklsTtl}>Frontend</h3>
@@ -178,7 +178,7 @@ export default function Portfolio() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
             tabIndex={0}
           >
             <h3 className={styles.sklsTtl}>Backend</h3>
@@ -196,7 +196,7 @@ export default function Portfolio() {
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.3 }}
             tabIndex={0}
           >
             <h3 className={styles.sklsTtl}>Design</h3>
@@ -229,7 +229,7 @@ export default function Portfolio() {
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <div className={styles.crrTxtCtn}>
             <h2 className={`${styles.crrTtl} ${styles.ttlBrd}`}>
@@ -251,7 +251,7 @@ export default function Portfolio() {
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <FaIcon icon={fontAwesome.paperclip} />
         </motion.span>

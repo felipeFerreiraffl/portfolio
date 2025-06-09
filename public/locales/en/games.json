@@ -29,7 +29,8 @@
       "other": "Other informations",
       "score": "Score",
       "launchDate": "Launch date",
-      "dev": "Developer"
+      "dev": "Developer",
+      "button": "Return"
     }
   }
 }
