@@ -18,6 +18,7 @@ i18n
       "hobbies",
       "animes-mangas",
       "games",
+      "football",
     ],
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json",

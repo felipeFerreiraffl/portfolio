@@ -1,22 +1,22 @@
 import { useTranslation } from "react-i18next";
 import FaIcon from "../../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
+import GiIcon from "../../../services/constants/icns/game-icons/gameIcons";
+import gameIcons from "../../../services/constants/icns/game-icons/iconNames";
 import headerImgs from "../../../services/constants/imgs/header";
+import pngImgs from "../../../services/constants/imgs/pngs";
+import Divisor from "../../../ui/components/Divisor";
+import Footer from "../../../ui/components/Footer";
+import GameType from "../../../ui/components/GameType";
 import Header from "../../../ui/components/Header";
+import HobbyFinal from "../../../ui/components/HobbyFinal";
 import HobbiesIntro from "../../../ui/components/Introduction/Hobbies";
+import GamesShowcase from "../../../ui/components/Showcase/Games";
+import HobbyCarousel from "../../../ui/components/Slides/Hobbies/Common";
+import GameRecentFuture from "../../../ui/components/Slides/Hobbies/GameSpecial";
+import { useGameData } from "../../../ui/hooks/api/game/useGameData";
 import useDocumentTitle from "../../../ui/hooks/useDocumentTitle";
 import styles from "./style.module.css";
-import GameType from "../../../ui/components/GameType";
-import gameIcons from "../../../services/constants/icns/game-icons/iconNames";
-import GamesShowcase from "../../../ui/components/Showcase/Games";
-import Divisor from "../../../ui/components/Divisor";
-import { useGameData } from "../../../ui/hooks/api/game/useGameData";
-import GameRecentFuture from "../../../ui/components/Slides/Hobbies/GameSpecial";
-import HobbyCarousel from "../../../ui/components/Slides/Hobbies/Common";
-import GiIcon from "../../../services/constants/icns/game-icons/gameIcons";
-import HobbyFinal from "../../../ui/components/HobbyFinal";
-import pngImgs from "../../../services/constants/imgs/pngs";
-import Footer from "../../../ui/components/Footer";
 
 export default function Games() {
   useDocumentTitle("Jogos | Felipe Ferreira");

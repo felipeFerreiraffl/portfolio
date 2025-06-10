@@ -1,12 +1,11 @@
-import { useTranslation } from "react-i18next";
-import styles from "./style.module.css";
-import useDocumentTitle from "../../../ui/hooks/useDocumentTitle";
-import Header from "../../../ui/components/Header";
 import { useParams } from "react-router-dom";
-import { useJikanBySpecificId } from "../../../ui/hooks/api/animeManga/useJikanBySpecificId";
-import BackButton from "../../../ui/components/Button/Back";
 import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
+import BackButton from "../../../ui/components/Button/Back";
 import AnimeMangaDetails from "../../../ui/components/Details/AnimeManga";
+import Header from "../../../ui/components/Header";
+import { useJikanBySpecificId } from "../../../ui/hooks/api/animeManga/useJikanBySpecificId";
+import useDocumentTitle from "../../../ui/hooks/useDocumentTitle";
+import styles from "./style.module.css";
 
 export default function AnimeMangaContent() {
   useDocumentTitle("Anime | Felipe Ferreira");
