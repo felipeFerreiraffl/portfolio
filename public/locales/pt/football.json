@@ -1,5 +1,58 @@
 {
   "football": {
-    "title": "Futebol"
+    "title": "Futebol",
+    "sections": {
+      "positions": {
+        "title": "Posições",
+        "subtitle": "Uma demonstração das posições no futebol, com uma pequena explicação de cada uma delas e com as minhas posições favoritas",
+        "legends": {
+          "favorite": "Favorita",
+          "normal": "Normal"
+        },
+        "api": {
+          "682500090ccd2c582316c76b": {
+            "name": "Goleiro",
+            "abbr": "GOL",
+            "desc": "Também conhecido como guarda-redes, é responsável por ficar de baixo das traves e evitar os gols da equipe adversária, sendo o único que pode usar as mãos (dentro da área, apenas). No futebol atual, o bom uso dos pés para saída de bola é essencial para ser um bom goleiro, também sendo importante na construção. Alguns goleiros de destaque são Buffon, Neuer, Courtois, Lev Yashin, Rogério Ceni, etc."
+          },
+          "682500df0ccd2c582316c76c": {
+            "name": "Lateral",
+            "abbr": "LAT",
+            "desc": "Extremo do lado da defesa, com o objetivo de defender e atacar os lados do campo, dando apoio aos pontas. Também podem exercer a função de armação, trabalhando por dentro. Laterais como Alexander-Arnold, Cafú, Roberto Carlos, Marcelo, Daniel Alves e Lahm são alguns dos melhores da hitória."
+          },
+          "6825026b0ccd2c582316c76d": {
+            "name": "Zagueiro",
+            "abbr": "ZAG",
+            "desc": "Possui a função de defender e marcar os atacantes da outra equipe, bloqueando chutes e ganhando duelos áereos e pelo chão. Assim como os goleiros, zagueiros também precisam saber sair jogando, sendo uma das qualidades fundamentais para essa posição atualmente, com destaques para Sergio Ramos, Maldini, Cannavaro, Van Dijk, Beckenbauer e outros muitos exemplos."
+          },
+          "682503250ccd2c582316c76e": {
+            "name": "Volante",
+            "abbr": "VOL",
+            "desc": "Protege a linha de defesa, sendo o jogador mais recuado do meio-campo. Tem a função de defender e iniciar as jogadas da equipe depois dos zagueiros, sendo uma das posições mais difíceis de ocupar, pela pressão do ataque do outro time e da resistência necessária. Os melhores conhecidos são Busquets, Casemiro, Lothar Matthäus, Patrick Vieira, etc."
+          },
+          "682503be0ccd2c582316c76f": {
+            "name": "Meia central",
+            "abbr": "MC",
+            "desc": "Responsável pela armação e controle de jogo da equipe, com passes precisos e bom controle de bola. Atualmente, também possuem responsabilidades defensivas, com alguns sendo chamados de box-to-box. Alguns jogadores de destaque são: Xavi, Iniesta, Zidane, Pirlo, Gerrard, entre outros."
+          },
+          "68250dadc216c551896b7031": {
+            "name": "Meia atacante",
+            "abbr": "MAT",
+            "desc": "Posição mais avançada do meio-campo, também sendo responsável pela armação e criação de jogadas, assim como pisar na área adversária para marcar gols, sendo geralmente jogadores com muitos gols e assistências. Jogadores como Johan Cruyff, Pelé, Kevin de Bruyne, Bellingham, entre outros, são exemplos dessa posição."
+          },
+          "68250e73c216c551896b7032": {
+            "name": "Ponta",
+            "abbr": "PON",
+            "desc": "Ficam pelos lados do campo, sendo responsáveis por criar as jogadas tanto na lateral quanto por dentro. Boa finalização e ótimo fundamento de drible são os que destacam os pontas, com jogadores como Neymar, Ronaldinho, Messi, Vinicius Jr., Yamal, etc."
+          },
+          "68250f91c216c551896b7033": {
+            "name": "Centroavante",
+            "abbr": "CA",
+            "desc": "Jogador que fica na área adversária, esperando uma oportunidade da bola vir nos seus pés ou cabeça para jogar a bola no fundo da rede, mas não apenas se restrigindo a isso, também podendo ajudar na construção de jogadas. Na maioria dos casos, é o artilheiro da sua equipe, e uma amostra dessa posição são jogadores como Gerd Müller, Lewandowski, Harry Kane, Cristiano Ronaldo, etc."
+          }
+        }
+      },
+      "best": "Melhores do mundo"
+    }
   }
 }

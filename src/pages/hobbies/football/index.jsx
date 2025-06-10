@@ -13,7 +13,7 @@ export default function Football() {
   const { t } = useTranslation("football", { useSuspense: true });
 
   return (
-    <div>
+    <div className={styles.ctn}>
       <header>
         <Header />
 

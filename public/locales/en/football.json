@@ -1,5 +1,58 @@
 {
   "football": {
-    "title": "Football"
+    "title": "Football",
+    "sections": {
+      "positions": {
+        "title": "Positions",
+        "subtitle": "A demonstration of football positions, with a breaf explanation of each one and my favorite ones",
+        "legends": {
+          "favorite": "Favorite",
+          "normal": "Normal"
+        },
+        "api": {
+          "682500090ccd2c582316c76b": {
+            "name": "Goalkeeper",
+            "abbr": "GK",
+            "desc": "Also known as keepers, he is resposible for staying under the goalposts and preventing goals of the opposing team, being the only one that can use his hands (inside the box, only). In today football, the good use of feet for ball-playing is essencial to be an elite goalkeeper, being also important on the building play. Some outstanding keepers are Buffon, Neuer, Courtois, Lev Yashin, Rogério Ceni, etc."
+          },
+          "682500df0ccd2c582316c76c": {
+            "name": "Fullback",
+            "abbr": "FB",
+            "desc": "Wider on the defense side, with the goal to defend and attack the sides of the field, giving support to the wingers. They also can play in the playmaking role, working inside. Fullbacks like Alexander-Arnold, Cafú, Roberto Carlos, Marcelo, Daniel Alves e Lahm are some of the best of the history."
+          },
+          "6825026b0ccd2c582316c76d": {
+            "name": "Centerback",
+            "abbr": "CB",
+            "desc": "They have the role to defend and mark the attackers of the opposing team, blocking finishes and winning aerial and ground duels. Just like the keepers, centerbacks also have to know to ball-play, being one of the fundamental skills to this position nowaddays, emphasis to Sergio Ramos, Maldini, Cannavaro, Van Dijk, Beckenbauer and many other exemples."
+          },
+          "682503250ccd2c582316c76e": {
+            "name": "Defensive midfielder",
+            "abbr": "DM",
+            "desc": "Protects the defense line, being the most retreated player of the midfield. He has the role of defend and start the team plays after the centerbacks, as one of the hardest positions to play, because of the oponent pressure and the needed resistence. The best known are Busquets, Casemiro, Lothar Matthäus, Patrick Vieira, etc."
+          },
+          "682503be0ccd2c582316c76f": {
+            "name": "Center midfielder",
+            "abbr": "CM",
+            "desc": "Responsible for the playming and team game control, with precise passes and good ball control. Currently, also have defensive duties, with some being called box-to-box. Some outstanding ones are: Xavi, Iniesta, Zidane, Pirlo, Gerrard, entre outros."
+          },
+          "68250dadc216c551896b7031": {
+            "name": "Attacking midfielder",
+            "abbr": "AM",
+            "desc": "The most advenced position on midfield, also responsible for playmaking and chance creations, as stepping on the opposition box to score goals, generally being the player with a lot of goals and assists. Players like Johan Cruyff, Pelé, Kevin de Bruyne, Bellingham, and others, are exemples of this position."
+          },
+          "68250e73c216c551896b7032": {
+            "name": "Winger",
+            "abbr": "WIN",
+            "desc": "They stay on the sides, being responsible for creating chances both outside and inside. Good finishing and great dribbling foundation are what outstand wingers, with players like Neymar, Ronaldinho, Messi, Vinicius Jr., Yamal, etc."
+          },
+          "68250f91c216c551896b7033": {
+            "name": "Striker",
+            "abbr": "ST",
+            "desc": "Player that stays on the opposition box, waiting for an opportunity to the ball coming to their feet or head to throw the ball into the back of the net, not just that, but helping in the building play. In most cases, it's the top scorer of the team, and a demonstration of this position are players like Gerd Müller, Lewandowski, Harry Kane, Cristiano Ronaldo, etc."
+          }
+        }
+      },
+      "best": "Best in the world"
+    }
   }
 }
