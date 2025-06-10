@@ -81,8 +81,8 @@ export default function Header() {
         <p
           aria-label={t("header.aria-labels.home")}
           href="/"
-          className={`${styles.link} ${
-            location.pathname === "/" ? styles["home-active"] : ""
+          className={`${styles.homePg} ${
+            location.pathname === "/" ? styles.homeActive : ""
           }`}
         >
           Home

@@ -84,7 +84,7 @@
 }
 
 .page,
-.social-icn {
+.socialIcn {
   transition: var(--ts-def);
 }
 
@@ -93,7 +93,12 @@
   color: var(--neu-04);
 }
 
-.page:hover {
+.page.active {
+  pointer-events: none;
+}
+
+.page:hover,
+.page.active {
   color: var(--main-01);
 }
 
@@ -121,6 +126,6 @@
   cursor: pointer;
 }
 
-.social-icn:hover {
+.socialIcn:hover {
   color: var(--main-04);
 }

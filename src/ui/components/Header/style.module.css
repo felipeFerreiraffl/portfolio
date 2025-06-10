@@ -26,6 +26,7 @@
   }
 }
 
+.homePg,
 .link,
 .langI,
 .menuI,
@@ -36,11 +37,11 @@
 .link {
   font: var(--def-hdr);
   color: var(--neu-04);
-  text-decoration: none;
 }
 
 .homeActive {
   color: var(--main-02);
+  pointer-events: none;
 }
 
 .portfolio {
@@ -73,10 +74,26 @@
   color: var(--neu-03);
 }
 
+.homeActive,
+.portfolio.active,
+.hobbies.active,
+.contacts.active {
+  pointer-events: none;
+}
+
 .logoCtn {
   display: flex;
   align-items: center;
   gap: var(--sp-12);
+  color: var(--neu-04);
+}
+
+.homePg {
+  font: var(--def-hdr);
+}
+
+.logoCtn:hover {
+  color: var(--main-02);
 }
 
 .logoI {

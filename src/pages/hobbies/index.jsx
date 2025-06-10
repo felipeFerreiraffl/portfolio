@@ -8,6 +8,7 @@ import HobbyPage from "../../ui/components/HobbyPage";
 import CommonIntro from "../../ui/components/Introduction/Common";
 import useDocumentTitle from "../../ui/hooks/useDocumentTitle";
 import styles from "./styles.module.css";
+import Footer from "../../ui/components/Footer";
 
 export default function Hobbies() {
   useDocumentTitle("Hobbies | Felipe Ferreira");
@@ -77,6 +78,8 @@ export default function Hobbies() {
           href={"/hobbies/drawings"}
         />
       </div>
+
+      <Footer marginTop={128} />
     </div>
   );
 }

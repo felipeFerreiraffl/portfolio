@@ -7,7 +7,7 @@ export default function BackButton({ type, icon, color, font, mbFont }) {
   const { t: tAnimeManga } = useTranslation("animes-mangas", {
     useSuspense: true,
   });
-  const { t: tGames } = useTranslation("animes-mangas", {
+  const { t: tGames } = useTranslation("games", {
     useSuspense: true,
   });
 
