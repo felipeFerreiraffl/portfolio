@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 24.25rem;
+  margin-top: 20.25rem;
 }
 
 .loadCtn {
@@ -93,13 +93,9 @@
 }
 
 .cover {
-  width: 26rem; /* 512px */
+  width: 45%; /* 512px */
   object-fit: cover;
   border-radius: var(--sp-4);
-
-  @media (max-width: 767.98px) {
-    width: 15rem; /* 240px */
-  }
 }
 
 .mnInfosCtn {

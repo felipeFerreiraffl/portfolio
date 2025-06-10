@@ -25,7 +25,7 @@ export default function ProjectsSlides() {
 
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.3,
+    threshold: 0.5,
   });
 
   const handleInView = useCallback(

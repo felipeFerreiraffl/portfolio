@@ -1,13 +1,14 @@
-import { useCallback, useEffect, useState } from "react";
-import styles from "./style.module.css";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import { debounce } from "lodash";
+import { useCallback, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useInView } from "react-intersection-observer";
+import YouTube from "react-youtube";
 import FaIcon from "../../../../services/constants/icns/font-awesome/fontAwesome";
 import fontAwesome from "../../../../services/constants/icns/font-awesome/iconNames";
-import { useTranslation } from "react-i18next";
 import langSvg from "../../../../services/constants/svgs/lang";
 import Footer from "../../Footer";
-import YouTube from "react-youtube";
+import styles from "./style.module.css";
 
 export default function AnimeMangaDetails({ type, data }) {
   const { t } = useTranslation("animes-mangas", { useSuspense: true });
@@ -76,7 +77,13 @@ export default function AnimeMangaDetails({ type, data }) {
             })`,
           }}
         >
-          <div className={styles.hdr}>
+          <motion.div
+            className={styles.hdr}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: true }}
+          >
             <img
               src={data.images?.webp?.image_url || data.images?.jpg?.image_url}
               alt={`${type} - ${data.title || data.title_english}`}
@@ -135,17 +142,29 @@ export default function AnimeMangaDetails({ type, data }) {
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
 
           <div className={styles.detailsCtn}>
-            <div className={styles.synpsCtn}>
+            <motion.div
+              className={styles.synpsCtn}
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <h2 className={`${styles.secTtl} ${styles.bdTtl}`}>
                 {t("animesMangas.content.synopsis")}
               </h2>
               <p className={styles.bodyTxt}>{data.synopsis || "..."}</p>
-            </div>
+            </motion.div>
 
-            <div className={styles.demoGenCtn}>
+            <motion.div
+              className={styles.demoGenCtn}
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <div className={styles.demoCtn}>
                 <h2 className={styles.secTtl}>
                   {t("animesMangas.content.demography")}
@@ -172,15 +191,21 @@ export default function AnimeMangaDetails({ type, data }) {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className={styles.otherCtn}>
+            <motion.div
+              className={styles.otherCtn}
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <h2 className={`${styles.secTtl} ${styles.bdTtl}`}>
                 {t("animesMangas.content.other")}
               </h2>
 
               <div className={styles.otherInfo}>
-                <div className={styles.other}>
+                <motion.div className={styles.other}>
                   <h3 className={`${styles.otherTtl} ${styles.bdTtl}`}>
                     {type === "anime"
                       ? t("animesMangas.content.anime.studio")
@@ -191,9 +216,15 @@ export default function AnimeMangaDetails({ type, data }) {
                       ? data.studios[0]?.name || "?"
                       : data.authors[0]?.name || "?"}
                   </p>
-                </div>
+                </motion.div>
 
-                <div className={styles.other}>
+                <motion.div
+                  className={styles.other}
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   <h3 className={`${styles.otherTtl} ${styles.bdTtl}`}>
                     {type === "anime"
                       ? t("animesMangas.content.anime.launchDate")
@@ -206,16 +237,22 @@ export default function AnimeMangaDetails({ type, data }) {
                           data.published?.prop?.to?.year || "?"
                         }`}
                   </p>
-                </div>
+                </motion.div>
 
-                <div className={styles.other}>
+                <motion.div
+                  className={styles.other}
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   <h3 className={`${styles.otherTtl} ${styles.bdTtl}`}>
                     Status
                   </h3>
                   <p className={styles.bodyTxt}>{data.status || "?"}</p>
-                </div>
+                </motion.div>
 
-                <div className={styles.other}>
+                <motion.div className={styles.other}>
                   <h3 className={`${styles.otherTtl} ${styles.bdTtl}`}>
                     {type === "anime"
                       ? t("animesMangas.content.anime.episodes")
@@ -226,28 +263,46 @@ export default function AnimeMangaDetails({ type, data }) {
                       ? data.episodes || "?"
                       : data.chapters || "?"}
                   </p>
-                </div>
+                </motion.div>
 
-                <div className={styles.other}>
+                <motion.div
+                  className={styles.other}
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   <h3 className={`${styles.otherTtl} ${styles.bdTtl}`}>
                     {t("animesMangas.content.popRank")}
                   </h3>
                   <p className={styles.bodyTxt}>
                     {`${data.popularity}º` || "?"}
                   </p>
-                </div>
+                </motion.div>
 
-                <div className={styles.other}>
+                <motion.div
+                  className={styles.other}
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   <h3 className={`${styles.otherTtl} ${styles.bdTtl}`}>
                     {t("animesMangas.content.scoreRank")}
                   </h3>
                   <p className={styles.bodyTxt}>{`${data.rank}º` || "?"}</p>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
 
             {type === "anime" && (
-              <div className={styles.trailerCtn}>
+              <motion.div
+                className={styles.trailerCtn}
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <div className={`${styles.trlrTtlCtn} ${styles.bdTtl}`}>
                   <h2 className={`${styles.secTtl}`}>Trailer</h2>
                   <span className={styles.trlrIcn}>
@@ -262,7 +317,7 @@ export default function AnimeMangaDetails({ type, data }) {
                     className={styles.trlrVid}
                   />
                 </div>
-              </div>
+              </motion.div>
             )}
 
             <span className={styles.cpt}>{t("animesMangas.content.data")}</span>

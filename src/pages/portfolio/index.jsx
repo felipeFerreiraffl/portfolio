@@ -50,7 +50,7 @@ export default function Portfolio() {
               className={styles.crsTtlCtn}
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1.2, ease: "easeInOut" }}
+              transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.3 }}
             >
               <h3 className={`${styles.crsThrdTtl} ${styles.tech}`}>
@@ -91,7 +91,7 @@ export default function Portfolio() {
               className={styles.crsTtlCtn}
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1.2, ease: "easeInOut" }}
+              transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.3 }}
             >
               <h3 className={`${styles.crsThrdTtl} ${styles.mec}`}>
@@ -144,7 +144,7 @@ export default function Portfolio() {
             className={styles.sklsCtn}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.3 }}
             tabIndex={0}
           >
@@ -177,7 +177,7 @@ export default function Portfolio() {
             className={styles.sklsCtn}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.3 }}
             tabIndex={0}
           >
@@ -195,7 +195,7 @@ export default function Portfolio() {
             className={styles.sklsCtn}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.3 }}
             tabIndex={0}
           >
@@ -228,7 +228,7 @@ export default function Portfolio() {
           className={styles.crrCont}
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <div className={styles.crrTxtCtn}>
@@ -250,7 +250,7 @@ export default function Portfolio() {
           className={styles.crrIcn}
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <FaIcon icon={fontAwesome.paperclip} />

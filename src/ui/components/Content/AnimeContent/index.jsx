@@ -8,6 +8,7 @@ import HobbyCarousel from "../../Slides/Hobbies/Common";
 import styles from "./style.module.css";
 import HobbyFinal from "../../HobbyFinal";
 import pngImgs from "../../../../services/constants/imgs/pngs";
+import { motion } from "framer-motion";
 
 export default function AnimeContent() {
   const { t } = useTranslation("animes-mangas", { useSuspense: true });

@@ -12,6 +12,7 @@ import {
   getName,
 } from "../../../../../services/functions/apiData";
 import useEmblaCarousel from "embla-carousel-react";
+import { motion } from "framer-motion";
 
 export default function HobbyCarousel({
   type,
@@ -29,7 +30,7 @@ export default function HobbyCarousel({
 
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.3,
+    threshold: 0.5,
   });
 
   useEffect(() => {
@@ -76,7 +77,14 @@ export default function HobbyCarousel({
   }, [emblaApi, onSelect, data]);
 
   return (
-    <div className={styles.ctn} style={{ "--color": color }}>
+    <motion.div
+      className={styles.ctn}
+      style={{ "--color": color }}
+      initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+    >
       <div className={styles.ttlCtn} style={{ "--border-btm": borderBtm }}>
         <h2
           className={styles.ttl}
@@ -94,6 +102,9 @@ export default function HobbyCarousel({
                   <a
                     key={getKeys(type, dt)}
                     className={styles.slide}
+                    style={{
+                      "--flex": type === "games" ? "0 0 40%" : "0 0 25%",
+                    }}
                     href={getLink(type, dt)}
                   >
                     <div
@@ -146,7 +157,7 @@ export default function HobbyCarousel({
           {type === "games" ? (
             <GiIcon
               icon={gameIcons.playButton}
-              style={{ transform: "rotate(180deg)" }}
+              style={{ transform: "scaleX(-1)" }}
             />
           ) : (
             <FaIcon icon={fontAwesome.circleLeft} />
@@ -166,6 +177,6 @@ export default function HobbyCarousel({
           )}
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }

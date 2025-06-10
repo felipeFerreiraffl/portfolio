@@ -26,7 +26,7 @@ export default function BackButton({ type, icon, color, font, mbFont }) {
       </span>
 
       <p className={styles.text} style={{ font: font, "--mb-font": mbFont }}>
-        {type === "game"
+        {type !== "game"
           ? tAnimeManga("animesMangas.content.button")
           : tGames("games.content.button")}
       </p>

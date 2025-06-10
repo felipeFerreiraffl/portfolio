@@ -62,11 +62,13 @@ export default function Games() {
             type={"Normal"}
             tooltip={t("games.sections.ranks.normal")}
             active={true}
+            animDelay={0.3}
           />
           <GameType
             icon={gameIcons.rank3}
             type={"Hardcore"}
             tooltip={t("games.sections.ranks.hardcore")}
+            animDelay={0.6}
           />
         </div>
       </section>

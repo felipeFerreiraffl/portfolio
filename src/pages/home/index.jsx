@@ -27,13 +27,13 @@ export default function Home() {
             loading="lazy"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.2, delay: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
           />
           <motion.div
             className={styles.txtCtn}
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, delay: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
           >
             <h1 className={styles.ttl}>{t("home.intro.title")}</h1>
             <p className={styles.subttl}>{t("home.intro.subtitle")}</p>
@@ -46,7 +46,7 @@ export default function Home() {
           className={styles.secTtl}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
           {t("home.sections.about-me.title")}
@@ -59,7 +59,7 @@ export default function Home() {
             className={styles.abtTxtCtn}
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.3 }}
           >
             <div className={styles.abtInfo}>
@@ -101,7 +101,7 @@ export default function Home() {
           className={styles.ptfCont}
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <div className={styles.ptfTextCtn}>
@@ -129,7 +129,7 @@ export default function Home() {
           className={styles.hbbCont}
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <div className={styles.hbbTxtCtn}>
@@ -153,7 +153,7 @@ export default function Home() {
             className={`${styles.hbbIcn} ${styles.gamepad}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.3 }}
           >
             <FaIcon icon={fontAwesome.gamepad} className={styles.hbbIcnSm} />
@@ -162,7 +162,7 @@ export default function Home() {
             className={`${styles.hbbIcn} ${styles.book}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
+            transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
             viewport={{ once: true, amount: 0.3 }}
           >
             <FaIcon icon={fontAwesome.book} className={styles.hbbIcnMd} />
@@ -171,7 +171,7 @@ export default function Home() {
             className={`${styles.hbbIcn} ${styles.umb}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut", delay: 0.6 }}
+            transition={{ duration: 1, ease: "easeInOut", delay: 0.6 }}
             viewport={{ once: true, amount: 0.3 }}
           >
             <FaIcon
@@ -183,7 +183,7 @@ export default function Home() {
             className={`${styles.hbbIcn} ${styles.futbol}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut", delay: 0.9 }}
+            transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
             viewport={{ once: true, amount: 0.3 }}
           >
             <FaIcon icon={fontAwesome.futbol} className={styles.hbbIcnMd} />
@@ -192,7 +192,7 @@ export default function Home() {
             className={`${styles.hbbIcn} ${styles.paint}`}
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut", delay: 1.2 }}
+            transition={{ duration: 1, ease: "easeInOut", delay: 1.2 }}
             viewport={{ once: true, amount: 0.3 }}
           >
             <FaIcon icon={fontAwesome.paintbrush} className={styles.hbbIcnSm} />

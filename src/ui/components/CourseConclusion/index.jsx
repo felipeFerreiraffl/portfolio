@@ -14,7 +14,7 @@ export default function CourseConclusion({
       className={styles.ctn}
       initial={{ x: -100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
-      transition={{ duration: 1.2, ease: "easeInOut" }}
+      transition={{ duration: 1, ease: "easeInOut" }}
       viewport={{ once: true, amount: 0.3 }}
     >
       <div className={styles.pgssCtn}>

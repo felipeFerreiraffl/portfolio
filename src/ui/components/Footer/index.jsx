@@ -11,7 +11,13 @@ export default function Footer({ marginTop }) {
 
   return (
     <footer className={styles.ftr} style={{ marginTop: marginTop }}>
-      <div className={styles.cont}>
+      <motion.div
+        className={styles.cont}
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <img
           src={logo.mainLogo2}
           alt={t("footer.logo-alt")}
@@ -19,13 +25,7 @@ export default function Footer({ marginTop }) {
           loading="lazy"
         />
         <div className={styles.secCont}>
-          <motion.nav
-            className={styles.nav}
-            initial={{ y: -100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
-            viewport={{ once: true, amount: 0.3 }}
-          >
+          <nav className={styles.nav}>
             <h2 className={`${styles.contTtl} ${styles.navTtl}`}>
               {t("footer.nav.title")}
             </h2>
@@ -63,14 +63,8 @@ export default function Footer({ marginTop }) {
                 {t("footer.nav.contacts")}
               </a>
             </div>
-          </motion.nav>
-          <motion.div
-            className={styles.social}
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
-            viewport={{ once: true, amount: 0.3 }}
-          >
+          </nav>
+          <div className={styles.social}>
             <h2 className={`${styles.contTtl} ${styles.socialTtl}`}>
               {t("footer.social")}
             </h2>
@@ -112,9 +106,9 @@ export default function Footer({ marginTop }) {
                 />
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </div>
+      </motion.div>
       <p className={styles.cptn}>&copy; Felipe Ferreira Lima 2025</p>
     </footer>
   );

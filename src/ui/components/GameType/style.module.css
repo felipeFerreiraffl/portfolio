@@ -5,7 +5,7 @@
   gap: var(--sp-12);
   cursor: pointer;
   color: var(--neu-03);
-  transition: var(--ts-def);
+  transition: color var(--ts-def);
 }
 
 .ctn.active {

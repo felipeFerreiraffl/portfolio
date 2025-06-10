@@ -5,6 +5,7 @@ import gameIcons from "../../../../../services/constants/icns/game-icons/iconNam
 import { useInView } from "react-intersection-observer";
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import { motion } from "framer-motion";
 
 export default function GameRecentFuture({ data = [], minLoadingTime }) {
   const { t } = useTranslation("games", { useSuspense: true });
@@ -13,7 +14,7 @@ export default function GameRecentFuture({ data = [], minLoadingTime }) {
 
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.3,
+    threshold: 0.5,
   });
 
   useEffect(() => {
@@ -60,7 +61,13 @@ export default function GameRecentFuture({ data = [], minLoadingTime }) {
   }, [emblaApi, onSelect, data]);
 
   return (
-    <div className={styles.ctn}>
+    <motion.div
+      className={styles.ctn}
+      initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+    >
       <div className={styles.txtCtn}>
         <div className={styles.ttlCtn}>
           <h2 className={styles.ttl}>{t("games.sections.pastFuture.title")}</h2>
@@ -124,6 +131,6 @@ export default function GameRecentFuture({ data = [], minLoadingTime }) {
           <GiIcon icon={gameIcons.playButton} />
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }

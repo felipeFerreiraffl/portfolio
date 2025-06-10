@@ -20,7 +20,7 @@ export default function HobbiesIntro({
         style={{ "--icn-border": border }}
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
+        transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
       >
         {icon}
       </motion.span>
@@ -29,7 +29,7 @@ export default function HobbiesIntro({
         style={{ "--ttl-font": titleFont, "--mob-ttl-font": mobTitleFont }}
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
+        transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
       >
         {title}
       </motion.h1>

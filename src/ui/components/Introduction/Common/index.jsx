@@ -9,7 +9,7 @@ export default function CommonIntro({ icon, title, subtitle, color, bgImage }) {
         style={{ color: color, borderColor: color }}
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
+        transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
       >
         {icon}
       </motion.span>
@@ -17,7 +17,7 @@ export default function CommonIntro({ icon, title, subtitle, color, bgImage }) {
         className={styles.txtCtn}
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
+        transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
       >
         <h1 className={styles.ttl} style={{ color: color, borderColor: color }}>
           {title}

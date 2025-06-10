@@ -6,13 +6,14 @@ import { useInView } from "react-intersection-observer";
 import GiIcon from "../../../../services/constants/icns/game-icons/gameIcons";
 import gameIcons from "../../../../services/constants/icns/game-icons/iconNames";
 import styles from "./style.module.css";
+import { motion } from "framer-motion";
 
 export default function GamesShowcase({ title, subtitle, icon, data = [] }) {
   const [isVisible, setIsVisible] = useState(false);
 
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.3,
+    threshold: 0.5,
   });
 
   const [emblaRef] = useEmblaCarousel(
@@ -47,7 +48,13 @@ export default function GamesShowcase({ title, subtitle, icon, data = [] }) {
 
   return (
     <div className={styles.ctn}>
-      <div className={styles.cont}>
+      <motion.div
+        className={styles.cont}
+        initial={{ y: -100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <div className={styles.txtCtn}>
           <h2 className={styles.ttl}>{title}</h2>
           <p className={styles.subttl}>{subtitle}</p>
@@ -55,7 +62,7 @@ export default function GamesShowcase({ title, subtitle, icon, data = [] }) {
         <span className={styles.icn}>
           <GiIcon icon={icon} />
         </span>
-      </div>
+      </motion.div>
 
       <div className={styles.crsl}>
         <div className={styles.slideWppr} ref={emblaRef}>

@@ -6,6 +6,7 @@ import FaIcon from "../../../../services/constants/icns/font-awesome/fontAwesome
 import styles from "./style.module.css";
 import fontAwesome from "../../../../services/constants/icns/font-awesome/iconNames";
 import AutoScroll from "embla-carousel-auto-scroll";
+import { motion } from "framer-motion";
 
 export default function AnimesMangasShowcase({
   type,
@@ -20,7 +21,7 @@ export default function AnimesMangasShowcase({
 
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.3,
+    threshold: 0.5,
   });
 
   const [emblaRef] = useEmblaCarousel(
@@ -58,8 +59,15 @@ export default function AnimesMangasShowcase({
     <div
       className={styles.ctn}
       style={{ "--flex-direc": flexDirection, "--align-items": alignItems }}
+      tabIndex={0}
     >
-      <div className={styles.contCtn}>
+      <motion.div
+        className={styles.contCtn}
+        initial={{ opacity: 0, x: flexDirection === "row" ? -100 : 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <div
           className={styles.txtCtn}
           style={{ textAlign: alignItems === "flex-start" ? "start" : "end" }}
@@ -69,7 +77,7 @@ export default function AnimesMangasShowcase({
         </div>
 
         <span className={styles.icn}>{<FaIcon icon={icon} />}</span>
-      </div>
+      </motion.div>
 
       <div className={styles.crsl}>
         <div className={styles.slideWppr} ref={emblaRef}>

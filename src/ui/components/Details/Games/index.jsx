@@ -1,10 +1,11 @@
+import { motion } from "framer-motion";
 import { debounce } from "lodash";
 import { useCallback, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
 import GiIcon from "../../../../services/constants/icns/game-icons/gameIcons";
 import gameIcons from "../../../../services/constants/icns/game-icons/iconNames";
 import styles from "./style.module.css";
-import { useTranslation } from "react-i18next";
 
 export default function GameDetails({ data }) {
   const { t } = useTranslation("games", { useSuspense: true });
@@ -62,9 +63,13 @@ export default function GameDetails({ data }) {
         </div>
       ) : (
         <section className={styles.cont}>
-          <div
+          <motion.div
             className={styles.hdr}
             style={{ "--bg-image": `url(${data.background_image_additional})` }}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: true }}
           >
             <img
               src={data?.background_image}
@@ -117,15 +122,22 @@ export default function GameDetails({ data }) {
                 <p
                   className={styles.mtcrtc}
                   style={{ "--meta-color": handleMetacriticColor() }}
+                  title="Metacritic"
                 >
                   {data?.metacritic || "?"}
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           <div className={styles.infosCtn}>
-            <div className={styles.secCtn}>
+            <motion.div
+              className={styles.secCtn}
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <div className={styles.infoTtlCtn}>
                 <h2 className={styles.secTtl}>{t("games.content.desc")}</h2>
                 <span className={styles.infoIcn}>
@@ -136,9 +148,15 @@ export default function GameDetails({ data }) {
               <p className={styles.bodyTxt}>
                 {data?.description_raw || "...?"}
               </p>
-            </div>
+            </motion.div>
 
-            <div className={styles.secCtn}>
+            <motion.div
+              className={styles.secCtn}
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <div className={styles.infoTtlCtn}>
                 <h2 className={styles.secTtl}>{t("games.content.platform")}</h2>
                 <span className={styles.infoIcn}>
@@ -151,9 +169,15 @@ export default function GameDetails({ data }) {
                   <p className={styles.pltfm}>{plat.platform?.name}</p>
                 )) || "?"}
               </div>
-            </div>
+            </motion.div>
 
-            <div className={styles.secCtn}>
+            <motion.div
+              className={styles.secCtn}
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <div className={styles.infoTtlCtn}>
                 <h2 className={styles.secTtl}>{t("games.content.genres")}</h2>
                 <span className={styles.infoIcn}>
@@ -166,9 +190,15 @@ export default function GameDetails({ data }) {
                   <p className={styles.gnr}>{gen?.name}</p>
                 )) || "?"}
               </div>
-            </div>
+            </motion.div>
 
-            <div className={styles.secCtn}>
+            <motion.div
+              className={styles.secCtn}
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <div className={styles.infoTtlCtn}>
                 <h2 className={styles.secTtl}>{t("games.content.other")}</h2>
                 <span className={styles.infoIcn}>
@@ -177,33 +207,57 @@ export default function GameDetails({ data }) {
               </div>
 
               <div className={styles.cmplmInfoCtn}>
-                <div className={styles.other}>
+                <motion.div
+                  className={styles.other}
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   <h3 className={styles.otherTtl}>Metacritic</h3>
                   <p className={styles.bodyTxt}>{data?.metacritic || "?"}</p>
-                </div>
+                </motion.div>
 
-                <div className={styles.other}>
+                <motion.div
+                  className={styles.other}
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   <h3 className={styles.otherTtl}>
                     {t("games.content.score")}
                   </h3>
                   <p className={styles.bodyTxt}>{data?.rating || "?"} / 5</p>
-                </div>
+                </motion.div>
 
-                <div className={styles.other}>
+                <motion.div
+                  className={styles.other}
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   <h3 className={styles.otherTtl}>
                     {t("games.content.launchDate")}
                   </h3>
                   <p className={styles.bodyTxt}>{data?.released || "?"}</p>
-                </div>
+                </motion.div>
 
-                <div className={styles.other}>
+                <motion.div
+                  className={styles.other}
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut", delay: 0.3 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   <h3 className={styles.otherTtl}>{t("games.content.dev")}</h3>
                   <p className={styles.bodyTxt}>
                     {data?.developers[0]?.name || "?"}
                   </p>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
       )}

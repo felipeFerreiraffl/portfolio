@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import styles from "./style.module.css";
 import MainButton from "../Button/Main";
 import SecondaryButton from "../Button/Secondary";
+import styles from "./style.module.css";
 
 export default function HobbyFinal({ img, alt, color, font, mbFont }) {
   const { t } = useTranslation("hobbies", { useSuspense: true });
@@ -28,7 +29,13 @@ export default function HobbyFinal({ img, alt, color, font, mbFont }) {
           })`,
         }}
       />
-      <div className={styles.cont}>
+      <motion.div
+        className={styles.cont}
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <h2
           className={styles.ttl}
           style={{ "--font": font, "--mb-font": mbFont, "--color": color }}
@@ -48,12 +55,14 @@ export default function HobbyFinal({ img, alt, color, font, mbFont }) {
             color={
               color === "var(--main-02)" ? "var(--main-01)" : "var(--main-04)"
             }
-            border={color === "var(--main-02)" ? "var(--bd-mn1)" : "var(--bd-mn4)"}
+            border={
+              color === "var(--main-02)" ? "var(--bd-mn1)" : "var(--bd-mn4)"
+            }
             text={t("hobbies.final.secButton")}
             href={"/hobbies"}
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
