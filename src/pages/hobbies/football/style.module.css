@@ -115,7 +115,7 @@
   border-radius: var(--brad-12);
   font: var(--fut-hdr);
   color: var(--neu-04);
-  transition: var(--ts-def);
+  transition: background-color, border var(--ts-def);
 }
 
 .pos:hover {

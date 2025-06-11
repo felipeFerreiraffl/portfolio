@@ -14,6 +14,7 @@ import HobbyCarousel from "../../../ui/components/Slides/Hobbies/Common";
 import Footer from "../../../ui/components/Footer";
 import HobbyFinal from "../../../ui/components/HobbyFinal";
 import pngImgs from "../../../services/constants/imgs/pngs";
+import { motion } from "framer-motion";
 
 export default function Football() {
   useDocumentTitle("Futebol | Felipe Ferreira");
@@ -42,25 +43,6 @@ export default function Football() {
   if (positionError || playerError) {
     return <div>Erro ao buscar dados</div>;
   }
-
-  // Fecha o modal com ESC
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "Escape" && isModalOpen) {
-        handleCloseModal();
-      }
-
-      if (isModalOpen) {
-        document.addEventListener("keydown", handleKeyDown);
-        document.body.style.overflow = "hidden"; // Previne o scroll
-      }
-
-      return () => {
-        document.removeEventListener("keydown", handleKeyDown);
-        document.body.style.overflow = "unset";
-      };
-    };
-  }, [isModalOpen]);
 
   // Define a borda da posição baseada na sigla
   const handleGetFavoritePosition = (pos) => {
@@ -109,6 +91,27 @@ export default function Football() {
     [handleCloseModal]
   );
 
+  // Fecha o modal com ESC
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" && isModalOpen) {
+        handleCloseModal();
+      }
+    };
+
+    if (isModalOpen) {
+      document.addEventListener("keydown", handleKeyDown);
+      document.body.style.overflowY = "hidden"; // Previne o scroll
+    } else {
+      document.body.style.overflowY = "unset";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflowY = "unset";
+    };
+  }, [isModalOpen, handleCloseModal]);
+
   return (
     <div className={styles.ctn}>
       <header>
@@ -125,7 +128,13 @@ export default function Football() {
         />
       </header>
 
-      <section className={styles.posCtn}>
+      <motion.section
+        className={styles.posCtn}
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <div className={styles.contCtn}>
           <div className={styles.txtCtn}>
             <h2 className={styles.ttl}>
@@ -163,7 +172,7 @@ export default function Football() {
         <div className={styles.fieldCtn}>
           {positionData.map((pos) => (
             <>
-              <p
+              <motion.p
                 key={pos.id}
                 className={styles.pos}
                 style={{
@@ -173,6 +182,10 @@ export default function Football() {
                 title={t("football.sections.positions.modalInfo")}
                 role="button"
                 tabIndex={0}
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                viewport={{ once: true }}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {
                     e.preventDefault();
@@ -181,14 +194,19 @@ export default function Football() {
                 }}
               >
                 {t(`football.sections.positions.api.${pos.id}.abbr`)}
-              </p>
+              </motion.p>
             </>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {isModalOpen && selectedPosition && (
-        <div className={styles.posModalCtn}>
+        <motion.div
+          className={styles.posModalCtn}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
           <div className={styles.ovly} onClick={handleOverlayClose} />
 
           <div
@@ -212,7 +230,7 @@ export default function Football() {
               {t(`football.sections.positions.api.${selectedPosition.id}.desc`)}
             </p>
           </div>
-        </div>
+        </motion.div>
       )}
 
       <Divisor marginTop={128} color={"var(--main-02)"} />
