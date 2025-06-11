@@ -75,7 +75,7 @@
   margin-bottom: var(--sp-20);
   object-fit: cover;
   border-radius: var(--sp-4);
-  transition: var(--ts-def);
+  transition: transform var(--ts-def), box-shadow var(--ts-def);
 }
 
 .msryImg:hover {

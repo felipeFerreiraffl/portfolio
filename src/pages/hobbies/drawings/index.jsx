@@ -17,6 +17,7 @@ import Divisor from "../../../ui/components/Divisor";
 import HobbyFinal from "../../../ui/components/HobbyFinal";
 import pngImgs from "../../../services/constants/imgs/pngs";
 import Footer from "../../../ui/components/Footer";
+import { motion } from "framer-motion";
 
 export default function Drawings() {
   useDocumentTitle("Desenhos | Felipe Ferreira");
@@ -101,7 +102,13 @@ export default function Drawings() {
       </header>
 
       <section className={styles.secCtn}>
-        <div className={styles.contCtn}>
+        <motion.div
+          className={styles.contCtn}
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <div className={styles.txtCtn}>
             <h2 className={styles.ttl}>{t("drawings.myDrawings.title")}</h2>
             <p className={styles.subttl}>{t("drawings.myDrawings.subtitle")}</p>
@@ -114,28 +121,36 @@ export default function Drawings() {
             text={t("drawings.myDrawings.button")}
             title={instagram("footer.aria-labels.instagram")}
           />
-        </div>
+        </motion.div>
 
-        <Masonry
-          className={styles.msry}
-          breakpointCols={breakpointsObj}
-          columnClassName={styles.msryClmn}
+        <motion.span
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          viewport={{ once: true, amount: 0.1 }}
         >
-          {data.map((draw, i) => (
-            <img
-              className={styles.msryImg}
-              key={draw.id}
-              src={draw.imgSrc}
-              alt={`${t("drawings.myDrawings.title")} - ${draw.id}`}
-              loading="lazy"
-              onClick={() => openLightbox(i)}
-              onError={(e) => {
-                console.error("Erro ao carregar imagem: ", draw.imgSrc);
-                e.target.style.display = "none";
-              }}
-            />
-          ))}
-        </Masonry>
+          <Masonry
+            className={styles.msry}
+            breakpointCols={breakpointsObj}
+            columnClassName={styles.msryClmn}
+          >
+            {data.map((draw, i) => (
+              <img
+                className={styles.msryImg}
+                key={draw.id}
+                src={draw.imgSrc}
+                alt={`${t("drawings.myDrawings.title")} - ${draw.id}`}
+                title={`${t("drawings.myDrawings.title")} - ${draw.id}`}
+                loading="lazy"
+                onClick={() => openLightbox(i)}
+                onError={(e) => {
+                  console.error("Erro ao carregar imagem: ", draw.imgSrc);
+                  e.target.style.display = "none";
+                }}
+              />
+            ))}
+          </Masonry>
+        </motion.span>
       </section>
 
       <Lightbox
