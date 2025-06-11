@@ -106,6 +106,8 @@ export default function HobbyCarousel({
                       "--flex": type === "games" ? "0 0 40%" : "0 0 25%",
                     }}
                     href={getLink(type, dt)}
+                    target={type === "football" ? "_blank" : ""}
+                    rel="noopener noreferer"
                   >
                     <div
                       className={styles.imgWppr}

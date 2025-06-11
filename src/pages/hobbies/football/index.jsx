@@ -8,19 +8,38 @@ import { usePositionData } from "../../../ui/hooks/api/football/usePositionData"
 import useDocumentTitle from "../../../ui/hooks/useDocumentTitle";
 import styles from "./style.module.css";
 import { useCallback, useEffect, useState } from "react";
+import Divisor from "../../../ui/components/Divisor";
+import { usePlayersData } from "../../../ui/hooks/api/football/usePlayersData";
+import HobbyCarousel from "../../../ui/components/Slides/Hobbies/Common";
+import Footer from "../../../ui/components/Footer";
+import HobbyFinal from "../../../ui/components/HobbyFinal";
+import pngImgs from "../../../services/constants/imgs/pngs";
 
 export default function Football() {
   useDocumentTitle("Futebol | Felipe Ferreira");
   const { t } = useTranslation("football", { useSuspense: true });
   const [isModalOpen, setIsModalOpen] = useState(false); // Estado do modal
   const [selectedPosition, setSelectedPosition] = useState(null); // Estado da posição selecionada para modal
-  const { data: positionData, isPending, isError } = usePositionData();
 
-  if (isPending) {
+  // API de posições
+  const {
+    data: positionData,
+    isPending: positionPending,
+    isError: positionError,
+  } = usePositionData();
+
+  // API de jogadores
+  const {
+    data: playerData,
+    isPending: playerPending,
+    isError: playerError,
+  } = usePlayersData();
+
+  if (positionPending || playerPending) {
     return <div>Carregando...</div>;
   }
 
-  if (isError) {
+  if (positionError || playerError) {
     return <div>Erro ao buscar dados</div>;
   }
 
@@ -195,6 +214,46 @@ export default function Football() {
           </div>
         </div>
       )}
+
+      <Divisor marginTop={128} color={"var(--main-02)"} />
+
+      <section className={styles.slidesCtn}>
+        <HobbyCarousel
+          type={"football"}
+          color={"var(--main-02)"}
+          borderBtm={"var(--bd-line-mn2)"}
+          font={"var(--fut-h2)"}
+          mbFont={"var(--fut-h3)"}
+          title={t("GOATs")}
+          isDataPending={playerPending}
+          minLoadingTime={1500}
+          data={playerData.filter((ply) => ply.category === "GOAT")}
+        />
+
+        <HobbyCarousel
+          type={"football"}
+          color={"var(--main-02)"}
+          borderBtm={"var(--bd-line-mn2)"}
+          font={"var(--fut-h2)"}
+          mbFont={"var(--fut-h3)"}
+          title={t("football.sections.best")}
+          isDataPending={playerPending}
+          minLoadingTime={1500}
+          data={playerData.filter((ply) => ply.category === "CURRENT")}
+        />
+      </section>
+
+      <Divisor marginTop={128} color={"var(--main-02)"} />
+
+      <HobbyFinal
+        img={pngImgs.football}
+        alt={"Lionel Messi"}
+        color={"var(--main-02)"}
+        font={"var(--fut-h2)"}
+        mbFont={"var(--fut-h3)"}
+      />
+
+      <Footer marginTop={0} />
     </div>
   );
 }

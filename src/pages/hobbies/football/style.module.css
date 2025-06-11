@@ -185,3 +185,9 @@
 .modalDesc {
   font: var(--fut-body);
 }
+
+.slidesCtn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-64);
+}
