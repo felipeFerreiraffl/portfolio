@@ -135,7 +135,7 @@ export default function Football() {
         transition={{ duration: 1, ease: "easeInOut" }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <div className={styles.contCtn}>
+        <div className={styles.contCtn} tabIndex={0}>
           <div className={styles.txtCtn}>
             <h2 className={styles.ttl}>
               {t("football.sections.positions.title")}
@@ -219,6 +219,7 @@ export default function Football() {
               className={styles.modalBtn}
               onClick={handleCloseModal}
               role="button"
+              tabIndex={0}
             >
               <FaIcon icon={fontAwesome.circleXMark} />
             </span>

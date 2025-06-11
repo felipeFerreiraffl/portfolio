@@ -4,9 +4,8 @@
   visibility: visible;
   display: flex;
   align-items: center;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: var(--sp-28) 0;
+  justify-content: space-evenly;
+  padding: var(--sp-28);
   width: 100%;
   transition: var(--ts-def);
   z-index: var(--zind-2000);
@@ -172,7 +171,7 @@
   padding: 67px var(--sp-64);
   background-color: var(--neu-01);
   gap: var(--sp-128);
-  z-index: var(--zind-1000);
+  z-index: var(--zind-2000);
 
   @media (max-width: 768px) {
     width: 60vw;
@@ -188,10 +187,11 @@
   height: 100%;
   visibility: hidden;
   background-color: var(--rgba-bk50);
+  backdrop-filter: blur(4px);
   z-index: var(--zind-1);
 }
 
-.menu-overlay.show {
+.menuOverlay.show {
   visibility: visible;
 }
 
@@ -202,7 +202,7 @@
   justify-content: center;
   color: var(--main-01);
   font-size: var(--sp-32);
-  z-index: var(--zind-10000);
+  z-index: var(--zind-2000);
   top: var(--sp-12);
   right: var(--sp-12);
   cursor: pointer;

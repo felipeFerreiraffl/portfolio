@@ -2,7 +2,8 @@
   width: 85vw;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: var(--sp-96);
 
   @media (max-width: 767.98px) {
     flex-direction: column-reverse;

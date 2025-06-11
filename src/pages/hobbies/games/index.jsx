@@ -48,7 +48,7 @@ export default function Games() {
         />
       </header>
 
-      <section className={styles.gmType}>
+      <section className={styles.gmType} tabIndex={0}>
         <h2 className={styles.secTtl}>{t("games.sections.gamerType")}</h2>
 
         <div className={styles.gmBrandsCtn}>

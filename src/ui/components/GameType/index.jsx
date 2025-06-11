@@ -14,6 +14,7 @@ export default function GameType({ icon, type, tooltip, active, animDelay }) {
       transition={{ transition: 1, ease: "easeInOut", delay: animDelay }}
       viewport={{ once: true, amount: 0.3 }}
       aria-hidden={true}
+      tabIndex={0}
     >
       <span className={styles.icn}>
         <GiIcon icon={icon} />

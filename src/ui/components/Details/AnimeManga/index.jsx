@@ -83,13 +83,15 @@ export default function AnimeMangaDetails({ type, data }) {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true }}
+            tabIndex={0}
           >
             <img
               src={data.images?.webp?.image_url || data.images?.jpg?.image_url}
               alt={`${type} - ${data.title || data.title_english}`}
               className={styles.cover}
+              loading="lazy"
             />
-            <div className={styles.infoCtn}>
+            <div className={styles.infoCtn} tabIndex={0}>
               <div className={styles.txtCtn}>
                 <div className={styles.ttlCtn}>
                   <h1 className={styles.ttl}>
@@ -144,13 +146,14 @@ export default function AnimeMangaDetails({ type, data }) {
             </div>
           </motion.div>
 
-          <div className={styles.detailsCtn}>
+          <div className={styles.detailsCtn} tabIndex={0}>
             <motion.div
               className={styles.synpsCtn}
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.3 }}
+              tabIndex={0}
             >
               <h2 className={`${styles.secTtl} ${styles.bdTtl}`}>
                 {t("animesMangas.content.synopsis")}
@@ -164,6 +167,7 @@ export default function AnimeMangaDetails({ type, data }) {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.3 }}
+              tabIndex={0}
             >
               <div className={styles.demoCtn}>
                 <h2 className={styles.secTtl}>
@@ -199,6 +203,7 @@ export default function AnimeMangaDetails({ type, data }) {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.3 }}
+              tabIndex={0}
             >
               <h2 className={`${styles.secTtl} ${styles.bdTtl}`}>
                 {t("animesMangas.content.other")}

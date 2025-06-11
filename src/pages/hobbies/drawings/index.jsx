@@ -101,7 +101,7 @@ export default function Drawings() {
         />
       </header>
 
-      <section className={styles.secCtn}>
+      <section className={styles.secCtn} tabIndex={0}>
         <motion.div
           className={styles.contCtn}
           initial={{ opacity: 0, x: -100 }}
@@ -142,6 +142,7 @@ export default function Drawings() {
                 alt={`${t("drawings.myDrawings.title")} - ${draw.id}`}
                 title={`${t("drawings.myDrawings.title")} - ${draw.id}`}
                 loading="lazy"
+                tabIndex={0}
                 onClick={() => openLightbox(i)}
                 onError={(e) => {
                   console.error("Erro ao carregar imagem: ", draw.imgSrc);

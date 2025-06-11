@@ -20,6 +20,7 @@ export default function BackButton({ type, icon, color, font, mbFont }) {
         "animesMangas.content.button" || tGames("games.content.button")
       )}
       role="button"
+      tabIndex={0}
     >
       <span className={styles.icn}>
         {type !== "game" ? <FaIcon icon={icon} /> : <GiIcon icon={icon} />}

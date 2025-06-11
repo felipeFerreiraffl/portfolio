@@ -70,11 +70,13 @@ export default function GameDetails({ data }) {
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true }}
+            tabIndex={0}
           >
             <img
               src={data?.background_image}
               alt={data?.name || data?.name_original || "?"}
               className={styles.cover}
+              loading="lazy"
             />
             <div className={styles.mnInfosCtn}>
               <div className={styles.txtCtn}>
@@ -137,6 +139,7 @@ export default function GameDetails({ data }) {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.3 }}
+              tabIndex={0}
             >
               <div className={styles.infoTtlCtn}>
                 <h2 className={styles.secTtl}>{t("games.content.desc")}</h2>
@@ -156,6 +159,7 @@ export default function GameDetails({ data }) {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.3 }}
+              tabIndex={0}
             >
               <div className={styles.infoTtlCtn}>
                 <h2 className={styles.secTtl}>{t("games.content.platform")}</h2>
@@ -177,6 +181,7 @@ export default function GameDetails({ data }) {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.3 }}
+              tabIndex={0}
             >
               <div className={styles.infoTtlCtn}>
                 <h2 className={styles.secTtl}>{t("games.content.genres")}</h2>
@@ -198,6 +203,7 @@ export default function GameDetails({ data }) {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.3 }}
+              tabIndex={0}
             >
               <div className={styles.infoTtlCtn}>
                 <h2 className={styles.secTtl}>{t("games.content.other")}</h2>

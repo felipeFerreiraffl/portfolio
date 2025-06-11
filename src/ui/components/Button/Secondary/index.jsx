@@ -25,6 +25,7 @@ export default function MainButton({
       }}
       onClick={onClick}
       role="button"
+      tabIndex={0}
     >
       {text}
     </a>

@@ -72,6 +72,7 @@ export default function AnimesMangas() {
             onClick={() => handleTypeSelection("animes")}
             title={"Animes"}
             role="button"
+            tabIndex={0}
           >
             <span className={styles.chsIcn}>
               <FaIcon icon={fontAwesome.language} />
@@ -87,6 +88,7 @@ export default function AnimesMangas() {
             onClick={() => handleTypeSelection("mangas")}
             title={t("animesMangas.choose.mangas")}
             role="button"
+            tabIndex={0}
           >
             <span className={styles.chsIcn}>
               <FaIcon icon={fontAwesome.bookOpenReader} />

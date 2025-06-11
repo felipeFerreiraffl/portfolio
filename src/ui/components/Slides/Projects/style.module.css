@@ -9,7 +9,7 @@
 
 .slidesWrapper {
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .slidesCtn {
@@ -23,6 +23,8 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  width: 100%;
+  aspect-ratio: 744 / 394;
   flex: 0 0 100%;
   box-sizing: border-box;
   align-self: center;
@@ -31,8 +33,7 @@
 
 .img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 744 / 394;
+  height: 100%;
   object-fit: cover;
   transition: var(--ts-def);
 }
@@ -47,6 +48,8 @@
   position: absolute;
   inset: 0;
   display: flex;
+  width: 100%;
+  aspect-ratio: 744 / 394;
   align-items: center;
   justify-content: center;
   background-color: var(--rgba-bk80);

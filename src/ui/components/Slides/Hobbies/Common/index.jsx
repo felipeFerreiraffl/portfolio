@@ -84,6 +84,7 @@ export default function HobbyCarousel({
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1, ease: "easeInOut" }}
       viewport={{ once: true, amount: 0.3 }}
+      tabIndex={0}
     >
       <div className={styles.ttlCtn} style={{ "--border-btm": borderBtm }}>
         <h2

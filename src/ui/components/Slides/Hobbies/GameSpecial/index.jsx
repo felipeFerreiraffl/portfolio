@@ -67,6 +67,7 @@ export default function GameRecentFuture({ data = [], minLoadingTime }) {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1, ease: "easeInOut" }}
       viewport={{ once: true, amount: 0.3 }}
+      tabIndex={0}
     >
       <div className={styles.txtCtn}>
         <div className={styles.ttlCtn}>

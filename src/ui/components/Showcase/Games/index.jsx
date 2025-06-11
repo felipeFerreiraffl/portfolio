@@ -1,12 +1,12 @@
 import AutoScroll from "embla-carousel-auto-scroll";
 import useEmblaCarousel from "embla-carousel-react";
+import { motion } from "framer-motion";
 import { debounce } from "lodash";
 import { useCallback, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import GiIcon from "../../../../services/constants/icns/game-icons/gameIcons";
 import gameIcons from "../../../../services/constants/icns/game-icons/iconNames";
 import styles from "./style.module.css";
-import { motion } from "framer-motion";
 
 export default function GamesShowcase({ title, subtitle, icon, data = [] }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -47,7 +47,7 @@ export default function GamesShowcase({ title, subtitle, icon, data = [] }) {
   }, [inView, handleInView]);
 
   return (
-    <div className={styles.ctn}>
+    <div className={styles.ctn} tabIndex={0}>
       <motion.div
         className={styles.cont}
         initial={{ y: -100, opacity: 0 }}

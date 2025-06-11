@@ -167,7 +167,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: var(--sp-96);
 
   @media (max-width: 1080px) {
     flex-direction: column;
@@ -214,11 +215,10 @@
   width: 100%;
   display: flex;
   align-items: center;
-  flex-direction: row;
   text-align: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: var(--sp-96);
   flex-wrap: wrap;
-  gap: var(--sp-32);
 }
 
 /* Estilos da seção Projetos */
@@ -269,7 +269,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: var(--sp-96);
   padding: var(--sp-96) var(--sp-88);
 
   @media (max-width: 1080px) {

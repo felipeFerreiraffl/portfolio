@@ -136,9 +136,8 @@
 
 .abtCont {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   @media (max-width: 768px) {
     text-align: center;
@@ -185,9 +184,9 @@
 .portfolio {
   position: relative;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: var(--sp-96);
   padding: var(--sp-96) 0;
   width: 100%;
 
