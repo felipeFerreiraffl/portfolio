@@ -1,9 +1,18 @@
 import styles from "./styles.module.css";
 
-export default function MainButton({ color, text, href, onClick, title }) {
+export default function MainButton({
+  type,
+  color,
+  text,
+  href,
+  onClick,
+  title,
+}) {
   return (
     <a
       href={href}
+      target={type === "external" ? "_blank" : ""}
+      rel="noopener noreferer"
       className={`${styles.btn}`}
       title={title}
       style={{

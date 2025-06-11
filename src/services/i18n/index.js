@@ -19,6 +19,7 @@ i18n
       "animes-mangas",
       "games",
       "football",
+      "drawings",
     ],
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json",
