@@ -20,6 +20,7 @@ i18n
       "games",
       "football",
       "drawings",
+      "contacts",
     ],
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json",

@@ -1,0 +1,18 @@
+{
+  "contacts": {
+    "intro": {
+      "title": "Contatos",
+      "subtitle": "Confira minhas redes sociais para fazermos conexão, a fim de abrir novas oportunidades, além de verificar o que usei no site para design e APIs"
+    },
+    "sections": {
+      "desc": "Criador do site, com o objetivo de demonstrar as habilidades do usuário e gerar uma interface agradável. Espero que tenha gostado!",
+      "socialMedias": "Redes sociais",
+      "auxiliary": "Sites auxiliares"
+    },
+    "labels": {
+      "figma": "Veja o meu design no Figma",
+      "jikan": "Veja a API da Jikan",
+      "rawg": "Veja a API da RAWG"
+    }
+  }
+}

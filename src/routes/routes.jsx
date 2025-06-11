@@ -12,6 +12,7 @@ const Games = lazy(() => import("../pages/hobbies/games"));
 const GameContent = lazy(() => import("../pages/content/games"));
 const Football = lazy(() => import("../pages/hobbies/football"));
 const Drawings = lazy(() => import("../pages/hobbies/drawings"));
+const Contacts = lazy(() => import("../pages/contacts"));
 
 // Rotas (react-router-dom)
 export default function AppRoutes() {
@@ -70,6 +71,7 @@ export default function AppRoutes() {
               path="/hobbies/drawings"
               lazy={true}
             />
+            <Route element={<Contacts />} path="/contacts" lazy={true} />
           </Routes>
         </motion.div>
       )}

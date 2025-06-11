@@ -112,9 +112,9 @@ export default function Header() {
         <a
           title={t("header.aria-labels.contacts")}
           aria-label={t("header.aria-labels.contacts")}
-          href="/contatos"
+          href="/contacts"
           className={`${styles.link} ${styles.contacts} ${
-            location.pathname === "/contatos" ? styles.active : ""
+            location.pathname === "/contacts" ? styles.active : ""
           }`}
         >
           {t("header.pages.contacts")}
@@ -236,9 +236,9 @@ export default function Header() {
                 <a
                   title={t("header.aria-labels.contacts")}
                   aria-label={t("header.aria-labels.contacts")}
-                  href="/contatos"
+                  href="/contacts"
                   className={`${styles.link} ${styles.menuPg} ${
-                    location.pathname === "/contatos" ? styles.active : ""
+                    location.pathname === "/contacts" ? styles.active : ""
                   }`}
                 >
                   {t("header.pages.contacts")}

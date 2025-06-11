@@ -1,0 +1,19 @@
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--rgba-bk80);
+  color: var(--color);
+  width: var(--sp-128);
+  aspect-ratio: 1 / 1;
+  border: var(--border);
+  border-radius: var(--brad-circ);
+  font-size: var(--sp-64);
+  cursor: pointer;
+  transition: var(--ts-def);
+}
+
+.link:hover {
+  background-color: var(--color);
+  color: var(--neu-04);
+}

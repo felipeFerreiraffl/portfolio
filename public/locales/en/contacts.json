@@ -1,0 +1,18 @@
+{
+  "contacts": {
+    "intro": {
+      "title": "Contacts",
+      "subtitle": "Check my social medias to me and you make connections, to open new oppotunities, besides to verify what I used on the site to design and APIs"
+    },
+    "sections": {
+      "desc": "The site creator, with the goal to show the skills f the user and generate a likable interface. I hope you liked!",
+      "socialMedias": "Social medias",
+      "auxiliary": "Auxiliary sites"
+    },
+    "labels": {
+      "figma": "Check my Figma design",
+      "jikan": "Check Jikan API",
+      "rawg": "Check RAWG API"
+    }
+  }
+}
