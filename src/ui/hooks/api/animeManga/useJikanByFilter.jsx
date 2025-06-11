@@ -32,7 +32,7 @@ export const useJikanByFilter = ({ type, filters = [] }) => {
         }
       },
       staleTime: 1000 * 60 * 60 * 24,
-      cacheTime: 1000 * 60 * 60 * 24,
+      gcTime: 1000 * 60 * 60 * 24,
       retry: (failureCount, error) => {
         if (error.response?.status === 429) {
           console.warn(`Rate limit (429) - Tentativa ${failureCount + 1}/2`);

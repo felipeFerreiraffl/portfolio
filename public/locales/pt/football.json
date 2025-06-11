@@ -9,6 +9,7 @@
           "favorite": "Favorita",
           "normal": "Normal"
         },
+        "modalInfo": "Ver informações da posição", 
         "api": {
           "682500090ccd2c582316c76b": {
             "name": "Goleiro",

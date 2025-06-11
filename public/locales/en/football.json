@@ -9,6 +9,7 @@
           "favorite": "Favorite",
           "normal": "Normal"
         },
+        "modalInfo": "See informations about the position",
         "api": {
           "682500090ccd2c582316c76b": {
             "name": "Goalkeeper",

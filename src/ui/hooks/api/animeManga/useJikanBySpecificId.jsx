@@ -23,7 +23,7 @@ export const useJikanBySpecificId = ({ type, id }) => {
     queryKey: [type, "one", id],
     queryFn: fetchOneId,
     staleTime: 1000 * 60 * 60 * 2,
-    cacheTime: 1000 * 60 * 60 * 24,
+    gcTime: 1000 * 60 * 60 * 24,
     retry: (failureCount, error) => {
       // Não faz retry em caso de erros 429, 404 ou 03
       if (
