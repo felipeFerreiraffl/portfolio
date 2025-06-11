@@ -24,3 +24,12 @@ header {
   align-items: center;
   justify-content: center;
 }
+
+/* Estilos pára o lightbox */
+.yarl__container {
+  background-color: var(--rgba-bk80) !important;
+}
+
+.yarl__slide {
+  padding: var(--sp-32) !important;
+}

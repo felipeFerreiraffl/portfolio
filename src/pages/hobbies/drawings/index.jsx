@@ -1,24 +1,83 @@
+import { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
-import styles from "./style.module.css";
+import Masonry from "react-masonry-css";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import FaIcon from "../../../services/constants/icns/font-awesome/fontAwesome";
+import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
+import headerImgs from "../../../services/constants/imgs/header";
+import links from "../../../services/constants/links/links";
+import MainButton from "../../../ui/components/Button/Main";
 import Header from "../../../ui/components/Header";
 import HobbiesIntro from "../../../ui/components/Introduction/Hobbies";
-import headerImgs from "../../../services/constants/imgs/header";
-import fontAwesome from "../../../services/constants/icns/font-awesome/iconNames";
+import { useDrawingsData } from "../../../ui/hooks/api/drawings/useDrawingsData";
 import useDocumentTitle from "../../../ui/hooks/useDocumentTitle";
-import FaIcon from "../../../services/constants/icns/font-awesome/fontAwesome";
-import MainButton from "../../../ui/components/Button/Main";
-import links from "../../../services/constants/links/links";
-import Masonry from "react-masonry-css";
+import styles from "./style.module.css";
 
 export default function Drawings() {
   useDocumentTitle("Desenhos | Felipe Ferreira");
   const { t } = useTranslation("drawings", { useSuspense: true });
   const { t: instagram } = useTranslation("footer", { useSuspense: true });
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false); // Estado para o lightbox
+  const [selectedImg, setSelectedImg] = useState(0);
+
+  const { data, isPending, isError } = useDrawingsData();
+
+  if (isPending) {
+    return <div>Carregando...</div>;
+  }
+
+  if (isError) {
+    return <div>Erro ao buscar dados</div>;
+  }
 
   // Breakpoints para o mosaico
   const breakpointsObj = {
     default: 3,
     768: 2,
+  };
+
+  // Cria os slides do lightbox
+  const lightboxSlides = data
+    ? data.map((draw) => ({
+        src: draw.imgSrc,
+        alt: `${t("drawings.myDrawings.title")} - ${draw.id}`,
+        width: 3840,
+        height: 2560,
+      }))
+    : [];
+
+  // Abre e fecha a galeria
+  const openLightbox = useCallback((img) => {
+    setSelectedImg(img);
+    setIsLightboxOpen(true);
+  }, []);
+
+  const closeLightbox = useCallback(() => {
+    setIsLightboxOpen(false);
+    setSelectedImg(0);
+  }, []);
+
+  // Ícones personalizados para o lightbox
+  const CustomIcons = {
+    Close: () => (
+      <FaIcon
+        icon={fontAwesome.circleXMark}
+        className={`${styles.lgBoxBtn} ${styles.close}`}
+      />
+    ),
+    Previous: () => (
+      <FaIcon
+        icon={fontAwesome.circleLeft}
+        className={`${styles.lgBoxBtn} ${styles.prev}`}
+      />
+    ),
+    Next: () => (
+      <FaIcon
+        icon={fontAwesome.circleRight}
+        className={`${styles.lgBoxBtn} ${styles.next}`}
+      />
+    ),
   };
 
   return (
@@ -54,11 +113,49 @@ export default function Drawings() {
         </div>
 
         <Masonry
-          className={styles}
+          className={styles.msry}
           breakpointCols={breakpointsObj}
-          columnClassName={styles}
-        ></Masonry>
+          columnClassName={styles.msryClmn}
+        >
+          {data.map((draw, i) => (
+            <img
+              className={styles.msryImg}
+              key={draw.id}
+              src={draw.imgSrc}
+              alt={`${t("drawings.myDrawings.title")} - ${draw.id}`}
+              loading="lazy"
+              onClick={() => openLightbox(i)}
+              onError={(e) => {
+                console.error("Erro ao carregar imagem: ", draw.imgSrc);
+                e.target.style.display = "none";
+              }}
+            />
+          ))}
+        </Masonry>
       </section>
+
+      <Lightbox
+        open={isLightboxOpen}
+        close={closeLightbox}
+        index={selectedImg}
+        slides={lightboxSlides}
+        carousel={{
+          finite: lightboxSlides.length <= 1,
+          preload: 2,
+          padding: "var(--sp-20)",
+        }}
+        controller={{
+          closeOnBackdropClick: true,
+          closeOnPullDown: true,
+        }}
+        render={{
+          buttonPrev: lightboxSlides.length <= 1 ? () => null : undefined,
+          buttonNext: lightboxSlides.length <= 1 ? () => null : undefined,
+          iconClose: () => <CustomIcons.Close />,
+          iconPrev: () => <CustomIcons.Previous />,
+          iconNext: () => <CustomIcons.Next />,
+        }}
+      />
     </div>
   );
 }

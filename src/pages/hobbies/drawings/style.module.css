@@ -45,3 +45,61 @@
   font: var(--draw-subttl);
   color: var(--neu-04);
 }
+
+.msry {
+  display: flex;
+  margin-left: calc(-1 * var(--sp-20));
+  width: auto;
+
+  @media (max-width: 767.98px) {
+    margin-left: 0;
+  }
+}
+
+.msryClmn {
+  padding-left: var(--sp-20);
+  background-clip: padding-box;
+  word-break: break-word;
+}
+
+.msryClmn:first-child {
+  padding-left: 0;
+}
+
+.msryImg {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  max-height: 25.625rem; /* 410px */
+  margin-bottom: var(--sp-20);
+  object-fit: cover;
+  border-radius: var(--sp-4);
+  transition: var(--ts-def);
+}
+
+.msryImg:hover {
+  transform: scale(1.05);
+  box-shadow: var(--bshw-led-mn5);
+}
+
+.lgBoxBtn {
+  color: var(--main-05);
+  box-shadow: none;
+  border-radius: var(--brad-circ);
+  transition: var(--ts-def);
+}
+
+.close {
+  font-size: var(--sp-32);
+}
+
+.prev,
+.next {
+  font-size: var(--sp-48);
+}
+
+.lgBoxBtn:hover {
+  filter: brightness(1.5);
+  box-shadow: var(--bshw-led-mn5);
+}
