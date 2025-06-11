@@ -13,6 +13,10 @@ import HobbiesIntro from "../../../ui/components/Introduction/Hobbies";
 import { useDrawingsData } from "../../../ui/hooks/api/drawings/useDrawingsData";
 import useDocumentTitle from "../../../ui/hooks/useDocumentTitle";
 import styles from "./style.module.css";
+import Divisor from "../../../ui/components/Divisor";
+import HobbyFinal from "../../../ui/components/HobbyFinal";
+import pngImgs from "../../../services/constants/imgs/pngs";
+import Footer from "../../../ui/components/Footer";
 
 export default function Drawings() {
   useDocumentTitle("Desenhos | Felipe Ferreira");
@@ -156,6 +160,18 @@ export default function Drawings() {
           iconNext: () => <CustomIcons.Next />,
         }}
       />
+
+      <Divisor marginTop={128} color={"var(--main-05)"} />
+
+      <HobbyFinal
+        img={pngImgs.drawings}
+        alt={t("drawings.alt")}
+        color={"var(--main-05)"}
+        font={"var(--draw-h2)"}
+        mbFont={"var(--draw-h3)"}
+      />
+
+      <Footer marginTop={0} />
     </div>
   );
 }

@@ -9,7 +9,7 @@
   padding: var(--sp-28) 0;
   width: 100%;
   transition: var(--ts-def);
-  z-index: var(--zind-1000);
+  z-index: var(--zind-2000);
 }
 
 .header.scrolled {
