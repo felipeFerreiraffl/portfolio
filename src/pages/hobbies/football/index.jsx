@@ -13,7 +13,7 @@ export default function Football() {
   useDocumentTitle("Futebol | Felipe Ferreira");
   const { t } = useTranslation("football", { useSuspense: true });
   const [isModalOpen, setIsModalOpen] = useState(false); // Estado do modal
-  const [selectedPosition, setSelectedPosition] = useState(false); // Estado da posição selecionada para modal
+  const [selectedPosition, setSelectedPosition] = useState(null); // Estado da posição selecionada para modal
   const { data: positionData, isPending, isError } = usePositionData();
 
   if (isPending) {
@@ -48,6 +48,21 @@ export default function Football() {
     const abbr = t(`football.sections.positions.api.${pos.id}.abbr`);
 
     if (abbr === "ZAG" || abbr === "VOL" || abbr === "CB" || abbr === "DM") {
+      return "var(--bd-aux3)";
+    } else {
+      return "var(--bd-mn1)";
+    }
+  };
+  // Define a borda da posição baseada na sigla
+  const handleGetFavoritePositionName = (pos) => {
+    const name = t(`football.sections.positions.api.${pos.id}.name`);
+
+    if (
+      name === "Zagueiro" ||
+      name === "Volante" ||
+      name === "Centerback" ||
+      name === "Defensive midfielder"
+    ) {
       return "var(--bd-aux3)";
     } else {
       return "var(--bd-mn1)";
@@ -135,7 +150,7 @@ export default function Football() {
                 style={{
                   "--pos-border": handleGetFavoritePosition(pos),
                 }}
-                onClick={handleOpenModal}
+                onClick={() => handleOpenModal(pos)}
                 title={t("football.sections.positions.modalInfo")}
                 role="button"
                 tabIndex={0}
@@ -153,11 +168,31 @@ export default function Football() {
         </div>
       </section>
 
-      {isModalOpen && (
+      {isModalOpen && selectedPosition && (
         <div className={styles.posModalCtn}>
-          <div className={styles.ovly} />
+          <div className={styles.ovly} onClick={handleOverlayClose} />
 
-          <div className={styles.posModal}>Abridoo</div>
+          <div
+            className={styles.posModal}
+            style={{
+              "--modal-border": handleGetFavoritePositionName(selectedPosition),
+            }}
+          >
+            <span
+              className={styles.modalBtn}
+              onClick={handleCloseModal}
+              role="button"
+            >
+              <FaIcon icon={fontAwesome.circleXMark} />
+            </span>
+
+            <h2 className={styles.modalTtl}>
+              {t(`football.sections.positions.api.${selectedPosition.id}.name`)}
+            </h2>
+            <p className={styles.modalDesc}>
+              {t(`football.sections.positions.api.${selectedPosition.id}.desc`)}
+            </p>
+          </div>
         </div>
       )}
     </div>

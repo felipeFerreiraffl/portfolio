@@ -124,7 +124,9 @@
 }
 
 .posModalCtn {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,10 +142,46 @@
   background-color: var(--rgba-bk80);
   width: 100vw;
   height: 100vh;
+  backdrop-filter: blur(8px);
 }
 
 .posModal {
-  position: fixed;
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--sp-24) var(--sp-32);
+  background-color: var(--neu-01);
+  border: var(--modal-border);
+  border-radius: var(--brad-12);
   color: var(--neu-04);
+  gap: var(--sp-16);
   z-index: var(--zind-10000);
+}
+
+.modalBtn {
+  position: absolute;
+  top: var(--sp-12);
+  right: var(--sp-12);
+  color: var(--main-01);
+  font-size: var(--sp-20);
+  cursor: pointer;
+  transition: var(--ts-def);
+}
+
+.modalBtn:hover {
+  color: var(--main-02);
+}
+
+.modalTtl {
+  width: 100%;
+  font: var(--fut-h4);
+  border-bottom: var(--bd-line-nt4);
+  padding-bottom: var(--sp-4);
+}
+
+.modalDesc {
+  font: var(--fut-body);
 }
