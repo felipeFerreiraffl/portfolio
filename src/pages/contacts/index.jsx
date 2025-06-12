@@ -10,8 +10,10 @@ import Auxiliary from "../../ui/components/Links/AuxiliaryLink";
 import SocialMedia from "../../ui/components/Links/SocialMedia";
 import styles from "./style.module.css";
 import Footer from "../../ui/components/Footer";
+import useDocumentTitle from "../../ui/hooks/useDocumentTitle";
 
 export default function Contacts() {
+  useDocumentTitle("Contatos | Felipe Ferreira");
   const { t: tContacts } = useTranslation("contacts", { useSuspense: true });
   const { t: tLinks } = useTranslation("footer", { useSuspense: true });
 
