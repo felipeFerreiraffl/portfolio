@@ -10,4 +10,121 @@
 }
 
 :root {
+  /* ----- Cores ----- */
+  --color-main-01: #4a19dc;
+  --color-main-02: #8e70e9;
+  --color-main-03: #160350;
+
+  --color-neutral-01: #ffffff;
+  --color-neutral-02: #ded3ff;
+  --color-neutral-03: #000008;
+  --color-neutral-04: #000000;
+
+  --color-opacity-main-01_40: rgba(74, 25, 220, 0.4);
+  --color-opacity-main-01_80: rgba(74, 25, 220, 0.8);
+  --color-opacity-main-02_40: rgba(142, 112, 233, 0.4);
+  --color-opacity-main-02_80: rgba(142, 112, 233, 0.8);
+
+  --color-gradient-light: linear-gradient(
+    to right,
+    var(--color-main-01) 0%,
+    var(--color-main-02) 100%
+  );
+  --color-gradient-dark: linear-gradient(
+    to right,
+    var(--color-main-02) 0%,
+    var(--color-main-01) 100%
+  );
+  --color-gradient-light-floor: linear-gradient(
+    to bottom,
+    rgba(142, 112, 233, 0.5) 100%,
+    rgba(142, 112, 233, 0) 0%
+  );
+  --color-gradient-dark-floor: linear-gradient(
+    to bottom,
+    rgba(74, 25, 220, 0.5) 100%,
+    rgba(74, 25, 220, 0) 0%
+  );
+
+  /* ----- Fontes -----*/
+  --font-family: "Space Grotesk", sans-serif;
+
+  --font-headline-01: 700 5rem var(--font-family); /* 80px */
+  --font-headline-02: 700 4rem var(--font-family); /* 64px */
+  --font-headline-03: 700 3rem var(--font-family); /* 48px */
+  --font-headline-04: 500 2rem var(--font-family); /* 32px */
+  --font-headline-05: 500 1.5rem var(--font-family); /* 24px */
+
+  /* 20px */
+  --font-body-large-regular: 400 1.25rem var(--font-family);
+  --font-body-large-bold: 700 1.25rem var(--font-family);
+
+  /* 16px */
+  --font-body-medium-regular: 400 1rem var(--font-family);
+  --font-body-medium-bold: 700 1rem var(--font-family);
+
+  /* 12px */
+  --font-body-small-light: 300 0.75rem var(--font-family);
+  --font-body-small-regular: 400 0.75rem var(--font-family);
+  --font-body-small-bold: 700 0.75rem var(--font-family);
+
+  /* ----- Efeitos ----- */
+  --transition-default: all 0.3s ease-in-out;
+
+  --shadow-default-light: 0 0 0.75rem rgba(142, 112, 233, 0.6);
+  --shadow-default-dark: 0 0 0.75rem rgba(22, 3, 80, 0.6);
+  --shadow-background-light: 0 0.5rem 1rem rgba(142, 112, 233, 0.4);
+  --shadow-background-dark: 0 0.5rem 1rem rgba(0, 0, 8, 0.4);
+
+  --background-blur: blur(8px);
+
+  --brightness-light: brightness(0.8);
+  --brightness-dark: brightness(1.2);
+
+  /* ----- Espaçamento / Tamanhos ----- */
+  --spacing-size-4: 0.25rem; /* 4px */
+  --spacing-size-8: 0.5rem; /* 8px */
+  --spacing-size-12: 0.75rem; /* 12px */
+  --spacing-size-16: 1rem; /* 16px */
+  --spacing-size-20: 1.25rem; /* 20px */
+  --spacing-size-24: 1.5rem; /* 24px */
+  --spacing-size-28: 1.75rem; /* 28px */
+  --spacing-size-32: 2rem; /* 32px */
+  --spacing-size-36: 2.25rem; /* 36px */
+  --spacing-size-40: 2.5rem; /* 40px */
+  --spacing-size-44: 2.75rem; /* 44px */
+  --spacing-size-48: 3rem; /* 48px */
+  --spacing-size-52: 3.25rem; /* 52px */
+  --spacing-size-56: 3.5rem; /* 56px */
+  --spacing-size-60: 3.75rem; /* 60px */
+  --spacing-size-64: 4rem; /* 64px */
+  --spacing-size-68: 4.25rem; /* 68px */
+  --spacing-size-72: 4.5rem; /* 72px */
+  --spacing-size-76: 4.75rem; /* 76px */
+  --spacing-size-80: 5rem; /* 80px */
+  --spacing-size-84: 5.25rem; /* 84px */
+  --spacing-size-88: 5.5rem; /* 88px */
+  --spacing-size-92: 5.75rem; /* 92px */
+  --spacing-size-96: 6rem; /* 96px */
+  --spacing-size-100: 6.25rem; /* 100px */
+  --spacing-size-104: 6.5rem; /* 104px */
+  --spacing-size-108: 6.75rem; /* 108px */
+  --spacing-size-112: 7rem; /* 112px */
+  --spacing-size-116: 7.25rem; /* 116px */
+  --spacing-size-120: 7.5rem; /* 120px */
+
+  /* ----- Bordas ----- */
+  --border-main-01: 0.125rem solid var(--color-main-01); /* 2px */
+  --border-main-02: 0.125rem solid var(--color-main-02); /* 2px */
+
+  --radius-8: 0.5rem; /* 8px */
+  --radius-12: 0.75rem; /* 12px */
+  --radius-16: 1rem; /* 16px */
+  --radius-96: 6rem; /* 96px */
+  --radius-circular: 50%; /* Circular */
+
+  /* ----- Margem ----- */
+  --margin-desktop: 0 6rem; /* 0 96px */
+  --margin-tablet: 0 4rem; /* 0 64px */
+  --margin-mobile: 0 2rem; /* 0 32px */
 }
