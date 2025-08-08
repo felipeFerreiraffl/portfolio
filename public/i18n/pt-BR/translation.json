@@ -1,0 +1,52 @@
+{
+  "parts": {
+    "skills": "Habilidades",
+    "expirience": "Experiência",
+    "projects": "Projetos",
+    "contacts": "Contatos",
+    "aria": {
+      "theme": "Trocar de tema",
+      "language": "Trocar de idioma",
+      "skills": "Habilidades",
+      "expirience": "Experiência",
+      "projects": "Projetos",
+      "contacts": "Contatos"
+    }
+  },
+  "sections": {
+    "intro": {
+      "subtitle": "Pequena introdução para me conhecer",
+      "infos": {
+        "label": "Estudante de T.I",
+        "presentation": {
+          "title": "Apresentação",
+          "desc": "Estudante de tecnologia com curiosidade para aprender sobre desenvolvimento web, game design, programação e recursos front-end."
+        },
+        "hobbies": {
+          "title": "Hobbies",
+          "desc": "Admirador de futebol, assisto animes, leio mangás e tenho gosto para desenhar."
+        },
+        "goals": {
+          "title": "Objetivos",
+          "desc": "Pretendo começar na área de T.I. como suporte técnico ou help desk, com objetivo de ingressar no ramo de desenvolvimento front-end. Se possível, desejaria estudar ou trabalhar com jogos."
+        }
+      }
+    },
+    "skills": {
+      "title": "Habilidades",
+      "subtitle": "Meu conhecimento e tecnologias utilizadas"
+    },
+    "expirience": {
+      "title": "Experiência",
+      "subtitle": "Minhas experiências anteriores na carreira"
+    },
+    "projects": {
+      "title": "Projetos",
+      "subtitle": "Projetos realizados com diferentes tecnologias"
+    },
+    "contatos": {
+      "title": "Contatos",
+      "subtitle": "Verifique minhas redes para contato"
+    }
+  }
+}

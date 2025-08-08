@@ -1,0 +1,52 @@
+{
+  "parts": {
+    "skills": "Skills",
+    "expirience": "Experience",
+    "projects": "Projects",
+    "contacts": "Contacts",
+    "aria": {
+      "theme": "Change theme",
+      "language": "Change language",
+      "skills": "Skills",
+      "expirience": "Experience",
+      "projects": "Projects",
+      "contacts": "Contacts"
+    }
+  },
+  "sections": {
+    "intro": {
+      "subtitle": "A small introduction to get to know me",
+      "infos": {
+        "label": "I.T Student",
+        "presentation": {
+          "title": "Presentation",
+          "desc": "A technology student with curiosity to learn about web development, game design, programming and front-end recourses."
+        },
+        "hobbies": {
+          "title": "Hobbies",
+          "desc": "Football fan, watch animes, read mangas and have drawing taste."
+        },
+        "goals": {
+          "title": "Goals",
+          "desc": "I want to start on the I.T area as a technical supporter or help desk, with a goal of enter in front-end development branch. If possible, I'd wish to study or work with games."
+        }
+      }
+    },
+    "skills": {
+      "title": "Skills",
+      "subtitle": "My knowledge and used technologies"
+    },
+    "expirience": {
+      "title": "Experience",
+      "subtitle": "My past experiences on my career"
+    },
+    "projects": {
+      "title": "Projects",
+      "subtitle": "Projects made with different technologies"
+    },
+    "contatos": {
+      "title": "Contacts",
+      "subtitle": "Check my networks for contact"
+    }
+  }
+}
