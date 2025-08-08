@@ -1,14 +1,14 @@
 {
   "parts": {
     "skills": "Habilidades",
-    "expirience": "Experiência",
+    "experience": "Experiência",
     "projects": "Projetos",
     "contacts": "Contatos",
     "aria": {
       "theme": "Trocar de tema",
       "language": "Trocar de idioma",
       "skills": "Habilidades",
-      "expirience": "Experiência",
+      "experience": "Experiência",
       "projects": "Projetos",
       "contacts": "Contatos"
     }
@@ -36,7 +36,7 @@
       "title": "Habilidades",
       "subtitle": "Meu conhecimento e tecnologias utilizadas"
     },
-    "expirience": {
+    "experience": {
       "title": "Experiência",
       "subtitle": "Minhas experiências anteriores na carreira"
     },

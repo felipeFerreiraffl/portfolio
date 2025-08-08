@@ -1,4 +1,3 @@
 /* ---------- Componente de ícones ---------- */
 
-import icons from "../../services/utils/icons";
-
+export default function LocalIcon({ icon, alt }) {}
