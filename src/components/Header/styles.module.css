@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: var(--spacing-size-28) var(--spacing-size-96);
+}
+
+.logo {
+  width: var(--spacing-size-76);
+  height: var(--spacing-size-36);
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
