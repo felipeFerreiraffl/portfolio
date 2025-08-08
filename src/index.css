@@ -127,4 +127,30 @@
   --margin-desktop: 0 6rem; /* 0 96px */
   --margin-tablet: 0 4rem; /* 0 64px */
   --margin-mobile: 0 2rem; /* 0 32px */
+
+  /* ----- Tema claro ------ */
+  --color-bg: var(--color-neutral-02);
+  --color-title: var(--color-neutral-03);
+  --color-text: var(--color-neutral-04);
+  --color-main: var(--color-main-02);
+  --color-opacity_40: var(--color-opacity-main-02_40);
+  --color-opacity_80: var(--color-opacity-main-02_80);
+  --box-shadow: var(--shadow-default-dark);
+  --linear-gradient: var(--color-gradient-light);
+  --linear-gradient-floor: var(--color-gradient-light-floor);
+  --filter-brightness: var(--brightness-light);
+
+  /* ----- Tema escuro ------ */
+  [data-theme="dark"] {
+    --color-bg: var(--color-neutral-03);
+    --color-title: var(--color-neutral-02);
+    --color-text: var(--color-neutral-01);
+    --color-main: var(--color-main-01);
+    --color-opacity_40: var(--color-opacity-main-01_40);
+    --color-opacity_80: var(--color-opacity-main-01_80);
+    --box-shadow: var(--shadow-default-light);
+    --linear-gradient: var(--color-gradient-dark);
+    --linear-gradient-floor: var(--color-gradient-dark-floor);
+    --filter-brightness: var(--brightness-dark);
+  }
 }
