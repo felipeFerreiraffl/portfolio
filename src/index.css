@@ -113,6 +113,7 @@
   --spacing-size-112: 7rem; /* 112px */
   --spacing-size-116: 7.25rem; /* 116px */
   --spacing-size-120: 7.5rem; /* 120px */
+  --spacing-size-144: 9rem; /* 144px */
 
   /* ----- Bordas ----- */
   --border-main-01: 0.125rem solid var(--color-main-01); /* 2px */

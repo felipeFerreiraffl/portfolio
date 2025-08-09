@@ -1,0 +1,45 @@
+.container {
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-size-20);
+  width: var(--spacing-size-144);
+  height: var(--spacing-size-56);
+  background-color: var(--color-main-03);
+  border-radius: var(--radius-8);
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 8px;
+  z-index: 2;
+  width: 0;
+  height: 0;
+  border-right: var(--spacing-size-12) solid transparent;
+  border-left: var(--spacing-size-12) solid var(--color-main-03);
+  border-top: var(--spacing-size-12) solid transparent;
+}
+
+.circle {
+  cursor: pointer;
+  width: var(--spacing-size-28);
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-circular);
+  transition: var(--transition-default);
+}
+
+.light {
+  background-color: var(--color-neutral-02);
+}
+
+.dark {
+  background-color: var(--color-neutral-03);
+}
+
+.circle:hover {
+  box-shadow: var(--shadow-default-light);
+}
