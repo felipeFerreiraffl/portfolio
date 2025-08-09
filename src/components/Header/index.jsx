@@ -4,15 +4,38 @@ import icons from "../../services/utils/icons";
 import images from "../../services/utils/images";
 import i18n from "../../services/i18n";
 import styles from "./styles.module.css";
+import { useState } from "react";
+import ColorDropdown from "./Dropdown/Color";
 
 export default function Header() {
+  const [colorDropdown, setColorDropdown] = useState(false);
+  const [lgnDropdown, setLgnDropdown] = useState(false);
   const { t } = useTranslation();
+
+  const handleOpenColorDropdown = () => {
+    setColorDropdown(true);
+  };
+
+  const handleCloseColorDropdown = () => {
+    setColorDropdown(false);
+  };
+
+  const handleOpenLgnDropdown = () => {
+    setColorDropdown(true);
+  };
+
+  const handleCloseLgnDropdown = () => {
+    setLgnDropdown(false);
+  };
+
+  console.log(`Color: ${colorDropdown}`);
+  console.log(`Linguagem: ${lgnDropdown}`);
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <button className={styles.logo} onClick={handleOpenColorDropdown}>
         <img src={images.logo} alt="Logo" />
-      </div>
+      </button>
 
       <nav className={styles.nav}>
         <ul>
@@ -34,9 +57,15 @@ export default function Header() {
         </ul>
       </nav>
 
-      <button className={styles.translation}>
+      <button className={styles.translation} onClick={handleOpenLgnDropdown}>
         <Icon icon={icons.remix.common.translate2} />
       </button>
+
+      {colorDropdown && (
+        <span className={styles.colorDrop}>
+          <ColorDropdown />
+        </span>
+      )}
     </header>
   );
 }

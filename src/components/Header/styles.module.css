@@ -64,3 +64,9 @@
 .translation:hover {
   background-color: var(--color-main-01);
 }
+
+.colorDrop {
+  position: absolute;
+  top: 80px;
+  left: 142px;
+}

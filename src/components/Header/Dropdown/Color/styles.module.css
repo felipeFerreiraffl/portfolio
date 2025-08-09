@@ -16,7 +16,6 @@
   position: absolute;
   top: -8px;
   left: 8px;
-  z-index: 2;
   width: 0;
   height: 0;
   border-right: var(--spacing-size-12) solid transparent;
@@ -40,6 +39,7 @@
   background-color: var(--color-neutral-03);
 }
 
-.circle:hover {
+.circle:hover,
+.circle.active {
   box-shadow: var(--shadow-default-light);
 }

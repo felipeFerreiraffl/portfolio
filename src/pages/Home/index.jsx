@@ -7,8 +7,6 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <Header />
-      <ColorDropdown />
-      <LanguageDropdown />
     </div>
   );
 }

@@ -5,16 +5,18 @@ import { ThemeContext } from "../../../../services/context/themeContext";
 export default function ColorDropdown() {
   const { theme, setColorTheme } = useContext(ThemeContext);
 
-  console.log(theme);
-
   return (
     <div className={styles.container}>
       <button
-        className={`${styles.circle} ${styles.light}`}
+        className={`${styles.circle} ${styles.light} ${
+          theme === "light" ? styles.active : ""
+        }`}
         onClick={() => setColorTheme("light")}
       ></button>
       <button
-        className={`${styles.circle} ${styles.dark}`}
+        className={`${styles.circle} ${styles.dark} ${
+          theme === "dark" ? styles.active : ""
+        }`}
         onClick={() => setColorTheme("dark")}
       ></button>
     </div>
