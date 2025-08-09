@@ -25,13 +25,13 @@ export function ThemeProvider({ children }) {
   }, [theme]);
 
   // Alterna entre os temas claro e escuro
-  const toggleTheme = (theme) => {
+  const setColorTheme = (theme) => {
     setTheme(theme === "light" ? "light" : "dark");
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
+    <ThemeContext.Provider value={{ theme, setColorTheme }}>
+        {children}
     </ThemeContext.Provider>
-  );
+  )
 }
