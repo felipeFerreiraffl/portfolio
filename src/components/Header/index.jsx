@@ -20,16 +20,16 @@ export default function Header() {
             <a href="">Intro</a>
           </li>
           <li>
-            <a href="#">{t("translation.parts.skills")}</a>
+            <a href="#">{t("parts.skills")}</a>
           </li>
           <li>
-            <a href="#">{t("translation.parts.experience")}</a>
+            <a href="#">{t("parts.experience")}</a>
           </li>
           <li>
-            <a href="#">{t("translation.parts.projects")}</a>
+            <a href="#">{t("parts.projects")}</a>
           </li>
           <li>
-            <a href="#">{t("translation.parts.contacts")}</a>
+            <a href="#">{t("parts.contacts")}</a>
           </li>
         </ul>
       </nav>
