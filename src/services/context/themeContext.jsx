@@ -2,7 +2,7 @@
 
 import { createContext, useEffect, useState } from "react";
 
-const ThemeContext = createContext();
+export const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("light");
@@ -25,13 +25,13 @@ export function ThemeProvider({ children }) {
   }, [theme]);
 
   // Alterna entre os temas claro e escuro
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  const toggleTheme = (theme) => {
+    setTheme(theme === "light" ? "light" : "dark");
   };
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-        {children}
+      {children}
     </ThemeContext.Provider>
-  )
+  );
 }
