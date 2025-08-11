@@ -1,30 +1,28 @@
-import { useGSAP } from "@gsap/react";
+/* ---------- Componente - Header ---------- */
+
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import {
+  handleCloseDropdown,
+  handleCloseDropdownAnimation,
+  handleDropdownGSAP,
+  handleOpenDropdown,
+} from "../../services/utils/hooks/Header/closeDropdown";
+import { useClickOutside } from "../../services/utils/hooks/Header/useClickOutside";
 import icons from "../../services/utils/jsons/icons";
 import images from "../../services/utils/jsons/images";
 import ColorDropdown from "./Dropdown/Color";
 import LanguageDropdown from "./Dropdown/Language";
 import styles from "./styles.module.css";
-import gsap from "gsap";
-import {
-  handleCloseDropdown,
-  handleOpenDropdown,
-} from "../../services/utils/hooks/Header/closeDropdown";
-import { useClickOutside } from "../../services/utils/hooks/Header/useClickOutside";
 
 export default function Header() {
-  // Tradução
+  // Tradução i18next
   const { t } = useTranslation("translation");
 
   // Estados para definir se está aberto ou fechado
   const [colorDropdown, setColorDropdown] = useState(false);
   const [lngDropdown, setLngDropdown] = useState(false);
-
-  // Estados para definir se renderizado ou não
-  const [renderColorDropdown, setRenderColorDropdown] = useState(false);
-  const [renderLngDropdown, setRenderLngDropdown] = useState(false);
 
   // Refs para o DOM e GSAP
   const colorDropdownRef = useRef(null);
@@ -36,60 +34,30 @@ export default function Header() {
   const openLng = () => handleOpenDropdown(setLngDropdown);
   const closeLng = () => handleCloseDropdown(setLngDropdown);
 
+  /* ----- Monta as animações do GSAP para os dropdowns ----- */
+  // Cor
+  useEffect(() => {
+    handleDropdownGSAP(colorDropdownRef, colorDropdown, { x: -16 });
+  }, [colorDropdown]);
+
+  // Linguagem
+  useEffect(() => {
+    handleDropdownGSAP(lngDropdownRef, lngDropdown, { x: 16 });
+  }, [lngDropdown]);
+
+  // Animações de saída dos dropdowns
+  const closeColorAnimation = () => {
+    handleCloseDropdownAnimation(colorDropdownRef, closeColor, "left");
+  };
+  const closeLngAnimation = () => {
+    handleCloseDropdownAnimation(lngDropdownRef, closeLng, "right");
+  };
+
   // Parâmetros para a função de clicar fora do elemento dropdown
   const refs = [colorDropdownRef, lngDropdownRef];
-  const handlers = [closeColor, closeLng];
+  const handlers = [closeColorAnimation, closeLngAnimation];
 
   useClickOutside(refs, handlers);
-
-  // Animação de entrada dos dropdowns
-  useGSAP(() => {
-    if (colorDropdown && colorDropdownRef.current) {
-      gsap.fromTo(
-        colorDropdownRef.current,
-        { y: -16, x: -16, opacity: 0, ease: "power1.inOut", duration: 0.3 },
-        { y: 0, x: 0, opacity: 1, ease: "power1.inOut", duration: 0.3 }
-      );
-    }
-
-    if (lngDropdown && lngDropdownRef.current) {
-      gsap.fromTo(
-        lngDropdownRef.current,
-        { y: -16, x: 16, opacity: 0, ease: "power1.inOut", duration: 0.3 },
-        { y: 0, x: 0, opacity: 1, ease: "power1.inOut", duration: 0.3 }
-      );
-    }
-  }, [colorDropdown, lngDropdown]);
-
-  // // Animação de saída dos dropdowns
-  // useEffect(() => {
-  //   // Verificação do elemento estar montado para realizar a animação
-  //   if (colorDropdown) {
-  //     setRenderColorDropdown(true);
-  //   } else if (renderColorDropdown) {
-  //     gsap.to(colorDropdownRef.current, {
-  //       y: -16,
-  //       x: -16,
-  //       opacity: 0,
-  //       ease: "power1.inOut",
-  //       duration: 0.3,
-  //       onComplete: () => setRenderColorDropdown(false),
-  //     });
-  //   }
-
-  //   if (lngDropdown) {
-  //     setRenderLngDropdown(true);
-  //   } else if (renderLngDropdown) {
-  //     gsap.to(lngDropdownRef.current, {
-  //       y: -16,
-  //       x: 16,
-  //       opacity: 0,
-  //       ease: "power1.inOut",
-  //       duration: 0.3,
-  //       onComplete: () => setRenderLngDropdown(false),
-  //     });
-  //   }
-  // }, [colorDropdown, lngDropdown]);
 
   return (
     <header className={styles.header}>
