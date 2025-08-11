@@ -13,7 +13,7 @@ i18n
     supportedLngs: ["pt-BR", "en"],
     ns: ["header"],
     backend: {
-      loadPath: "/locales/{{lng}}/{{ns}}.json",
+      loadPath: "locales/{{lng}}/{{ns}}.json",
     },
     interpolation: {
       escapeValue: false, // React já faz a proteção contra XSS

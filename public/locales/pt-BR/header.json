@@ -6,7 +6,11 @@
     "contacts": "Contatos",
     "aria": {
       "theme": "Trocar tema",
-      "language": "Trocar idioma"
+      "language": "Trocar idioma",
+      "light": "Trocar para tema claro",
+      "dark": "Trocar para tema escuro",
+      "ptBr": "Trocar para português-BR",
+      "en": "Trocar para inglês"
     }
   }
 }

@@ -18,7 +18,7 @@ import styles from "./styles.module.css";
 
 export default function Header() {
   // Tradução i18next
-  const { t } = useTranslation("header");
+  const { t } = useTranslation();
 
   // Estados para definir se está aberto ou fechado
   const [colorDropdown, setColorDropdown] = useState(false);
@@ -64,7 +64,8 @@ export default function Header() {
       <button
         className={styles.logo}
         onClick={openColor}
-        aria-label="color-button"
+        title={t("header.aria.theme")}
+        aria-label={t("header.aria.theme")}
       >
         <img src={images.logo} alt="Logo" />
       </button>
@@ -72,24 +73,55 @@ export default function Header() {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <a href="">Intro</a>
+            <a href="#" title="Intro" aria-label="Intro">
+              Intro
+            </a>
           </li>
           <li>
-            <a href="#">{t("header.skills")}</a>
+            <a
+              href="#"
+              title={t("header.skills")}
+              aria-label={t("header.skills")}
+            >
+              {t("header.skills")}
+            </a>
           </li>
           <li>
-            <a href="#">{t("header.experience")}</a>
+            <a
+              href="#"
+              title={t("header.experience")}
+              aria-label={t("header.experience")}
+            >
+              {t("header.experience")}
+            </a>
           </li>
           <li>
-            <a href="#">{t("header.projects")}</a>
+            <a
+              href="#"
+              title={t("header.projects")}
+              aria-label={t("header.projects")}
+            >
+              {t("header.projects")}
+            </a>
           </li>
           <li>
-            <a href="#">{t("header.contacts")}</a>
+            <a
+              href="#"
+              title={t("header.contacts")}
+              aria-label={t("header.contacts")}
+            >
+              {t("header.contacts")}
+            </a>
           </li>
         </ul>
       </nav>
 
-      <button className={styles.translation} onClick={openLng}>
+      <button
+        className={styles.translation}
+        onClick={openLng}
+        title={t("header.aria.language")}
+        aria-label={t("header.aria.language")}
+      >
         <Icon icon={icons.remix.common.translate2} />
       </button>
 

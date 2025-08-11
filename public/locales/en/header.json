@@ -6,7 +6,11 @@
     "contacts": "Contacts",
     "aria": {
       "theme": "Change theme",
-      "language": "Change language"
+      "language": "Change language",
+      "light": "Change to light theme",
+      "dark": "Change to dark theme",
+      "ptBr": "Change to portuguese-BR",
+      "en": "Change to english"
     }
   }
 }
