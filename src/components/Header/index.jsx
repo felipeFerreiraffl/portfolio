@@ -18,7 +18,7 @@ import styles from "./styles.module.css";
 
 export default function Header() {
   // Tradução i18next
-  const { t } = useTranslation("translation");
+  const { t } = useTranslation("header");
 
   // Estados para definir se está aberto ou fechado
   const [colorDropdown, setColorDropdown] = useState(false);
@@ -61,7 +61,11 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <button className={styles.logo} onClick={openColor}>
+      <button
+        className={styles.logo}
+        onClick={openColor}
+        aria-label="color-button"
+      >
         <img src={images.logo} alt="Logo" />
       </button>
 
@@ -71,16 +75,16 @@ export default function Header() {
             <a href="">Intro</a>
           </li>
           <li>
-            <a href="#">{t("parts.skills")}</a>
+            <a href="#">{t("header.skills")}</a>
           </li>
           <li>
-            <a href="#">{t("parts.experience")}</a>
+            <a href="#">{t("header.experience")}</a>
           </li>
           <li>
-            <a href="#">{t("parts.projects")}</a>
+            <a href="#">{t("header.projects")}</a>
           </li>
           <li>
-            <a href="#">{t("parts.contacts")}</a>
+            <a href="#">{t("header.contacts")}</a>
           </li>
         </ul>
       </nav>
@@ -90,13 +94,21 @@ export default function Header() {
       </button>
 
       {colorDropdown && (
-        <span ref={colorDropdownRef} className={styles.colorDrop}>
+        <span
+          ref={colorDropdownRef}
+          className={styles.colorDrop}
+          aria-hidden="false"
+        >
           <ColorDropdown />
         </span>
       )}
 
       {lngDropdown && (
-        <span ref={lngDropdownRef} className={styles.languageDrop}>
+        <span
+          ref={lngDropdownRef}
+          className={styles.languageDrop}
+          aria-hidden="false"
+        >
           <LanguageDropdown />
         </span>
       )}

@@ -1,0 +1,12 @@
+{
+  "header": {
+    "skills": "Habilidades",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "contacts": "Contatos",
+    "aria": {
+      "theme": "Trocar tema",
+      "language": "Trocar idioma"
+    }
+  }
+}
