@@ -70,3 +70,9 @@
   top: 80px;
   left: 142px;
 }
+
+.languageDrop {
+  position: absolute;
+  top: 80px;
+  right: 142px;
+}

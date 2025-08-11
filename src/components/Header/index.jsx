@@ -1,16 +1,20 @@
+import { useGSAP } from "@gsap/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import icons from "../../services/utils/icons";
 import images from "../../services/utils/images";
-import i18n from "../../services/i18n";
-import styles from "./styles.module.css";
-import { useState } from "react";
 import ColorDropdown from "./Dropdown/Color";
+import LanguageDropdown from "./Dropdown/Language";
+import styles from "./styles.module.css";
+import gsap from "gsap";
 
 export default function Header() {
   const [colorDropdown, setColorDropdown] = useState(false);
   const [lgnDropdown, setLgnDropdown] = useState(false);
-  const { t } = useTranslation();
+  const { t } = useTranslation("translation");
+  const colorDropdownRef = useRef(null);
+  const lgnDropdownRef = useRef(null);
 
   const handleOpenColorDropdown = () => {
     setColorDropdown(true);
@@ -21,15 +25,55 @@ export default function Header() {
   };
 
   const handleOpenLgnDropdown = () => {
-    setColorDropdown(true);
+    setLgnDropdown(true);
   };
 
   const handleCloseLgnDropdown = () => {
     setLgnDropdown(false);
   };
 
-  console.log(`Color: ${colorDropdown}`);
-  console.log(`Linguagem: ${lgnDropdown}`);
+  // Evento que fecha ao clicar fora do dropdown
+  useEffect(() => {
+    const clickOutside = (e) => {
+      if (
+        colorDropdownRef.current &&
+        !colorDropdownRef.current.contains(e.target)
+      ) {
+        handleCloseColorDropdown(); // Fecha caso o dropdown de cor esteja aberto
+      } else if (
+        lgnDropdownRef.current &&
+        !lgnDropdownRef.current.contains(e.target)
+      ) {
+        handleCloseLgnDropdown(); // Fecha caso o dropdown de linguagem esteja aberto
+      }
+    };
+
+    document.addEventListener("mousedown", clickOutside);
+
+    return () => document.removeEventListener("mousedown", clickOutside);
+  }, []);
+
+  // Animação de entrada e saída dos dropdowns
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        colorDropdownRef.current,
+        {
+          y: -20,
+          x: -20,
+          opacity: 0,
+          ease: "power1.inOut",
+        },
+        {
+          y: 0,
+          x: 0,
+          opacity: 1,
+          ease: "power1.inOut",
+        }
+      );
+    },
+    { scope: colorDropdown }
+  );
 
   return (
     <header className={styles.header}>
@@ -62,8 +106,14 @@ export default function Header() {
       </button>
 
       {colorDropdown && (
-        <span className={styles.colorDrop}>
+        <span ref={colorDropdownRef} className={styles.colorDrop}>
           <ColorDropdown />
+        </span>
+      )}
+
+      {lgnDropdown && (
+        <span ref={lgnDropdownRef} className={styles.languageDrop}>
+          <LanguageDropdown />
         </span>
       )}
     </header>
