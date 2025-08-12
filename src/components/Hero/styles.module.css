@@ -3,14 +3,7 @@
   width: 46.5rem;
   aspect-ratio: 1 / 1;
   margin-top: var(--spacing-size-104);
-  overflow: hidden;
 }
-
-/* .ringsContainer {
-  position: relative;
-  width: 46.5rem;
-  aspect-ratio: 1 / 1;
-} */
 
 .ring {
   position: absolute;
@@ -82,7 +75,6 @@
   justify-content: center;
   width: var(--spacing-size-312);
   aspect-ratio: 1 / 1;
-  border: 1px solid red;
   border-radius: var(--radius-circular);
   animation: orbit 8s linear infinite;
 }
@@ -121,7 +113,10 @@
   background-color: var(--color-bg);
   text-align: center;
   z-index: var(--zindex-10);
+  animation: pulse 3s ease-in-out infinite;
 }
+
+/* ----- Animações ----- */
 
 @keyframes ringOrbit {
   from {
@@ -138,5 +133,17 @@
   }
   to {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
   }
 }

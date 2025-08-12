@@ -8,6 +8,7 @@
   padding: var(--margin-desktop);
   padding-top: var(--spacing-size-28);
   padding-bottom: var(--spacing-size-28);
+  z-index: var(--zindex-2000);
 }
 
 .logo {

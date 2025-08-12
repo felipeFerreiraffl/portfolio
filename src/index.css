@@ -181,5 +181,15 @@
 
 /* ----- Scrollbar ----- */
 body::-webkit-scrollbar {
-  background-color: var(--linear-gradient);
+  width: var(--spacing-size-16);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-main);
+  border-radius: var(--radius-12);
+  border: var(--spacing-size-4) solid var(--color-bg);
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--color-bg);
 }
