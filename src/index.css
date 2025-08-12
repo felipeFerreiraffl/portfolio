@@ -83,6 +83,7 @@
   --brightness-dark: brightness(1.2);
 
   /* ----- Espaçamento / Tamanhos ----- */
+  --spacing-size-2: 0.125rem; /* 2px */
   --spacing-size-4: 0.25rem; /* 4px */
   --spacing-size-8: 0.5rem; /* 8px */
   --spacing-size-12: 0.75rem; /* 12px */
@@ -114,6 +115,16 @@
   --spacing-size-116: 7.25rem; /* 116px */
   --spacing-size-120: 7.5rem; /* 120px */
   --spacing-size-144: 9rem; /* 144px */
+  --spacing-size-156: 9.75rem; /* 156px */
+  --spacing-size-160: 10rem; /* 156px */
+  --spacing-size-200: 12.5rem; /* 200px */
+  --spacing-size-236: 14.75rem; /* 236px */
+  --spacing-size-312: 19.5rem; /* 312px */
+  --spacing-size-400: 25rem; /* 400px */
+  --spacing-size-432: 27rem; /* 432px */
+  --spacing-size-580: 36.25rem; /* 580px */
+  --spacing-size-620: 38.75rem; /* 620px */
+  --spacing-size-644: 40.25rem; /* 644px */
 
   /* ----- Bordas ----- */
   --border-main-01: 0.125rem solid var(--color-main-01); /* 2px */
@@ -129,6 +140,15 @@
   --margin-desktop: 0 6rem; /* 0 96px */
   --margin-tablet: 0 4rem; /* 0 64px */
   --margin-mobile: 0 2rem; /* 0 32px */
+
+  /* ----- Z-Index ----- */
+  --zindex-1: 1;
+  --zindex-10: 10;
+  --zindex-100: 100;
+  --zindex-500: 500;
+  --zindex-1000: 1000;
+  --zindex-1500: 1500;
+  --zindex-2000: 2000;
 }
 
 /* ----- Tema claro ------ */
@@ -157,4 +177,9 @@
   --linear-gradient: var(--color-gradient-dark);
   --linear-gradient-floor: var(--color-gradient-dark-floor);
   --filter-brightness: var(--brightness-dark);
+}
+
+/* ----- Scrollbar ----- */
+body::-webkit-scrollbar {
+  background-color: var(--linear-gradient);
 }

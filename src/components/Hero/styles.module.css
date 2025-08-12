@@ -1,0 +1,142 @@
+.container {
+  position: relative;
+  width: 46.5rem;
+  aspect-ratio: 1 / 1;
+  margin-top: var(--spacing-size-104);
+  overflow: hidden;
+}
+
+/* .ringsContainer {
+  position: relative;
+  width: 46.5rem;
+  aspect-ratio: 1 / 1;
+} */
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.125rem solid var(--color-main);
+  border-radius: var(--radius-circular);
+  aspect-ratio: 1 / 1;
+  animation: ringOrbit 8s linear infinite;
+}
+
+.ringOne {
+  width: var(--spacing-size-200);
+}
+
+.ringTwo {
+  width: var(--spacing-size-236);
+}
+
+.ringThree {
+  width: var(--spacing-size-312);
+}
+
+.ringFour {
+  width: var(--spacing-size-400);
+}
+
+.ringFive {
+  width: var(--spacing-size-432);
+}
+
+.ringSix {
+  width: var(--spacing-size-580);
+}
+
+.ringSeven {
+  width: var(--spacing-size-620);
+}
+
+.ringEight {
+  width: var(--spacing-size-644);
+}
+
+.ringOne,
+.ringSeven {
+  border-width: var(--spacing-size-2);
+}
+
+.ringTwo,
+.ringFour,
+.ringSix {
+  border-width: var(--spacing-size-4);
+}
+
+.ringThree,
+.ringFive,
+.ringEight {
+  border-width: var(--spacing-size-8);
+}
+
+.orbitDotContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-size-312);
+  aspect-ratio: 1 / 1;
+  border: 1px solid red;
+  border-radius: var(--radius-circular);
+  animation: orbit 8s linear infinite;
+}
+
+.orbitDot {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-size-28);
+  aspect-ratio: 1 / 1;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--radius-circular);
+  background-color: var(--color-main);
+}
+
+.orbitDot::after {
+  content: "";
+  width: var(--spacing-size-12);
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-circular);
+}
+
+.name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  font: var(--font-headline-01);
+  color: var(--color-main);
+  background-color: var(--color-bg);
+  text-align: center;
+  z-index: var(--zindex-10);
+}
+
+@keyframes ringOrbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

@@ -9,6 +9,7 @@
   height: var(--spacing-size-56);
   background-color: var(--color-main-03);
   border-radius: var(--radius-8);
+  z-index: var(--zindex-1500);
 }
 
 .container::before {
@@ -29,6 +30,7 @@
   color: var(--color-neutral-01);
   text-transform: uppercase;
   transition: var(--transition-default);
+  z-index: var(--zindex-2000);
 }
 
 .container button:hover,
