@@ -1,8 +1,16 @@
 .container {
   position: relative;
-  width: 46.5rem;
+  width: min(46.5rem, 90vw); /* 744px */
   aspect-ratio: 1 / 1;
   margin-top: var(--spacing-size-104);
+
+  @media (max-width: 1200px) {
+    width: min(var(--spacing-size-640), 85vw);
+  }
+
+  @media (max-width: 576px) {
+    width: min(var(--spacing-size-256), 80vw);
+  }
 }
 
 .ring {
@@ -17,52 +25,64 @@
 }
 
 .ringOne {
-  width: var(--spacing-size-200);
+  width: min(var(--spacing-size-200), 27%);
 }
 
 .ringTwo {
-  width: var(--spacing-size-236);
+  width: min(var(--spacing-size-236), 32%);
 }
 
 .ringThree {
-  width: var(--spacing-size-312);
+  width: min(var(--spacing-size-312), 42%);
 }
 
 .ringFour {
-  width: var(--spacing-size-400);
+  width: min(var(--spacing-size-400), 54%);
 }
 
 .ringFive {
-  width: var(--spacing-size-432);
+  width: min(var(--spacing-size-432), 58%);
 }
 
 .ringSix {
-  width: var(--spacing-size-580);
+  width: min(var(--spacing-size-580), 78%);
 }
 
 .ringSeven {
-  width: var(--spacing-size-620);
+  width: min(var(--spacing-size-620), 83%);
 }
 
 .ringEight {
-  width: var(--spacing-size-644);
+  width: min(var(--spacing-size-644), 87%);
 }
 
 .ringOne,
 .ringSeven {
   border-width: var(--spacing-size-2);
+
+  @media (max-width: 576px) {
+    border-width: 1px;
+  }
 }
 
 .ringTwo,
 .ringFour,
 .ringSix {
   border-width: var(--spacing-size-4);
+
+  @media (max-width: 576px) {
+    border-width: var(--spacing-size-2);
+  }
 }
 
 .ringThree,
 .ringFive,
 .ringEight {
   border-width: var(--spacing-size-8);
+
+  @media (max-width: 576px) {
+    border-width: 3px;
+  }
 }
 
 .orbitDotContainer {
@@ -73,7 +93,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--spacing-size-312);
+  width: min(var(--spacing-size-312), 42%);
   aspect-ratio: 1 / 1;
   border-radius: var(--radius-circular);
   animation: orbit 8s linear infinite;
@@ -87,16 +107,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--spacing-size-28);
+  width: min(var(--spacing-size-28), 9%);
   aspect-ratio: 1 / 1;
-  box-shadow: var(--box-shadow);
   border-radius: var(--radius-circular);
   background-color: var(--color-main);
+  animation: shadow 1s ease-in-out infinite;
+
+  @media (max-width: 576px) {
+    top: -4px;
+  }
 }
 
 .orbitDot::after {
   content: "";
-  width: var(--spacing-size-12);
+  width: min(var(--spacing-size-12), 43%);
   aspect-ratio: 1 / 1;
   background-color: var(--color-bg);
   border-radius: var(--radius-circular);
@@ -114,6 +138,15 @@
   text-align: center;
   z-index: var(--zindex-10);
   animation: pulse 3s ease-in-out infinite;
+
+  @media (max-width: 1200px) {
+    font: var(--font-headline-02);
+  }
+
+  @media (max-width: 576px) {
+    font: var(--font-headline-05);
+    font-weight: 700;
+  }
 }
 
 /* ----- Animações ----- */
@@ -133,6 +166,18 @@
   }
   to {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: var(--box-shadow);
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: var(--box-shadow);
   }
 }
 
