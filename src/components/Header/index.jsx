@@ -15,6 +15,7 @@ import images from "../../services/utils/jsons/images";
 import ColorDropdown from "./Dropdown/Color";
 import LanguageDropdown from "./Dropdown/Language";
 import styles from "./styles.module.css";
+import { handleCloseMenu } from "../../services/utils/hooks/Header/menuModal";
 
 export default function Header() {
   // Tradução i18next
@@ -30,12 +31,14 @@ export default function Header() {
   // Refs para o DOM e GSAP
   const colorDropdownRef = useRef(null);
   const lngDropdownRef = useRef(null);
+  const menuRef = useRef(null);
 
   // Funções que separam os handlers
   const openColor = () => handleOpenDropdown(setColorDropdown);
   const closeColor = () => handleCloseDropdown(setColorDropdown);
   const openLng = () => handleOpenDropdown(setLngDropdown);
   const closeLng = () => handleCloseDropdown(setLngDropdown);
+  const closeMenu = () => handleCloseMenu(setMenuHeaderOpen);
 
   /* ----- Monta as animações do GSAP para os dropdowns ----- */
   // Cor
@@ -129,7 +132,10 @@ export default function Header() {
           <Icon icon={icons.remix.common.translate2} />
         </button>
 
-        <button className={styles.menu}>
+        <button
+          className={styles.menuIcon}
+          onClick={() => setMenuHeaderOpen(true)}
+        >
           <Icon icon={icons.remix.common.menu3} />
         </button>
       </div>
@@ -156,48 +162,46 @@ export default function Header() {
 
       {menuHeaderOpen && (
         <>
-          <div className={styles}></div>
-          <div className={styles}>
-            <nav>
-              <ul>
-                <li>
-                  <a href="#">Intro</a>
-                  <div className={styles}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </li>
-                <li>
-                  <a href="#">{t("header.skills")}</a>
-                  <div className={styles}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </li>
-                <li>
-                  <a href="#">{t("header.experience")}</a>
-                  <div className={styles}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </li>
-                <li>
-                  <a href="#">{t("header.projects")}</a>
-                  <div className={styles}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </li>
-                <li>
-                  <a href="#">{t("header.contacts")}</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+          <div className={styles.overlay}></div>
+          <nav className={styles.menu}>
+            <ul>
+              <li>
+                <a href="#">Intro</a>
+                <div className={styles.divisor}>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </li>
+              <li>
+                <a href="#">{t("header.skills")}</a>
+                <div className={styles.divisor}>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </li>
+              <li>
+                <a href="#">{t("header.experience")}</a>
+                <div className={styles.divisor}>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </li>
+              <li>
+                <a href="#">{t("header.projects")}</a>
+                <div className={styles.divisor}>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </li>
+              <li>
+                <a href="#">{t("header.contacts")}</a>
+              </li>
+            </ul>
+          </nav>
         </>
       )}
     </header>

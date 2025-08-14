@@ -101,7 +101,7 @@
   gap: var(--spacing-size-32);
 }
 
-.menu {
+.menuIcon {
   display: none;
 
   @media (max-width: 1200px) {
@@ -109,7 +109,7 @@
   }
 }
 
-.menu * {
+.menuIcon * {
   font-size: var(--spacing-size-28);
   color: var(--color-neutral-01);
 }
@@ -124,4 +124,63 @@
   position: absolute;
   top: 80px;
   right: 142px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: var(--zindex-1500);
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-size-48);
+  width: 100%;
+  background-color: var(--color-neutral-04);
+  z-index: var(--zindex-2000);
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-size-8);
+}
+
+.menu ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-size-4);
+}
+
+.menu ul li a {
+  font: var(--font-body-large-bold);
+  color: var(--color-neutral-01);
+  text-transform: uppercase;
+
+  @media (max-width: 576px) {
+    font: var(--font-body-medium-bold);
+  }
+}
+
+.divisor {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-size-8);
+}
+
+.divisor span {
+  width: var(--spacing-size-8);
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-main-02);
+  border-radius: var(--radius-circular);
 }
