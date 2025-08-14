@@ -24,6 +24,9 @@ export default function Header() {
   const [colorDropdown, setColorDropdown] = useState(false);
   const [lngDropdown, setLngDropdown] = useState(false);
 
+  // Estados do menu aberto ou fechado
+  const [menuHeaderOpen, setMenuHeaderOpen] = useState(false);
+
   // Refs para o DOM e GSAP
   const colorDropdownRef = useRef(null);
   const lngDropdownRef = useRef(null);
@@ -116,14 +119,20 @@ export default function Header() {
         </ul>
       </nav>
 
-      <button
-        className={styles.translation}
-        onClick={openLng}
-        title={t("header.aria.language")}
-        aria-label={t("header.aria.language")}
-      >
-        <Icon icon={icons.remix.common.translate2} />
-      </button>
+      <div className={styles.menuContainer}>
+        <button
+          className={styles.translation}
+          onClick={openLng}
+          title={t("header.aria.language")}
+          aria-label={t("header.aria.language")}
+        >
+          <Icon icon={icons.remix.common.translate2} />
+        </button>
+
+        <button className={styles.menu}>
+          <Icon icon={icons.remix.common.menu3} />
+        </button>
+      </div>
 
       {colorDropdown && (
         <span
@@ -143,6 +152,53 @@ export default function Header() {
         >
           <LanguageDropdown />
         </span>
+      )}
+
+      {menuHeaderOpen && (
+        <>
+          <div className={styles}></div>
+          <div className={styles}>
+            <nav>
+              <ul>
+                <li>
+                  <a href="#">Intro</a>
+                  <div className={styles}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">{t("header.skills")}</a>
+                  <div className={styles}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">{t("header.experience")}</a>
+                  <div className={styles}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">{t("header.projects")}</a>
+                  <div className={styles}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">{t("header.contacts")}</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </>
       )}
     </header>
   );
