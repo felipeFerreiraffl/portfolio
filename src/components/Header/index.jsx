@@ -4,18 +4,19 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
-  handleCloseDropdown,
-  handleCloseDropdownAnimation,
+  handleClose,
+  handleDropdownAnimation,
   handleDropdownGSAP,
-  handleOpenDropdown,
-} from "../../services/utils/hooks/Header/closeDropdown";
+  handleMenuAnimation,
+  handleMenuGSAP,
+  handleOpen
+} from "../../services/utils/hooks/Header/elements";
 import { useClickOutside } from "../../services/utils/hooks/Header/useClickOutside";
 import icons from "../../services/utils/jsons/icons";
 import images from "../../services/utils/jsons/images";
 import ColorDropdown from "./Dropdown/Color";
 import LanguageDropdown from "./Dropdown/Language";
 import styles from "./styles.module.css";
-import { handleCloseMenu } from "../../services/utils/hooks/Header/menuModal";
 
 export default function Header() {
   // Tradução i18next
@@ -34,11 +35,11 @@ export default function Header() {
   const menuRef = useRef(null);
 
   // Funções que separam os handlers
-  const openColor = () => handleOpenDropdown(setColorDropdown);
-  const closeColor = () => handleCloseDropdown(setColorDropdown);
-  const openLng = () => handleOpenDropdown(setLngDropdown);
-  const closeLng = () => handleCloseDropdown(setLngDropdown);
-  const closeMenu = () => handleCloseMenu(setMenuHeaderOpen);
+  const openColor = () => handleOpen(setColorDropdown);
+  const closeColor = () => handleClose(setColorDropdown);
+  const openLng = () => handleOpen(setLngDropdown);
+  const closeLng = () => handleClose(setLngDropdown);
+  const closeMenu = () => handleClose(setMenuHeaderOpen);
 
   /* ----- Monta as animações do GSAP para os dropdowns ----- */
   // Cor
@@ -51,17 +52,25 @@ export default function Header() {
     handleDropdownGSAP(lngDropdownRef, lngDropdown, { x: 16 });
   }, [lngDropdown]);
 
+  // Menu
+  useEffect(() => {
+    handleMenuGSAP(menuRef, menuHeaderOpen);
+  }, [menuHeaderOpen]);
+
   // Animações de saída dos dropdowns
   const closeColorAnimation = () => {
-    handleCloseDropdownAnimation(colorDropdownRef, closeColor, "left");
+    handleDropdownAnimation(colorDropdownRef, closeColor, "left");
   };
   const closeLngAnimation = () => {
-    handleCloseDropdownAnimation(lngDropdownRef, closeLng, "right");
+    handleDropdownAnimation(lngDropdownRef, closeLng, "right");
+  };
+  const closeMenuAnimation = () => {
+    handleMenuAnimation(menuRef, closeMenu);
   };
 
-  // Parâmetros para a função de clicar fora do elemento dropdown
-  const refs = [colorDropdownRef, lngDropdownRef];
-  const handlers = [closeColorAnimation, closeLngAnimation];
+  // Parâmetros para a função de clicar fora do elemento dropdown e menu (mobile e tablet)
+  const refs = [colorDropdownRef, lngDropdownRef, menuRef];
+  const handlers = [closeColorAnimation, closeLngAnimation, closeMenuAnimation];
 
   useClickOutside(refs, handlers);
 
@@ -163,7 +172,7 @@ export default function Header() {
       {menuHeaderOpen && (
         <>
           <div className={styles.overlay}></div>
-          <nav className={styles.menu}>
+          <nav className={styles.menu} ref={menuRef}>
             <ul>
               <li>
                 <a href="#">Intro</a>

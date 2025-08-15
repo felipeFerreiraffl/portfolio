@@ -3,12 +3,12 @@
 import gsap from "gsap";
 
 // Abre o dropdown (define estado como true)
-export const handleOpenDropdown = (setter) => {
+export const handleOpen = (setter) => {
   setter(true);
 };
 
 // Abre o dropdown (define estado como false)
-export const handleCloseDropdown = (setter) => {
+export const handleClose = (setter) => {
   setter(false);
 };
 
@@ -30,8 +30,16 @@ export function handleDropdownGSAP(ref, state, set = {}) {
   }
 }
 
+// Configurações do GSAP do menu
+export function handleMenuGSAP(ref, state) {
+  if (state && ref.current) {
+    gsap.set(ref.current, { y: "-100%" });
+    gsap.to(ref.current, { y: 0, duration: 0.6, ease: "power1.inOut" });
+  }
+}
+
 // Gera a animação de entrada ou saída
-export function handleCloseDropdownAnimation(ref, handler, direction = "left") {
+export function handleDropdownAnimation(ref, handler, direction = "left") {
   const exitAnimation = (element) => {
     return gsap.to(element, {
       opacity: 0,
@@ -42,8 +50,28 @@ export function handleCloseDropdownAnimation(ref, handler, direction = "left") {
     });
   };
 
+  // Gera a animação antes de fechar, caso não tenha feito
   if (ref.current) {
     exitAnimation(ref.current, direction).then(() => {
+      handler();
+    });
+  } else {
+    handler();
+  }
+}
+// Gera a animação de entrada ou saída do menu
+export function handleMenuAnimation(ref, handler) {
+  const exitAnimation = (element) => {
+    return gsap.to(element, {
+      y: "-100%",
+      duration: 0.6,
+      ease: "power1.inOut",
+    });
+  };
+
+  // Gera a animação antes de fechar, caso não tenha feito
+  if (ref.current) {
+    exitAnimation(ref.current).then(() => {
       handler();
     });
   } else {
