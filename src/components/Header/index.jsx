@@ -9,7 +9,7 @@ import {
   handleDropdownGSAP,
   handleMenuAnimation,
   handleMenuGSAP,
-  handleOpen
+  handleOpen,
 } from "../../services/utils/hooks/Header/elements";
 import { useClickOutside } from "../../services/utils/hooks/Header/useClickOutside";
 import icons from "../../services/utils/jsons/icons";
@@ -183,7 +183,31 @@ export default function Header() {
                 </div>
               </li>
               <li>
-                <a href="#">{t("header.skills")}</a>
+                <a
+                  href="#"
+                  title={t("header.skills")}
+                  aria-label={t("header.skills")}
+                >
+                  {t("header.skills")}
+                </a>
+                <div
+                  className={styles.divisor}
+                  title="Intro"
+                  aria-label="Intro"
+                >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  title={t("header.experience")}
+                  aria-label={t("header.experience")}
+                >
+                  {t("header.experience")}
+                </a>
                 <div className={styles.divisor}>
                   <span></span>
                   <span></span>
@@ -191,7 +215,13 @@ export default function Header() {
                 </div>
               </li>
               <li>
-                <a href="#">{t("header.experience")}</a>
+                <a
+                  href="#"
+                  title={t("header.projects")}
+                  aria-label={t("header.projects")}
+                >
+                  {t("header.projects")}
+                </a>
                 <div className={styles.divisor}>
                   <span></span>
                   <span></span>
@@ -199,15 +229,13 @@ export default function Header() {
                 </div>
               </li>
               <li>
-                <a href="#">{t("header.projects")}</a>
-                <div className={styles.divisor}>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </li>
-              <li>
-                <a href="#">{t("header.contacts")}</a>
+                <a
+                  href="#"
+                  title={t("header.contacts")}
+                  aria-label={t("header.contacts")}
+                >
+                  {t("header.contacts")}
+                </a>
               </li>
             </ul>
           </nav>

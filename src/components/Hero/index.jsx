@@ -1,16 +1,36 @@
+import gsap from "gsap";
 import styles from "./styles.module.css";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
 
 export default function Hero() {
+  const ringRefs = useRef([]);
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline();
+
+      ringRefs.current.forEach((ring, i) => {
+        tl.fromTo(
+          ring,
+          { opacity: 0, scale: 0 },
+          { opacity: 1, scale: 1, duration: 0.3 + i * 0.2 },
+          i * 0.2
+        );
+      });
+    },
+    { scope: ringRefs }
+  );
+
   return (
     <div className={styles.container}>
-      <div className={`${styles.ring} ${styles.ringOne}`}></div>
-      <div className={`${styles.ring} ${styles.ringTwo}`}></div>
-      <div className={`${styles.ring} ${styles.ringThree}`}></div>
-      <div className={`${styles.ring} ${styles.ringFour}`}></div>
-      <div className={`${styles.ring} ${styles.ringFive}`}></div>
-      <div className={`${styles.ring} ${styles.ringSix}`}></div>
-      <div className={`${styles.ring} ${styles.ringSeven}`}></div>
-      <div className={`${styles.ring} ${styles.ringEight}`}></div>
+      {[...Array(8)].map((_, i) => (
+        <div
+          key={i}
+          className={`${styles.ring} ${styles[`ring${i + 1}`]}`}
+          ref={(el) => (ringRefs.current[i] = el)}
+        ></div>
+      ))}
 
       <div className={styles.name}>Felipe Ferreira Lima</div>
 

@@ -26,6 +26,7 @@ export default function LanguageDropdown() {
         onClick={() => handleChangeLanguage("pt-BR")}
         title={t("header.aria.ptBr")}
         aria-label={t("header.aria.ptBr")}
+        tabIndex={0}
       >
         Por
       </button>
@@ -35,6 +36,7 @@ export default function LanguageDropdown() {
         onClick={() => handleChangeLanguage("en")}
         title={t("header.aria.en")}
         aria-label={t("header.aria.en")}
+        tabIndex={0}
       >
         Eng
       </button>

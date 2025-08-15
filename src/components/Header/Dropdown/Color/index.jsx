@@ -16,6 +16,7 @@ export default function ColorDropdown() {
         onClick={() => setColorTheme("light")}
         title={t("header.aria.light")}
         aria-label={t("header.aria.light")}
+        tabIndex={0}
       ></button>
       <button
         className={`${styles.circle} ${styles.dark} ${
@@ -24,6 +25,7 @@ export default function ColorDropdown() {
         onClick={() => setColorTheme("dark")}
         title={t("header.aria.dark")}
         aria-label={t("header.aria.dark")}
+        tabIndex={0}
       ></button>
     </div>
   );

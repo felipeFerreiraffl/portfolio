@@ -24,40 +24,40 @@
   animation: ringOrbit 8s linear infinite;
 }
 
-.ringOne {
+.ring1 {
   width: min(var(--spacing-size-200), 27%);
 }
 
-.ringTwo {
+.ring2 {
   width: min(var(--spacing-size-236), 32%);
 }
 
-.ringThree {
+.ring3 {
   width: min(var(--spacing-size-312), 42%);
 }
 
-.ringFour {
+.ring4 {
   width: min(var(--spacing-size-400), 54%);
 }
 
-.ringFive {
+.ring5 {
   width: min(var(--spacing-size-432), 58%);
 }
 
-.ringSix {
+.ring6 {
   width: min(var(--spacing-size-580), 78%);
 }
 
-.ringSeven {
+.ring7 {
   width: min(var(--spacing-size-620), 83%);
 }
 
-.ringEight {
+.ring8 {
   width: min(var(--spacing-size-644), 87%);
 }
 
-.ringOne,
-.ringSeven {
+.ring1,
+.ring7 {
   border-width: var(--spacing-size-2);
 
   @media (max-width: 576px) {
@@ -65,9 +65,9 @@
   }
 }
 
-.ringTwo,
-.ringFour,
-.ringSix {
+.ring2,
+.ring4,
+.ring6 {
   border-width: var(--spacing-size-4);
 
   @media (max-width: 576px) {
@@ -75,9 +75,9 @@
   }
 }
 
-.ringThree,
-.ringFive,
-.ringEight {
+.ring3,
+.ring5,
+.ring8 {
   border-width: var(--spacing-size-8);
 
   @media (max-width: 576px) {
