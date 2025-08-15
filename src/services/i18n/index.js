@@ -11,9 +11,9 @@ i18n
   .init({
     fallbackLng: "pt-BR",
     supportedLngs: ["pt-BR", "en"],
-    ns: ["header"],
+    ns: ["header", "intro"],
     backend: {
-      loadPath: "locales/{{lng}}/{{ns}}.json",
+      loadPath: "/locales/{{lng}}/{{ns}}.json",
     },
     interpolation: {
       escapeValue: false, // React já faz a proteção contra XSS

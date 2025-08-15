@@ -1,0 +1,22 @@
+{
+  "intro": {
+    "title": "Intro",
+    "subtitle": "A small introduction to get to know me",
+    "infos": {
+      "label": "I.T. Student",
+      "presentation": {
+        "title": "Presentation",
+        "desc": "A tech student with curiosity to learn about web development, game design, coding and front-end recourses."
+      },
+      "hobbies": {
+        "title": "Hobbies",
+        "desc": "Football fan, watch animes, read mangas and take a liking to draw."
+      },
+      "goals": {
+        "title": "Goals",
+        "desc": "I want to start in I.T. area as an technical supporter or help desk, with the goals of entering at front-end development branch. If possible, I'd want to study or work with games."
+      }
+    },
+    "button": "Check CV"
+  }
+}

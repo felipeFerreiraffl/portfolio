@@ -1,0 +1,22 @@
+{
+  "intro": {
+    "title": "Intro",
+    "subtitle": "Pequena introdução para me conhecer",
+    "infos": {
+      "label": "Estudante de T.I.",
+      "presentation": {
+        "title": "Apresentação",
+        "desc": "Estudante de tecnologia com curiosidade para aprender sobre desenvolvimento web, game design, programação e recursos front-end."
+      },
+      "hobbies": {
+        "title": "Hobbies",
+        "desc": "Admirador de futebol, assisto animes, leio mangás e tenho gosto para desenhar."
+      },
+      "goals": {
+        "title": "Objetivo",
+        "desc": "Pretendo começar na área de T.I. como suporte técnico ou help desk, com objetivo de ingressar no ramo de desenvolvimento front-end. Se possível, desejaria estudar ou trabalhar com jogos."
+      }
+    },
+    "button": "Ver CV"
+  }
+}
