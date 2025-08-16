@@ -20,7 +20,7 @@ import styles from "./styles.module.css";
 
 export default function Header() {
   // Tradução i18next
-  const { t } = useTranslation();
+  const { t } = useTranslation("header");
 
   // Estados para definir se está aberto ou fechado
   const [colorDropdown, setColorDropdown] = useState(false);

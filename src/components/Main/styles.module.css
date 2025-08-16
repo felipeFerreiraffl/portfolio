@@ -1,7 +1,9 @@
 .main {
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--spacing-size-120);
   margin-top: var(--spacing-size-120);
+  padding: var(--margin-desktop);
 }
