@@ -2,6 +2,7 @@ import styles from "./styles.module.css";
 import { useTranslation } from "react-i18next";
 import SectionTitle from "../../SectionTitle";
 import images from "../../../services/utils/jsons/images";
+import Info from "./Info";
 
 export default function Intro() {
   const { t: tSection } = useTranslation("sections");
@@ -26,7 +27,28 @@ export default function Intro() {
             <h2>Felipe Ferreira Lima</h2>
             <p>{tSection("intro.infos.label")}</p>
           </div>
-          <div className={styles.infos}></div>
+
+          <ul>
+            <li>
+              <Info
+                title={tSection("intro.infos.presentation.title")}
+                desc={tSection("intro.infos.presentation.desc")}
+              />
+            </li>
+            <li>
+              <Info
+                title={tSection("intro.infos.hobbies.title")}
+                desc={tSection("intro.infos.hobbies.desc")}
+              />
+            </li>
+            <li>
+              <Info
+                title={tSection("intro.infos.goals.title")}
+                desc={tSection("intro.infos.goals.desc")}
+              />
+            </li>
+          </ul>
+
           <a href="">{tCommon("button_labels.curriculum_vitae")}</a>
         </div>
       </div>

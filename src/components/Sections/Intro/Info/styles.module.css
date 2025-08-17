@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-size-8);
+}
+
+.listTitleContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-size-12);
+}
+
+.bullet {
+  width: var(--spacing-size-16);
+  aspect-ratio: 1 / 1;
+  border: var(--border-main-02);
+  border-radius: var(--radius-circular);
+}
+
+.listTitleContainer h3 {
+  font: var(--font-headline-05);
+  color: var(--color-text);
+}
+
+.container p {
+  font: var(--font-body-medium-regular);
+  color: var(--color-text);
+}
