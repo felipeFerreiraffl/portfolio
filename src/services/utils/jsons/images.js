@@ -5,6 +5,7 @@ import logo from "../../../assets/svgs/logos/logo.svg";
 const images = {
   statue: statue,
   logo: logo,
+  profile: "",
 };
 
 export default images;
