@@ -4,11 +4,15 @@ import SectionTitle from "../../SectionTitle";
 import images from "../../../services/utils/jsons/images";
 
 export default function Intro() {
-  const { t } = useTranslation("sections");
+  const { t: tSection } = useTranslation("sections");
+  const { t: tCommon } = useTranslation("common");
 
   return (
     <div className={styles.container}>
-      <SectionTitle title={t("intro.title")} subtitle={t("intro.subtitle")} />
+      <SectionTitle
+        title={tSection("intro.title")}
+        subtitle={tSection("intro.subtitle")}
+      />
 
       <div className={styles.content}>
         <div className={styles.profileContainer}>
@@ -17,13 +21,13 @@ export default function Intro() {
           <img src={images.profile} alt="" loading="lazy" />
         </div>
 
-        <div className={styles}>
-          <div className={styles}>
+        <div className={styles.infosContainer}>
+          <div className={styles.titleContainer}>
             <h2>Felipe Ferreira Lima</h2>
-            <p>{t("intro.infos.label")}</p>
+            <p>{tSection("intro.infos.label")}</p>
           </div>
-          <div className={styles}></div>
-          <a href=""></a>
+          <div className={styles.infos}></div>
+          <a href="">{tCommon("button_labels.curriculum_vitae")}</a>
         </div>
       </div>
     </div>
