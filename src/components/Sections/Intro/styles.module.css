@@ -8,18 +8,49 @@
 }
 
 .content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-size-56);
 }
 
 .profileContainer {
+  position: relative;
+  width: var(--spacing-size-364);
+  aspect-ratio: 1 / 1;
 }
 
 .ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-color: var(--color-main);
+  border-style: solid;
+  border-radius: var(--radius-circular);
 }
 
 .firstRing {
+  width: min(var(--spacing-size-364), 100%);
+  aspect-ratio: 1 / 1;
+  border-width: var(--spacing-size-8);
 }
 
 .secondRing {
+  width: min(var(--spacing-size-332), 92%);
+  aspect-ratio: 1 / 1;
+  border-width: var(--spacing-size-2);
+}
+
+.profileContainer img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(var(--spacing-size-260), 72%);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radius-circular);
 }
 
 .infosContainer {
