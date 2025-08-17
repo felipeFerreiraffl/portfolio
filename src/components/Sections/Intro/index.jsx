@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import SectionTitle from "../../SectionTitle";
 
 export default function Intro() {
-  const { t } = useTranslation("intro");
+  const { t } = useTranslation("sections");
 
   return (
     <div className={styles.container}>

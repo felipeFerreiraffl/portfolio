@@ -1,0 +1,20 @@
+{
+  "navbar": {
+    "skills": "Habilidades",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "contacts": "Contatos"
+  },
+  "tooltip": {
+    "theme": "Trocar tema",
+    "language": "Trocar idioma",
+    "light": "Trocar para tema claro",
+    "dark": "Trocar para tema escuro",
+    "pt_br": "Trocar para português-BR",
+    "en": "Trocar para inglês"
+  },
+  "button_labels": {
+    "curriculum_vitae": "Ver CV",
+    "figma": "Acessar design"
+  }
+}

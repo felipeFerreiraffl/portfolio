@@ -9,7 +9,6 @@
 
 .mainTitleContainer {
   width: 100%;
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,10 +21,9 @@
 }
 
 .line {
-  width: 496px;
+  width: 100%;
   height: var(--spacing-size-4);
   background-color: var(--color-main);
-  /* border: 1px solid red; */
 }
 
 .diamond {

@@ -20,7 +20,7 @@ import styles from "./styles.module.css";
 
 export default function Header() {
   // Tradução i18next
-  const { t } = useTranslation("header");
+  const { t } = useTranslation();
 
   // Estados para definir se está aberto ou fechado
   const [colorDropdown, setColorDropdown] = useState(false);
@@ -79,8 +79,8 @@ export default function Header() {
       <button
         className={styles.logo}
         onClick={openColor}
-        title={t("header.aria.theme")}
-        aria-label={t("header.aria.theme")}
+        title={t("tooltip.theme")}
+        aria-label={t("tooltip.theme")}
       >
         <img src={images.logo} alt="Logo" />
       </button>
@@ -95,37 +95,37 @@ export default function Header() {
           <li>
             <a
               href="#"
-              title={t("header.skills")}
-              aria-label={t("header.skills")}
+              title={t("navbar.skills")}
+              aria-label={t("navbar.skills")}
             >
-              {t("header.skills")}
+              {t("navbar.skills")}
             </a>
           </li>
           <li>
             <a
               href="#"
-              title={t("header.experience")}
-              aria-label={t("header.experience")}
+              title={t("navbar.experience")}
+              aria-label={t("navbar.experience")}
             >
-              {t("header.experience")}
+              {t("navbar.experience")}
             </a>
           </li>
           <li>
             <a
               href="#"
-              title={t("header.projects")}
-              aria-label={t("header.projects")}
+              title={t("navbar.projects")}
+              aria-label={t("navbar.projects")}
             >
-              {t("header.projects")}
+              {t("navbar.projects")}
             </a>
           </li>
           <li>
             <a
               href="#"
-              title={t("header.contacts")}
-              aria-label={t("header.contacts")}
+              title={t("navbar.contacts")}
+              aria-label={t("navbar.contacts")}
             >
-              {t("header.contacts")}
+              {t("navbar.contacts")}
             </a>
           </li>
         </ul>
@@ -135,8 +135,8 @@ export default function Header() {
         <button
           className={styles.translation}
           onClick={openLng}
-          title={t("header.aria.language")}
-          aria-label={t("header.aria.language")}
+          title={t("tooltip.language")}
+          aria-label={t("tooltip.language")}
         >
           <Icon icon={icons.remix.common.translate2} />
         </button>
@@ -185,10 +185,10 @@ export default function Header() {
               <li>
                 <a
                   href="#"
-                  title={t("header.skills")}
-                  aria-label={t("header.skills")}
+                  title={t("navbar.skills")}
+                  aria-label={t("navbar.skills")}
                 >
-                  {t("header.skills")}
+                  {t("navbar.skills")}
                 </a>
                 <div
                   className={styles.divisor}
@@ -203,10 +203,10 @@ export default function Header() {
               <li>
                 <a
                   href="#"
-                  title={t("header.experience")}
-                  aria-label={t("header.experience")}
+                  title={t("navbar.experience")}
+                  aria-label={t("navbar.experience")}
                 >
-                  {t("header.experience")}
+                  {t("navbar.experience")}
                 </a>
                 <div className={styles.divisor}>
                   <span></span>
@@ -217,10 +217,10 @@ export default function Header() {
               <li>
                 <a
                   href="#"
-                  title={t("header.projects")}
-                  aria-label={t("header.projects")}
+                  title={t("navbar.projects")}
+                  aria-label={t("navbar.projects")}
                 >
-                  {t("header.projects")}
+                  {t("navbar.projects")}
                 </a>
                 <div className={styles.divisor}>
                   <span></span>
@@ -231,10 +231,10 @@ export default function Header() {
               <li>
                 <a
                   href="#"
-                  title={t("header.contacts")}
-                  aria-label={t("header.contacts")}
+                  title={t("navbar.contacts")}
+                  aria-label={t("navbar.contacts")}
                 >
-                  {t("header.contacts")}
+                  {t("navbar.contacts")}
                 </a>
               </li>
             </ul>

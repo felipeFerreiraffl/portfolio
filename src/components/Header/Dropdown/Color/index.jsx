@@ -14,8 +14,8 @@ export default function ColorDropdown() {
           theme === "light" ? styles.active : ""
         }`}
         onClick={() => setColorTheme("light")}
-        title={t("header.aria.light")}
-        aria-label={t("header.aria.light")}
+        title={t("tooltip.light")}
+        aria-label={t("tooltip.light")}
         tabIndex={0}
       ></button>
       <button
@@ -23,8 +23,8 @@ export default function ColorDropdown() {
           theme === "dark" ? styles.active : ""
         }`}
         onClick={() => setColorTheme("dark")}
-        title={t("header.aria.dark")}
-        aria-label={t("header.aria.dark")}
+        title={t("tooltip.dark")}
+        aria-label={t("tooltip.dark")}
         tabIndex={0}
       ></button>
     </div>

@@ -24,8 +24,8 @@ export default function LanguageDropdown() {
       <button
         className={`${language === "pt-BR" ? styles.active : ""}`}
         onClick={() => handleChangeLanguage("pt-BR")}
-        title={t("header.aria.ptBr")}
-        aria-label={t("header.aria.ptBr")}
+        title={t("tooltip.pt_br")}
+        aria-label={t("tooltip.pt_br")}
         tabIndex={0}
       >
         Por
@@ -34,8 +34,8 @@ export default function LanguageDropdown() {
       <button
         className={`${language === "en" ? styles.active : ""}`}
         onClick={() => handleChangeLanguage("en")}
-        title={t("header.aria.en")}
-        aria-label={t("header.aria.en")}
+        title={t("tooltip.en")}
+        aria-label={t("tooltip.en")}
         tabIndex={0}
       >
         Eng
