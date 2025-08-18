@@ -144,6 +144,8 @@ export default function Header() {
         <button
           className={styles.menuIcon}
           onClick={() => setMenuHeaderOpen(true)}
+          title={t("tooltip.open_menu")}
+          aria-label={t("tooltip.open_menu")}
         >
           <Icon icon={icons.remix.common.menu3} />
         </button>
