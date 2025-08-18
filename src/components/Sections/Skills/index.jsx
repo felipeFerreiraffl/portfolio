@@ -38,7 +38,8 @@ export default function Skills() {
         subtitle={tSections("skills.subtitle")}
       />
 
-      <Slide title={"Feedasassas"} src={profile} alt={"Image"} techs={data} />
+      
+      {/* <Slide title={""} src={profile} alt={"Image"} techs={data} /> */}
       {/* <LocalIcon icon={icons.local.mongodb} alt={"MongoDB"} /> */}
     </div>
   );
