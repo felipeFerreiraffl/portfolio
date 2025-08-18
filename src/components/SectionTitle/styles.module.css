@@ -4,6 +4,10 @@
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-size-12);
+
+  @media (max-width: 576px) {
+    width: 80vw;
+  }
 }
 
 .mainTitleContainer {
@@ -31,15 +35,28 @@
   aspect-ratio: 1 / 1;
   background-color: var(--color-main);
   transform: rotate(45deg);
+
+  @media (max-width: 1200px) {
+    width: var(--spacing-size-12);
+  }
 }
 
 .mainTitleContainer h2 {
   font: var(--font-headline-02);
   color: var(--color-title);
+
+  @media (max-width: 576px) {
+    font: var(--font-headline-04);
+    font-weight: 700;
+  }
 }
 
 .container p {
   font: var(--font-body-large-regular);
   color: var(--color-text);
   text-align: center;
+
+  @media (max-width: 576px) {
+    font: var(--font-body-small-regular);
+  }
 }
