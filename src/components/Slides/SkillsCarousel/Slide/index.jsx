@@ -1,12 +1,24 @@
+import Tech from "../Tech";
 import styles from "./styles.module.css";
 
-export default function Slide({  }) {
+export default function Slide({
+  title,
+  src,
+  alt,
+  techs = [],
+  techName,
+  techIcon,
+}) {
   return (
-    <div>
-      <h3 className={styles}></h3>
-      <div className={styles}>
-        <img src="" alt="" />
-        <div className={styles}></div>
+    <div className={styles.container}>
+      <h3>{title}</h3>
+      <div className={styles.content}>
+        <img src={src} alt={alt} />
+        <div className={styles}>
+          {techs.map((_, i) => (
+            <Tech key={i} icon={techIcon} name={techName} />
+          ))}
+        </div>
       </div>
     </div>
   );
