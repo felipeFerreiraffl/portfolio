@@ -17,5 +17,9 @@
         "desc": "Pretendo começar na área de T.I. como suporte técnico ou help desk, com objetivo de ingressar no ramo de desenvolvimento front-end. Se possível, desejaria estudar ou trabalhar com jogos."
       }
     }
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Meu conhecimento e tecnologias utilizadas"
   }
 }
