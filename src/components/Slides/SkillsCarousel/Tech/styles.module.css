@@ -1,0 +1,23 @@
+.container {
+  width: var(--spacing-size-144);
+  aspect-ratio: 4 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-size-8);
+  background-color: var(--color-opacity_40);
+  border: var(--border-main);
+  border-radius: var(--spacing-size-96);
+}
+
+.container p {
+  font: var(--font-body-medium-bold);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.container span * {
+  font-size: var(--spacing-size-64);
+  color: var(--color-text);
+}

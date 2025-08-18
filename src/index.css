@@ -166,6 +166,7 @@
   --color-main: var(--color-main-02);
   --color-opacity_40: var(--color-opacity-main-02_40);
   --color-opacity_80: var(--color-opacity-main-02_80);
+  --border-main: var(--border-main-02);
   --box-shadow: var(--shadow-default-dark);
   --linear-gradient: var(--color-gradient-light);
   --linear-gradient-floor: var(--color-gradient-light-floor);
@@ -180,6 +181,7 @@
   --color-main: var(--color-main-01);
   --color-opacity_40: var(--color-opacity-main-01_40);
   --color-opacity_80: var(--color-opacity-main-01_80);
+  --border-main: var(--border-main-01);
   --box-shadow: var(--shadow-default-light);
   --linear-gradient: var(--color-gradient-dark);
   --linear-gradient-floor: var(--color-gradient-dark-floor);
