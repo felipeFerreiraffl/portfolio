@@ -19,7 +19,12 @@ export default function Intro() {
         <div className={styles.profileContainer}>
           <div className={`${styles.ring} ${styles.firstRing}`}></div>
           <div className={`${styles.ring} ${styles.secondRing}`}></div>
-          <img src={images.profile} alt="" loading="lazy" />
+          <img
+            src={images.profile}
+            alt={tCommon("alts.profile")}
+            title={tCommon("alts.profile")}
+            loading="lazy"
+          />
         </div>
 
         <div className={styles.infosContainer}>
@@ -49,7 +54,14 @@ export default function Intro() {
             </li>
           </ul>
 
-          <a href="">{tCommon("button_labels.curriculum_vitae")}</a>
+          <a
+            href="/public/archives/dev-curriculum.pdf"
+            target="_blank"
+            title={tCommon("button_labels.curriculum_vitae")}
+            aria-label={tCommon("button_labels.curriculum_vitae")}
+          >
+            {tCommon("button_labels.curriculum_vitae")}
+          </a>
         </div>
       </div>
     </div>

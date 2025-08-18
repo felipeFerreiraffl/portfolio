@@ -13,6 +13,9 @@
     "pt_br": "Trocar para português-BR",
     "en": "Trocar para inglês"
   },
+  "alts": {
+    "profile": "Foto de Felipe Ferreira Lima"
+  },
   "button_labels": {
     "curriculum_vitae": "Ver CV",
     "figma": "Acessar design"

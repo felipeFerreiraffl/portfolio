@@ -13,6 +13,9 @@
     "pt_br": "Change to portuguese-BR",
     "en": "Change to english"
   },
+  "alts": {
+    "profile": "Felipe Ferreira Lima's photo"
+  },
   "button_labels": {
     "curriculum_vitae": "See CV",
     "figma": "Acess design"
