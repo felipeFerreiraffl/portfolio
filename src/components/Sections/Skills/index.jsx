@@ -31,7 +31,7 @@ export default function Skills() {
   ];
 
   return (
-    <div className={styles}>
+    <div className="section-container" tabIndex={0}>
       <SectionTitle
         title={tSections("skills.title")}
         subtitle={tSections("skills.subtitle")}
