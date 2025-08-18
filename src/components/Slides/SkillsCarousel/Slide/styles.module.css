@@ -9,12 +9,22 @@
 .container h3 {
   font: var(--font-headline-03);
   color: var(--color-text);
+
+  @media (max-width: 576px) {
+    font: var(--font-headline-05);
+    font-weight: 700;
+  }
 }
 
 .content {
   display: flex;
   align-items: center;
   gap: var(--spacing-size-16);
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: var(--spacing-size-48);
+  }
 }
 
 .content img {
@@ -22,6 +32,8 @@
   aspect-ratio: 440 / 293;
   object-fit: cover;
   border-radius: var(--radius-8);
+
+  
 }
 
 .techsContainer {

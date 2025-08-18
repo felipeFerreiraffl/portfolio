@@ -9,15 +9,27 @@
   background-color: var(--color-opacity_40);
   border: var(--border-main);
   border-radius: var(--spacing-size-96);
+
+  @media (max-width: 576px) {
+    width: var(--spacing-size-112);
+  }
 }
 
 .container p {
   font: var(--font-body-medium-bold);
   color: var(--color-text);
   text-align: center;
+
+  @media (max-width: 576px) {
+    font: var(--font-body-small-bold);
+  }
 }
 
 .container span * {
   font-size: var(--spacing-size-64);
   color: var(--color-text);
+
+  @media (max-width: 576px) {
+    font-size: var(--spacing-size-48);
+  }
 }
