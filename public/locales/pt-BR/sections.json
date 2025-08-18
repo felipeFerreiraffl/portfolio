@@ -20,6 +20,10 @@
   },
   "skills": {
     "title": "Habilidades",
-    "subtitle": "Meu conhecimento e tecnologias utilizadas"
+    "subtitle": "Meu conhecimento e tecnologias utilizadas",
+    "carousel_titles": {
+      "database": "Banco de dados",
+      "tools": "Ferramentas"
+    }
   }
 }

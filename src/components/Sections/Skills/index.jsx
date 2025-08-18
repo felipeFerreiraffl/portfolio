@@ -1,12 +1,9 @@
-import { useTranslation } from "react-i18next";
-import SectionTitle from "../../SectionTitle";
-import styles from "./styles.module.css";
-import Tech from "../../Slides/SkillsCarousel/Tech";
-import LocalIcon from "../../Icon";
-import icons from "../../../services/utils/jsons/icons";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import Slide from "../../Slides/SkillsCarousel/Slide";
+import { useTranslation } from "react-i18next";
 import profile from "../../../assets/imgs/profile.webp";
+import icons from "../../../services/utils/jsons/icons";
+import SectionTitle from "../../SectionTitle";
+import Slide from "../../Slides/SkillsCarousel/Slide";
 
 export default function Skills() {
   const { t: tSections } = useTranslation("sections");
@@ -28,6 +25,10 @@ export default function Skills() {
       techName: "Tech 4",
       techIcon: <Icon icon={icons.remix.brand.github} />,
     },
+    {
+      techName: "Tech 5",
+      techIcon: <Icon icon={icons.remix.brand.github} />,
+    },
   ];
 
   return (
@@ -37,13 +38,7 @@ export default function Skills() {
         subtitle={tSections("skills.subtitle")}
       />
 
-      <Slide
-        title={"Feedasassas"}
-        src={profile}
-        alt={"Image"}
-        techName={data.find((tech) => tech.techName)}
-        techIcon={data.find((tech) => tech.techIcon)}
-      />
+      <Slide title={"Feedasassas"} src={profile} alt={"Image"} techs={data} />
       {/* <LocalIcon icon={icons.local.mongodb} alt={"MongoDB"} /> */}
     </div>
   );
