@@ -1,4 +1,5 @@
 .container {
+  width: 85vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,6 +7,7 @@
 }
 
 .mainTitleContainer {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +15,7 @@
 }
 
 .lineContainer {
-  width: 85vw;
+  width: 100%;
   display: flex;
   align-items: center;
 }
