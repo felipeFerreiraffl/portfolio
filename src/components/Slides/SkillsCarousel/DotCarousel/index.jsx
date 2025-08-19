@@ -5,12 +5,12 @@ export default function DotCarousel({ selected, onClick }) {
     <button className={styles.container} onClick={onClick}>
       <div
         className={`${styles.ring} ${styles.ringOne} ${
-          selected ? styles.selected : ""
+          selected ? styles.selected : styles.normal
         }`}
       ></div>
       <div
         className={`${styles.ring} ${styles.ringTwo} ${
-          selected ? styles.selected : ""
+          selected ? styles.selected : styles.normal
         }`}
       ></div>
       <div className={styles.dot}></div>

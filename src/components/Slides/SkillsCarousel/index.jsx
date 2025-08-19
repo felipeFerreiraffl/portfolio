@@ -46,7 +46,7 @@ export default function SkillsCarousel() {
 
     setPrevDisabled(!emblaApi.canScrollPrev());
     setNextDisabled(!emblaApi.canScrollNext());
-    setSelectedIndex(!emblaApi.selectedScrollSnap());
+    setSelectedIndex(emblaApi.selectedScrollSnap());
   }, [emblaApi, setSelectedIndex]);
 
   useEffect(() => {
