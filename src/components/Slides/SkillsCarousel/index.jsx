@@ -14,6 +14,7 @@ export default function SkillsCarousel() {
   // Inicia o Embla Carousel
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "center",
+    dragFree: false,
   });
 
   // Estados dos botões desabilidados
@@ -23,12 +24,14 @@ export default function SkillsCarousel() {
   // Estado do index do slide
   const [selectedIndex, setSelectedIndex] = useState(0);
 
+  const [scrollSnaps, setScrollSnaps] = useState([]);
+
   // Permite a rolagem para esquerda (prev), direita (next) ou escolher qual slide navegar
   const handleScrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.canScrollPrev();
+    if (emblaApi) emblaApi.scrollPrev();
   }, [emblaApi]);
   const handleScrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.canScrollNext();
+    if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
   const handleScrollTo = useCallback(
     (i) => {
@@ -51,10 +54,11 @@ export default function SkillsCarousel() {
 
     emblaApi.reInit();
     onSelect();
+    setScrollSnaps(emblaApi.scrollSnapList());
     emblaApi.on("select", onSelect);
 
     return () => emblaApi.off("select", onSelect);
-  }, []);
+  }, [emblaApi, onSelect]);
 
   return (
     <div className={styles.container}>
@@ -92,7 +96,7 @@ export default function SkillsCarousel() {
 
       <div className={styles}>
         <div className={styles}>
-          {skillsData.map((_, i) => (
+          {scrollSnaps.map((_, i) => (
             <DotCarousel
               key={i}
               onClick={() => handleScrollTo(i)}
