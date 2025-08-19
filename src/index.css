@@ -28,23 +28,23 @@
 
   --color-gradient-light: linear-gradient(
     to right,
-    var(--color-main-01) 0%,
-    var(--color-main-02) 100%
+    var(--color-main-01),
+    var(--color-main-02)
   );
   --color-gradient-dark: linear-gradient(
     to right,
-    var(--color-main-02) 0%,
-    var(--color-main-01) 100%
+    var(--color-main-02),
+    var(--color-main-01)
   );
   --color-gradient-light-floor: linear-gradient(
     to bottom,
-    rgba(142, 112, 233, 0.5) 100%,
-    rgba(142, 112, 233, 0) 0%
+    rgba(142, 112, 233, 0.5),
+    rgba(142, 112, 233, 0)
   );
   --color-gradient-dark-floor: linear-gradient(
     to bottom,
-    rgba(74, 25, 220, 0.5) 100%,
-    rgba(74, 25, 220, 0) 0%
+    rgba(74, 25, 220, 0.5),
+    rgba(74, 25, 220, 0)
   );
 
   /* ----- Fontes -----*/
@@ -114,6 +114,7 @@
   --spacing-size-112: 7rem; /* 112px */
   --spacing-size-116: 7.25rem; /* 116px */
   --spacing-size-120: 7.5rem; /* 120px */
+  --spacing-size-124: 7.75rem; /* 124px */
   --spacing-size-144: 9rem; /* 144px */
   --spacing-size-156: 9.75rem; /* 156px */
   --spacing-size-160: 10rem; /* 156px */

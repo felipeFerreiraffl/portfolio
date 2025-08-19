@@ -94,8 +94,8 @@ export default function SkillsCarousel() {
         <Icon icon={icons.remix.arrow.arrowDropRight} />
       </button>
 
-      <div className={styles}>
-        <div className={styles}>
+      <div className={styles.floor}>
+        <div className={styles.dotContainer}>
           {scrollSnaps.map((_, i) => (
             <DotCarousel
               key={i}
@@ -104,6 +104,8 @@ export default function SkillsCarousel() {
             />
           ))}
         </div>
+
+        <div className={styles.base}></div>
       </div>
     </div>
   );
