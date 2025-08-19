@@ -7,15 +7,17 @@ import { useTranslation } from "react-i18next";
 import DotCarousel from "./DotCarousel";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import icons from "../../../services/utils/jsons/icons";
+import {
+  emblaUseEffect,
+  getEmblaCallbacks,
+  useEmblaOptions,
+} from "../../../services/utils/hooks/Skills/emblaHandler";
 
 export default function SkillsCarousel() {
   const { t: tSections } = useTranslation("sections");
 
   // Inicia o Embla Carousel
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "center",
-    dragFree: false,
-  });
+  const [emblaRef, emblaApi] = useEmblaCarousel(useEmblaOptions);
 
   // Estados dos botões desabilidados
   const [prevDisabled, setPrevDisabled] = useState(true);
@@ -42,22 +44,17 @@ export default function SkillsCarousel() {
 
   // Permite a seleção dos slides pelos botões
   const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-
-    setPrevDisabled(!emblaApi.canScrollPrev());
-    setNextDisabled(!emblaApi.canScrollNext());
-    setSelectedIndex(emblaApi.selectedScrollSnap());
+    getEmblaCallbacks(
+      emblaApi,
+      setPrevDisabled,
+      setNextDisabled,
+      setSelectedIndex
+    );
   }, [emblaApi, setSelectedIndex]);
 
+  // Atualiza o Embla Carousel
   useEffect(() => {
-    if (!emblaApi) return;
-
-    emblaApi.reInit();
-    onSelect();
-    setScrollSnaps(emblaApi.scrollSnapList());
-    emblaApi.on("select", onSelect);
-
-    return () => emblaApi.off("select", onSelect);
+    emblaUseEffect(emblaApi, onSelect, setScrollSnaps);
   }, [emblaApi, onSelect]);
 
   return (
