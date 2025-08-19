@@ -12,7 +12,11 @@
     "dark": "Change to dark theme",
     "pt_br": "Change to portuguese-BR",
     "en": "Change to english",
-    "open_menu": "Open menu"
+    "open_menu": "Open menu",
+    "buttons": {
+      "prev": "Previous",
+      "next": "Next"
+    }
   },
   "alts": {
     "profile": "Felipe Ferreira Lima's photo"

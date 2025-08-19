@@ -15,6 +15,7 @@ import {
 
 export default function SkillsCarousel() {
   const { t: tSections } = useTranslation("sections");
+  const { t: tCommon } = useTranslation("common");
 
   // Inicia o Embla Carousel
   const [emblaRef, emblaApi] = useEmblaCarousel(useEmblaOptions);
@@ -64,6 +65,9 @@ export default function SkillsCarousel() {
           className={`${styles.btn} ${styles.left}`}
           onClick={handleScrollPrev}
           disabled={prevDisabled}
+          title={tCommon("tooltip.buttons.prev")}
+          aria-label={tCommon("tooltip.buttons.prev")}
+          tabIndex={0}
         >
           <Icon icon={icons.remix.arrow.arrowDropLeft} />
         </button>
@@ -74,7 +78,7 @@ export default function SkillsCarousel() {
                 key={i}
                 title={tSections(slide.title)}
                 src={slide.imgSrc}
-                alt={slide.title}
+                alt={tSections(slide.title)}
                 techs={slide.techs}
               />
             ))}
@@ -84,6 +88,9 @@ export default function SkillsCarousel() {
           className={`${styles.btn} ${styles.right}`}
           onClick={handleScrollNext}
           disabled={nextDisabled}
+          title={tCommon("tooltip.buttons.next")}
+          aria-label={tCommon("tooltip.buttons.next")}
+          tabIndex={0}
         >
           <Icon icon={icons.remix.arrow.arrowDropRight} />
         </button>
@@ -96,6 +103,7 @@ export default function SkillsCarousel() {
               key={i}
               onClick={() => handleScrollTo(i)}
               selected={i === selectedIndex ? true : false}
+              title={`Slide ${i + 1}`}
             />
           ))}
         </div>

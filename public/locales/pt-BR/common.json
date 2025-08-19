@@ -12,7 +12,11 @@
     "dark": "Trocar para tema escuro",
     "pt_br": "Trocar para português-BR",
     "en": "Trocar para inglês",
-    "open_menu": "Abrir menu"
+    "open_menu": "Abrir menu",
+    "buttons": {
+      "prev": "Anterior",
+      "next": "Próximo"
+    }
   },
   "alts": {
     "profile": "Foto de Felipe Ferreira Lima"
