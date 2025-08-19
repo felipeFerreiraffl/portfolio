@@ -6,6 +6,7 @@ import frontend from "../../../assets/imgs/skills/frontend.webp";
 import backend from "../../../assets/imgs/skills/backend.webp";
 import database from "../../../assets/imgs/skills/database.webp";
 import tools from "../../../assets/imgs/skills/tools.webp";
+import exp1 from "../../../assets/imgs/experience/senai-mercedesbenz.webp";
 
 const images = {
   statue,
@@ -16,6 +17,9 @@ const images = {
     backend,
     database,
     tools,
+  },
+  experiences: {
+    exp1,
   },
 };
 

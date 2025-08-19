@@ -24,15 +24,15 @@
     "carousel_titles": {
       "database": "Database",
       "tools": "Tools"
-    },
-    "experience": {
-      "title": "Experience",
-      "subtitle": "My previous experiences in my career",
-      "cards": {
-        "one": {
-          "title": "Apprentice - SENAI Mercedes-Benz",
-          "desc": "Apprentice in the Vehicle Production Mechanic course at Mercedes-Benz do Brasil, São Bernardo do Campo, where activities related to mechanics were carried out, but also included the use of software, Microsoft Office, and computer setup, providing interdisciplinary experience."
-        }
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My previous experiences in my career",
+    "cards": {
+      "one": {
+        "title": "Apprentice - SENAI Mercedes-Benz",
+        "desc": "Apprentice in the Vehicle Production Mechanic course at Mercedes-Benz do Brasil, São Bernardo do Campo, where activities related to mechanics were carried out, but also included the use of software, Microsoft Office, and computer setup, providing interdisciplinary experience."
       }
     }
   }

@@ -74,7 +74,14 @@ export const skillsData = [
 ];
 
 // Dados de exxperiências
-export const experiencesData = [{}];
+export const experiencesData = [
+  {
+    imgSrc: images.experiences.exp1,
+    title: "experience.cards.one.title",
+    time: "2023-2025",
+    desc: "experience.cards.one.desc",
+  },
+];
 
 // Dados dos projetos
 export const projectsData = [{}];

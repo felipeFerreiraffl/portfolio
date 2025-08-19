@@ -120,6 +120,7 @@
   --spacing-size-160: 10rem; /* 156px */
   --spacing-size-200: 12.5rem; /* 200px */
   --spacing-size-204: 12.75rem; /* 204px */
+  --spacing-size-224: 14rem; /* 224px */
   --spacing-size-236: 14.75rem; /* 236px */
   --spacing-size-256: 16rem; /* 256px */
   --spacing-size-260: 16.25rem; /* 260px */
@@ -131,7 +132,9 @@
   --spacing-size-432: 27rem; /* 432px */
   --spacing-size-440: 27.5rem; /* 440px */
   --spacing-size-448: 28rem; /* 448px */
+  --spacing-size-520: 32.5rem; /* 520px */
   --spacing-size-580: 36.25rem; /* 580px */
+  --spacing-size-584: 36.5rem; /* 584px */
   --spacing-size-620: 38.75rem; /* 620px */
   --spacing-size-628: 39.25rem; /* 628px */
   --spacing-size-640: 40rem; /* 640px */
@@ -172,6 +175,7 @@
   --color-opacity_80: var(--color-opacity-main-02_80);
   --border-main: var(--border-main-02);
   --box-shadow: var(--shadow-default-dark);
+  --background-shadow: var(--shadow-background-dark);
   --linear-gradient: var(--color-gradient-light);
   --linear-gradient-floor: var(--color-gradient-light-floor);
   --filter-brightness: var(--brightness-light);
@@ -187,6 +191,7 @@
   --color-opacity_80: var(--color-opacity-main-01_80);
   --border-main: var(--border-main-01);
   --box-shadow: var(--shadow-default-light);
+  --background-shadow: var(--shadow-background-light);
   --linear-gradient: var(--color-gradient-dark);
   --linear-gradient-floor: var(--color-gradient-dark-floor);
   --filter-brightness: var(--brightness-dark);
