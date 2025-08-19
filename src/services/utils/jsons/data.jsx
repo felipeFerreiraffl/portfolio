@@ -5,8 +5,7 @@ import { ReactComponent as SpringBootIcon } from "../../../assets/svgs/icons/spr
 import icons from "./icons";
 import images from "./images";
 
-// const { t: tSections } = useTranslation("sections");
-
+// Dados dos habilidades
 export const skillsData = [
   {
     title: "Front-End",
@@ -74,6 +73,8 @@ export const skillsData = [
   },
 ];
 
+// Dados de exxperiências
 export const experiencesData = [{}];
 
+// Dados dos projetos
 export const projectsData = [{}];

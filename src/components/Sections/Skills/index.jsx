@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import SectionTitle from "../../SectionTitle";
 import { skillsData } from "../../../services/utils/jsons/data";
 import Slide from "../../Slides/SkillsCarousel/Slide";
+import SkillsCarousel from "../../Slides/SkillsCarousel";
 
 export default function Skills() {
   const { t: tSections } = useTranslation("sections");
@@ -13,16 +14,7 @@ export default function Skills() {
         subtitle={tSections("skills.subtitle")}
       />
 
-      {skillsData.map((skill, i) => (
-        <Slide
-          key={i}
-          title={tSections(skill.title)}
-          src={skill.imgSrc}
-          alt={skill.title}
-          techs={skill.techs}
-        />
-      ))}
-      {/* <LocalIcon icon={icons.local.mongodb} alt={"MongoDB"} /> */}
+      <SkillsCarousel />
     </div>
   );
 }
