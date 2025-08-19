@@ -27,6 +27,8 @@
 
 .container span * {
   font-size: var(--spacing-size-64);
+  width: var(--spacing-size-64);
+  aspect-ratio: 1 / 1;
   color: var(--color-text);
 
   @media (max-width: 576px) {

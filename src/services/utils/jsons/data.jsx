@@ -1,9 +1,11 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { useTranslation } from "react-i18next";
+import { ReactComponent as MongoDBIcon } from "../../../assets/svgs/icons/mongodb.svg";
+import { ReactComponent as MySQLIcon } from "../../../assets/svgs/icons/mysql.svg";
+import { ReactComponent as SpringBootIcon } from "../../../assets/svgs/icons/springboot.svg";
 import icons from "./icons";
 import images from "./images";
 
-const { t: tSections } = useTranslation("sections");
+// const { t: tSections } = useTranslation("sections");
 
 export const skillsData = [
   {
@@ -31,7 +33,10 @@ export const skillsData = [
         techName: "Node.js",
         techIcon: <Icon icon={icons.remix.brand.nodejs} />,
       },
-      { techName: "Spring Boot", techIcon: "" },
+      {
+        techName: "Spring Boot",
+        techIcon: <SpringBootIcon style={{ fill: "var(--color-text)" }} />,
+      },
       {
         techName: "Rest API",
         techIcon: <Icon icon={icons.remix.common.server} />,
@@ -39,15 +44,21 @@ export const skillsData = [
     ],
   },
   {
-    title: tSections("skills.carousel_titles.database"),
+    title: "skills.carousel_titles.database",
     imgSrc: images.skills.database,
     techs: [
-      { techName: "MySQL", techIcon: "" },
-      { techName: "MongoDB", techIcon: "" },
+      {
+        techName: "MySQL",
+        techIcon: <MySQLIcon style={{ fill: "var(--color-text)" }} />,
+      },
+      {
+        techName: "MongoDB",
+        techIcon: <MongoDBIcon style={{ fill: "var(--color-text)" }} />,
+      },
     ],
   },
   {
-    title: tSections("skills.carousel_titles.tools"),
+    title: "skills.carousel_titles.tools",
     imgSrc: images.skills.tools,
     techs: [
       {

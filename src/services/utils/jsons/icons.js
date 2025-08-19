@@ -1,7 +1,4 @@
 /* ---------- Objeto que guarda as strings dos ícones da Remix ---------- */
-import springboot from "../../../assets/svgs/icons/springboot.svg";
-import mysql from "../../../assets/svgs/icons/mysql.svg";
-import mongodb from "../../../assets/svgs/icons/mongodb.svg";
 
 const icons = {
   remix: {
@@ -29,11 +26,6 @@ const icons = {
       github: "ri:github-fill",
       nodejs: "ri:nodejs-fill",
     },
-  },
-  local: {
-    springboot: springboot,
-    mysql: mysql,
-    mongodb: mongodb,
   },
 };
 
