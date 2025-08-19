@@ -62,15 +62,14 @@ export default function SkillsCarousel() {
 
   return (
     <div className={styles.container}>
-      <button
-        className={`${styles.btn} ${styles.left}`}
-        onClick={handleScrollPrev}
-        disabled={prevDisabled}
-      >
-        <Icon icon={icons.remix.arrow.arrowDropLeft} />
-      </button>
-
       <div className={styles.carousel}>
+        <button
+          className={`${styles.btn} ${styles.left}`}
+          onClick={handleScrollPrev}
+          disabled={prevDisabled}
+        >
+          <Icon icon={icons.remix.arrow.arrowDropLeft} />
+        </button>
         <div className={styles.carouselViewport} ref={emblaRef}>
           <div className={styles.carouselContainer}>
             {skillsData.map((slide, i) => (
@@ -84,15 +83,14 @@ export default function SkillsCarousel() {
             ))}
           </div>
         </div>
+        <button
+          className={`${styles.btn} ${styles.right}`}
+          onClick={handleScrollNext}
+          disabled={nextDisabled}
+        >
+          <Icon icon={icons.remix.arrow.arrowDropRight} />
+        </button>
       </div>
-
-      <button
-        className={`${styles.btn} ${styles.right}`}
-        onClick={handleScrollNext}
-        disabled={nextDisabled}
-      >
-        <Icon icon={icons.remix.arrow.arrowDropRight} />
-      </button>
 
       <div className={styles.floor}>
         <div className={styles.dotContainer}>
