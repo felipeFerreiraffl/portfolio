@@ -180,3 +180,18 @@ export const projectsData = [
     ],
   },
 ];
+
+export const socialLinks = [
+  {
+    title: "tooltip.socials.github",
+    icon: <Icon icon={icons.remix.brand.github} />,
+  },
+  {
+    title: "tooltip.socials.linkedin",
+    icon: <Icon icon={icons.remix.brand.linkedin} />,
+  },
+  {
+    title: "tooltip.socials.instagram",
+    icon: <Icon icon={icons.remix.brand.instagram} />,
+  },
+];

@@ -4,6 +4,8 @@ import styles from "./styles.module.css";
 import SocialIcon from "./SocialIcon";
 import icons from "../../../services/utils/jsons/icons";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { socialLinks } from "../../../services/utils/jsons/data";
+import images from "../../../services/utils/jsons/images";
 
 export default function Contacts() {
   const { t: tSections } = useTranslation("sections");
@@ -16,10 +18,56 @@ export default function Contacts() {
         subtitle={tSections("contacts.subtitle")}
       />
 
-      <SocialIcon
-        icon={<Icon icon={icons.remix.brand.github} />}
-        title={tCommon("tooltip.socials.github")}
-      />
+      <div className={styles.content}>
+        <div className={styles.linksContent}>
+          <div className={styles.socialContainer}>
+            <div className={styles.titleContainer}>
+              <h3>{tSections("contacts.social_title")}</h3>
+              <span>
+                <Icon icon={icons.remix.arrow.arrowDown} />
+              </span>
+            </div>
+
+            <div className={styles.socialLinks}>
+              {socialLinks.map((social, i) => (
+                <SocialIcon key={i} title={social.title} icon={social.icon} />
+              ))}
+            </div>
+          </div>
+
+          <div className={styles}>
+            <div className={styles}></div>
+            <div className={styles}></div>
+            <div className={styles}></div>
+          </div>
+
+          <div className={styles.designContainer}>
+            <h3>
+              {tSections("contacts.design_title")} <span>Figma</span>
+            </h3>
+            <a
+              href=""
+              target="_blank"
+              rel="noopener noreferer"
+              title={tCommon("button_labels.figma")}
+            >
+              <span>
+                <Icon icon={icons.remix.brand.figma} />
+              </span>
+              <div></div>
+              <p>{tCommon("button_labels.figma")}</p>
+            </a>
+          </div>
+        </div>
+
+        <div className={styles}>
+          <img
+            src={images.statue}
+            alt={tCommon("alts.statue")}
+            title={tCommon("alts.statue")}
+          />
+        </div>
+      </div>
     </div>
   );
 }
