@@ -30,21 +30,27 @@ export default function Contacts() {
 
             <div className={styles.socialLinks}>
               {socialLinks.map((social, i) => (
-                <SocialIcon key={i} title={social.title} icon={social.icon} />
+                <SocialIcon
+                  key={i}
+                  href={social.href}
+                  title={tCommon(social.title)}
+                  icon={social.icon}
+                />
               ))}
             </div>
           </div>
 
-          <div className={styles}>
-            <div className={styles}></div>
-            <div className={styles}></div>
-            <div className={styles}></div>
+          <div className={styles.divisor}>
+            <div className={styles.line}></div>
+            <div className={styles.diamond}></div>
+            <div className={styles.line}></div>
           </div>
 
           <div className={styles.designContainer}>
             <h3>
               {tSections("contacts.design_title")} <span>Figma</span>
             </h3>
+
             <a
               href=""
               target="_blank"
@@ -60,7 +66,7 @@ export default function Contacts() {
           </div>
         </div>
 
-        <div className={styles}>
+        <div className={styles.img}>
           <img
             src={images.statue}
             alt={tCommon("alts.statue")}

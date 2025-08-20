@@ -185,13 +185,16 @@ export const socialLinks = [
   {
     title: "tooltip.socials.github",
     icon: <Icon icon={icons.remix.brand.github} />,
+    href: "https://github.com/felipeFerreiraffl",
   },
   {
     title: "tooltip.socials.linkedin",
     icon: <Icon icon={icons.remix.brand.linkedin} />,
+    href: "https://www.linkedin.com/in/felipe-ferreira-959bb8271/",
   },
   {
     title: "tooltip.socials.instagram",
     icon: <Icon icon={icons.remix.brand.instagram} />,
+    href: "https://www.instagram.com/felipe_ffl7/",
   },
 ];

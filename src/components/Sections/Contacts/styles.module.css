@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--spacing-size-12);
 }
 
 .socialContainer {
@@ -40,6 +41,25 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-size-8);
+}
+
+.divisor {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  width: 100%;
+  height: var(--spacing-size-4);
+  background-color: var(--color-title);
+}
+
+.diamond {
+  width: var(--spacing-size-32);
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-title);
+  transform: rotate(45deg);
 }
 
 .designContainer {
@@ -104,4 +124,15 @@
 .designContainer a p {
   font: var(--font-body-medium-bold);
   z-index: var(--zindex-100);
+}
+
+.img {
+  width: 33.875rem; /* 542px */
+  aspect-ratio: 271 / 234;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
