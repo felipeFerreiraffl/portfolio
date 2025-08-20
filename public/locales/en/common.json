@@ -16,6 +16,11 @@
     "buttons": {
       "prev": "Previous",
       "next": "Next"
+    },
+    "socials": {
+      "github": "Access Github",
+      "linkedin": "Access Linkedin",
+      "instagram": "Access Instagram"
     }
   },
   "alts": {
