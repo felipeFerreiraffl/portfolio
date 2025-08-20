@@ -1,0 +1,38 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--bg-image);
+  width: var(--spacing-size-352);
+  aspect-ratio: 176 / 117;
+  border-radius: var(--radius-12);
+  overflow: hidden;
+}
+
+.container h3 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  font: var(--font-body-medium-bold);
+  padding: var(--spacing-size-12) 0;
+  background-color: var(--color-opacity_80);
+}
+
+.iconsContainer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-size-8);
+  width: 100%;
+  padding: var(--spacing-size-8) 0;
+  background-color: var(--color-opacity_80);
+}
+
+.iconsContainer {
+  font-size: var(--spacing-size-16);
+}

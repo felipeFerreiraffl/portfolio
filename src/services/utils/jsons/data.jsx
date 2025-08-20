@@ -84,4 +84,15 @@ export const experiencesData = [
 ];
 
 // Dados dos projetos
-export const projectsData = [{}];
+export const projectsData = [
+  {
+    title: "HUHUHUH",
+    imgSrc: images.experiences.exp1,
+    techs: [
+      { icon: <Icon icon={icons.remix.brand.css} /> },
+      { icon: <Icon icon={icons.remix.brand.css} /> },
+      { icon: <Icon icon={icons.remix.brand.css} /> },
+      { icon: <Icon icon={icons.remix.brand.css} /> },
+    ],
+  },
+];
