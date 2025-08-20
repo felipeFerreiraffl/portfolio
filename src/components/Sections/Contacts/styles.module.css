@@ -1,14 +1,21 @@
 .content {
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  gap: var(--spacing-size-60);
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
 }
 
 .content h3 {
   font: var(--font-headline-04);
   color: var(--color-text);
   text-align: center;
+
+  @media (max-width: 576px) {
+    font: var(--font-headline-05);
+  }
 }
 
 .linksContent {
@@ -41,6 +48,10 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-size-8);
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
 }
 
 .divisor {
@@ -71,6 +82,7 @@
 
 .designContainer h3 span {
   color: var(--color-main);
+  font-weight: 700;
 }
 
 .designContainer a {
@@ -129,6 +141,10 @@
 .img {
   width: 33.875rem; /* 542px */
   aspect-ratio: 271 / 234;
+
+  @media (max-width: 576px) {
+    width: var(--spacing-size-256);
+  }
 }
 
 .img img {
