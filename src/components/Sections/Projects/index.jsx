@@ -8,7 +8,7 @@ export default function Projects() {
   const { t: tSections } = useTranslation("sections");
 
   return (
-    <div className="section-container">
+    <div className="section-container" tabIndex={0}>
       <SectionTitle
         title={tSections("projects.title")}
         subtitle={tSections("projects.subtitle")}

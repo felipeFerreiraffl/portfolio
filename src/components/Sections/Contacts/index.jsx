@@ -12,7 +12,7 @@ export default function Contacts() {
   const { t: tCommon } = useTranslation("common");
 
   return (
-    <div className="section-container">
+    <div className="section-container" tabIndex={0}>
       <SectionTitle
         title={tSections("contacts.title")}
         subtitle={tSections("contacts.subtitle")}

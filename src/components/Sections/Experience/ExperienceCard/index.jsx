@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 
 export default function ExperienceCard({ src, title, time, desc }) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} tabIndex={0}>
       <div className={styles.img}>
         <img src={src} alt={title} loading="lazy" title={title} />
       </div>

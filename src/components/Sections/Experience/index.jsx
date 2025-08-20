@@ -9,7 +9,7 @@ export default function Experience() {
   const { t: tSections } = useTranslation("sections");
 
   return (
-    <div className={`section-container ${styles.container}`}>
+    <div className={`section-container ${styles.container}`} tabIndex={0}>
       <SectionTitle
         title={tSections("experience.title")}
         subtitle={tSections("experience.subtitle")}
