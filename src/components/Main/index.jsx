@@ -1,3 +1,4 @@
+import Contacts from "../Sections/Contacts";
 import Experience from "../Sections/Experience";
 import Intro from "../Sections/Intro";
 import Projects from "../Sections/Projects";
@@ -11,6 +12,7 @@ export default function Main() {
       <Skills />
       <Experience />
       <Projects />
+      <Contacts />
     </main>
   );
 }

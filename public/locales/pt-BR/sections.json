@@ -68,5 +68,11 @@
         "title": "Treino com Phaser"
       }
     }
+  },
+  "contacts": {
+    "title": "Contatos",
+    "subtitle": "Verifique minhas redes para contato",
+    "social_title": "Acesse minhas redes",
+    "design_title": "Design feito no Figma"
   }
 }

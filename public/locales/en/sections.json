@@ -68,5 +68,11 @@
         "title": "Train with Phaser"
       }
     }
+  },
+  "contacts": {
+    "title": "Contacts",
+    "subtitle": "Check my links to connect",
+    "social_title": "Acess my links",
+    "design_title": "Design made in Figma"
   }
 }
