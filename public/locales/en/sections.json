@@ -38,6 +38,35 @@
   },
   "projects": {
     "title": "Projects",
-    "subtitle": "Projects made with distinct technologies"
+    "subtitle": "Projects made with distinct technologies",
+    "cards": {
+      "proj1": {
+        "title": "First personal site"
+      },
+      "proj2": {
+        "title": "Menu - Felicitos"
+      },
+      "proj3": {
+        "title": "Wheather API 1"
+      },
+      "proj4": {
+        "title": "Professional porfolio 1"
+      },
+      "proj5": {
+        "title": "Wheather API 2"
+      },
+      "proj6": {
+        "title": "Math calculations"
+      },
+      "proj7": {
+        "title": "Library CRUD"
+      },
+      "proj8": {
+        "title": "Anime and mangas - Kitsu"
+      },
+      "proj9": {
+        "title": "Train with Phaser"
+      }
+    }
   }
 }

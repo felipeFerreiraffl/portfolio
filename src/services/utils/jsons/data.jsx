@@ -86,8 +86,8 @@ export const experiencesData = [
 // Dados dos projetos
 export const projectsData = [
   {
-    title: "HUHUHUH",
-    imgSrc: images.experiences.exp1,
+    title: "projects.cards.proj1.title",
+    imgSrc: images.projects.personalSite,
     href: "https://github.com/felipeFerreiraffl/projeto-sitePessoal",
     techs: [
       { icon: <Icon icon={icons.remix.brand.html} /> },
@@ -95,8 +95,8 @@ export const projectsData = [
     ],
   },
   {
-    title: "HUHUHUH",
-    imgSrc: images.experiences.exp1,
+    title: "projects.cards.proj2.title",
+    imgSrc: images.projects.menuFelicitos,
     href: "https://github.com/felipeFerreiraffl/pagina-cardapio",
     techs: [
       { icon: <Icon icon={icons.remix.brand.html} /> },
@@ -104,8 +104,8 @@ export const projectsData = [
     ],
   },
   {
-    title: "HUHUHUH",
-    imgSrc: images.experiences.exp1,
+    title: "projects.cards.proj3.title",
+    imgSrc: images.projects.apiWeather1,
     href: "https://github.com/felipeFerreiraffl/clima-api",
     techs: [
       { icon: <Icon icon={icons.remix.brand.html} /> },
@@ -114,8 +114,8 @@ export const projectsData = [
     ],
   },
   {
-    title: "HUHUHUH",
-    imgSrc: images.experiences.exp1,
+    title: "projects.cards.proj4.title",
+    imgSrc: images.projects.professionalPortfolio1,
     href: "https://github.com/felipeFerreiraffl/professional-portifolio",
     techs: [
       { icon: <Icon icon={icons.remix.brand.html} /> },
@@ -125,8 +125,8 @@ export const projectsData = [
     ],
   },
   {
-    title: "HUHUHUH",
-    imgSrc: images.experiences.exp1,
+    title: "projects.cards.proj5.title",
+    imgSrc: images.projects.apiWeather2,
     href: "https://github.com/felipeFerreiraffl/app-temperatura",
     techs: [
       { icon: <Icon icon={icons.remix.brand.react} /> },
@@ -137,8 +137,8 @@ export const projectsData = [
     ],
   },
   {
-    title: "HUHUHUH",
-    imgSrc: images.experiences.exp1,
+    title: "projects.cards.proj6.title",
+    imgSrc: images.projects.mathCalculations,
     href: "https://github.com/felipeFerreiraffl/calculos-matematicos",
     techs: [
       { icon: <Icon icon={icons.remix.brand.react} /> },
@@ -148,8 +148,8 @@ export const projectsData = [
     ],
   },
   {
-    title: "HUHUHUH",
-    imgSrc: images.experiences.exp1,
+    title: "projects.cards.proj7.title",
+    imgSrc: images.projects.crudLibrary,
     href: "https://github.com/felipeFerreiraffl/crud-livraria",
     techs: [
       { icon: <Icon icon={icons.remix.brand.react} /> },
@@ -161,31 +161,22 @@ export const projectsData = [
     ],
   },
   {
-    title: "HUHUHUH",
-    imgSrc: images.experiences.exp1,
+    title: "projects.cards.proj8.title",
+    imgSrc: images.projects.animesMangasKitsu,
+    href: "https://github.com/felipeFerreiraffl/anime-manga-info",
+    techs: [
+      { icon: <Icon icon={icons.remix.brand.html} /> },
+      { icon: <Icon icon={icons.remix.brand.css} /> },
+    ],
+  },
+  {
+    title: "projects.cards.proj9.title",
+    imgSrc: images.projects.phaserTrain,
     href: "https://github.com/felipeFerreiraffl/phaser-train-2",
     techs: [
       { icon: <Icon icon={icons.remix.brand.react} /> },
       { icon: <Icon icon={icons.remix.brand.javascript} /> },
       { icon: <Icon icon={icons.remix.brand.vercel} /> },
-    ],
-  },
-  {
-    title: "HUHUHUH",
-    imgSrc: images.experiences.exp1,
-    href: "https://github.com/felipeFerreiraffl/nextcent-landing-page",
-    techs: [
-      { icon: <Icon icon={icons.remix.brand.html} /> },
-      { icon: <Icon icon={icons.remix.brand.css} /> },
-    ],
-  },
-  {
-    title: "HUHUHUH",
-    imgSrc: images.experiences.exp1,
-    href: "https://github.com/felipeFerreiraffl/quickfood-landpage",
-    techs: [
-      { icon: <Icon icon={icons.remix.brand.html} /> },
-      { icon: <Icon icon={icons.remix.brand.css} /> },
     ],
   },
 ];

@@ -7,6 +7,7 @@ export default function ProjectCard({ title, src, techs = [], href }) {
       rel="noopener noreferer"
       className={styles.container}
       style={{ "--bg-image": `url(${src})` }}
+      title={title}
     >
       <h3>{title}</h3>
       <div className={styles.iconsContainer}>

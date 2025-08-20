@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import SectionTitle from "../../SectionTitle";
 import { projectsData } from "../../../services/utils/jsons/data";
 import ProjectCard from "./ProjectCard";
+import styles from "./styles.module.css";
 
 export default function Projects() {
   const { t: tSections } = useTranslation("sections");
@@ -13,15 +14,17 @@ export default function Projects() {
         subtitle={tSections("projects.subtitle")}
       />
 
-      {projectsData.map((proj, i) => (
-        <ProjectCard
-          key={i}
-          href={proj.href}
-          title={proj.title}
-          src={proj.imgSrc}
-          techs={proj.techs}
-        />
-      ))}
+      <div className={styles.cardsContainer}>
+        {projectsData.map((proj, i) => (
+          <ProjectCard
+            key={i}
+            href={proj.href}
+            title={tSections(proj.title)}
+            src={proj.imgSrc}
+            techs={proj.techs}
+          />
+        ))}
+      </div>
     </div>
   );
 }

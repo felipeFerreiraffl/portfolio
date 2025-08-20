@@ -38,6 +38,35 @@
   },
   "projects": {
     "title": "Projetos",
-    "subtitle": "Projetos realizados com diferentes tecnologias"
+    "subtitle": "Projetos realizados com diferentes tecnologias",
+    "cards": {
+      "proj1": {
+        "title": "Primeiro site pessoal"
+      },
+      "proj2": {
+        "title": "Cardápio - Felicitos"
+      },
+      "proj3": {
+        "title": "API de clima 1"
+      },
+      "proj4": {
+        "title": "Portfólio profissional 1"
+      },
+      "proj5": {
+        "title": "API de clima 2"
+      },
+      "proj6": {
+        "title": "Cálculos matemáticos"
+      },
+      "proj7": {
+        "title": "CRUD de livraria"
+      },
+      "proj8": {
+        "title": "Anime e mangás - Kitsu"
+      },
+      "proj9": {
+        "title": "Treino com Phaser"
+      }
+    }
   }
 }

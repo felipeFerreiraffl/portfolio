@@ -6,6 +6,10 @@
   align-items: center;
   justify-content: center;
   background-image: var(--bg-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
   width: var(--spacing-size-352);
   aspect-ratio: 176 / 117;
   border-radius: var(--radius-12);
