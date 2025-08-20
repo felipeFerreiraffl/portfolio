@@ -48,8 +48,6 @@ export default function Experience() {
           </div>
         </div>
       </div>
-
-      <div className={styles.ground}></div>
     </div>
   );
 }
