@@ -88,10 +88,103 @@ export const projectsData = [
   {
     title: "HUHUHUH",
     imgSrc: images.experiences.exp1,
+    href: "https://github.com/felipeFerreiraffl/projeto-sitePessoal",
     techs: [
+      { icon: <Icon icon={icons.remix.brand.html} /> },
       { icon: <Icon icon={icons.remix.brand.css} /> },
+    ],
+  },
+  {
+    title: "HUHUHUH",
+    imgSrc: images.experiences.exp1,
+    href: "https://github.com/felipeFerreiraffl/pagina-cardapio",
+    techs: [
+      { icon: <Icon icon={icons.remix.brand.html} /> },
       { icon: <Icon icon={icons.remix.brand.css} /> },
+    ],
+  },
+  {
+    title: "HUHUHUH",
+    imgSrc: images.experiences.exp1,
+    href: "https://github.com/felipeFerreiraffl/clima-api",
+    techs: [
+      { icon: <Icon icon={icons.remix.brand.html} /> },
       { icon: <Icon icon={icons.remix.brand.css} /> },
+      { icon: <Icon icon={icons.remix.brand.javascript} /> },
+    ],
+  },
+  {
+    title: "HUHUHUH",
+    imgSrc: images.experiences.exp1,
+    href: "https://github.com/felipeFerreiraffl/professional-portifolio",
+    techs: [
+      { icon: <Icon icon={icons.remix.brand.html} /> },
+      { icon: <Icon icon={icons.remix.brand.css} /> },
+      { icon: <Icon icon={icons.remix.brand.javascript} /> },
+      { icon: <Icon icon={icons.remix.brand.vercel} /> },
+    ],
+  },
+  {
+    title: "HUHUHUH",
+    imgSrc: images.experiences.exp1,
+    href: "https://github.com/felipeFerreiraffl/app-temperatura",
+    techs: [
+      { icon: <Icon icon={icons.remix.brand.react} /> },
+      { icon: <Icon icon={icons.remix.brand.css} /> },
+      { icon: <Icon icon={icons.remix.brand.javascript} /> },
+      { icon: <Icon icon={icons.remix.common.server} /> },
+      { icon: <Icon icon={icons.remix.brand.vercel} /> },
+    ],
+  },
+  {
+    title: "HUHUHUH",
+    imgSrc: images.experiences.exp1,
+    href: "https://github.com/felipeFerreiraffl/calculos-matematicos",
+    techs: [
+      { icon: <Icon icon={icons.remix.brand.react} /> },
+      { icon: <Icon icon={icons.remix.brand.css} /> },
+      { icon: <Icon icon={icons.remix.brand.javascript} /> },
+      { icon: <Icon icon={icons.remix.brand.vercel} /> },
+    ],
+  },
+  {
+    title: "HUHUHUH",
+    imgSrc: images.experiences.exp1,
+    href: "https://github.com/felipeFerreiraffl/crud-livraria",
+    techs: [
+      { icon: <Icon icon={icons.remix.brand.react} /> },
+      { icon: <Icon icon={icons.remix.brand.css} /> },
+      { icon: <Icon icon={icons.remix.brand.javascript} /> },
+      { icon: <Icon icon={icons.remix.brand.java} /> },
+      { icon: <MySQLIcon style={{ fill: "var(--color-text)" }} /> },
+      { icon: <SpringBootIcon style={{ fill: "var(--color-text)" }} /> },
+    ],
+  },
+  {
+    title: "HUHUHUH",
+    imgSrc: images.experiences.exp1,
+    href: "https://github.com/felipeFerreiraffl/phaser-train-2",
+    techs: [
+      { icon: <Icon icon={icons.remix.brand.react} /> },
+      { icon: <Icon icon={icons.remix.brand.javascript} /> },
+      { icon: <Icon icon={icons.remix.brand.vercel} /> },
+    ],
+  },
+  {
+    title: "HUHUHUH",
+    imgSrc: images.experiences.exp1,
+    href: "https://github.com/felipeFerreiraffl/nextcent-landing-page",
+    techs: [
+      { icon: <Icon icon={icons.remix.brand.html} /> },
+      { icon: <Icon icon={icons.remix.brand.css} /> },
+    ],
+  },
+  {
+    title: "HUHUHUH",
+    imgSrc: images.experiences.exp1,
+    href: "https://github.com/felipeFerreiraffl/quickfood-landpage",
+    techs: [
+      { icon: <Icon icon={icons.remix.brand.html} /> },
       { icon: <Icon icon={icons.remix.brand.css} /> },
     ],
   },

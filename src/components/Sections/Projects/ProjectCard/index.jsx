@@ -1,14 +1,19 @@
 import styles from "./styles.module.css";
 
-export default function ProjectCard({ title, src, techs = [] }) {
+export default function ProjectCard({ title, src, techs = [], href }) {
   return (
-    <div className={styles.container} style={{ "--bg-image": `url(${src})` }}>
+    <a
+      href={href}
+      rel="noopener noreferer"
+      className={styles.container}
+      style={{ "--bg-image": `url(${src})` }}
+    >
       <h3>{title}</h3>
       <div className={styles.iconsContainer}>
         {techs.map((tech, i) => (
           <span key={i}>{tech.icon}</span>
         ))}
       </div>
-    </div>
+    </a>
   );
 }
