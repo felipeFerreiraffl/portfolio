@@ -8,6 +8,7 @@
   padding: var(--spacing-size-32);
   box-shadow: var(--background-shadow);
   border-radius: var(--radius-12);
+  z-index: var(--zindex-100);
 
   @media (max-width: 576px) {
     max-width: var(--spacing-size-256);

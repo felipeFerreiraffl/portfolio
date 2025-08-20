@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.background {
+  position: absolute;
+  top: 22.875rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+  display: flex;
+
+  @media (max-width: 1200px) {
+    top: 31.125rem;
+  }
+
+  @media (max-width: 576px) {
+    top: 28.875rem;
+  }
+}
+
+.tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.treeContainer {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  gap: calc(var(--spacing-size-28) * -1);
+}
+
+.treeContainerLeft {
+  left: 4%;
+
+  @media (max-width: 1200px) {
+    left: 0;
+  }
+}
+
+.treeContainerRight {
+  right: 4%;
+
+  @media (max-width: 1200px) {
+    right: 0;
+  }
+}
+
+.rectangle {
+  background: var(--linear-gradient-floor);
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-4);
+  transform: rotate(180deg);
+}
+
+.stem {
+  width: var(--spacing-size-8);
+  background-color: var(--color-main);
+
+  @media (max-width: 1200px) {
+    width: var(--spacing-size-4);
+  }
+
+  @media (max-width: 576px) {
+    width: var(--spacing-size-2);
+  }
+}
+
+.stemSmall {
+  height: var(--spacing-size-136);
+
+  @media (max-width: 1200px) {
+    height: var(--spacing-size-96);
+  }
+
+  @media (max-width: 576px) {
+    height: var(--spacing-size-32);
+  }
+}
+
+.stemBig {
+  height: var(--spacing-size-332);
+
+  @media (max-width: 1200px) {
+    height: var(--spacing-size-232);
+  }
+
+  @media (max-width: 576px) {
+    height: var(--spacing-size-80);
+  }
+}
+
+.small {
+  width: var(--spacing-size-76);
+
+  @media (max-width: 1200px) {
+    width: var(--spacing-size-52);
+  }
+
+  @media (max-width: 576px) {
+    width: var(--spacing-size-16);
+  }
+}
+
+.big {
+  width: var(--spacing-size-116);
+
+  @media (max-width: 1200px) {
+    width: var(--spacing-size-80);
+  }
+
+  @media (max-width: 576px) {
+    width: var(--spacing-size-28);
+  }
+}
+
+.ground {
+  width: 100%;
+  height: var(--spacing-size-4);
+  background-color: var(--color-main);
+}

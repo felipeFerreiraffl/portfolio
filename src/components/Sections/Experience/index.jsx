@@ -9,7 +9,7 @@ export default function Experience() {
   const { t: tSections } = useTranslation("sections");
 
   return (
-    <div className="section-container">
+    <div className={`section-container ${styles.container}`}>
       <SectionTitle
         title={tSections("experience.title")}
         subtitle={tSections("experience.subtitle")}
@@ -24,6 +24,32 @@ export default function Experience() {
           src={exp.imgSrc}
         />
       ))}
+
+      <div className={styles.background}>
+        <div className={`${styles.treeContainer} ${styles.treeContainerLeft}`}>
+          <div className={styles.tree}>
+            <div className={`${styles.rectangle} ${styles.big}`}></div>
+            <div className={`${styles.stem} ${styles.stemBig}`}></div>
+          </div>
+          <div className={styles.tree}>
+            <div className={`${styles.rectangle} ${styles.small}`}></div>
+            <div className={`${styles.stem} ${styles.stemSmall}`}></div>
+          </div>
+        </div>
+
+        <div className={`${styles.treeContainer} ${styles.treeContainerRight}`}>
+          <div className={styles.tree}>
+            <div className={`${styles.rectangle} ${styles.small}`}></div>
+            <div className={`${styles.stem} ${styles.stemSmall}`}></div>
+          </div>
+          <div className={styles.tree}>
+            <div className={`${styles.rectangle} ${styles.big}`}></div>
+            <div className={`${styles.stem} ${styles.stemBig}`}></div>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.ground}></div>
     </div>
   );
 }

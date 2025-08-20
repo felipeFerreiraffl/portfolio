@@ -115,13 +115,15 @@
   --spacing-size-116: 7.25rem; /* 116px */
   --spacing-size-120: 7.5rem; /* 120px */
   --spacing-size-124: 7.75rem; /* 124px */
+  --spacing-size-136: 8.5rem; /* 136px */
   --spacing-size-144: 9rem; /* 144px */
   --spacing-size-156: 9.75rem; /* 156px */
   --spacing-size-160: 10rem; /* 156px */
   --spacing-size-200: 12.5rem; /* 200px */
   --spacing-size-204: 12.75rem; /* 204px */
   --spacing-size-224: 14rem; /* 224px */
-  --spacing-size-236: 14.75rem; /* 236px */
+  --spacing-size-232: 15rem; /* 232px */
+  --spacing-size-236: 15.75rem; /* 236px */
   --spacing-size-256: 16rem; /* 256px */
   --spacing-size-260: 16.25rem; /* 260px */
   --spacing-size-292: 18.25rem; /* 292px */
@@ -214,6 +216,7 @@ body::-webkit-scrollbar-track {
 
 /* ----- Classes globais ----- */
 .section-container {
+  position: relative;
   width: 85vw;
   display: flex;
   flex-direction: column;
