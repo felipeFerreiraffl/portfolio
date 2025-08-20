@@ -139,6 +139,9 @@
 }
 
 .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 33.875rem; /* 542px */
   aspect-ratio: 271 / 234;
 
