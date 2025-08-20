@@ -1,0 +1,55 @@
+.link {
+  position: relative;
+  cursor: pointer;
+  width: var(--spacing-size-120);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link span {
+  width: var(--spacing-size-72);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-main);
+  border-radius: var(--radius-12);
+  transition: var(--transition-default);
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1 / 1;
+  border-style: solid;
+  border-color: var(--color-main);
+  border-radius: var(--radius-circular);
+  visibility: hidden;
+}
+
+.ringOne {
+  width: min(var(--spacing-size-120), 100%);
+  border-width: var(--spacing-size-4);
+}
+
+.ringTwo {
+  width: min(var(--spacing-size-104), 87%);
+  border-width: 0.0625rem;
+}
+
+.link:hover span {
+  box-shadow: var(--box-shadow);
+}
+
+.link:hover .ring {
+  visibility: visible;
+}
+
+.link span * {
+  font-size: var(--spacing-size-48);
+  color: var(--color-text);
+}
