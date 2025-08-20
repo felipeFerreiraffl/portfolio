@@ -3,6 +3,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
+// Configuração do GSAP
 export function useGSAPConfigs(ref, setProps = {}, toProps = {}) {
   if (ref.current) {
     gsap.set(ref.current, { ...setProps });
@@ -10,6 +11,7 @@ export function useGSAPConfigs(ref, setProps = {}, toProps = {}) {
   }
 }
 
+// Configuração do timeline do GSAP
 export function useGSAPTimeline(
   timeline,
   refs = [],
@@ -22,7 +24,12 @@ export function useGSAPTimeline(
       timeline.current = gsap.timeline({ paused: true });
 
       refs.current.forEach((ring, i) => {
-        timeline.current.fromTo(ring, { ...fromProps }, { ...toProps }, i * delay);
+        timeline.current.fromTo(
+          ring,
+          { ...fromProps },
+          { ...toProps },
+          i * delay
+        );
       });
     },
     { scope: refs }

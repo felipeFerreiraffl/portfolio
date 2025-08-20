@@ -28,7 +28,6 @@
   border-style: solid;
   border-color: var(--color-main);
   border-radius: var(--radius-circular);
-  /* visibility: hidden; */
 }
 
 .ring1 {
@@ -44,10 +43,6 @@
 .link:hover span {
   box-shadow: var(--box-shadow);
 }
-/* 
-.link:hover .ring {
-  visibility: visible;
-} */
 
 .link span * {
   font-size: var(--spacing-size-48);

@@ -1,11 +1,6 @@
 import { useRef } from "react";
+import { useGSAPTimeline } from "../../../../services/utils/hooks/global/gsap";
 import styles from "./styles.module.css";
-import { useGSAP } from "@gsap/react";
-import {
-  useGSAPConfigs,
-  useGSAPTimeline,
-} from "../../../../services/utils/hooks/global/gsap";
-import gsap from "gsap";
 
 export default function SocialIcon({ icon, title, href }) {
   const ringRefs = useRef([]);

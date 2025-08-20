@@ -12,8 +12,10 @@ import {
   getEmblaCallbacks,
   useEmblaOptions,
 } from "../../../services/utils/hooks/Skills/emblaHandler";
+import { useGSAPTimeline } from "../../../services/utils/hooks/global/gsap";
 
 export default function SkillsCarousel() {
+  // Traduções
   const { t: tSections } = useTranslation("sections");
   const { t: tCommon } = useTranslation("common");
 
@@ -27,6 +29,7 @@ export default function SkillsCarousel() {
   // Estado do index do slide
   const [selectedIndex, setSelectedIndex] = useState(0);
 
+  // Estado dos slides
   const [scrollSnaps, setScrollSnaps] = useState([]);
 
   // Permite a rolagem para esquerda (prev), direita (next) ou escolher qual slide navegar
