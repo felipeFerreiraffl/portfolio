@@ -35,5 +35,9 @@
         "desc": "Aprendiz no curso de Mecânico de Produção Veicular na Mercedes-Benz do Brasil, São Bernardo do Campo, em que foram realizadas atividades relacionadas à mecânica, porém com auxílio de sofwares, uso do Microsoft Office e configuração de computadores, obtendo interdisciplinariedade."
       }
     }
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Projetos realizados com diferentes tecnologias"
   }
 }

@@ -35,5 +35,9 @@
         "desc": "Apprentice in the Vehicle Production Mechanic course at Mercedes-Benz do Brasil, São Bernardo do Campo, where activities related to mechanics were carried out, but also included the use of software, Microsoft Office, and computer setup, providing interdisciplinary experience."
       }
     }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Projects made with distinct technologies"
   }
 }
