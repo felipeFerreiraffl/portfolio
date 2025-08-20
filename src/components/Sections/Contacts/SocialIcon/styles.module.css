@@ -28,15 +28,15 @@
   border-style: solid;
   border-color: var(--color-main);
   border-radius: var(--radius-circular);
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
-.ringOne {
+.ring1 {
   width: min(var(--spacing-size-120), 100%);
   border-width: var(--spacing-size-4);
 }
 
-.ringTwo {
+.ring2 {
   width: min(var(--spacing-size-104), 87%);
   border-width: 0.0625rem;
 }
@@ -44,10 +44,10 @@
 .link:hover span {
   box-shadow: var(--box-shadow);
 }
-
+/* 
 .link:hover .ring {
   visibility: visible;
-}
+} */
 
 .link span * {
   font-size: var(--spacing-size-48);
