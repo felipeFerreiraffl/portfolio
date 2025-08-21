@@ -55,7 +55,7 @@ export default function Intro({ ref }) {
           </ul>
 
           <a
-            href="/public/archives/dev-curriculum.pdf"
+            href="archives/dev-curriculum.pdf"
             target="_blank"
             title={tCommon("button_labels.curriculum_vitae")}
             aria-label={tCommon("button_labels.curriculum_vitae")}
