@@ -4,11 +4,11 @@ import { projectsData } from "../../../services/utils/jsons/data";
 import ProjectCard from "./ProjectCard";
 import styles from "./styles.module.css";
 
-export default function Projects() {
+export default function Projects({ ref }) {
   const { t: tSections } = useTranslation("sections");
 
   return (
-    <div className="section-container" tabIndex={0}>
+    <div ref={ref} className="section-container" tabIndex={0}>
       <SectionTitle
         title={tSections("projects.title")}
         subtitle={tSections("projects.subtitle")}

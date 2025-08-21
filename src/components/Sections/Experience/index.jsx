@@ -1,15 +1,18 @@
 import { useTranslation } from "react-i18next";
-import SectionTitle from "../../SectionTitle";
-import styles from "./styles.module.css";
-import ExperienceCard from "./ExperienceCard";
-import images from "../../../services/utils/jsons/images";
 import { experiencesData } from "../../../services/utils/jsons/data";
+import SectionTitle from "../../SectionTitle";
+import ExperienceCard from "./ExperienceCard";
+import styles from "./styles.module.css";
 
-export default function Experience() {
+export default function Experience({ ref }) {
   const { t: tSections } = useTranslation("sections");
 
   return (
-    <div className={`section-container ${styles.container}`} tabIndex={0}>
+    <div
+      ref={ref}
+      className={`section-container ${styles.container}`}
+      tabIndex={0}
+    >
       <SectionTitle
         title={tSections("experience.title")}
         subtitle={tSections("experience.subtitle")}

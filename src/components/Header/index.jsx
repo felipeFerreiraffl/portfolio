@@ -17,8 +17,9 @@ import images from "../../services/utils/jsons/images";
 import ColorDropdown from "./Dropdown/Color";
 import LanguageDropdown from "./Dropdown/Language";
 import styles from "./styles.module.css";
+import { scrollToSection } from "../../services/utils/hooks/global/scrollToSection";
 
-export default function Header() {
+export default function Header({ sectionRefs }) {
   // Tradução i18next
   const { t } = useTranslation("common");
 
@@ -88,7 +89,15 @@ export default function Header() {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <a href="#" title="Intro" aria-label="Intro">
+            <a
+              href="#"
+              title="Intro"
+              aria-label="Intro"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(sectionRefs.intro);
+              }}
+            >
               Intro
             </a>
           </li>
@@ -97,6 +106,10 @@ export default function Header() {
               href="#"
               title={t("navbar.skills")}
               aria-label={t("navbar.skills")}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(sectionRefs.skills);
+              }}
             >
               {t("navbar.skills")}
             </a>
@@ -106,6 +119,10 @@ export default function Header() {
               href="#"
               title={t("navbar.experience")}
               aria-label={t("navbar.experience")}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(sectionRefs.experiences);
+              }}
             >
               {t("navbar.experience")}
             </a>
@@ -115,6 +132,10 @@ export default function Header() {
               href="#"
               title={t("navbar.projects")}
               aria-label={t("navbar.projects")}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(sectionRefs.projects);
+              }}
             >
               {t("navbar.projects")}
             </a>
@@ -124,6 +145,10 @@ export default function Header() {
               href="#"
               title={t("navbar.contacts")}
               aria-label={t("navbar.contacts")}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(sectionRefs.contacts);
+              }}
             >
               {t("navbar.contacts")}
             </a>
@@ -177,7 +202,17 @@ export default function Header() {
           <nav className={styles.menu} ref={menuRef}>
             <ul>
               <li>
-                <a href="#">Intro</a>
+                <a
+                  href="#"
+                  title="Intro"
+                  aria-label="Intro"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(sectionRefs.intro);
+                  }}
+                >
+                  Intro
+                </a>
                 <div className={styles.divisor}>
                   <span></span>
                   <span></span>
@@ -189,14 +224,14 @@ export default function Header() {
                   href="#"
                   title={t("navbar.skills")}
                   aria-label={t("navbar.skills")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(sectionRefs.skills);
+                  }}
                 >
                   {t("navbar.skills")}
                 </a>
-                <div
-                  className={styles.divisor}
-                  title="Intro"
-                  aria-label="Intro"
-                >
+                <div className={styles.divisor}>
                   <span></span>
                   <span></span>
                   <span></span>
@@ -207,6 +242,10 @@ export default function Header() {
                   href="#"
                   title={t("navbar.experience")}
                   aria-label={t("navbar.experience")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(sectionRefs.experiences);
+                  }}
                 >
                   {t("navbar.experience")}
                 </a>
@@ -221,6 +260,10 @@ export default function Header() {
                   href="#"
                   title={t("navbar.projects")}
                   aria-label={t("navbar.projects")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(sectionRefs.projects);
+                  }}
                 >
                   {t("navbar.projects")}
                 </a>
@@ -235,6 +278,10 @@ export default function Header() {
                   href="#"
                   title={t("navbar.contacts")}
                   aria-label={t("navbar.contacts")}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(sectionRefs.contacts);
+                  }}
                 >
                   {t("navbar.contacts")}
                 </a>

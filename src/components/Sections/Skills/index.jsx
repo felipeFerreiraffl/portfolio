@@ -4,11 +4,11 @@ import { skillsData } from "../../../services/utils/jsons/data";
 import Slide from "../../Slides/SkillsCarousel/Slide";
 import SkillsCarousel from "../../Slides/SkillsCarousel";
 
-export default function Skills() {
+export default function Skills({ ref }) {
   const { t: tSections } = useTranslation("sections");
 
   return (
-    <div className="section-container" tabIndex={0}>
+    <div ref={ref} className="section-container" tabIndex={0}>
       <SectionTitle
         title={tSections("skills.title")}
         subtitle={tSections("skills.subtitle")}

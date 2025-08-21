@@ -7,12 +7,12 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { socialLinks } from "../../../services/utils/jsons/data";
 import images from "../../../services/utils/jsons/images";
 
-export default function Contacts() {
+export default function Contacts({ ref }) {
   const { t: tSections } = useTranslation("sections");
   const { t: tCommon } = useTranslation("common");
 
   return (
-    <div className="section-container" tabIndex={0}>
+    <div ref={ref} className="section-container" tabIndex={0}>
       <SectionTitle
         title={tSections("contacts.title")}
         subtitle={tSections("contacts.subtitle")}

@@ -4,12 +4,12 @@ import SectionTitle from "../../SectionTitle";
 import images from "../../../services/utils/jsons/images";
 import Info from "./Info";
 
-export default function Intro() {
+export default function Intro({ ref }) {
   const { t: tSection } = useTranslation("sections");
   const { t: tCommon } = useTranslation("common");
 
   return (
-    <div className="section-container" tabIndex={0}>
+    <div ref={ref} className="section-container" tabIndex={0}>
       <SectionTitle
         title={tSection("intro.title")}
         subtitle={tSection("intro.subtitle")}
