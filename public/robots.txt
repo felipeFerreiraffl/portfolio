@@ -1,0 +1,8 @@
+User-agent: *
+
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /.vscode/
+Disallow: /assets/
+
+Allow: /
