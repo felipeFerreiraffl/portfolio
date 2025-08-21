@@ -55,6 +55,17 @@ A seguir, você encontrará informações gerais sobre o projeto e sobre o autor
   - **Tema principal** - é possível alterar o tema do site clicando na logo do header, escolhendo entre o círculo azul claro ou escuro
   - **Tradução** - ao clicar no ícone de tradução (lado direito do header), é possível clicar em <code>POR</code> muda para o português e <code>ENG</code> para trocar para inglês
 
+- #### 🎨 Inspiração
+  - **Design** - inspiração no jogo GRIS, utilizando cores, anéis e imagens remetem aos seus elementos([Ver mais sobre GRIS](https://store.steampowered.com/app/683320/GRIS))
+    - Exemplos
+      ![Design GRIS 1](./src/assets/imgs/previews/gris-ref-1.jpg)
+      ![Design GRIS 2](./src/assets/imgs/previews/gris-ref-2.jpg)
+      ![Design GRIS 3](./src/assets/imgs/gris-staute.webp)
+  - **Layout** - portfólio de Eric Nunes me auxiliou na estrutura geral da página ([Portfólio de Eric Nunes](https://portfolio-eric-nunes-lpmkbla06-ericnunes0s-projects.vercel.app))
+    [![GitHub](https://img.shields.io/badge/EricNunes0-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/EricNunes0)
+
+    
+
 ****
 
 ## 💻 Tecnologias
@@ -73,7 +84,7 @@ A seguir, você encontrará informações gerais sobre o projeto e sobre o autor
 
 🔗 [Acesso ao portfólio]()
 
-- #### Tema claro
+- #### Tema **claro**
 
 ![Preview 1](./src/assets/imgs/previews/preview-1-light.webp)
 ![Preview 2](./src/assets/imgs/previews/preview-2-light.webp)
