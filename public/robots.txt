@@ -6,3 +6,5 @@ Disallow: /.vscode/
 Disallow: /assets/
 
 Allow: /
+
+Sitemap: https://portfolio-one-nu-99.vercel.app
