@@ -52,7 +52,7 @@ export default function Contacts({ ref }) {
             </h3>
 
             <a
-              href=""
+              href="https://www.figma.com/design/vGYB5KQPySdayZVni0t6no/Design-%7C-Portf%C3%B3lio?node-id=62-1215&t=2LrlV2kYf5y5eu60-1"
               target="_blank"
               rel="noopener noreferer"
               title={tCommon("button_labels.figma")}
