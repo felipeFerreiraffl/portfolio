@@ -9,7 +9,7 @@
   - <a href="#-estruturação">Estruturação</a> 
   - <a href="#-seções">Seções</a> 
   - <a href="#-funcionalidades">Funcionalidades</a> 
-  - <a href="#-inspirações">Inspirações</a> 
+  - <a href="#-inspiração">Inspiração</a> 
 - <a href="#-tecnologias">Tecnologias</a>
 - <a href="#️-preview">Preview</a>
 - <a href="#-autor">Autor</a>
