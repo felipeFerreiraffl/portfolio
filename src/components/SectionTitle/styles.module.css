@@ -30,6 +30,14 @@
   background-color: var(--color-main);
 }
 
+.lineLeft {
+  transform-origin: right;
+}
+
+.lineRight {
+  transform-origin: left;
+}
+
 .diamond {
   width: var(--spacing-size-16);
   aspect-ratio: 1 / 1;

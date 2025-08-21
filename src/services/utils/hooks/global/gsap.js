@@ -35,3 +35,7 @@ export function useGSAPTimeline(
     { scope: refs }
   );
 }
+
+export function useGSAPFromTo(ref, fromProps = {}, toProps = {}) {
+  gsap.fromTo(ref.current, { ...fromProps }, { ...toProps });
+}
