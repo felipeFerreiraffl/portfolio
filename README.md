@@ -9,6 +9,7 @@
   - <a href="#-estruturação">Estruturação</a> 
   - <a href="#-seções">Seções</a> 
   - <a href="#-funcionalidades">Funcionalidades</a> 
+  - <a href="#-inspirações">Inspirações</a> 
 - <a href="#-tecnologias">Tecnologias</a>
 - <a href="#️-preview">Preview</a>
 - <a href="#-autor">Autor</a>
@@ -56,12 +57,15 @@ A seguir, você encontrará informações gerais sobre o projeto e sobre o autor
   - **Tradução** - ao clicar no ícone de tradução (lado direito do header), é possível clicar em <code>POR</code> muda para o português e <code>ENG</code> para trocar para inglês
 
 - #### 🎨 Inspiração
-  - **Design** - inspiração no jogo GRIS, utilizando cores, anéis e imagens remetem aos seus elementos([Ver mais sobre GRIS](https://store.steampowered.com/app/683320/GRIS))
+  - **Design** - inspiração no jogo GRIS, utilizando cores, anéis e imagens remetem aos seus elementos ([Ver mais sobre GRIS](https://store.steampowered.com/app/683320/GRIS))
     - Exemplos
+    
       ![Design GRIS 1](./src/assets/imgs/previews/gris-ref-1.jpg)
       ![Design GRIS 2](./src/assets/imgs/previews/gris-ref-2.jpg)
       ![Design GRIS 3](./src/assets/imgs/gris-staute.webp)
+      
   - **Layout** - portfólio de Eric Nunes me auxiliou na estrutura geral da página ([Portfólio de Eric Nunes](https://portfolio-eric-nunes-lpmkbla06-ericnunes0s-projects.vercel.app))
+    
     [![GitHub](https://img.shields.io/badge/EricNunes0-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/EricNunes0)
 
     
