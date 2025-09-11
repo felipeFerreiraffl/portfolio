@@ -59,7 +59,16 @@
   background-color: var(--color-opacity_80);
 }
 
-.iconsContainer {
+.iconsContainer span {
+  display: flex;
+  width: var(--spacing-size-16);
+  aspect-ratio: 1 / 1;
+}
+
+.iconsContainer span * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   font-size: var(--spacing-size-16);
   color: var(--color-text);
 
