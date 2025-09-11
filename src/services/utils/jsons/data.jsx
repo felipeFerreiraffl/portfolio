@@ -177,7 +177,7 @@ export const projectsData = [
   {
     title: "TSAuth",
     imgSrc: images.projects.tsAuth,
-    href: "https://github.com/felipeFerreiraffl/phaser-train-2",
+    href: "https://github.com/felipeFerreiraffl/tsauth",
     techs: [
       { icon: <Icon icon={icons.remix.brand.react} /> },
       { icon: <Icon icon={icons.remix.brand.javascript} /> },
