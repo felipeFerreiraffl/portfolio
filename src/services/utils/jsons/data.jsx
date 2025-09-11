@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { ReactComponent as MongoDBIcon } from "../../../assets/svgs/icons/mongodb.svg";
 import { ReactComponent as MySQLIcon } from "../../../assets/svgs/icons/mysql.svg";
 import { ReactComponent as SpringBootIcon } from "../../../assets/svgs/icons/springboot.svg";
+import { ReactComponent as TypeScriptIcon } from "../../../assets/svgs/icons/typescript.svg";
 import icons from "./icons";
 import images from "./images";
 
@@ -20,6 +21,10 @@ export const skillsData = [
       {
         techName: "React.js",
         techIcon: <Icon icon={icons.remix.brand.react} />,
+      },
+      {
+        techName: "TypeScript",
+        techIcon: <TypeScriptIcon style={{ fill: "var(--color-text)" }} />,
       },
     ],
   },
@@ -86,7 +91,7 @@ export const experiencesData = [
 // Dados dos projetos
 export const projectsData = [
   {
-    title: "projects.cards.proj1.title",
+    title: "projects.cards.first-personal-site.title",
     imgSrc: images.projects.personalSite,
     href: "https://github.com/felipeFerreiraffl/projeto-sitePessoal",
     techs: [
@@ -95,7 +100,7 @@ export const projectsData = [
     ],
   },
   {
-    title: "projects.cards.proj2.title",
+    title: "projects.cards.felicitos.title",
     imgSrc: images.projects.menuFelicitos,
     href: "https://github.com/felipeFerreiraffl/pagina-cardapio",
     techs: [
@@ -104,17 +109,7 @@ export const projectsData = [
     ],
   },
   {
-    title: "projects.cards.proj3.title",
-    imgSrc: images.projects.apiWeather1,
-    href: "https://github.com/felipeFerreiraffl/clima-api",
-    techs: [
-      { icon: <Icon icon={icons.remix.brand.html} /> },
-      { icon: <Icon icon={icons.remix.brand.css} /> },
-      { icon: <Icon icon={icons.remix.brand.javascript} /> },
-    ],
-  },
-  {
-    title: "projects.cards.proj4.title",
+    title: "projects.cards.first-personal-site.title",
     imgSrc: images.projects.professionalPortfolio1,
     href: "https://github.com/felipeFerreiraffl/professional-portifolio",
     techs: [
@@ -125,8 +120,8 @@ export const projectsData = [
     ],
   },
   {
-    title: "projects.cards.proj5.title",
-    imgSrc: images.projects.apiWeather2,
+    title: "projects.cards.weather-api.title",
+    imgSrc: images.projects.apiWeather,
     href: "https://github.com/felipeFerreiraffl/app-temperatura",
     techs: [
       { icon: <Icon icon={icons.remix.brand.react} /> },
@@ -137,7 +132,7 @@ export const projectsData = [
     ],
   },
   {
-    title: "projects.cards.proj6.title",
+    title: "projects.cards.math-calculations.title",
     imgSrc: images.projects.mathCalculations,
     href: "https://github.com/felipeFerreiraffl/calculos-matematicos",
     techs: [
@@ -148,7 +143,7 @@ export const projectsData = [
     ],
   },
   {
-    title: "projects.cards.proj7.title",
+    title: "projects.cards.library-crud.title",
     imgSrc: images.projects.crudLibrary,
     href: "https://github.com/felipeFerreiraffl/crud-livraria",
     techs: [
@@ -161,7 +156,7 @@ export const projectsData = [
     ],
   },
   {
-    title: "projects.cards.proj8.title",
+    title: "projects.cards.animes-mangas-kitsu.title",
     imgSrc: images.projects.animesMangasKitsu,
     href: "https://github.com/felipeFerreiraffl/anime-manga-info",
     techs: [
@@ -170,12 +165,24 @@ export const projectsData = [
     ],
   },
   {
-    title: "projects.cards.proj9.title",
+    title: "projects.cards.train-phaser.title",
     imgSrc: images.projects.phaserTrain,
     href: "https://github.com/felipeFerreiraffl/phaser-train-2",
     techs: [
       { icon: <Icon icon={icons.remix.brand.react} /> },
       { icon: <Icon icon={icons.remix.brand.javascript} /> },
+      { icon: <Icon icon={icons.remix.brand.vercel} /> },
+    ],
+  },
+  {
+    title: "TSAuth",
+    imgSrc: images.projects.tsAuth,
+    href: "https://github.com/felipeFerreiraffl/phaser-train-2",
+    techs: [
+      { icon: <Icon icon={icons.remix.brand.react} /> },
+      { icon: <Icon icon={icons.remix.brand.javascript} /> },
+      { icon: <TypeScriptIcon style={{ fill: "var(--color-text)" }} /> },
+      { icon: <Icon icon={icons.remix.brand.nodejs} /> },
       { icon: <Icon icon={icons.remix.brand.vercel} /> },
     ],
   },
