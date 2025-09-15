@@ -4,7 +4,7 @@ export function scrollToSection(sectionRef) {
   if (sectionRef?.current) {
     // Define um valor para o topo da seção (posição do topo do ref - offset)
     const top =
-      sectionRef.current.getBoundingClientRect().top + window.scrollY - 120;
+      sectionRef.current.getBoundingClientRect().top + window.scrollY - 140;
 
     window.scrollTo({
       top,
