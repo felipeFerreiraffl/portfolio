@@ -109,7 +109,7 @@ export const projectsData = [
     ],
   },
   {
-    title: "projects.cards.first-personal-site.title",
+    title: "projects.cards.prof-portfolio-1.title",
     imgSrc: images.projects.professionalPortfolio1,
     href: "https://github.com/felipeFerreiraffl/professional-portifolio",
     techs: [
