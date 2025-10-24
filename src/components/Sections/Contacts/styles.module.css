@@ -1,3 +1,7 @@
+.contacts {
+  padding-bottom: 0 !important;
+}
+
 .content {
   display: flex;
   align-items: center;

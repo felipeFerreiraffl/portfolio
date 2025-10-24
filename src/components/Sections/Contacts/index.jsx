@@ -12,7 +12,11 @@ export default function Contacts({ ref }) {
   const { t: tCommon } = useTranslation("common");
 
   return (
-    <div ref={ref} className="section-container" tabIndex={0}>
+    <div
+      ref={ref}
+      className={`section-container ${styles.contacts}`}
+      tabIndex={0}
+    >
       <SectionTitle
         title={tSections("contacts.title")}
         subtitle={tSections("contacts.subtitle")}
