@@ -4,10 +4,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color-neutral-04);
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
   padding: var(--margin-desktop);
-  padding-top: var(--spacing-size-28) !important;
-  padding-bottom: var(--spacing-size-28) !important;
+  padding-top: var(--spacing-size-20) !important;
+  padding-bottom: var(--spacing-size-20) !important;
   z-index: var(--zindex-2000);
 
   @media (max-width: 1200px) {
