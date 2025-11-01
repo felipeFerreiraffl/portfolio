@@ -12,40 +12,19 @@
 
 :root {
   /* ----- Cores ----- */
-  --color-main-01: #4a19dc;
-  --color-main-02: #8e70e9;
-  --color-main-03: #160350;
+  --color-main-01: 74 25 220;
+  --color-main-02: 142 112 233;
+  --color-main-03: 41 21 102;
 
-  --color-neutral-01: #ffffff;
-  --color-neutral-02: #ded3ff;
-  --color-neutral-03: #000008;
-  --color-neutral-04: #000000;
+  --color-neutral-01: 255 255 255;
+  --color-neutral-02: 222 211 255;
+  --color-neutral-03: 0 0 8;
+  --color-neutral-04: 0 0 0;
 
-  --color-opacity-main-01_40: rgba(74, 25, 220, 0.4);
-  --color-opacity-main-01_80: rgba(74, 25, 220, 0.8);
-  --color-opacity-main-02_40: rgba(142, 112, 233, 0.4);
-  --color-opacity-main-02_80: rgba(142, 112, 233, 0.8);
-
-  --color-gradient-light: linear-gradient(
-    to right,
-    var(--color-main-01),
-    var(--color-main-02)
-  );
-  --color-gradient-dark: linear-gradient(
-    to right,
-    var(--color-main-02),
-    var(--color-main-01)
-  );
-  --color-gradient-light-floor: linear-gradient(
-    to bottom,
-    rgba(142, 112, 233, 0.5),
-    rgba(142, 112, 233, 0)
-  );
-  --color-gradient-dark-floor: linear-gradient(
-    to bottom,
-    rgba(74, 25, 220, 0.5),
-    rgba(74, 25, 220, 0)
-  );
+  --color-opacity-main-01_40: rgb(--color-main-01 / 0.4);
+  --color-opacity-main-01_80: rgb(--color-main-01 / 0.8);
+  --color-opacity-main-02_40: rgb(--color-main-02 / 0.4);
+  --color-opacity-main-02_80: rgb(--color-main-02 / 0.8);
 
   /* ----- Fontes -----*/
   --font-family: "Space Grotesk", sans-serif;
@@ -75,10 +54,10 @@
   /* ----- Efeitos ----- */
   --transition-default: all 0.3s ease-in-out;
 
-  --shadow-default-light: 0 0 0.75rem rgba(142, 112, 233, 0.6);
-  --shadow-default-dark: 0 0 0.75rem rgba(22, 3, 80, 0.6);
-  --shadow-background-light: 0 0.5rem 1rem rgba(142, 112, 233, 0.4);
-  --shadow-background-dark: 0 0.5rem 1rem rgba(0, 0, 8, 0.4);
+  --shadow-default-light: 0 0 0.75rem rgb(--color-main-02 / 0.6);
+  --shadow-default-dark: 0 0 0.75rem rgb(--color-main-03 / 0.6);
+  --shadow-background-light: 0 0.5rem 1rem rgb(--color-main-02 / 0.4);
+  --shadow-background-dark: 0 0.5rem 1rem rgb(--color-neutral-03 / 0.4);
 
   --background-blur: blur(8px);
 
