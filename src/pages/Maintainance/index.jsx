@@ -6,15 +6,16 @@ export default function Maintenance() {
   const { t } = useTranslation("common");
 
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles}>
         {[...Array(10)].map((_, i) => (
           <div key={i} className={`${styles} ${styles}`}></div>
         ))}
       </div>
-      <div className={styles}>
-        <h1 className={styles}>{t("maintenance.title")} :(</h1>
-        <p className={styles}>{t("maintenance.subtitle")}</p>
+
+      <div className={styles.titleContainer}>
+        <h1>{t("maintenance.title")} :(</h1>
+        <p>{t("maintenance.subtitle")}</p>
       </div>
 
       <img src={images.logo} alt={"Logo - Felipe Ferreira Lima"} />
