@@ -31,5 +31,9 @@
     "curriculum_vitae": "Ver CV",
     "figma": "Acessar design"
   },
-  "footer": "Portfólio"
+  "footer": "Portfólio",
+  "maintenance": {
+    "title": "Página sob manutenção :(",
+    "subtitle": "Fique tranquilo. Daqui a pouco você verá um conteúdo incrível!"
+  }
 }

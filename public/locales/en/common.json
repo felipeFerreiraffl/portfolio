@@ -31,5 +31,9 @@
     "curriculum_vitae": "See CV",
     "figma": "Acess design"
   },
-  "footer": "Portfolio"
+  "footer": "Portfolio",
+  "maintenance": {
+    "title": "Page under maintenance :(",
+    "subtitle": "Stay calm. I'll see an incredible content very soon!"
+  }
 }
