@@ -1,0 +1,122 @@
+.container {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(var(--color-neutral-02));
+  overflow: hidden;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-size-12);
+  z-index: var(--zindex-1000);
+}
+
+.titleContainer * {
+  text-align: center;
+  -webkit-text-stroke: var(--spacing-size-12) rgb(var(--color-neutral-02));
+  paint-order: stroke fill;
+}
+
+.titleContainer h1 {
+  font: var(--font-headline-03);
+  color: rgb(var(--color-neutral-03));
+}
+
+.titleContainer p {
+  font: var(--font-body-subtitle);
+  color: rgb(var(--color-neutral-04));
+}
+
+img {
+  position: absolute;
+  bottom: 24px;
+  max-width: var(--spacing-size-80);
+  width: 100%;
+  height: auto;
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  border-radius: var(--radius-circular);
+  background: linear-gradient(
+        rgb(var(--color-neutral-02)),
+        rgb(var(--color-neutral-02))
+      )
+      padding-box,
+    linear-gradient(
+        180deg,
+        rgb(var(--color-main-03)),
+        rgb(var(--color-neutral-02))
+      )
+      border-box;
+  border: solid transparent;
+  opacity: 0.2;
+}
+
+.ring:nth-child(1) {
+  width: min(var(--spacing-size-200), 16%);
+}
+
+.ring:nth-child(2) {
+  width: min(var(--spacing-size-236), 18%);
+}
+
+.ring:nth-child(3) {
+  width: min(var(--spacing-size-312), 24%);
+}
+
+.ring:nth-child(4) {
+  width: min(var(--spacing-size-400), 31%);
+}
+
+.ring:nth-child(5) {
+  width: min(var(--spacing-size-432), 34%);
+}
+
+.ring:nth-child(6) {
+  width: min(var(--spacing-size-580), 45%);
+}
+
+.ring:nth-child(7) {
+  width: min(var(--spacing-size-620), 48%);
+}
+
+.ring:nth-child(8) {
+  width: min(var(--spacing-size-644), 50%);
+}
+
+.ring:nth-child(9) {
+  width: min(50.25rem, 63%);
+}
+
+.ring:nth-child(10) {
+  width: min(59.5rem, 74%);
+}
+
+.ring:nth-child(11) {
+  width: min(80rem, 100%);
+}
+
+.ring:nth-child(1),
+.ring:nth-child(7) {
+  border-width: var(--spacing-size-2);
+}
+
+.ring:nth-child(-2n + 6) {
+  border-width: var(--spacing-size-4);
+}
+
+.ring:nth-child(3),
+.ring:nth-child(5),
+.ring:nth-child(n + 8) {
+  border-width: var(--spacing-size-8);
+}

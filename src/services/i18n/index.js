@@ -9,6 +9,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    defaultNS: "pt-BR",
     fallbackLng: "pt-BR",
     supportedLngs: ["pt-BR", "en"],
     ns: ["common", "sections"],

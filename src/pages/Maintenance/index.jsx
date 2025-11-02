@@ -7,14 +7,12 @@ export default function Maintenance() {
 
   return (
     <div className={styles.container}>
-      <div className={styles}>
-        {[...Array(10)].map((_, i) => (
-          <div key={i} className={`${styles} ${styles}`}></div>
-        ))}
-      </div>
+      {[...Array(11)].map((_, i) => (
+        <div key={i} className={styles.ring}></div>
+      ))}
 
       <div className={styles.titleContainer}>
-        <h1>{t("maintenance.title")} :(</h1>
+        <h1>{t("maintenance.title")}</h1>
         <p>{t("maintenance.subtitle")}</p>
       </div>
 
