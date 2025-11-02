@@ -14,6 +14,10 @@
   align-items: center;
   gap: var(--spacing-size-12);
   z-index: var(--zindex-1000);
+
+  @media (max-width: 884px) {
+    max-width: 90vw;
+  }
 }
 
 .titleContainer * {
@@ -25,6 +29,10 @@
 .titleContainer h1 {
   font: var(--font-headline-03);
   color: rgb(var(--color-neutral-03));
+
+  @media (max-width: 480px) {
+    font: var(--font-headline-04);
+  }
 }
 
 .titleContainer p {

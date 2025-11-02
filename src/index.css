@@ -32,8 +32,8 @@
   --font-headline-01: 700 5rem var(--font-family); /* 80px */
   --font-headline-02: 700 4rem var(--font-family); /* 64px */
   --font-headline-03: 700 3rem var(--font-family); /* 48px */
-  --font-headline-04: 500 2rem var(--font-family); /* 32px */
-  --font-headline-05: 500 1.5rem var(--font-family); /* 24px */
+  --font-headline-04: 700 2rem var(--font-family); /* 32px */
+  --font-headline-05: 700 1.5rem var(--font-family); /* 24px */
 
   /* 24px */
   --font-body-subtitle: 500 1.5rem var(--font-family);
