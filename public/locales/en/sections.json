@@ -6,7 +6,7 @@
       "label": "I.T. Student",
       "presentation": {
         "title": "Presentation",
-        "desc": "A tech student with curiosity to learn about web development, game design, coding and front-end recourses."
+        "desc": "Technian in System's Development with competences in front-end and back-end, like implementations in HTML, CSS, React.js, Java, Node, TypeScript and APIs REST integration"
       },
       "hobbies": {
         "title": "Hobbies",
@@ -14,7 +14,7 @@
       },
       "goals": {
         "title": "Goals",
-        "desc": "I want to start in I.T. area as an technical supporter or help desk, with the goals of entering at front-end development branch. If possible, I'd want to study or work with games."
+        "desc": "I'm open to work in Help Desk and Front-end / Full-stack development branch and gaining more experience and be able to help on the company solutions"
       }
     }
   },
@@ -31,8 +31,12 @@
     "subtitle": "My previous experiences in my career",
     "cards": {
       "one": {
-        "title": "Apprentice - SENAI Mercedes-Benz",
-        "desc": "Apprentice in the Vehicle Production Mechanic course at Mercedes-Benz do Brasil, São Bernardo do Campo, where activities related to mechanics were carried out, but also included the use of software, Microsoft Office, and computer setup, providing interdisciplinary experience."
+        "title": "Vehicular production mechanical",
+        "descs": {
+          "one": "Preparatory course for Mercedes-Benz vehicle production, covering machining concepts (CNC, milling, turning, fitting, etc.) and maintenance of heavy vehicle components",
+          "two": "Soft skills such as teamwork, attention to detail, and proactivity",
+          "three": "Computer maintenance and formatting, use of Microsoft Office Suite applications, and software installation are extracurricular activities related to IT"
+        }
       }
     }
   },
@@ -40,9 +44,22 @@
     "title": "Projects",
     "subtitle": "Projects made with distinct technologies",
     "cards": {
-      "math_calcs": "Math calculations",
-      "crud_lib": "Library CRUD",
-      "kitsu": "Animes & Mangas - Kitsu"
+      "math_calcs": {
+        "title": "Math calculations",
+        "desc": "Famous meth calculations, like BMI, fees, physic and others"
+      },
+      "crud_lib": {
+        "title": "Library CRUD",
+        "desc": "Creation and management of books by CRUD"
+      },
+      "kitsu": {
+        "title": "Animes & Mangas - Kitsu",
+        "desc": "Animes and mangas website with Kitsu API"
+      },
+      "tsauth": {
+        "title": "TSAuth",
+        "desc": "Login and regist users by JWT"
+      }
     }
   },
   "contacts": {

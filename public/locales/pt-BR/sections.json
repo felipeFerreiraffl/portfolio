@@ -6,7 +6,7 @@
       "label": "Estudante de T.I.",
       "presentation": {
         "title": "Apresentação",
-        "desc": "Estudante de tecnologia com curiosidade para aprender sobre desenvolvimento web, game design, programação e recursos front-end."
+        "desc": "Técnico em Desenvolvimento de Sistemas com competências em front-end e back-end, sendo elas implementações em HTML, CSS, React.js, Java, Node, TypeScript e integrações com APIs REST."
       },
       "hobbies": {
         "title": "Hobbies",
@@ -14,7 +14,7 @@
       },
       "goals": {
         "title": "Objetivo",
-        "desc": "Pretendo começar na área de T.I. como suporte técnico ou help desk, com objetivo de ingressar no ramo de desenvolvimento front-end. Se possível, desejaria estudar ou trabalhar com jogos."
+        "desc": "Estou aberto a trabalhar na área de Help Desk e Desenvolvimento Front-end ou Full-Stack, assim adquirindo mais experiência e poder ajudar nas soluções das empresas."
       }
     }
   },
@@ -32,7 +32,11 @@
     "cards": {
       "one": {
         "title": "Aprendiz - SENAI Mercedes-Benz",
-        "desc": "Aprendiz no curso de Mecânico de Produção Veicular na Mercedes-Benz do Brasil, São Bernardo do Campo, em que foram realizadas atividades relacionadas à mecânica, porém com auxílio de sofwares, uso do Microsoft Office e configuração de computadores, obtendo interdisciplinariedade."
+        "desc": {
+          "one": "Curso preparativo para a produção veicular da Mercedes-Benz, com conceitos de usinagem (CNC, fresamento, torneamento, ajustagem, etc), manutenção de componentes de veículos pesados ",
+          "two": "Soft-skills como trabalho em equipe, atenção aos detalhes e proatividade",
+          "three": "Manutenção e formatação de computadores, utilização de aplicativos do Pacote Office e instalação de softwares são atividades extracurriculares relacionadas a T.I."
+        }
       }
     }
   },
@@ -40,9 +44,22 @@
     "title": "Projetos",
     "subtitle": "Projetos realizados com diferentes tecnologias",
     "cards": {
-      "math_calcs": "Cálculos matemáticos",
-      "crud_lib": "CRUD de Livraria",
-      "kitsu": "Animes & Mangás - Kitsu"
+      "math_calcs": {
+        "title": "Cálculos matemáticos",
+        "desc": "Cálculos matemáticos famosos, como IMC, juros, física, e entre outros"
+      },
+      "crud_lib": {
+        "title": "CRUD de Livraria",
+        "desc": "Criação e manutenção de livros por CRUD"
+      },
+      "kitsu": {
+        "title": "Animes & Mangás - Kitsu",
+        "desc": "Site de animes e mangás com a API da Kitsu"
+      },
+      "tsauth": {
+        "title": "TSAuth",
+        "desc": "Login e cadastro de usuários por JWT"
+      }
     }
   },
   "contacts": {
