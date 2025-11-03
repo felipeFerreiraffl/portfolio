@@ -40,30 +40,9 @@
     "title": "Projetos",
     "subtitle": "Projetos realizados com diferentes tecnologias",
     "cards": {
-      "first-personal-site": {
-        "title": "Primeiro site pessoal"
-      },
-      "felicitos": {
-        "title": "Cardápio - Felicitos"
-      },
-      "prof-portfolio-1": {
-        "title": "Portfólio profissional 1"
-      },
-      "weather-api": {
-        "title": "API de clima"
-      },
-      "math-calculations": {
-        "title": "Cálculos matemáticos"
-      },
-      "library-crud": {
-        "title": "CRUD de livraria"
-      },
-      "animes-mangas-kitsu": {
-        "title": "Anime e mangás - Kitsu"
-      },
-      "train-phaser": {
-        "title": "Treino com Phaser"
-      }
+      "math_calcs": "Cálculos matemáticos",
+      "crud_lib": "CRUD de Livraria",
+      "kitsu": "Animes & Mangás - Kitsu"
     }
   },
   "contacts": {
