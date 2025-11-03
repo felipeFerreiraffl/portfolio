@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import SectionTitle from "../../SectionTitle";
-import { projectsData } from "../../../services/utils/jsons/data";
+import { projectsData } from "../../../data/data";
 import ProjectCard from "./ProjectCard";
 import styles from "./styles.module.css";
 

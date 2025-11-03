@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import SectionTitle from "../../SectionTitle";
-import { skillsData } from "../../../services/utils/jsons/data";
+import { skillsData } from "../../../data/data";
 import Slide from "../../Slides/SkillsCarousel/Slide";
 import SkillsCarousel from "../../Slides/SkillsCarousel";
 

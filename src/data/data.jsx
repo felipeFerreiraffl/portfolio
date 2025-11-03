@@ -3,8 +3,8 @@ import { ReactComponent as MongoDBIcon } from "../../../assets/svgs/icons/mongod
 import { ReactComponent as MySQLIcon } from "../../../assets/svgs/icons/mysql.svg";
 import { ReactComponent as SpringBootIcon } from "../../../assets/svgs/icons/springboot.svg";
 import { ReactComponent as TypeScriptIcon } from "../../../assets/svgs/icons/typescript.svg";
-import icons from "./icons";
-import images from "./images";
+import icons from "../services/utils/icons";
+import images from "../services/utils/images";
 
 // Dados dos habilidades
 export const skillsData = [

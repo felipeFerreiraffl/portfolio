@@ -12,8 +12,8 @@ import {
   handleOpen,
 } from "../../services/utils/hooks/Header/elements";
 import { useClickOutside } from "../../services/utils/hooks/Header/useClickOutside";
-import icons from "../../services/utils/jsons/icons";
-import images from "../../services/utils/jsons/images";
+import icons from "../../services/utils/icons";
+import images from "../../services/utils/images";
 import ColorDropdown from "./Dropdown/Color";
 import LanguageDropdown from "./Dropdown/Language";
 import styles from "./styles.module.css";

@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import { useTranslation } from "react-i18next";
 import SectionTitle from "../../SectionTitle";
-import images from "../../../services/utils/jsons/images";
+import images from "../../../services/utils/images";
 import Info from "./Info";
 
 export default function Intro({ ref }) {

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { experiencesData } from "../../../services/utils/jsons/data";
+import { experiencesData } from "../../../data/data";
 import SectionTitle from "../../SectionTitle";
 import ExperienceCard from "./ExperienceCard";
 import styles from "./styles.module.css";

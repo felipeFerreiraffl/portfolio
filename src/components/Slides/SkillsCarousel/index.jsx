@@ -2,11 +2,11 @@ import useEmblaCarousel from "embla-carousel-react";
 import styles from "./styles.module.css";
 import { useCallback, useEffect, useState } from "react";
 import Slide from "./Slide";
-import { skillsData } from "../../../services/utils/jsons/data";
+import { skillsData } from "../../../data/data";
 import { useTranslation } from "react-i18next";
 import DotCarousel from "./DotCarousel";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import icons from "../../../services/utils/jsons/icons";
+import icons from "../../../services/utils/icons";
 import {
   emblaUseEffect,
   getEmblaCallbacks,
