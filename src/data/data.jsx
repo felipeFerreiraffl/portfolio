@@ -78,51 +78,35 @@ export const skillsData = [
   },
 ];
 
-// Dados de exxperiências
-export const experiencesData = [
-  {
-    imgSrc: images.experiences.exp1,
-    title: "experience.cards.one.title",
-    time: "2023-2025",
-    desc: "experience.cards.one.desc",
-  },
-];
-
-// Dados dos projetos
+// Dados de experiências
 export const projectsData = [
   {
-    title: "projects.cards.first-personal-site.title",
-    imgSrc: images.projects.personalSite,
-    href: "https://github.com/felipeFerreiraffl/projeto-sitePessoal",
+    title: "projects.cards.math_calcs",
+    src: images.projects.mathCalculations,
+    description: "projects.cards.math_calcs.desc",
     techs: [
-      { icon: <Icon icon={icons.remix.brand.html} /> },
-      { icon: <Icon icon={icons.remix.brand.css} /> },
-    ],
-  },
-  {
-    title: "projects.cards.felicitos.title",
-    imgSrc: images.projects.menuFelicitos,
-    href: "https://github.com/felipeFerreiraffl/pagina-cardapio",
-    techs: [
-      { icon: <Icon icon={icons.remix.brand.html} /> },
-      { icon: <Icon icon={icons.remix.brand.css} /> },
-    ],
-  },
-  {
-    title: "projects.cards.prof-portfolio-1.title",
-    imgSrc: images.projects.professionalPortfolio1,
-    href: "https://github.com/felipeFerreiraffl/professional-portifolio",
-    techs: [
-      { icon: <Icon icon={icons.remix.brand.html} /> },
+      { icon: <Icon icon={icons.remix.brand.react} /> },
       { icon: <Icon icon={icons.remix.brand.css} /> },
       { icon: <Icon icon={icons.remix.brand.javascript} /> },
       { icon: <Icon icon={icons.remix.brand.vercel} /> },
     ],
   },
   {
-    title: "projects.cards.weather-api.title",
-    imgSrc: images.projects.apiWeather,
-    href: "https://github.com/felipeFerreiraffl/app-temperatura",
+    title: "projects.cards.crud_lib.title",
+    src: images.projects.crudLibrary,
+    description: "projects.cards.crud_lib.desc",
+    techs: [
+      { icon: <Icon icon={icons.remix.brand.react} /> },
+      { icon: <Icon icon={icons.remix.brand.css} /> },
+      { icon: <Icon icon={icons.remix.brand.javascript} /> },
+      { icon: <Icon icon={icons.remix.brand.java} /> },
+      { icon: <SpringBootIcon style={{ fill: "var(--color-text)" }} /> },
+    ],
+  },
+  {
+    title: "projects.cards.kitsu.title",
+    src: images.projects.animesMangasKitsu,
+    description: "projects.cards.kitsu.desc",
     techs: [
       { icon: <Icon icon={icons.remix.brand.react} /> },
       { icon: <Icon icon={icons.remix.brand.css} /> },
@@ -132,55 +116,12 @@ export const projectsData = [
     ],
   },
   {
-    title: "projects.cards.math-calculations.title",
-    imgSrc: images.projects.mathCalculations,
-    href: "https://github.com/felipeFerreiraffl/calculos-matematicos",
+    title: "projects.cards.tsauth.title",
+    src: images.projects.tsAuth,
+    description: "projects.cards.tsauth.desc",
     techs: [
       { icon: <Icon icon={icons.remix.brand.react} /> },
       { icon: <Icon icon={icons.remix.brand.css} /> },
-      { icon: <Icon icon={icons.remix.brand.javascript} /> },
-      { icon: <Icon icon={icons.remix.brand.vercel} /> },
-    ],
-  },
-  {
-    title: "projects.cards.library-crud.title",
-    imgSrc: images.projects.crudLibrary,
-    href: "https://github.com/felipeFerreiraffl/crud-livraria",
-    techs: [
-      { icon: <Icon icon={icons.remix.brand.react} /> },
-      { icon: <Icon icon={icons.remix.brand.css} /> },
-      { icon: <Icon icon={icons.remix.brand.javascript} /> },
-      { icon: <Icon icon={icons.remix.brand.java} /> },
-      { icon: <MySQLIcon style={{ fill: "var(--color-text)" }} /> },
-      { icon: <SpringBootIcon style={{ fill: "var(--color-text)" }} /> },
-    ],
-  },
-  {
-    title: "projects.cards.animes-mangas-kitsu.title",
-    imgSrc: images.projects.animesMangasKitsu,
-    href: "https://github.com/felipeFerreiraffl/anime-manga-info",
-    techs: [
-      { icon: <Icon icon={icons.remix.brand.html} /> },
-      { icon: <Icon icon={icons.remix.brand.css} /> },
-    ],
-  },
-  {
-    title: "projects.cards.train-phaser.title",
-    imgSrc: images.projects.phaserTrain,
-    href: "https://github.com/felipeFerreiraffl/phaser-train-2",
-    techs: [
-      { icon: <Icon icon={icons.remix.brand.react} /> },
-      { icon: <Icon icon={icons.remix.brand.javascript} /> },
-      { icon: <Icon icon={icons.remix.brand.vercel} /> },
-    ],
-  },
-  {
-    title: "TSAuth",
-    imgSrc: images.projects.tsAuth,
-    href: "https://github.com/felipeFerreiraffl/tsauth",
-    techs: [
-      { icon: <Icon icon={icons.remix.brand.react} /> },
-      { icon: <Icon icon={icons.remix.brand.javascript} /> },
       { icon: <TypeScriptIcon style={{ fill: "var(--color-text)" }} /> },
       { icon: <Icon icon={icons.remix.brand.nodejs} /> },
       { icon: <Icon icon={icons.remix.brand.vercel} /> },
