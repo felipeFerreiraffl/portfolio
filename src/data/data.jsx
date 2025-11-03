@@ -79,6 +79,20 @@ export const skillsData = [
 ];
 
 // Dados de experiências
+export const experiencesData = [
+  {
+    title: "experience.cards.one.title",
+    src: "#",
+    date: "07/2023 - 07/2025",
+    descs: [
+      { desc1: "experience.cards.one.descs.one" },
+      { desc2: "experience.cards.one.descs.two" },
+      { desc3: "experience.cards.one.descs.three" },
+    ],
+  },
+];
+
+// Dados de projetos
 export const projectsData = [
   {
     title: "projects.cards.math_calcs",
