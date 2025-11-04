@@ -21,9 +21,30 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 0.125rem solid rgb(var(--color-main));
+  border: solid rgb(var(--color-main));
   border-radius: var(--radius-circular);
-  aspect-ratio: 1;
+}
+
+.btnRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid rgb(var(--color-main) / 0.4);
+}
+
+.btnRing:nth-child(1) {
+  width: var(--spacing-size-216);
+  height: var(--spacing-size-68);
+  border-radius: var(--radius-20);
+  border-width: 0.0625rem;
+}
+
+.btnRing:nth-child(2) {
+  width: var(--spacing-size-228);
+  height: var(--spacing-size-80);
+  border-radius: var(--radius-24);
+  border-width: var(--spacing-size-2);
 }
 
 .titleContainer {
@@ -31,6 +52,7 @@
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-size-12);
+  z-index: var(--zindex-1000);
 }
 
 .titleContainer * {
@@ -61,6 +83,7 @@
 }
 
 .container a {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,4 +93,9 @@
   min-width: var(--spacing-size-200);
   padding: var(--spacing-size-16) var(--spacing-size-64);
   border-radius: var(--spacing-size-12);
+  transition: var(--transition-default);
+}
+
+.container a:hover {
+  filter: var(--brightness-dark);
 }

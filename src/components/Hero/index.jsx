@@ -3,10 +3,13 @@ import styles from "./styles.module.css";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { useTranslation } from "react-i18next";
+import { useGSAPTimeline } from "../../utils/hooks/global/gsap";
 
 export default function Hero() {
   const { t } = useTranslation("common");
   const ringRefs = useRef([]);
+  const buttonRingRefs = useRef([]);
+  const buttonRingTl = useRef(null);
 
   useGSAP(
     () => {
@@ -24,15 +27,31 @@ export default function Hero() {
     { scope: ringRefs }
   );
 
+  useGSAPTimeline(
+    buttonRingTl,
+    buttonRingRefs,
+    { opacity: 0, scale: 0 },
+    {
+      opacity: 1,
+      scale: 1,
+      duration: 0.3,
+      ease: "power1.inOut",
+    },
+    0.15
+  );
+
+  const btnRingPlay = () => buttonRingTl.current.play();
+  const btnRingReverse = () => buttonRingTl.current.reverse();
+
   return (
     <div className={styles.container}>
-      {[...Array(8)].map((_, i) => (
+      {/* {[...Array(8)].map((_, i) => (
         <div
           key={i}
           className={styles.ring}
           ref={(el) => (ringRefs.current[i] = el)}
         ></div>
-      ))}
+      ))} */}
 
       <div className={styles.titleContainer}>
         <h1>Felipe Ferreira Lima</h1>
@@ -42,9 +61,18 @@ export default function Hero() {
       <a
         href="/archives/programmer_cv.pdf"
         target="_blank"
+        onMouseEnter={btnRingPlay}
+        onMouseLeave={btnRingReverse}
         title={t("button_labels.curriculum_vitae")}
         aria-label={t("button_labels.curriculum_vitae")}
       >
+        {[...Array(2)].map((_, i) => (
+          <div
+            key={i}
+            className={styles.btnRing}
+            ref={(el) => (buttonRingRefs.current[i] = el)}
+          ></div>
+        ))}
         <p>{t("button_labels.curriculum_vitae")}</p>
       </a>
     </div>
