@@ -2,8 +2,10 @@ import gsap from "gsap";
 import styles from "./styles.module.css";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation("common");
   const ringRefs = useRef([]);
 
   useGSAP(
@@ -27,16 +29,24 @@ export default function Hero() {
       {[...Array(8)].map((_, i) => (
         <div
           key={i}
-          className={`${styles.ring} ${styles[`ring${i + 1}`]}`}
+          className={styles.ring}
           ref={(el) => (ringRefs.current[i] = el)}
         ></div>
       ))}
 
-      <div className={styles.name}>Felipe Ferreira Lima</div>
-
-      <div className={styles.orbitDotContainer}>
-        <div className={styles.orbitDot}></div>
+      <div className={styles.titleContainer}>
+        <h1>Felipe Ferreira Lima</h1>
+        <p>Portfólio profissional</p>
       </div>
+
+      <a
+        href="/archives/programmer_cv.pdf"
+        target="_blank"
+        title={t("button_labels.curriculum_vitae")}
+        aria-label={t("button_labels.curriculum_vitae")}
+      >
+        <p>{t("button_labels.curriculum_vitae")}</p>
+      </a>
     </div>
   );
 }
