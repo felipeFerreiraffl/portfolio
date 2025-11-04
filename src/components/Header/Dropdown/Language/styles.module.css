@@ -7,7 +7,7 @@
   gap: var(--spacing-size-12);
   width: var(--spacing-size-144);
   height: var(--spacing-size-56);
-  background-color: var(--color-main-03);
+  background-color: rgb(var(--color-neutral-04));
   border-radius: var(--radius-8);
   z-index: var(--zindex-1500);
 }
@@ -20,14 +20,14 @@
   width: 0;
   height: 0;
   border-right: var(--spacing-size-12) solid transparent;
-  border-right: var(--spacing-size-12) solid var(--color-main-03);
+  border-right: var(--spacing-size-12) solid rgb(var(--color-neutral-04));
   border-top: var(--spacing-size-12) solid transparent;
 }
 
 .container button {
   cursor: pointer;
   font: var(--font-body-medium-bold);
-  color: var(--color-neutral-01);
+  color: rgb(var(--color-neutral-01));
   text-transform: uppercase;
   transition: var(--transition-default);
   z-index: var(--zindex-2000);
@@ -35,11 +35,11 @@
 
 .container button:hover,
 .container button.active {
-  color: var(--color-main-01);
+  color: rgb(var(--color-main-01));
 }
 
 .container span {
-  background-color: var(--color-neutral-01);
+  background-color: rgb(var(--color-neutral-01));
   width: var(--spacing-size-8);
   aspect-ratio: 1 / 1;
   border-radius: var(--radius-circular);

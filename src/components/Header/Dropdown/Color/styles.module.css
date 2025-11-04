@@ -7,9 +7,9 @@
   gap: var(--spacing-size-20);
   width: var(--spacing-size-144);
   height: var(--spacing-size-56);
-  background-color: var(--color-main-03);
+  background-color: rgb(var(--color-main-03));
   border-radius: var(--radius-8);
-  z-index: var(--zindex-1500);
+  z-index: var(--zindex-2000);
 }
 
 .container::before {
@@ -20,8 +20,15 @@
   width: 0;
   height: 0;
   border-right: var(--spacing-size-12) solid transparent;
-  border-left: var(--spacing-size-12) solid var(--color-main-03);
+  border-left: var(--spacing-size-12) solid rgb(var(--color-main-03));
   border-top: var(--spacing-size-12) solid transparent;
+}
+
+.colorBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .circle {
@@ -34,14 +41,37 @@
 }
 
 .light {
-  background-color: var(--color-neutral-02);
+  background-color: rgb(var(--color-neutral-02));
 }
 
 .dark {
-  background-color: var(--color-neutral-03);
+  background-color: rgb(var(--color-neutral-03));
 }
 
-.circle:hover,
-.circle.active {
-  box-shadow: var(--shadow-default-light);
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+  border-style: solid;
+  border-radius: var(--radius-circular);
+}
+
+.ring:nth-child(1) {
+  width: var(--spacing-size-32);
+  border-width: 0.0625rem;
+}
+
+.ring:nth-child(2) {
+  width: var(--spacing-size-40);
+  border-width: var(--spacing-size-2);
+}
+
+.ringLight {
+  border-color: rgb(var(--color-neutral-02));
+}
+
+.ringDark {
+  border-color: rgb(var(--color-neutral-03));
 }

@@ -10,7 +10,14 @@ import ColorDropdown from "./Dropdown/Color";
 import LanguageDropdown from "./Dropdown/Language";
 import styles from "./styles.module.css";
 import { scrollToSection } from "../../utils/hooks/global/scrollToSection";
-import { handleDropdownAnimation, handleDropdownGSAP, handleMenuAnimation, handleMenuGSAP } from "../../utils/hooks/Header/elements";
+import {
+  handleClose,
+  handleDropdownAnimation,
+  handleDropdownGSAP,
+  handleMenuAnimation,
+  handleMenuGSAP,
+  handleOpen,
+} from "../../utils/hooks/Header/elements";
 
 export default function Header({ sectionRefs }) {
   // Tradução i18next
