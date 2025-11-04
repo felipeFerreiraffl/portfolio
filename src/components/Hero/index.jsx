@@ -18,8 +18,15 @@ export default function Hero() {
       ringRefs.current.forEach((ring, i) => {
         tl.fromTo(
           ring,
-          { opacity: 0, scale: 0 },
-          { opacity: 1, scale: 1, duration: 0.3 + i * 0.2 },
+          { opacity: 0, scale: 0, xPercent: -50, yPercent: -50 },
+          {
+            opacity: 0.2,
+            scale: 1,
+            duration: 0.3 + i * 0.2,
+            ease: "power1.inOut",
+            xPercent: -50,
+            yPercent: -50,
+          },
           i * 0.2
         );
       });
@@ -30,12 +37,14 @@ export default function Hero() {
   useGSAPTimeline(
     buttonRingTl,
     buttonRingRefs,
-    { opacity: 0, scale: 0 },
+    { opacity: 0, scale: 0, xPercent: -50, yPercent: -50 },
     {
-      opacity: 1,
+      opacity: 0.2,
       scale: 1,
       duration: 0.3,
       ease: "power1.inOut",
+      xPercent: -50,
+      yPercent: -50,
     },
     0.15
   );
@@ -45,13 +54,13 @@ export default function Hero() {
 
   return (
     <div className={styles.container}>
-      {/* {[...Array(8)].map((_, i) => (
+      {[...Array(11)].map((_, i) => (
         <div
           key={i}
           className={styles.ring}
           ref={(el) => (ringRefs.current[i] = el)}
         ></div>
-      ))} */}
+      ))}
 
       <div className={styles.titleContainer}>
         <h1>Felipe Ferreira Lima</h1>
