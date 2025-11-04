@@ -35,6 +35,7 @@
 
   /* 20px */
   --font-body-large-regular: 400 1.25rem var(--font-family);
+  --font-body-large-medium: 500 1.25rem var(--font-family);
   --font-body-large-bold: 700 1.25rem var(--font-family);
 
   /* 16px */
@@ -130,6 +131,11 @@
   --radius-16: 1rem; /* 16px */
   --radius-96: 6rem; /* 96px */
   --radius-circular: 50%; /* Circular */
+
+  /* ----- Margem ----- */
+  --margin-desktop: 0 var(--spacing-size-80);
+  --margin-tablet: 0 var(--spacing-size-40);
+  --margin-mobile: 0 var(--spacing-size-20);
 
   /* ----- Z-Index ----- */
   --zindex-1: 1;
