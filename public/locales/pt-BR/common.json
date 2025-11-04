@@ -1,4 +1,7 @@
 {
+  "hero": {
+    "subtitle": "Portfólio profissional"
+  },
   "navbar": {
     "skills": "Habilidades",
     "experience": "Experiência",
@@ -28,7 +31,7 @@
     "statue": "Estátua do jogo GRIS"
   },
   "button_labels": {
-    "curriculum_vitae": "Ver CV",
+    "curriculum_vitae": "Ver currículo",
     "figma": "Acessar design"
   },
   "footer": "Portfólio",
