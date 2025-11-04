@@ -34,14 +34,14 @@
 }
 
 .btnRing:nth-child(1) {
-  width: var(--spacing-size-216);
+  width: max(var(--spacing-size-216), 100%);
   height: var(--spacing-size-68);
   border-radius: var(--radius-20);
   border-width: 0.0625rem;
 }
 
 .btnRing:nth-child(2) {
-  width: var(--spacing-size-228);
+  width: max(var(--spacing-size-228), 100%);
   height: var(--spacing-size-80);
   border-radius: var(--radius-24);
   border-width: var(--spacing-size-2);
@@ -88,14 +88,18 @@
   align-items: center;
   justify-content: center;
   background-color: rgb(var(--color-main));
-  font: var(--font-body-medium-bold);
-  color: rgb(var(--color-button-label));
-  min-width: var(--spacing-size-200);
-  padding: var(--spacing-size-16) var(--spacing-size-64);
+  width: var(--spacing-size-200);
+  box-sizing: border-box;
+  padding: var(--spacing-size-16) 0;
   border-radius: var(--spacing-size-12);
   transition: var(--transition-default);
 }
 
 .container a:hover {
   filter: var(--brightness-dark);
+}
+
+.container a p {
+  font: var(--font-body-medium-bold);
+  color: rgb(var(--color-button-label));
 }

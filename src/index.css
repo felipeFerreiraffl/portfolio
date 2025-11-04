@@ -99,7 +99,9 @@
   --spacing-size-160: 10rem; /* 156px */
   --spacing-size-200: 12.5rem; /* 200px */
   --spacing-size-204: 12.75rem; /* 204px */
+  --spacing-size-216: 13.5rem; /* 216px */
   --spacing-size-224: 14rem; /* 224px */
+  --spacing-size-228: 14.25rem; /* 228px */
   --spacing-size-232: 15rem; /* 232px */
   --spacing-size-236: 15.75rem; /* 236px */
   --spacing-size-256: 16rem; /* 256px */
@@ -126,10 +128,12 @@
   --border-main-02: 0.125rem solid rgb(var(--color-main-02)); /* 2px */
   --border-main-03: 0.125rem solid rgb(var(--color-main-03)); /* 2px */
 
-  --radius-8: 0.5rem; /* 8px */
-  --radius-12: 0.75rem; /* 12px */
-  --radius-16: 1rem; /* 16px */
-  --radius-96: 6rem; /* 96px */
+  --radius-8: var(--spacing-size-8); /* 8px */
+  --radius-12: var(--spacing-size-12); /* 12px */
+  --radius-16: var(--spacing-size-16); /* 16px */
+  --radius-20: var(--spacing-size-20); /* 20px */
+  --radius-24: var(--spacing-size-24); /* 20px */
+  --radius-96: var(--spacing-size-96); /* 96px */
   --radius-circular: 50%; /* Circular */
 
   /* ----- Margem ----- */
@@ -166,7 +170,7 @@
   --color-title: var(--color-neutral-02);
   --color-text: var(--color-neutral-01);
   --color-main: var(--color-main-02);
-  --color-button-label: var(--color-neutral-04)
+  --color-button-label: var(--color-neutral-04);
   --border-main: var(--border-main-02);
   --box-shadow: var(--shadow-default-light);
   --background-shadow: var(--shadow-background-light);

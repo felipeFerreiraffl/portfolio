@@ -55,7 +55,7 @@ export default function Hero() {
 
       <div className={styles.titleContainer}>
         <h1>Felipe Ferreira Lima</h1>
-        <p>Portfólio profissional</p>
+        <p>{t("hero.subtitle")}</p>
       </div>
 
       <a

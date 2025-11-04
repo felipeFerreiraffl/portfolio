@@ -22,7 +22,7 @@ export function useGSAPTimeline(
   useGSAP(
     () => {
       timeline.current = gsap.timeline({ paused: true });
-
+      
       refs.current.forEach((ring, i) => {
         timeline.current.fromTo(
           ring,
