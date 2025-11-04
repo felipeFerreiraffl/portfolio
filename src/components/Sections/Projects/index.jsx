@@ -13,18 +13,6 @@ export default function Projects({ ref }) {
         title={tSections("projects.title")}
         subtitle={tSections("projects.subtitle")}
       />
-
-      <div className={styles.cardsContainer}>
-        {projectsData.map((proj, i) => (
-          <ProjectCard
-            key={i}
-            href={proj.href}
-            title={tSections(proj.title)}
-            src={proj.imgSrc}
-            techs={proj.techs}
-          />
-        ))}
-      </div>
     </div>
   );
 }

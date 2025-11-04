@@ -1,16 +1,15 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { ReactComponent as MongoDBIcon } from "../../../assets/svgs/icons/mongodb.svg";
-import { ReactComponent as MySQLIcon } from "../../../assets/svgs/icons/mysql.svg";
-import { ReactComponent as SpringBootIcon } from "../../../assets/svgs/icons/springboot.svg";
-import { ReactComponent as TypeScriptIcon } from "../../../assets/svgs/icons/typescript.svg";
-import icons from "../services/utils/icons";
-import images from "../services/utils/images";
+import { ReactComponent as MongoDBIcon } from "../assets/svgs/icons/mongodb.svg";
+import { ReactComponent as MySQLIcon } from "../assets/svgs/icons/mysql.svg";
+import { ReactComponent as SpringBootIcon } from "../assets/svgs/icons/springboot.svg";
+import { ReactComponent as TypeScriptIcon } from "../assets/svgs/icons/typescript.svg";
+import icons from "../utils/icons";
+import images from "../utils/images";
 
 // Dados dos habilidades
 export const skillsData = [
   {
     title: "Front-End",
-    imgSrc: images.skills.frontend,
     techs: [
       { techName: "HTML", techIcon: <Icon icon={icons.remix.brand.html} /> },
       { techName: "CSS", techIcon: <Icon icon={icons.remix.brand.css} /> },
@@ -30,7 +29,6 @@ export const skillsData = [
   },
   {
     title: "Back-End",
-    imgSrc: images.skills.backend,
     techs: [
       { techName: "Java", techIcon: <Icon icon={icons.remix.brand.java} /> },
       {
@@ -49,7 +47,6 @@ export const skillsData = [
   },
   {
     title: "skills.carousel_titles.database",
-    imgSrc: images.skills.database,
     techs: [
       {
         techName: "MySQL",
@@ -63,7 +60,6 @@ export const skillsData = [
   },
   {
     title: "skills.carousel_titles.tools",
-    imgSrc: images.skills.tools,
     techs: [
       {
         techName: "Github",

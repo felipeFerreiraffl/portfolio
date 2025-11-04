@@ -1,8 +1,5 @@
 import { useTranslation } from "react-i18next";
 import SectionTitle from "../../SectionTitle";
-import { skillsData } from "../../../data/data";
-import Slide from "../../Slides/SkillsCarousel/Slide";
-import SkillsCarousel from "../../Slides/SkillsCarousel";
 
 export default function Skills({ ref }) {
   const { t: tSections } = useTranslation("sections");
@@ -13,8 +10,6 @@ export default function Skills({ ref }) {
         title={tSections("skills.title")}
         subtitle={tSections("skills.subtitle")}
       />
-
-      <SkillsCarousel />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import images from "../../services/utils/images";
+import images from "../../utils/images";
 import styles from "./styles.module.css";
 
 export default function Maintenance() {

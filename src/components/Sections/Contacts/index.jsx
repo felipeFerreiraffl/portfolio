@@ -2,10 +2,10 @@ import { useTranslation } from "react-i18next";
 import SectionTitle from "../../SectionTitle";
 import styles from "./styles.module.css";
 import SocialIcon from "./SocialIcon";
-import icons from "../../../services/utils/icons";
+import icons from "../../../utils/icons";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { socialLinks } from "../../../data/data";
-import images from "../../../services/utils/images";
+import images from "../../../utils/images";
 
 export default function Contacts({ ref }) {
   const { t: tSections } = useTranslation("sections");

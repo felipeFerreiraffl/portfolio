@@ -3,21 +3,14 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  handleClose,
-  handleDropdownAnimation,
-  handleDropdownGSAP,
-  handleMenuAnimation,
-  handleMenuGSAP,
-  handleOpen,
-} from "../../services/utils/hooks/Header/elements";
-import { useClickOutside } from "../../services/utils/hooks/Header/useClickOutside";
-import icons from "../../services/utils/icons";
-import images from "../../services/utils/images";
+import { useClickOutside } from "../../utils/hooks/Header/useClickOutside";
+import icons from "../../utils/icons";
+import images from "../../utils/images";
 import ColorDropdown from "./Dropdown/Color";
 import LanguageDropdown from "./Dropdown/Language";
 import styles from "./styles.module.css";
-import { scrollToSection } from "../../services/utils/hooks/global/scrollToSection";
+import { scrollToSection } from "../../utils/hooks/global/scrollToSection";
+import { handleDropdownAnimation, handleDropdownGSAP, handleMenuAnimation, handleMenuGSAP } from "../../utils/hooks/Header/elements";
 
 export default function Header({ sectionRefs }) {
   // Tradução i18next

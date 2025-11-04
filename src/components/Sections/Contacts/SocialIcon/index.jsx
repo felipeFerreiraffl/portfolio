@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useGSAPTimeline } from "../../../../services/utils/hooks/global/gsap";
+import { useGSAPTimeline } from "../../../../utils/hooks/global/gsap";
 import styles from "./styles.module.css";
 
 export default function SocialIcon({ icon, title, href }) {

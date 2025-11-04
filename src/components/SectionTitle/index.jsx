@@ -2,7 +2,7 @@ import { useRef } from "react";
 import styles from "./styles.module.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { useGSAPFromTo } from "../../services/utils/hooks/global/gsap";
+import { useGSAPFromTo } from "../../utils/hooks/global/gsap";
 import gsap from "gsap";
 gsap.registerPlugin(ScrollTrigger); // Ativação do Scroll Trigger
 
