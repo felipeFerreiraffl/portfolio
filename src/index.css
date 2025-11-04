@@ -153,6 +153,7 @@
   --color-title: var(--color-neutral-03);
   --color-text: var(--color-neutral-04);
   --color-main: var(--color-main-03);
+  --color-button-label: var(--color-neutral-01);
   --border-main: var(--border-main-03);
   --box-shadow: var(--shadow-default-dark);
   --background-shadow: var(--shadow-background-dark);
@@ -165,6 +166,7 @@
   --color-title: var(--color-neutral-02);
   --color-text: var(--color-neutral-01);
   --color-main: var(--color-main-02);
+  --color-button-label: var(--color-neutral-04)
   --border-main: var(--border-main-02);
   --box-shadow: var(--shadow-default-light);
   --background-shadow: var(--shadow-background-light);
