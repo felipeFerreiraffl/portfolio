@@ -21,11 +21,6 @@
   --color-neutral-03: 0 0 8;
   --color-neutral-04: 0 0 0;
 
-  --color-opacity-main-01_40: rgb(--color-main-01 / 0.4);
-  --color-opacity-main-01_80: rgb(--color-main-01 / 0.8);
-  --color-opacity-main-02_40: rgb(--color-main-02 / 0.4);
-  --color-opacity-main-02_80: rgb(--color-main-02 / 0.8);
-
   /* ----- Fontes -----*/
   --font-family: "Space Grotesk", sans-serif;
 
@@ -126,19 +121,15 @@
   --spacing-size-644: 40.25rem; /* 644px */
 
   /* ----- Bordas ----- */
-  --border-main-01: 0.125rem solid var(--color-main-01); /* 2px */
-  --border-main-02: 0.125rem solid var(--color-main-02); /* 2px */
+  --border-main-01: 0.125rem solid rgb(var(--color-main-01)); /* 2px */
+  --border-main-02: 0.125rem solid rgb(var(--color-main-02)); /* 2px */
+  --border-main-03: 0.125rem solid rgb(var(--color-main-03)); /* 2px */
 
   --radius-8: 0.5rem; /* 8px */
   --radius-12: 0.75rem; /* 12px */
   --radius-16: 1rem; /* 16px */
   --radius-96: 6rem; /* 96px */
   --radius-circular: 50%; /* Circular */
-
-  /* ----- Margem ----- */
-  --margin-desktop: 0 6rem; /* 0 96px */
-  --margin-tablet: 0 4rem; /* 0 64px */
-  --margin-mobile: 0 2rem; /* 0 32px */
 
   /* ----- Z-Index ----- */
   --zindex-1: 1;
@@ -155,14 +146,10 @@
   --color-bg: var(--color-neutral-02);
   --color-title: var(--color-neutral-03);
   --color-text: var(--color-neutral-04);
-  --color-main: var(--color-main-02);
-  --color-opacity_40: var(--color-opacity-main-02_40);
-  --color-opacity_80: var(--color-opacity-main-02_80);
-  --border-main: var(--border-main-02);
+  --color-main: var(--color-main-03);
+  --border-main: var(--border-main-03);
   --box-shadow: var(--shadow-default-dark);
   --background-shadow: var(--shadow-background-dark);
-  --linear-gradient: var(--color-gradient-light);
-  --linear-gradient-floor: var(--color-gradient-light-floor);
   --filter-brightness: var(--brightness-light);
 }
 
@@ -171,14 +158,10 @@
   --color-bg: var(--color-neutral-03);
   --color-title: var(--color-neutral-02);
   --color-text: var(--color-neutral-01);
-  --color-main: var(--color-main-01);
-  --color-opacity_40: var(--color-opacity-main-01_40);
-  --color-opacity_80: var(--color-opacity-main-01_80);
-  --border-main: var(--border-main-01);
+  --color-main: var(--color-main-02);
+  --border-main: var(--border-main-02);
   --box-shadow: var(--shadow-default-light);
   --background-shadow: var(--shadow-background-light);
-  --linear-gradient: var(--color-gradient-dark);
-  --linear-gradient-floor: var(--color-gradient-dark-floor);
   --filter-brightness: var(--brightness-dark);
 }
 
