@@ -177,13 +177,13 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--color-main);
+  background-color: rgb(var(--color-main));
   border-radius: var(--radius-12);
-  border: var(--spacing-size-4) solid var(--color-bg);
+  border: var(--spacing-size-4) solid rgb(var(--color-bg));
 }
 
 body::-webkit-scrollbar-track {
-  background-color: var(--color-bg);
+  background-color: rgb(var(--color-bg));
 }
 
 /* ----- Classes globais ----- */
@@ -196,7 +196,7 @@ body::-webkit-scrollbar-track {
   gap: var(--spacing-size-64);
   padding: var(--spacing-size-48) 0;
 
-  @media (max-width: 576px) {
+  @media (max-width: 480px) {
     width: 80vw;
     gap: var(--spacing-size-32);
   }
