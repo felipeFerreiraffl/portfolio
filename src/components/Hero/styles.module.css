@@ -22,7 +22,6 @@
   pointer-events: none;
   will-change: opacity, transform;
   aspect-ratio: 1;
-  opacity: 0.2;
 }
 
 .ring:nth-child(n) {
@@ -176,4 +175,13 @@
 .container a p {
   font: var(--font-body-medium-bold);
   color: rgb(var(--color-button-label));
+}
+
+.bridge {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12%;
+  z-index: var(--zindex-100);
+  width: 100vw;
 }

@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { useTranslation } from "react-i18next";
 import { useGSAPTimeline } from "../../utils/hooks/global/gsap";
+import { ReactComponent as Bridge } from "../../assets/svgs/illustrations/hero-bridge.svg";
 
 export default function Hero() {
   const { t } = useTranslation("common");
@@ -20,7 +21,7 @@ export default function Hero() {
           ring,
           { opacity: 0, scale: 0, xPercent: -50, yPercent: -50 },
           {
-            opacity: 0.2,
+            opacity: 0.1,
             scale: 1,
             duration: 0.3 + i * 0.2,
             ease: "power1.inOut",
@@ -84,6 +85,8 @@ export default function Hero() {
         ))}
         <p>{t("button_labels.curriculum_vitae")}</p>
       </a>
+
+      <Bridge className={styles.bridge} />
     </div>
   );
 }
