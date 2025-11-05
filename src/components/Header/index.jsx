@@ -1,14 +1,6 @@
-/* ---------- Componente - Header ---------- */
-
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useClickOutside } from "../../utils/hooks/Header/useClickOutside";
-import icons from "../../utils/icons";
-import images from "../../utils/images";
-import ColorDropdown from "./Dropdown/Color";
-import LanguageDropdown from "./Dropdown/Language";
-import styles from "./styles.module.css";
 import { scrollToSection } from "../../utils/hooks/global/scrollToSection";
 import {
   handleClose,
@@ -18,6 +10,12 @@ import {
   handleMenuGSAP,
   handleOpen,
 } from "../../utils/hooks/Header/elements";
+import { useClickOutside } from "../../utils/hooks/Header/useClickOutside";
+import icons from "../../utils/icons";
+import images from "../../utils/images";
+import ColorDropdown from "./Dropdown/Color";
+import LanguageDropdown from "./Dropdown/Language";
+import styles from "./styles.module.css";
 
 export default function Header({ sectionRefs }) {
   // Tradução i18next

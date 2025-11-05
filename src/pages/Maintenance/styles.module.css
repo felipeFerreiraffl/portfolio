@@ -40,7 +40,7 @@
   color: rgb(var(--color-neutral-04));
 }
 
-img {
+.container img {
   position: absolute;
   bottom: 24px;
   max-width: var(--spacing-size-80);
