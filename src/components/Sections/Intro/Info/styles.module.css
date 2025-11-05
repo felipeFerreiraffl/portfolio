@@ -17,12 +17,12 @@
   border-radius: var(--radius-circular);
 }
 
-.listTitleContainer h3 {
+.listTitleContainer .headline {
   font: var(--font-headline-05);
   color: rgb(var(--color-text));
 }
 
-.container p {
+.container .paragraph {
   font: var(--font-body-medium-regular);
   color: rgb(var(--color-text));
 }

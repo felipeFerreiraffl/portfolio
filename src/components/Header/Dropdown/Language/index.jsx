@@ -22,7 +22,7 @@ export default function LanguageDropdown() {
   return (
     <div className={styles.container}>
       <button
-        className={`${language === "pt-BR" ? styles.active : ""}`}
+        className={`${styles.btn} ${language === "pt-BR" ? styles.active : ""}`}
         onClick={() => handleChangeLanguage("pt-BR")}
         title={t("tooltip.pt_br")}
         aria-label={t("tooltip.pt_br")}
@@ -30,9 +30,9 @@ export default function LanguageDropdown() {
       >
         Por
       </button>
-      <span></span>
+      <span className={styles.divisor}></span>
       <button
-        className={`${language === "en" ? styles.active : ""}`}
+        className={`${styles.btn} ${language === "en" ? styles.active : ""}`}
         onClick={() => handleChangeLanguage("en")}
         title={t("tooltip.en")}
         aria-label={t("tooltip.en")}

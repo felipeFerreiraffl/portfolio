@@ -24,7 +24,7 @@
   border-top: var(--spacing-size-12) solid transparent;
 }
 
-.container button {
+.container .btn {
   cursor: pointer;
   font: var(--font-body-medium-bold);
   color: rgb(var(--color-neutral-01));
@@ -33,12 +33,12 @@
   z-index: var(--zindex-2000);
 }
 
-.container button:hover,
-.container button.active {
+.container .btn:hover,
+.container .btn.active {
   color: rgb(var(--color-main-01));
 }
 
-.container span {
+.container .divisor {
   background-color: rgb(var(--color-neutral-01));
   width: var(--spacing-size-8);
   aspect-ratio: 1 / 1;

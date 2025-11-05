@@ -81,12 +81,12 @@ export default function Header({ sectionRefs }) {
         title={t("tooltip.theme")}
         aria-label={t("tooltip.theme")}
       >
-        <img src={images.logo} alt="Logo" />
+        <img className={styles.img} src={images.logo} alt="Logo" />
       </button>
 
       <nav className={styles.nav}>
-        <ul>
-          <li>
+        <ul className={styles.pagesContainer}>
+          <li className={styles.page}>
             <a
               href="#"
               title="Intro"
@@ -99,7 +99,7 @@ export default function Header({ sectionRefs }) {
               Intro
             </a>
           </li>
-          <li>
+          <li className={styles.page}>
             <a
               href="#"
               title={t("navbar.experiences")}
@@ -112,7 +112,7 @@ export default function Header({ sectionRefs }) {
               {t("navbar.experiences")}
             </a>
           </li>
-          <li>
+          <li className={styles.page}>
             <a
               href="#"
               title={t("navbar.skills")}
@@ -125,7 +125,7 @@ export default function Header({ sectionRefs }) {
               {t("navbar.skills")}
             </a>
           </li>
-          <li>
+          <li className={styles.page}>
             <a
               href="#"
               title={t("navbar.projects")}
@@ -138,7 +138,7 @@ export default function Header({ sectionRefs }) {
               {t("navbar.projects")}
             </a>
           </li>
-          <li>
+          <li className={styles.page}>
             <a
               href="#"
               title={t("navbar.contacts")}
@@ -198,8 +198,8 @@ export default function Header({ sectionRefs }) {
         <>
           <div className={styles.overlay}></div>
           <nav className={styles.menu} ref={menuRef}>
-            <ul>
-              <li>
+            <ul className={styles.menuPages}>
+              <li className={styles.menuPage}>
                 <a
                   href="#"
                   title="Intro"
@@ -212,12 +212,12 @@ export default function Header({ sectionRefs }) {
                   Intro
                 </a>
                 <div className={styles.divisor}>
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                  <span className={styles.dot}></span>
+                  <span className={styles.dot}></span>
+                  <span className={styles.dot}></span>
                 </div>
               </li>
-              <li>
+              <li className={styles.menuPage}>
                 <a
                   href="#"
                   title={t("navbar.skills")}
@@ -230,16 +230,16 @@ export default function Header({ sectionRefs }) {
                   {t("navbar.skills")}
                 </a>
                 <div className={styles.divisor}>
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                  <span className={styles.dot}></span>
+                  <span className={styles.dot}></span>
+                  <span className={styles.dot}></span>
                 </div>
               </li>
-              <li>
+              <li className={styles.menuPage}>
                 <a
                   href="#"
                   title={t("navbar.experience")}
-                  aria-label={t("navbar.experience")}
+                  aria-label={t("navbar.experiences")}
                   onClick={(e) => {
                     e.preventDefault();
                     scrollToSection(sectionRefs.experiences);
@@ -248,12 +248,12 @@ export default function Header({ sectionRefs }) {
                   {t("navbar.experience")}
                 </a>
                 <div className={styles.divisor}>
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                  <span className={styles.dot}></span>
+                  <span className={styles.dot}></span>
+                  <span className={styles.dot}></span>
                 </div>
               </li>
-              <li>
+              <li className={styles.menuPage}>
                 <a
                   href="#"
                   title={t("navbar.projects")}
@@ -266,12 +266,12 @@ export default function Header({ sectionRefs }) {
                   {t("navbar.projects")}
                 </a>
                 <div className={styles.divisor}>
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                  <span className={styles.dot}></span>
+                  <span className={styles.dot}></span>
+                  <span className={styles.dot}></span>
                 </div>
               </li>
-              <li>
+              <li className={styles.menuPage}>
                 <a
                   href="#"
                   title={t("navbar.contacts")}

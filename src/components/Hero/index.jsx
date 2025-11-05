@@ -64,11 +64,12 @@ export default function Hero() {
       ))}
 
       <div className={styles.titleContainer}>
-        <h1>Felipe Ferreira Lima</h1>
-        <p>{t("hero.subtitle")}</p>
+        <h1 className={styles.title}>Felipe Ferreira Lima</h1>
+        <p className={styles.desc}>{t("hero.subtitle")}</p>
       </div>
 
       <a
+        className={styles.btn}
         href="/archives/programmer_cv.pdf"
         target="_blank"
         onMouseEnter={btnRingPlay}
@@ -83,7 +84,7 @@ export default function Hero() {
             ref={(el) => (buttonRingRefs.current[i] = el)}
           ></div>
         ))}
-        <p>{t("button_labels.curriculum_vitae")}</p>
+        <p className={styles.label}>{t("button_labels.curriculum_vitae")}</p>
       </a>
 
       <Bridge className={styles.bridge} />

@@ -133,7 +133,7 @@
   paint-order: stroke fill;
 }
 
-.titleContainer h1 {
+.titleContainer .title {
   font: var(--font-headline-01);
   color: rgb(var(--color-title));
   background-color: var(--color-bg);
@@ -150,12 +150,12 @@
   }
 }
 
-.titleContainer p {
+.titleContainer .desc {
   font: var(--font-body-subtitle);
   color: rgb(var(--color-text));
 }
 
-.container a {
+.container .btn {
   position: relative;
   display: flex;
   align-items: center;
@@ -169,11 +169,11 @@
   z-index: var(--zindex-1000);
 }
 
-.container a:hover {
+.container .btn:hover {
   filter: var(--brightness-dark);
 }
 
-.container a p {
+.container .btn .label {
   font: var(--font-body-medium-bold);
   color: rgb(var(--color-button-label));
 }

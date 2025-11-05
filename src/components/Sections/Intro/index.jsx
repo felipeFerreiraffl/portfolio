@@ -9,7 +9,11 @@ export default function Intro({ ref }) {
   const { t: tCommon } = useTranslation("common");
 
   return (
-    <div ref={ref} className={`section-container ${styles.container}`} tabIndex={0}>
+    <div
+      ref={ref}
+      className={`section-container ${styles.container}`}
+      tabIndex={0}
+    >
       <SectionTitle
         title={tSection("intro.title")}
         subtitle={tSection("intro.subtitle")}
@@ -20,9 +24,10 @@ export default function Intro({ ref }) {
           <div className={`${styles.ring} ${styles.firstRing}`}></div>
           <div className={`${styles.ring} ${styles.secondRing}`}></div>
           <div className={styles.orbitDot}>
-            <span></span>
+            <span className={styles.dot}></span>
           </div>
           <img
+            className={styles.pic}
             src={images.profile}
             alt={tCommon("alts.profile")}
             title={tCommon("alts.profile")}
@@ -32,29 +37,23 @@ export default function Intro({ ref }) {
 
         <div className={styles.infosContainer}>
           <div className={styles.titleContainer}>
-            <h2>Felipe Ferreira Lima</h2>
-            <p>{tSection("intro.infos.label")}</p>
+            <h2 className={styles.name}>Felipe Ferreira Lima</h2>
+            <p className={styles.function}>{tSection("intro.infos.label")}</p>
           </div>
 
-          <ul>
-            <li>
-              <Info
-                title={tSection("intro.infos.presentation.title")}
-                desc={tSection("intro.infos.presentation.desc")}
-              />
-            </li>
-            <li>
-              <Info
-                title={tSection("intro.infos.hobbies.title")}
-                desc={tSection("intro.infos.hobbies.desc")}
-              />
-            </li>
-            <li>
-              <Info
-                title={tSection("intro.infos.goals.title")}
-                desc={tSection("intro.infos.goals.desc")}
-              />
-            </li>
+          <ul className={styles.list}>
+            <Info
+              title={tSection("intro.infos.presentation.title")}
+              desc={tSection("intro.infos.presentation.desc")}
+            />
+            <Info
+              title={tSection("intro.infos.hobbies.title")}
+              desc={tSection("intro.infos.hobbies.desc")}
+            />
+            <Info
+              title={tSection("intro.infos.goals.title")}
+              desc={tSection("intro.infos.goals.desc")}
+            />
           </ul>
         </div>
       </div>

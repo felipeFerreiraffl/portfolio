@@ -64,7 +64,7 @@
   animation: orbitation 10s linear infinite;
 }
 
-.orbitDot span {
+.orbitDot .dot {
   position: absolute;
   top: 50%;
   left: -0.375rem;
@@ -98,7 +98,7 @@
   }
 }
 
-.profileContainer img {
+.profileContainer .pic {
   width: min(var(--spacing-size-332), 72%);
   aspect-ratio: 1;
   object-fit: cover;
@@ -129,7 +129,7 @@
   }
 }
 
-.titleContainer h2 {
+.titleContainer .name {
   font: var(--font-headline-03);
   color: rgb(var(--color-text));
 
@@ -138,12 +138,12 @@
   }
 }
 
-.titleContainer p {
+.titleContainer .function {
   font: var(--font-body-large-regular);
   color: rgb(var(--color-text));
 }
 
-.infosContainer ul {
+.infosContainer .list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
