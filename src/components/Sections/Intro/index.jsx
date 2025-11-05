@@ -9,7 +9,7 @@ export default function Intro({ ref }) {
   const { t: tCommon } = useTranslation("common");
 
   return (
-    <div ref={ref} className="section-container" tabIndex={0}>
+    <div ref={ref} className={`section-container ${styles.container}`} tabIndex={0}>
       <SectionTitle
         title={tSection("intro.title")}
         subtitle={tSection("intro.subtitle")}
@@ -29,7 +29,7 @@ export default function Intro({ ref }) {
             loading="lazy"
           />
         </div>
-        
+
         <div className={styles.infosContainer}>
           <div className={styles.titleContainer}>
             <h2>Felipe Ferreira Lima</h2>

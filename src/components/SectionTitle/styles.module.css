@@ -5,7 +5,7 @@
   align-items: center;
   gap: var(--spacing-size-12);
 
-  @media (max-width: 576px) {
+  @media (max-width: 480px) {
     width: 80vw;
   }
 }
@@ -44,7 +44,7 @@
   background-color: var(--color-main);
   transform: rotate(45deg);
 
-  @media (max-width: 1200px) {
+  @media (max-width: 884px) {
     width: var(--spacing-size-12);
   }
 }
@@ -53,7 +53,7 @@
   font: var(--font-headline-02);
   color: var(--color-title);
 
-  @media (max-width: 576px) {
+  @media (max-width: 480px) {
     font: var(--font-headline-04);
     font-weight: 700;
   }
@@ -64,7 +64,7 @@
   color: var(--color-text);
   text-align: center;
 
-  @media (max-width: 576px) {
+  @media (max-width: 480px) {
     font: var(--font-body-small-regular);
   }
 }

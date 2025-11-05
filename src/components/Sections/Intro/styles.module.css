@@ -1,3 +1,11 @@
+.container {
+  align-items: flex-end !important;
+
+  @media (max-width: 884px) {
+    align-items: center !important;
+  }
+}
+
 .content {
   display: flex;
   flex-direction: column-reverse;
@@ -7,7 +15,7 @@
 
 .profileContainer {
   position: absolute;
-  left: calc(var(--spacing-size-136) * -1);
+  left: -12rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,6 +24,7 @@
 
   @media (max-width: 884px) {
     position: relative;
+    left: 0;
     max-width: 21.25rem;
   }
 
@@ -97,13 +106,13 @@
 }
 
 .infosContainer {
-  max-width: var(--spacing-size-628);
+  max-width: 57vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--spacing-size-36);
 
-  @media (max-width: 1200px) {
+  @media (max-width: 884px) {
     align-items: center;
   }
 }
@@ -113,24 +122,23 @@
   flex-direction: column;
   gap: var(--spacing-size-8);
 
-  @media (max-width: 1200px) {
+  @media (max-width: 884px) {
     align-items: center;
   }
 }
 
 .titleContainer h2 {
   font: var(--font-headline-03);
-  color: var(--color-text);
+  color: rgb(var(--color-text));
 
-  @media (max-width: 576px) {
+  @media (max-width: 480px) {
     font: var(--font-headline-04);
-    text-align: center;
   }
 }
 
 .titleContainer p {
   font: var(--font-body-large-regular);
-  color: var(--color-text);
+  color: rgb(var(--color-text));
 }
 
 .infosContainer ul {
@@ -138,18 +146,4 @@
   flex-direction: column;
   align-items: flex-start;
   gap: var(--spacing-size-24);
-}
-
-.infosContainer a {
-  padding: var(--spacing-size-16) var(--spacing-size-64);
-  background-color: var(--color-main);
-  font: var(--font-body-medium-bold);
-  color: var(--color-text);
-  border-radius: var(--spacing-size-12);
-  transition: var(--transition-default);
-}
-
-.infosContainer a:hover {
-  filter: var(--filter-brightness);
-  box-shadow: var(--box-shadow);
 }

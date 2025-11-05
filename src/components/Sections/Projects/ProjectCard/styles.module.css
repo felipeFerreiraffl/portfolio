@@ -16,12 +16,12 @@
   overflow: hidden;
   transition: var(--transition-default);
 
-  @media (max-width: 1200px) {
+  @media (max-width: 884px) {
     width: var(--spacing-size-312);
     aspect-ratio: 156 / 117;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 480px) {
     width: var(--spacing-size-224);
     aspect-ratio: 4 / 3;
   }
@@ -42,7 +42,7 @@
   background-color: var(--color-opacity_80);
   color: var(--color-text);
 
-  @media (max-width: 576px) {
+  @media (max-width: 480px) {
     font: var(--font-body-small-bold);
   }
 }
@@ -72,7 +72,7 @@
   font-size: var(--spacing-size-16);
   color: var(--color-text);
 
-  @media (max-width: 576px) {
+  @media (max-width: 480px) {
     font-size: var(--spacing-size-12);
   }
 }

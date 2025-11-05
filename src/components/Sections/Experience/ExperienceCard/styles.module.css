@@ -10,7 +10,7 @@
   border-radius: var(--radius-12);
   z-index: var(--zindex-100);
 
-  @media (max-width: 576px) {
+  @media (max-width: 480px) {
     max-width: var(--spacing-size-256);
     padding: var(--spacing-size-16);
   }
@@ -59,7 +59,7 @@
   font: var(--font-headline-04);
   color: var(--color-title);
 
-  @media (max-width: 576px) {
+  @media (max-width: 480px) {
     font: var(--font-body-large-bold);
   }
 }

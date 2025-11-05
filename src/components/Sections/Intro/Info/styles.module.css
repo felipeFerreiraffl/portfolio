@@ -12,17 +12,17 @@
 
 .bullet {
   width: var(--spacing-size-16);
-  aspect-ratio: 1 / 1;
-  border: var(--border-main-02);
+  aspect-ratio: 1;
+  background-color: rgb(var(--color-main));
   border-radius: var(--radius-circular);
 }
 
 .listTitleContainer h3 {
   font: var(--font-headline-05);
-  color: var(--color-text);
+  color: rgb(var(--color-text));
 }
 
 .container p {
   font: var(--font-body-medium-regular);
-  color: var(--color-text);
+  color: rgb(var(--color-text));
 }
