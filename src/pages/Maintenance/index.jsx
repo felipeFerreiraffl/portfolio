@@ -12,11 +12,15 @@ export default function Maintenance() {
       ))}
 
       <div className={styles.titleContainer}>
-        <h1>{t("maintenance.title")}</h1>
-        <p>{t("maintenance.subtitle")}</p>
+        <h1 className={styles.title}>{t("maintenance.title")}</h1>
+        <p className={styles.subtitle}>{t("maintenance.subtitle")}</p>
       </div>
 
-      <img src={images.logo} alt={"Logo - Felipe Ferreira Lima"} />
+      <img
+        className={styles.logo}
+        src={images.logo}
+        alt={"Logo - Felipe Ferreira Lima"}
+      />
     </div>
   );
 }

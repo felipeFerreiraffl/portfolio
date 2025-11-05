@@ -26,7 +26,7 @@
   paint-order: stroke fill;
 }
 
-.titleContainer h1 {
+.titleContainer .title {
   font: var(--font-headline-03);
   color: rgb(var(--color-neutral-03));
 
@@ -35,12 +35,12 @@
   }
 }
 
-.titleContainer p {
+.titleContainer .subtitle {
   font: var(--font-body-subtitle);
   color: rgb(var(--color-neutral-04));
 }
 
-.container img {
+.container .logo {
   position: absolute;
   bottom: 24px;
   max-width: var(--spacing-size-80);
