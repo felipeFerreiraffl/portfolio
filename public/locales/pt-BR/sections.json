@@ -1,9 +1,9 @@
 {
   "intro": {
     "title": "Intro",
-    "subtitle": "Pequena introdução para me conhecer",
+    "subtitle": "Tenha mais conhecimento sobre mim",
     "infos": {
-      "label": "Estudante de T.I.",
+      "label": "Desenvolvedor Full-Stack",
       "presentation": {
         "title": "Apresentação",
         "desc": "Técnico em Desenvolvimento de Sistemas com competências em front-end e back-end, sendo elas implementações em HTML, CSS, React.js, Java, Node, TypeScript e integrações com APIs REST."
@@ -18,17 +18,9 @@
       }
     }
   },
-  "skills": {
-    "title": "Habilidades",
-    "subtitle": "Meu conhecimento e tecnologias utilizadas",
-    "carousel_titles": {
-      "database": "Banco de dados",
-      "tools": "Ferramentas"
-    }
-  },
   "experience": {
-    "title": "Experiência",
-    "subtitle": "Minhas experiências anteriores na carreira",
+    "title": "Experiências",
+    "subtitle": "Trajetória que auxiliou na minha carreira profissional",
     "cards": {
       "one": {
         "title": "Aprendiz - SENAI Mercedes-Benz",
@@ -40,9 +32,17 @@
       }
     }
   },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Competências nas diversas áreas de tecnologia",
+    "sections": {
+      "database": "Banco de dados",
+      "tools": "Ferramentas"
+    }
+  },
   "projects": {
     "title": "Projetos",
-    "subtitle": "Projetos realizados com diferentes tecnologias",
+    "subtitle": "Projetos pessoais que envolvem minhas habilidades",
     "cards": {
       "math_calcs": {
         "title": "Cálculos matemáticos",
@@ -64,8 +64,8 @@
   },
   "contacts": {
     "title": "Contatos",
-    "subtitle": "Verifique minhas redes para contato",
-    "social_title": "Acesse minhas redes",
+    "subtitle": "Entre em contato para me conhecer mais",
+    "social_title": "Dê uma olhada nas redes sociais e e-mail",
     "design_title": "Design feito no"
   }
 }

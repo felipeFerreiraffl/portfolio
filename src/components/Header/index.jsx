@@ -102,14 +102,14 @@ export default function Header({ sectionRefs }) {
           <li>
             <a
               href="#"
-              title={t("navbar.experience")}
-              aria-label={t("navbar.experience")}
+              title={t("navbar.experiences")}
+              aria-label={t("navbar.experiences")}
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection(sectionRefs.experiences);
               }}
             >
-              {t("navbar.experience")}
+              {t("navbar.experiences")}
             </a>
           </li>
           <li>

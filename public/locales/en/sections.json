@@ -1,9 +1,9 @@
 {
   "intro": {
     "title": "Intro",
-    "subtitle": "A small introduction to get to know me",
+    "subtitle": "Have more information about me",
     "infos": {
-      "label": "I.T. Student",
+      "label": "Full-Stack Developer",
       "presentation": {
         "title": "Presentation",
         "desc": "Technian in System's Development with competences in front-end and back-end, like implementations in HTML, CSS, React.js, Java, Node, TypeScript and APIs REST integration"
@@ -13,22 +13,14 @@
         "desc": "Football fan, watch animes, read mangas and take a liking to draw."
       },
       "goals": {
-        "title": "Goals",
+        "title": "Goal",
         "desc": "I'm open to work in Help Desk and Front-end / Full-stack development branch and gaining more experience and be able to help on the company solutions"
       }
     }
   },
-  "skills": {
-    "title": "Skills",
-    "subtitle": "My knowledge and used technologies",
-    "carousel_titles": {
-      "database": "Database",
-      "tools": "Tools"
-    }
-  },
   "experience": {
-    "title": "Experience",
-    "subtitle": "My previous experiences in my career",
+    "title": "Experiences",
+    "subtitle": "Track that helped in my professional career",
     "cards": {
       "one": {
         "title": "Vehicular production mechanical",
@@ -40,9 +32,17 @@
       }
     }
   },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Skills in many technology areas",
+    "sections": {
+      "database": "Database",
+      "tools": "Tools"
+    }
+  },
   "projects": {
     "title": "Projects",
-    "subtitle": "Projects made with distinct technologies",
+    "subtitle": "Personal projects that includes my skills",
     "cards": {
       "math_calcs": {
         "title": "Math calculations",
@@ -64,8 +64,8 @@
   },
   "contacts": {
     "title": "Contacts",
-    "subtitle": "Check my links to connect",
-    "social_title": "Access my links",
+    "subtitle": "Get in touch to know me more",
+    "social_title": "Check the social medias and e-mail",
     "design_title": "Design made in"
   }
 }
