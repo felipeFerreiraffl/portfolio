@@ -197,7 +197,7 @@ body::-webkit-scrollbar-track {
 /* ----- Classes globais ----- */
 .section-container {
   position: relative;
-  width: 85vw;
+  max-width: 88vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -205,8 +205,7 @@ body::-webkit-scrollbar-track {
   padding: var(--spacing-size-48) 0;
   z-index: var(--zindex-2000);
 
-  @media (max-width: 480px) {
-    width: 80vw;
-    gap: var(--spacing-size-32);
+  @media (max-width: 884px) {
+    max-width: 90vw;
   }
 }
