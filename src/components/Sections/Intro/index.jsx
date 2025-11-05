@@ -19,6 +19,9 @@ export default function Intro({ ref }) {
         <div className={styles.profileContainer}>
           <div className={`${styles.ring} ${styles.firstRing}`}></div>
           <div className={`${styles.ring} ${styles.secondRing}`}></div>
+          <div className={styles.orbitDot}>
+            <span></span>
+          </div>
           <img
             src={images.profile}
             alt={tCommon("alts.profile")}
@@ -26,7 +29,7 @@ export default function Intro({ ref }) {
             loading="lazy"
           />
         </div>
-
+        
         <div className={styles.infosContainer}>
           <div className={styles.titleContainer}>
             <h2>Felipe Ferreira Lima</h2>
@@ -53,15 +56,6 @@ export default function Intro({ ref }) {
               />
             </li>
           </ul>
-
-          <a
-            href="archives/dev-curriculum.pdf"
-            target="_blank"
-            title={tCommon("button_labels.curriculum_vitae")}
-            aria-label={tCommon("button_labels.curriculum_vitae")}
-          >
-            {tCommon("button_labels.curriculum_vitae")}
-          </a>
         </div>
       </div>
     </div>

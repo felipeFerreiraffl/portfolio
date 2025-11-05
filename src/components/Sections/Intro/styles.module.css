@@ -1,20 +1,26 @@
 .content {
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
-  gap: var(--spacing-size-56);
-
-  @media (max-width: 1200px) {
-    flex-direction: column;
-  }
+  gap: var(--spacing-size-64);
 }
 
 .profileContainer {
-  position: relative;
-  width: var(--spacing-size-364);
-  aspect-ratio: 1 / 1;
+  position: absolute;
+  left: calc(var(--spacing-size-136) * -1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 29rem;
+  aspect-ratio: 1;
 
-  @media (max-width: 576px) {
-    width: var(--spacing-size-204);
+  @media (max-width: 884px) {
+    position: relative;
+    max-width: 21.25rem;
+  }
+
+  @media (max-width: 480px) {
+    max-width: var(--spacing-size-292);
   }
 }
 
@@ -23,36 +29,70 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-color: var(--color-main);
-  border-style: solid;
+  aspect-ratio: 1;
+  border: solid rgb(var(--color-main));
   border-radius: var(--radius-circular);
 }
 
 .firstRing {
-  width: min(var(--spacing-size-364), 100%);
-  aspect-ratio: 1 / 1;
+  width: min(29rem, 100%);
   border-width: var(--spacing-size-8);
-
-  @media (max-width: 576px) {
-    border-width: 0.375rem;
-  }
 }
 
 .secondRing {
-  width: min(var(--spacing-size-332), 92%);
-  aspect-ratio: 1 / 1;
+  width: min(26.5rem, 91%);
   border-width: var(--spacing-size-2);
 }
 
-.profileContainer img {
+.orbitDot {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: min(var(--spacing-size-260), 72%);
-  aspect-ratio: 1 / 1;
+  width: min(29rem, 100%);
+  animation: orbitation 10s linear infinite;
+}
+
+.orbitDot span {
+  position: absolute;
+  top: 50%;
+  left: -0.375rem;
+  transform: translateY(-50%);
+  width: var(--spacing-size-20);
+  background-color: rgb(var(--color-bg));
+  border: var(--spacing-size-4) solid rgb(var(--color-main));
+  aspect-ratio: 1;
+  border-radius: var(--radius-circular);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes orbitation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.profileContainer img {
+  width: min(var(--spacing-size-332), 72%);
+  aspect-ratio: 1;
   object-fit: cover;
   object-position: top;
+  border: 0.0625rem solid var(--color-main);
   border-radius: var(--radius-circular);
 }
 

@@ -9,7 +9,7 @@
   padding: var(--margin-desktop);
   padding-top: var(--spacing-size-20) !important;
   padding-bottom: var(--spacing-size-20) !important;
-  z-index: var(--zindex-2000);
+  z-index: var(--zindex-3000);
 
   @media (max-width: 1200px) {
     padding: var(--margin-tablet);

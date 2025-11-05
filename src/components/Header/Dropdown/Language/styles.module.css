@@ -9,7 +9,7 @@
   height: var(--spacing-size-56);
   background-color: rgb(var(--color-neutral-04));
   border-radius: var(--radius-8);
-  z-index: var(--zindex-1500);
+  z-index: var(--zindex-3000);
 }
 
 .container::before {

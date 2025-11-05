@@ -149,6 +149,8 @@
   --zindex-1000: 1000;
   --zindex-1500: 1500;
   --zindex-2000: 2000;
+  --zindex-2500: 2500;
+  --zindex-3000: 3000;
 }
 
 /* ----- Tema claro ------ */
@@ -201,6 +203,7 @@ body::-webkit-scrollbar-track {
   align-items: center;
   gap: var(--spacing-size-64);
   padding: var(--spacing-size-48) 0;
+  z-index: var(--zindex-2000);
 
   @media (max-width: 480px) {
     width: 80vw;
