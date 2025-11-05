@@ -49,6 +49,8 @@
 
   /* ----- Efeitos ----- */
   --transition-default: all 0.3s ease-in-out;
+  --transition-theme: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
   --shadow-default-light: 0 0 0.75rem rgb(--color-main-02 / 0.6);
   --shadow-default-dark: 0 0 0.75rem rgb(--color-main-03 / 0.6);
@@ -179,6 +181,11 @@
   --filter-brightness: var(--brightness-dark);
 }
 
+:root[data-theme="light"],
+:root[data-theme="dark"] {
+  transition: var(--transition-theme);
+}
+
 /* ----- Scrollbar ----- */
 body::-webkit-scrollbar {
   width: var(--spacing-size-16);
@@ -192,6 +199,11 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
   background-color: rgb(var(--color-bg));
+}
+
+body,
+* {
+  transition: var(--transition-theme);
 }
 
 /* ----- Classes globais ----- */
