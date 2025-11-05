@@ -16,7 +16,7 @@ export default function ColorDropdown() {
   useGSAPTimeline(
     lightTl,
     lightRingRefs,
-    { opacity: 0, scale: 0 },
+    { opacity: 0, scale: 0, xPercent: -50, yPercent: -50 },
     {
       opacity: 1,
       scale: 1,
@@ -29,12 +29,14 @@ export default function ColorDropdown() {
   useGSAPTimeline(
     darkTl,
     darkRingRefs,
-    { opacity: 0, scale: 0 },
+    { opacity: 0, scale: 0, xPercent: -50, yPercent: -50 },
     {
       opacity: 1,
       scale: 1,
       duration: 0.3,
       ease: "power1.inOut",
+      xPercent: -50,
+      yPercent: -50,
     },
     0.15
   );
@@ -57,7 +59,9 @@ export default function ColorDropdown() {
   return (
     <div className={styles.container}>
       <button
-        className={styles.colorBtn}
+        className={`${styles.colorBtn} ${
+          theme === "light" ? styles.lightActive : ""
+        }`}
         onClick={() => setColorTheme("light")}
         onMouseEnter={theme !== "light" ? lightTlPlay : undefined}
         onMouseLeave={theme !== "light" ? lightTlReverse : undefined}
@@ -76,7 +80,9 @@ export default function ColorDropdown() {
       </button>
 
       <div
-        className={styles.colorBtn}
+        className={`${styles.colorBtn} ${
+          theme === "dark" ? styles.darkActive : ""
+        }`}
         onClick={() => setColorTheme("dark")}
         onMouseEnter={theme !== "dark" ? darkTlPlay : undefined}
         onMouseLeave={theme !== "dark" ? darkTlReverse : undefined}
