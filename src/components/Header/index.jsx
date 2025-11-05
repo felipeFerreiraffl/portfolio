@@ -102,19 +102,6 @@ export default function Header({ sectionRefs }) {
           <li>
             <a
               href="#"
-              title={t("navbar.skills")}
-              aria-label={t("navbar.skills")}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(sectionRefs.skills);
-              }}
-            >
-              {t("navbar.skills")}
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
               title={t("navbar.experience")}
               aria-label={t("navbar.experience")}
               onClick={(e) => {
@@ -123,6 +110,19 @@ export default function Header({ sectionRefs }) {
               }}
             >
               {t("navbar.experience")}
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              title={t("navbar.skills")}
+              aria-label={t("navbar.skills")}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(sectionRefs.skills);
+              }}
+            >
+              {t("navbar.skills")}
             </a>
           </li>
           <li>

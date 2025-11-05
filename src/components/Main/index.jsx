@@ -9,8 +9,8 @@ export default function Main({ sectionRefs }) {
   return (
     <main className={styles.main}>
       <Intro ref={sectionRefs.intro} />
-      <Skills ref={sectionRefs.skills} />
       <Experience ref={sectionRefs.experiences} />
+      <Skills ref={sectionRefs.skills} />
       <Projects ref={sectionRefs.projects} />
       <Contacts ref={sectionRefs.contacts} />
     </main>
