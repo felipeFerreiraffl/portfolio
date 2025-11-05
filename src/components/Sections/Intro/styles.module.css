@@ -8,14 +8,16 @@
 
 .content {
   display: flex;
-  flex-direction: column-reverse;
   align-items: center;
   gap: var(--spacing-size-64);
+
+  @media (max-width: 884px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .profileContainer {
-  position: absolute;
-  left: -12rem;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
