@@ -1,12 +1,12 @@
 .container {
-  width: 85vw;
+  width: 88vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-size-12);
 
-  @media (max-width: 480px) {
-    width: 80vw;
+  @media (max-width: 884px) {
+    width: 90vw;
   }
 }
 
@@ -27,7 +27,7 @@
 .line {
   width: 100%;
   height: var(--spacing-size-4);
-  background-color: var(--color-main);
+  background-color: rgb(var(--color-main));
 }
 
 .lineLeft {
@@ -39,9 +39,9 @@
 }
 
 .diamond {
-  width: var(--spacing-size-16);
-  aspect-ratio: 1 / 1;
-  background-color: var(--color-main);
+  width: var(--spacing-size-12);
+  aspect-ratio: 1;
+  background-color: rgb(var(--color-main));
   transform: rotate(45deg);
 
   @media (max-width: 884px) {
@@ -51,20 +51,24 @@
 
 .mainTitleContainer h2 {
   font: var(--font-headline-02);
-  color: var(--color-title);
+  color: rgb(var(--color-title));
+  text-transform: uppercase;
+
+  @media (max-width: 884px) {
+    font: var(--font-headline-03);
+  }
 
   @media (max-width: 480px) {
     font: var(--font-headline-04);
-    font-weight: 700;
   }
 }
 
 .container p {
-  font: var(--font-body-large-regular);
-  color: var(--color-text);
+  font: var(--font-body-subtitle);
+  color: rgb(var(--color-text));
   text-align: center;
 
   @media (max-width: 480px) {
-    font: var(--font-body-small-regular);
+    font: var(--font-body-large-medium);
   }
 }
