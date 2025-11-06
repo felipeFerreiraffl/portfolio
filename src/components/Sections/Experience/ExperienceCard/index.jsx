@@ -13,12 +13,10 @@ export default function ExperienceCard({ title, src, time, descs = [] }) {
 
       <ul className={styles.list}>
         {descs.map((desc, i) => (
-          <div className={styles.itemContainer}>
+          <li className={styles.itemContainer} key={i}>
             <span className={styles.marker}></span>
-            <li className={styles.item} key={i}>
-              {t(desc[`desc${i + 1}`])}
-            </li>
-          </div>
+            <p className={styles.item}>{t(desc[`desc${i + 1}`])}</p>
+          </li>
         ))}
       </ul>
 
