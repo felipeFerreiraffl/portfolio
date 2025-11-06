@@ -8,5 +8,5 @@
   bottom: calc(var(--spacing-size-40) * -1);
   right: calc(var(--spacing-size-92) * -1);
   width: 101vw;
-  z-index: -1;
+  z-index: var(--zindex-1);
 }

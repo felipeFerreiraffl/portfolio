@@ -7,6 +7,8 @@
   width: 100%;
   max-width: 47vw;
   min-height: 23.75rem;
+  border-left: var(--spacing-size-4) solid rgb(var(--color-main));
+  padding-left: var(--spacing-size-24);
 
   @media (max-width: 884px) {
     max-width: 63vw;
