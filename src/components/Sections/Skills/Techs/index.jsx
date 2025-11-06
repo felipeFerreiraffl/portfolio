@@ -3,32 +3,15 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import { ReactComponent as IconEx } from "../../../../assets/svgs/icons/typescript.svg";
+import { ReactComponent as Tree } from "../../../../assets/svgs/illustrations/skills-tree.svg";
 import { useGSAPFromTo } from "../../../../utils/hooks/global/gsap";
 import Skill from "../Skill";
 import styles from "./styles.module.css";
 gsap.registerPlugin(ScrollTrigger);
-import { ReactComponent as Tree } from "../../../../assets/svgs/illustrations/skills-tree.svg";
 
 export default function Techs({ title, techs = [], alignSelf }) {
   const diamondRef = useRef(null);
-
-  useGSAP(
-    () =>
-      useGSAPFromTo(
-        diamondRef,
-        { rotation: 0 },
-        {
-          rotation: 180,
-          duration: 0.6,
-          ease: "power1.inOut",
-          scrollTrigger: {
-            trigger: diamondRef.current,
-            scrub: 1,
-          },
-        }
-      ),
-    { scope: diamondRef }
-  );
+  const treeRef = useRef(null);
 
   const treeStyleProps = {
     "--tree-left":
@@ -41,6 +24,49 @@ export default function Techs({ title, techs = [], alignSelf }) {
         : "auto",
     "--tree-direction": alignSelf === "flex-start" ? "0deg" : "180deg",
   };
+
+  useGSAP(
+    () =>
+      useGSAPFromTo(
+        diamondRef,
+        { rotation: 0, xPercent: -50, yPercent: -50 },
+        {
+          rotation: 180,
+          duration: 0.6,
+          ease: "power1.inOut",
+          xPercent: -50,
+          yPercent: -50,
+          scrollTrigger: {
+            trigger: diamondRef.current,
+            scrub: 1,
+          },
+        }
+      ),
+    { scope: diamondRef }
+  );
+
+  useGSAP(
+    () =>
+      useGSAPFromTo(
+        treeRef,
+        {
+          x: alignSelf === "flex-start" ? "100%" : "-100",
+          yPercent: -50,
+        },
+        {
+          x: 0,
+          yPercent: -50,
+          duration: 0.6,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: treeRef.current,
+            start: "top 90%",
+            toggleActions: "play reverse play reverse",
+          },
+        }
+      ),
+    { scope: treeRef }
+  );
 
   return (
     <div className={styles.container} style={{ "--align-self": alignSelf }}>
@@ -63,7 +89,7 @@ export default function Techs({ title, techs = [], alignSelf }) {
         </div>
       </div>
 
-      <Tree className={styles.tree} style={treeStyleProps} />
+      <Tree ref={treeRef} className={styles.tree} style={treeStyleProps} />
     </div>
   );
 }
