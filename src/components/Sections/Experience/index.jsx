@@ -25,6 +25,7 @@ export default function Experience({ ref }) {
           title={data.title}
           time={data.date}
           src={data.src}
+          srcAlt={data.srcAlt}
           descs={data.descs}
         />
       ))}

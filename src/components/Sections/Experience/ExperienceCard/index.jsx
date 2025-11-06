@@ -1,7 +1,13 @@
 import { useTranslation } from "react-i18next";
 import styles from "./styles.module.css";
 
-export default function ExperienceCard({ title, src, time, descs = [] }) {
+export default function ExperienceCard({
+  title,
+  src,
+  srcAlt,
+  time,
+  descs = [],
+}) {
   const { t } = useTranslation("sections");
 
   return (
@@ -20,7 +26,13 @@ export default function ExperienceCard({ title, src, time, descs = [] }) {
         ))}
       </ul>
 
-      <img className={styles.img} src={src} alt={title} />
+      <img
+        className={styles.img}
+        src={src}
+        alt={t(srcAlt)}
+        title={t(srcAlt)}
+        aria-label={t(srcAlt)}
+      />
     </div>
   );
 }
