@@ -1,0 +1,64 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: var(--spacing-size-620);
+}
+
+.mainContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: var(--align-self);
+  gap: var(--spacing-size-32);
+  width: 100%;
+  z-index: var(--zindex-100);
+}
+
+.symbolContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.symbolContainer * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* height: 100%; */
+  border: solid rgb(var(--color-main));
+  aspect-ratio: 1;
+  z-index: var(--zindex-10);
+}
+
+.symbolContainer .diamond {
+  width: min(16.75rem, 43%);
+  border-width: var(--spacing-size-2);
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0.1;
+}
+
+.symbolContainer .circle {
+  width: min(23.75rem, 61%);
+  border-radius: var(--radius-circular);
+  border-width: var(--spacing-size-4);
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+}
+
+.title {
+  font: var(--font-headline-05);
+  color: rgb(var(--color-text));
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-size-40);
+}
