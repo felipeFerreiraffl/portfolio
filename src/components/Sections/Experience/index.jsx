@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
-import { experiencesData } from "../../../data/data";
 import SectionTitle from "../../SectionTitle";
-import ExperienceCard from "./ExperienceCard";
 import styles from "./styles.module.css";
+import ExperienceCard from "./ExperienceCard";
+import images from "../../../utils/images";
+import { experiencesData } from "../../../data/data";
 
 export default function Experience({ ref }) {
-  const { t: tSections } = useTranslation("sections");
+  const { t } = useTranslation("sections");
 
   return (
     <div
@@ -14,43 +15,19 @@ export default function Experience({ ref }) {
       tabIndex={0}
     >
       <SectionTitle
-        title={tSections("experience.title")}
-        subtitle={tSections("experience.subtitle")}
+        title={t("experience.title")}
+        subtitle={t("experience.subtitle")}
       />
 
-      {experiencesData.map((exp, i) => (
+      {experiencesData.map((data, i) => (
         <ExperienceCard
           key={i}
-          title={tSections(exp.title)}
-          time={exp.time}
-          desc={tSections(exp.desc)}
-          src={exp.imgSrc}
+          title={data.title}
+          time={data.date}
+          src={data.src}
+          descs={data.descs}
         />
       ))}
-
-      <div className={styles.background}>
-        <div className={`${styles.treeContainer} ${styles.treeContainerLeft}`}>
-          <div className={styles.tree}>
-            <div className={`${styles.rectangle} ${styles.big}`}></div>
-            <div className={`${styles.stem} ${styles.stemBig}`}></div>
-          </div>
-          <div className={styles.tree}>
-            <div className={`${styles.rectangle} ${styles.small}`}></div>
-            <div className={`${styles.stem} ${styles.stemSmall}`}></div>
-          </div>
-        </div>
-
-        <div className={`${styles.treeContainer} ${styles.treeContainerRight}`}>
-          <div className={styles.tree}>
-            <div className={`${styles.rectangle} ${styles.small}`}></div>
-            <div className={`${styles.stem} ${styles.stemSmall}`}></div>
-          </div>
-          <div className={styles.tree}>
-            <div className={`${styles.rectangle} ${styles.big}`}></div>
-            <div className={`${styles.stem} ${styles.stemBig}`}></div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
