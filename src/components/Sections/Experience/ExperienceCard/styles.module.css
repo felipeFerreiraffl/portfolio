@@ -76,13 +76,14 @@
 }
 
 .itemContainer .marker {
-  width: var(--spacing-size-12);
+  max-width: var(--spacing-size-12);
+  width: 100%;
   aspect-ratio: 1;
   background-color: rgb(var(--color-main));
   border-radius: var(--radius-circular);
 
   @media (max-width: 480px) {
-    width: var(--spacing-size-8);
+    max-width: var(--spacing-size-8);
   }
 }
 
