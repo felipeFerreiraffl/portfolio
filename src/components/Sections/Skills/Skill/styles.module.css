@@ -59,7 +59,11 @@
 }
 
 .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: var(--spacing-size-40);
+  font-size: var(--spacing-size-40);
   aspect-ratio: 1;
   fill: rgb(var(--color-text));
 

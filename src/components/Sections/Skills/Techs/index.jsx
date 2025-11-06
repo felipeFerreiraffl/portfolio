@@ -2,14 +2,13 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
-import { ReactComponent as IconEx } from "../../../../assets/svgs/icons/typescript.svg";
 import { ReactComponent as Tree } from "../../../../assets/svgs/illustrations/skills-tree.svg";
 import { useGSAPFromTo } from "../../../../utils/hooks/global/gsap";
 import Skill from "../Skill";
 import styles from "./styles.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Techs({ title, techs = [], alignSelf }) {
+export default function Techs({ title, skills = [], alignSelf }) {
   const diamondRef = useRef(null);
   const treeRef = useRef(null);
 
@@ -17,14 +16,14 @@ export default function Techs({ title, techs = [], alignSelf }) {
     "--tree-left":
       alignSelf === "flex-start"
         ? "auto"
-        : "calc(-1 * 100vw + 100% + var(--spacing-size-40))",
+        : "calc(-1 * 100vw + 100% + var(--spacing-size-80))",
     "--tree-left-tablet":
       alignSelf === "flex-start"
         ? "auto"
         : "calc(-1 * 100vw + 100% + var(--spacing-size-120))",
     "--tree-right":
       alignSelf === "flex-start"
-        ? "calc(-1 * 100vw + 100% + var(--spacing-size-40))"
+        ? "calc(-1 * 100vw + 100% + var(--spacing-size-80))"
         : "auto",
     "--tree-right-tablet":
       alignSelf === "flex-start"
@@ -84,16 +83,12 @@ export default function Techs({ title, techs = [], alignSelf }) {
           <span className={styles.circle}></span>
         </div>
 
-        <h3 className={styles.title}>Título</h3>
+        <h3 className={styles.title}>{title}</h3>
 
         <div className={styles.skillsContainer}>
-          <Skill name={"Habilidade 1"} icon={<IconEx />} />
-          <Skill name={"Habilidade 1"} icon={<IconEx />} />
-          <Skill name={"Habilidade 1"} icon={<IconEx />} />
-          <Skill name={"Habilidade 1"} icon={<IconEx />} />
-          <Skill name={"Habilidade 1"} icon={<IconEx />} />
-          <Skill name={"Habilidade 1"} icon={<IconEx />} />
-          <Skill name={"Habilidade 1"} icon={<IconEx />} />
+          {skills.map((skill, i) => (
+            <Skill key={i} name={skill.techName} icon={skill.techIcon} />
+          ))}
         </div>
       </div>
 
