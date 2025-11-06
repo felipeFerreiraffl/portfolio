@@ -46,7 +46,7 @@ export const skillsData = [
     ],
   },
   {
-    title: "skills.carousel_titles.database",
+    title: "skills.sections.database",
     techs: [
       {
         techName: "MySQL",
@@ -59,7 +59,7 @@ export const skillsData = [
     ],
   },
   {
-    title: "skills.carousel_titles.tools",
+    title: "skills.sections.tools",
     techs: [
       {
         techName: "Github",
