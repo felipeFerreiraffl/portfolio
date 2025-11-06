@@ -3,6 +3,7 @@ import { skillsData } from "../../../data/data";
 import SectionTitle from "../../SectionTitle";
 import styles from "./styles.module.css";
 import Techs from "./Techs";
+import { ReactComponent as Water } from "../../../assets/svgs/illustrations/skills-water.svg";
 
 export default function Skills({ ref }) {
   const { t } = useTranslation("sections");
@@ -26,6 +27,8 @@ export default function Skills({ ref }) {
           />
         ))}
       </div>
+
+      <Water className={styles.water} />
     </div>
   );
 }
