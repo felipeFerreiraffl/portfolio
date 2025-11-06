@@ -18,9 +18,17 @@ export default function Techs({ title, techs = [], alignSelf }) {
       alignSelf === "flex-start"
         ? "auto"
         : "calc(-1 * 100vw + 100% + var(--spacing-size-40))",
+    "--tree-left-tablet":
+      alignSelf === "flex-start"
+        ? "auto"
+        : "calc(-1 * 100vw + 100% + var(--spacing-size-120))",
     "--tree-right":
       alignSelf === "flex-start"
         ? "calc(-1 * 100vw + 100% + var(--spacing-size-40))"
+        : "auto",
+    "--tree-right-tablet":
+      alignSelf === "flex-start"
+        ? "calc(-1 * 100vw + 100% + var(--spacing-size-120))"
         : "auto",
     "--tree-direction": alignSelf === "flex-start" ? "0deg" : "180deg",
   };
