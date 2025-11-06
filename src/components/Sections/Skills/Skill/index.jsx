@@ -1,9 +1,4 @@
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
-import { useGSAPTimeline } from "../../../../utils/hooks/global/gsap";
 import styles from "./styles.module.css";
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Skill({ name, icon }) {
   return (

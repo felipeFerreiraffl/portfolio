@@ -48,6 +48,10 @@
 .name {
   font: var(--font-body-medium-bold);
   color: rgb(var(--color-text));
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 
   @media (max-width: 480px) {
     font: var(--font-body-small-bold);
