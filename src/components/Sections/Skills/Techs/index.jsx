@@ -7,6 +7,7 @@ import { useGSAPFromTo } from "../../../../utils/hooks/global/gsap";
 import Skill from "../Skill";
 import styles from "./styles.module.css";
 gsap.registerPlugin(ScrollTrigger);
+import { ReactComponent as Tree } from "../../../../assets/svgs/illustrations/skills-tree.svg";
 
 export default function Techs({ title, techs = [], alignSelf }) {
   const diamondRef = useRef(null);
@@ -29,6 +30,18 @@ export default function Techs({ title, techs = [], alignSelf }) {
     { scope: diamondRef }
   );
 
+  const treeStyleProps = {
+    "--tree-left":
+      alignSelf === "flex-start"
+        ? "auto"
+        : "calc(-1 * 100vw + 100% + var(--spacing-size-40))",
+    "--tree-right":
+      alignSelf === "flex-start"
+        ? "calc(-1 * 100vw + 100% + var(--spacing-size-40))"
+        : "auto",
+    "--tree-direction": alignSelf === "flex-start" ? "0deg" : "180deg",
+  };
+
   return (
     <div className={styles.container} style={{ "--align-self": alignSelf }}>
       <div className={styles.mainContent}>
@@ -49,6 +62,8 @@ export default function Techs({ title, techs = [], alignSelf }) {
           <Skill name={"Habilidade 1"} icon={<IconEx />} />
         </div>
       </div>
+
+      <Tree className={styles.tree} style={treeStyleProps} />
     </div>
   );
 }
