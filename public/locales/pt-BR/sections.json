@@ -24,7 +24,7 @@
     "cards": {
       "one": {
         "title": "Aprendiz - SENAI Mercedes-Benz",
-        "desc": {
+        "descs": {
           "one": "Curso preparativo para a produção veicular da Mercedes-Benz, com conceitos de usinagem (CNC, fresamento, torneamento, ajustagem, etc), manutenção de componentes de veículos pesados ",
           "two": "Soft-skills como trabalho em equipe, atenção aos detalhes e proatividade",
           "three": "Manutenção e formatação de computadores, utilização de aplicativos do Pacote Office e instalação de softwares são atividades extracurriculares relacionadas a T.I."
