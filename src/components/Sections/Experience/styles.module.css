@@ -8,5 +8,15 @@
   bottom: calc(var(--spacing-size-40) * -1);
   right: calc(var(--spacing-size-92) * -1);
   width: 101vw;
+  height: max-content;
   z-index: var(--zindex-1);
+
+  @media (max-width: 884px) {
+    right: calc(var(--spacing-size-120) * -1);
+    left: 0;
+  }
+
+  @media (max-width: 480px) {
+    left: 0;
+  }
 }
