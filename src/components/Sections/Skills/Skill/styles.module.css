@@ -10,6 +10,10 @@
   background-color: rgb(var(--color-main) / 0.4);
   border: var(--spacing-size-2) solid rgb(var(--color-main));
   border-radius: var(--radius-circular);
+
+  @media (max-width: 480px) {
+    width: var(--spacing-size-72);
+  }
 }
 
 .ring {
@@ -24,22 +28,38 @@
 }
 
 .ring:nth-child(1) {
-  width: var(--spacing-size-120);
+  width: min(var(--spacing-size-120), 120%);
   border-width: var(--spacing-size-2);
+
+  @media (max-width: 480px) {
+    width: min(var(--spacing-size-92), 128%);
+  }
 }
 
 .ring:nth-child(2) {
-  width: 8.25rem;
+  width: min(8.25rem, 132%);
   border-width: var(--spacing-size-4);
+
+  @media (max-width: 480px) {
+    width: min(var(--spacing-size-104), 144%);
+  }
 }
 
 .name {
   font: var(--font-body-medium-bold);
   color: rgb(var(--color-text));
+
+  @media (max-width: 480px) {
+    font: var(--font-body-small-bold);
+  }
 }
 
 .icon {
   width: var(--spacing-size-40);
   aspect-ratio: 1;
   fill: rgb(var(--color-text));
+
+  @media (max-width: 480px) {
+    width: var(--spacing-size-32);
+  }
 }

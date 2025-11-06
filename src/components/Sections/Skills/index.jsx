@@ -12,11 +12,6 @@ export default function Skills({ ref }) {
         title={tSections("skills.title")}
         subtitle={tSections("skills.subtitle")}
       />
-
-      <Skill
-        name={"Nome"}
-        icon={<IconExemple />}
-      />
     </div>
   );
 }
