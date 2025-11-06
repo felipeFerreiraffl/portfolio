@@ -78,7 +78,7 @@ export const skillsData = [
 export const experiencesData = [
   {
     title: "experience.cards.one.title",
-    src: "#",
+    src: images.experiences.exp1,
     date: "07/2023 - 07/2025",
     descs: [
       { desc1: "experience.cards.one.descs.one" },
