@@ -1,0 +1,45 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-size-100);
+  aspect-ratio: 1;
+  gap: var(--spacing-size-4);
+  background-color: rgb(var(--color-main) / 0.4);
+  border: var(--spacing-size-2) solid rgb(var(--color-main));
+  border-radius: var(--radius-circular);
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid rgb(var(--color-main));
+  aspect-ratio: 1;
+  border-radius: var(--radius-circular);
+  opacity: 0.4;
+}
+
+.ring:nth-child(1) {
+  width: var(--spacing-size-120);
+  border-width: var(--spacing-size-2);
+}
+
+.ring:nth-child(2) {
+  width: 8.25rem;
+  border-width: var(--spacing-size-4);
+}
+
+.name {
+  font: var(--font-body-medium-bold);
+  color: rgb(var(--color-text));
+}
+
+.icon {
+  width: var(--spacing-size-40);
+  aspect-ratio: 1;
+  fill: rgb(var(--color-text));
+}
