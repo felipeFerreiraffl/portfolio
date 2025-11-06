@@ -1,0 +1,22 @@
+<svg viewBox="0 0 1292 418" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.4">
+<circle cx="94" cy="94" r="94" transform="matrix(-1 0 0 1 1292 0)" fill="rgb(var(--color-main))"/>
+<mask id="path-2-inside-1_511_2068" fill="white">
+<path d="M1292 94H1104V354H1292V94Z"/>
+</mask>
+<path d="M1292 94H1104V354H1292V94Z" fill="rgb(var(--color-main))"/>
+<path d="M1292 94V96H1104V94V92H1292V94Z" fill="rgb(var(--color-bg))" mask="url(#path-2-inside-1_511_2068)"/>
+<rect x="-2" y="2" width="48" height="48" rx="24" transform="matrix(-1 0 0 1 1220 102)" stroke="rgb(var(--color-bg))" stroke-width="4"/>
+<circle cx="20" cy="20" r="19" transform="matrix(-1 0 0 1 1218 108)" stroke="rgb(var(--color-bg))" stroke-width="2"/>
+<circle cx="14" cy="14" r="14" transform="matrix(-1 0 0 1 1212 114)" fill="rgb(var(--color-bg))"/>
+<path d="M1260 174C1260 167.373 1254.63 162 1248 162H1148C1141.37 162 1136 167.373 1136 174V354H1260V174Z" fill="rgb(var(--color-bg))"/>
+<path d="M1242 334H1154V334C1154 345.046 1162.95 354 1174 354H1222C1233.05 354 1242 345.046 1242 334V334Z" fill="rgb(var(--color-main))"/>
+<path d="M1062 370H1038V378H1022V386H1006V394H990V402H0V418H1292V354H1062V370Z" fill="url(#paint0_linear_511_2068)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_511_2068" x1="646" y1="354" x2="646" y2="418" gradientUnits="userSpaceOnUse">
+<stop stop-color="rgb(var(--color-main))"/>
+<stop offset="1" stop-color="rgb(var(--color-bg))"/>
+</linearGradient>
+</defs>
+</svg>
