@@ -1,3 +1,12 @@
 .container {
   align-items: flex-start !important;
 }
+
+.altar {
+  pointer-events: none;
+  position: absolute;
+  bottom: calc(var(--spacing-size-40) * -1);
+  right: calc(var(--spacing-size-92) * -1);
+  width: 101vw;
+  z-index: -1;
+}

@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
-import SectionTitle from "../../SectionTitle";
-import styles from "./styles.module.css";
-import ExperienceCard from "./ExperienceCard";
-import images from "../../../utils/images";
 import { experiencesData } from "../../../data/data";
+import SectionTitle from "../../SectionTitle";
+import ExperienceCard from "./ExperienceCard";
+import styles from "./styles.module.css";
+import { ReactComponent as Altar } from "../../../assets/svgs/illustrations/experiences-altar.svg";
 
 export default function Experience({ ref }) {
   const { t } = useTranslation("sections");
@@ -28,6 +28,8 @@ export default function Experience({ ref }) {
           descs={data.descs}
         />
       ))}
+
+      <Altar className={styles.altar} />
     </div>
   );
 }
