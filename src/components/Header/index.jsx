@@ -220,14 +220,14 @@ export default function Header({ sectionRefs }) {
               <li className={styles.menuPage}>
                 <a
                   href="#"
-                  title={t("navbar.skills")}
-                  aria-label={t("navbar.skills")}
+                  title={t("navbar.experiences")}
+                  aria-label={t("navbar.experiences")}
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToSection(sectionRefs.skills);
+                    scrollToSection(sectionRefs.experiences);
                   }}
                 >
-                  {t("navbar.skills")}
+                  {t("navbar.experiences")}
                 </a>
                 <div className={styles.divisor}>
                   <span className={styles.dot}></span>
@@ -238,14 +238,14 @@ export default function Header({ sectionRefs }) {
               <li className={styles.menuPage}>
                 <a
                   href="#"
-                  title={t("navbar.experience")}
-                  aria-label={t("navbar.experiences")}
+                  title={t("navbar.skills")}
+                  aria-label={t("navbar.skills")}
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToSection(sectionRefs.experiences);
+                    scrollToSection(sectionRefs.skills);
                   }}
                 >
-                  {t("navbar.experience")}
+                  {t("navbar.skills")}
                 </a>
                 <div className={styles.divisor}>
                   <span className={styles.dot}></span>
