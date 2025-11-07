@@ -92,7 +92,7 @@ export const experiencesData = [
 // Dados de projetos
 export const projectsData = [
   {
-    title: "projects.cards.math_calcs",
+    title: "projects.cards.math_calcs.title",
     src: images.projects.mathCalculations,
     description: "projects.cards.math_calcs.desc",
     techs: [
