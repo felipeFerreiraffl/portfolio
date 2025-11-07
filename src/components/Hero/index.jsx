@@ -28,7 +28,7 @@ export default function Hero() {
             xPercent: -50,
             yPercent: -50,
           },
-          i * 0.2
+          i * 0.1
         );
       });
     },

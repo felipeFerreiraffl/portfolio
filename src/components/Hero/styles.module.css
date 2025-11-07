@@ -107,17 +107,17 @@
 }
 
 .btnRing:nth-child(1) {
-  width: max(var(--spacing-size-216), 100%);
-  height: var(--spacing-size-68);
-  border-radius: var(--radius-20);
-  border-width: 0.0625rem;
-}
-
-.btnRing:nth-child(2) {
   width: max(var(--spacing-size-228), 100%);
   height: var(--spacing-size-80);
   border-radius: var(--radius-24);
   border-width: var(--spacing-size-2);
+}
+
+.btnRing:nth-child(2) {
+  width: max(var(--spacing-size-216), 100%);
+  height: var(--spacing-size-68);
+  border-radius: var(--radius-20);
+  border-width: 0.0625rem;
 }
 
 .titleContainer {

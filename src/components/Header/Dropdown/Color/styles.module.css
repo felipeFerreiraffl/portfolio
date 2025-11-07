@@ -66,13 +66,13 @@
 }
 
 .ring:nth-child(1) {
-  width: var(--spacing-size-32);
-  border-width: 0.0625rem;
+  width: var(--spacing-size-40);
+  border-width: var(--spacing-size-2);
 }
 
 .ring:nth-child(2) {
-  width: var(--spacing-size-40);
-  border-width: var(--spacing-size-2);
+  width: var(--spacing-size-32);
+  border-width: 0.0625rem;
 }
 
 .ringLight {
