@@ -52,10 +52,8 @@
   --transition-theme: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
     border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
-  --shadow-default-light: 0 0 0.75rem rgb(--color-main-02 / 0.6);
-  --shadow-default-dark: 0 0 0.75rem rgb(--color-main-03 / 0.6);
-  --shadow-background-light: 0 0.5rem 1rem rgb(--color-main-02 / 0.4);
-  --shadow-background-dark: 0 0.5rem 1rem rgb(--color-neutral-03 / 0.4);
+  --shadow-default-light: 0 0 0.75rem rgb(var(--color-main-02) / 0.6);
+  --shadow-default-dark: 0 0 0.75rem rgb(var(--color-main-03) / 0.6);
 
   --background-blur: blur(8px);
 
@@ -164,7 +162,6 @@
   --color-button-label: var(--color-neutral-01);
   --border-main: var(--border-main-03);
   --box-shadow: var(--shadow-default-dark);
-  --background-shadow: var(--shadow-background-dark);
   --filter-brightness: var(--brightness-light);
 }
 
@@ -177,7 +174,6 @@
   --color-button-label: var(--color-neutral-04);
   --border-main: var(--border-main-02);
   --box-shadow: var(--shadow-default-light);
-  --background-shadow: var(--shadow-background-light);
   --filter-brightness: var(--brightness-dark);
 }
 
