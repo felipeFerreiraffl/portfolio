@@ -8,11 +8,6 @@ import { ReactComponent as Water } from "../../../assets/svgs/illustrations/skil
 export default function Skills({ ref }) {
   const { t } = useTranslation("sections");
 
-  const mapped = skillsData.map((data, i) => {
-    return data.techs;
-  });
-  console.log(mapped);
-
   return (
     <div ref={ref} className="section-container" tabIndex={0}>
       <SectionTitle title={t("skills.title")} subtitle={t("skills.subtitle")} />
