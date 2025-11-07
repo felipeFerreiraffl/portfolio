@@ -146,18 +146,24 @@ export const projectsData = [
 
 export const socialLinks = [
   {
+    type: "link",
+    name: "felipeFerreiraffl",
     title: "tooltip.socials.github",
     icon: <Icon icon={icons.remix.brand.github} />,
     href: "https://github.com/felipeFerreiraffl",
   },
   {
+    type: "link",
+    name: "Felipe Ferreira",
     title: "tooltip.socials.linkedin",
     icon: <Icon icon={icons.remix.brand.linkedin} />,
     href: "https://www.linkedin.com/in/felipe-ferreira-959bb8271/",
   },
   {
-    title: "tooltip.socials.instagram",
-    icon: <Icon icon={icons.remix.brand.instagram} />,
-    href: "https://www.instagram.com/felipe_ffl7/",
+    type: "email",
+    name: "felipe.ferr.lima04@gmail.com",
+    title: "",
+    icon: <Icon icon={icons.remix.common.mail} />,
+    href: "mailto:felipe.ferr.lima04@gmail.com",
   },
 ];
