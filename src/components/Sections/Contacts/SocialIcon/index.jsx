@@ -22,6 +22,22 @@ export default function SocialIcon({ type, icon, title, href, name }) {
   const tlPlay = () => tl.current.play();
   const tlReverse = () => tl.current.reverse();
 
+  const copyOrAccessEmail = (e) => {
+    if (type === "email") {
+      // Verificação se é um dispositivo Mobile
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+      if (!isMobile) {
+        e.preventDefault();
+
+        const email = "felipe.ferr.lima04@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+          alert("Email copiado para área de transferência");
+        });
+      }
+    }
+  };
+
   return (
     <a
       className={styles.link}
@@ -30,6 +46,7 @@ export default function SocialIcon({ type, icon, title, href, name }) {
       rel="noopener noreferer"
       onMouseEnter={tlPlay}
       onMouseLeave={tlReverse}
+      onClick={copyOrAccessEmail}
       title={title}
       aria-label={title}
     >
