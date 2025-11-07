@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useGSAPTimeline } from "../../../../utils/hooks/global/gsap";
 import styles from "./styles.module.css";
 
-export default function SocialIcon({ icon, title, href }) {
+export default function SocialIcon({ type, icon, title, href, name }) {
   const ringRefs = useRef([]);
   const tl = useRef();
 
@@ -11,7 +11,7 @@ export default function SocialIcon({ icon, title, href }) {
     ringRefs,
     { opacity: 0, scale: 0 },
     {
-      opacity: 1,
+      opacity: 0.4,
       scale: 1,
       duration: 0.3,
       ease: "power1.inOut",
@@ -40,7 +40,8 @@ export default function SocialIcon({ icon, title, href }) {
           ref={(el) => (ringRefs.current[i] = el)}
         ></div>
       ))}
-      <span>{icon}</span>
+      <span className={styles.icon}>{icon}</span>
+      <p className={styles.name}>{name}</p>
     </a>
   );
 }
