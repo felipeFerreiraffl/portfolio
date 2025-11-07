@@ -66,6 +66,7 @@
   font-size: var(--spacing-size-40);
   aspect-ratio: 1;
   fill: rgb(var(--color-text));
+  color: rgb(var(--color-text));
 
   @media (max-width: 480px) {
     width: var(--spacing-size-32);
