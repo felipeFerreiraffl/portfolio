@@ -23,6 +23,11 @@
   width: 100%;
   height: 100%;
 
+  @media (max-width: 884px) {
+    max-width: var(--spacing-size-520);
+    min-width: var(--spacing-size-520);
+  }
+
   @media (max-width: 480px) {
     max-width: 20rem;
     min-width: 20rem;
@@ -83,11 +88,7 @@
   transform: rotate(var(--tree-direction));
   width: auto;
   height: var(--spacing-size-160);
-
-  @media (max-width: 884px) {
-    left: var(--tree-left-tablet);
-    right: var(--tree-right-tablet);
-  }
+  opacity: 0.6;
 
   @media (max-width: 480px) {
     display: none;

@@ -18,17 +18,13 @@ export default function Techs({ title, skills = [], alignSelf }) {
         ? "auto"
         : "calc(-1 * 100vw + 100% + var(--spacing-size-80))",
     "--tree-left-tablet":
-      alignSelf === "flex-start"
-        ? "auto"
-        : "calc(-1 * 100vw + 100% + var(--spacing-size-120))",
+      alignSelf === "flex-start" ? "auto" : "calc(-1 * 100vw + 100% + 15rem)",
     "--tree-right":
       alignSelf === "flex-start"
         ? "calc(-1 * 100vw + 100% + var(--spacing-size-80))"
         : "auto",
     "--tree-right-tablet":
-      alignSelf === "flex-start"
-        ? "calc(-1 * 100vw + 100% + var(--spacing-size-120))"
-        : "auto",
+      alignSelf === "flex-start" ? "calc(-1 * 100vw + 100% + 15rem)" : "auto",
     "--tree-direction": alignSelf === "flex-start" ? "0deg" : "180deg",
   };
 
@@ -57,7 +53,7 @@ export default function Techs({ title, skills = [], alignSelf }) {
       useGSAPFromTo(
         treeRef,
         {
-          x: alignSelf === "flex-start" ? "100%" : "-100",
+          x: alignSelf === "flex-start" ? "100%" : "-100%",
           yPercent: -50,
         },
         {
