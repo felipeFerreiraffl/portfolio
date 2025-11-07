@@ -92,6 +92,7 @@ export const experiencesData = [
 // Dados de projetos
 export const projectsData = [
   {
+    href: "https://github.com/felipeFerreiraffl/calculos-matematicos",
     title: "projects.cards.math_calcs.title",
     src: images.projects.mathCalculations,
     description: "projects.cards.math_calcs.desc",
@@ -103,6 +104,7 @@ export const projectsData = [
     ],
   },
   {
+    href: "https://github.com/felipeFerreiraffl/crud-livraria",
     title: "projects.cards.crud_lib.title",
     src: images.projects.crudLibrary,
     description: "projects.cards.crud_lib.desc",
@@ -115,6 +117,7 @@ export const projectsData = [
     ],
   },
   {
+    href: "https://github.com/felipeFerreiraffl/anime-manga-info",
     title: "projects.cards.kitsu.title",
     src: images.projects.animesMangasKitsu,
     description: "projects.cards.kitsu.desc",
@@ -127,6 +130,7 @@ export const projectsData = [
     ],
   },
   {
+    href: "https://github.com/felipeFerreiraffl/tsauth",
     title: "projects.cards.tsauth.title",
     src: images.projects.tsAuth,
     description: "projects.cards.tsauth.desc",

@@ -18,6 +18,7 @@ export default function Projects({ ref }) {
         {projectsData.map((data, i) => (
           <ProjectCard
             key={i}
+            href={data.href}
             title={t(data.title)}
             src={data.src}
             desc={t(data.description)}

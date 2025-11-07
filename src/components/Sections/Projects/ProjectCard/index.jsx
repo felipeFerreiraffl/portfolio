@@ -4,10 +4,10 @@ import images from "../../../../utils/images";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import icons from "../../../../utils/icons";
 
-export default function ProjectCard({ title, src, desc, techs = [] }) {
+export default function ProjectCard({ href, title, src, desc, techs = [] }) {
   return (
     <a
-      href="#"
+      href={href}
       rel="noopener noreferer"
       target="_blank"
       title={title}
