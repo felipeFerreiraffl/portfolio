@@ -132,7 +132,8 @@
   --radius-12: var(--spacing-size-12); /* 12px */
   --radius-16: var(--spacing-size-16); /* 16px */
   --radius-20: var(--spacing-size-20); /* 20px */
-  --radius-24: var(--spacing-size-24); /* 20px */
+  --radius-24: var(--spacing-size-24); /* 24px */
+  --radius-32: var(--spacing-size-32); /* 32px */
   --radius-96: var(--spacing-size-96); /* 96px */
   --radius-circular: 50%; /* Circular */
 
