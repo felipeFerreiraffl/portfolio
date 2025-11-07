@@ -1,78 +1,153 @@
 .container {
-  cursor: pointer;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-image: var(--bg-image);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-clip: border-box;
-  width: var(--spacing-size-352);
-  aspect-ratio: 176 / 117;
-  border-radius: var(--radius-12);
-  overflow: hidden;
-  transition: var(--transition-default);
+  gap: var(--spacing-size-12);
+  max-width: 22.5rem;
 
   @media (max-width: 884px) {
-    width: var(--spacing-size-312);
-    aspect-ratio: 156 / 117;
-  }
-
-  @media (max-width: 480px) {
-    width: var(--spacing-size-224);
-    aspect-ratio: 4 / 3;
+    max-width: var(--spacing-size-260);
   }
 }
 
-.container:hover {
-  box-shadow: var(--box-shadow);
-  transform: scale(1.05) translateY(calc(var(--spacing-size-2) * -1));
+.container * {
+  transition: var(--transition-default);
 }
 
-.container h3 {
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(var(--color-neutral-04) / 0.8);
+  width: 100%;
+  height: 100%;
+  z-index: var(--zindex-100);
+  gap: var(--spacing-size-8);
+  opacity: 0;
+}
+
+.gitHub {
+  font: var(--font-body-large-bold);
+  color: rgb(var(--color-neutral-01));
+
+  @media (max-width: 884px) {
+    font: var(--font-body-medium-bold);
+  }
+}
+
+.gitHubIcon {
+  font-size: var(--spacing-size-24);
+  color: rgb(var(--color-neutral-01));
+
+  @media (max-width: 884px) {
+    font-size: var(--spacing-size-16);
+  }
+}
+
+.previewContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  clip-path: inset(0 round var(--spacing-size-16));
+}
+
+.title {
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
+  height: var(--spacing-size-40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  background-color: rgb(var(--color-neutral-04) / 0.8);
+  backdrop-filter: var(--background-blur);
   font: var(--font-body-medium-bold);
-  padding: var(--spacing-size-12) 0;
-  background-color: var(--color-opacity_80);
-  color: var(--color-text);
+  color: rgb(var(--color-neutral-01));
+  z-index: var(--zindex-100);
 
-  @media (max-width: 480px) {
+  @media (max-width: 884px) {
     font: var(--font-body-small-bold);
   }
 }
 
-.iconsContainer {
-  position: absolute;
-  bottom: 0;
+.image {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 9 / 6;
+  object-fit: cover;
+}
+
+.description {
+  width: 100%;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font: var(--font-body-medium-regular);
+  color: rgb(var(--color-text));
+  text-align: center;
+
+  @media (max-width: 884px) {
+    font: var(--font-body-small-regular);
+  }
+}
+
+.techsContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-size-4);
+}
+
+.tech {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-size-8);
-  width: 100%;
-  padding: var(--spacing-size-8) 0;
-  background-color: var(--color-opacity_80);
-}
+  width: var(--spacing-size-44);
+  aspect-ratio: 1;
+  border-radius: var(--radius-circular);
+  border: var(--spacing-size-2) solid rgb(var(--color-main) / 0.4);
 
-.iconsContainer span {
-  display: flex;
-  width: var(--spacing-size-16);
-  aspect-ratio: 1 / 1;
-}
-
-.iconsContainer span * {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  font-size: var(--spacing-size-16);
-  color: var(--color-text);
-
-  @media (max-width: 480px) {
-    font-size: var(--spacing-size-12);
+  @media (max-width: 884px) {
+    width: var(--spacing-size-28);
   }
+}
+
+.icon {
+  width: min(var(--spacing-size-28), 64%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-size-4);
+  aspect-ratio: 1;
+  background-color: rgb(var(--color-main) / 0.4);
+  border: 0.0625rem solid rgb(var(--color-main) / 0.4);
+  border-radius: var(--radius-circular);
+}
+
+.icon * {
+  width: min(var(--spacing-size-20), 71%);
+  font-size: var(--spacing-size-20);
+  color: rgb(var(--color-text));
+  fill: rgb(var(--color-text));
+}
+
+.container:hover .title,
+.container:hover .image {
+  opacity: 0;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.container:hover .tech,
+.container:hover .icon {
+  border-color: rgb(var(--color-main));
 }

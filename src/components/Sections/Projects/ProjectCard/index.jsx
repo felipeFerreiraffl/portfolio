@@ -1,19 +1,36 @@
 import styles from "./styles.module.css";
+import { ReactComponent as IconEx } from "../../../../assets/svgs/icons/mysql.svg";
+import images from "../../../../utils/images";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import icons from "../../../../utils/icons";
 
-export default function ProjectCard({ title, src, techs = [], href }) {
+export default function ProjectCard({ title, src, desc, techs = [] }) {
   return (
     <a
-      href={href}
+      href="#"
       rel="noopener noreferer"
       target="_blank"
-      className={styles.container}
-      style={{ "--bg-image": `url(${src})` }}
       title={title}
+      aria-label={title}
+      className={styles.container}
     >
-      <h3>{title}</h3>
-      <div className={styles.iconsContainer}>
+      <div className={styles.previewContainer}>
+        <div className={styles.overlay}>
+          <p className={styles.gitHub}>GitHub</p>
+          <Icon icon={icons.remix.common.linkM} className={styles.gitHubIcon} />
+        </div>
+
+        <p className={styles.title}>{title}</p>
+        <img src={src} alt={title} className={styles.image} loading="lazy" />
+      </div>
+
+      <p className={styles.description}>{desc}</p>
+
+      <div className={styles.techsContainer}>
         {techs.map((tech, i) => (
-          <span key={i}>{tech.icon}</span>
+          <div key={i} className={styles.tech}>
+            <span className={styles.icon}>{tech.icon}</span>
+          </div>
         ))}
       </div>
     </a>
