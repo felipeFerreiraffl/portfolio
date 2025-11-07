@@ -2,11 +2,12 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { socialLinks } from "../../../data/data";
+import { useGSAPTimeline } from "../../../utils/hooks/global/gsap";
 import icons from "../../../utils/icons";
 import SectionTitle from "../../SectionTitle";
 import SocialIcon from "./SocialIcon";
 import styles from "./styles.module.css";
-import { useGSAPTimeline } from "../../../utils/hooks/global/gsap";
+import { ReactComponent as Constellation } from "../../../assets/svgs/illustrations/contacts-constellation.svg";
 
 export default function Contacts({ ref }) {
   const { t: tSections } = useTranslation("sections");
@@ -100,6 +101,8 @@ export default function Contacts({ ref }) {
           </a>
         </div>
       </div>
+
+      <Constellation className={styles.constellation} />
     </div>
   );
 }

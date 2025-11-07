@@ -125,3 +125,14 @@
   height: var(--spacing-size-88);
   border-radius: var(--radius-24);
 }
+
+.constellation {
+  position: absolute;
+  top: 15.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: auto;
+  z-index: var(--zindex-1);
+  pointer-events: none;
+}
