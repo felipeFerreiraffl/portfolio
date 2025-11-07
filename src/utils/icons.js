@@ -7,6 +7,8 @@ const icons = {
       user: "ri:user-fill",
       server: "ri:server-fill",
       menu3: "ri:menu-3-line",
+      linkM: "ri:link-m",
+      mail: "ri:mail-fill",
     },
     arrow: {
       arrowDropLeft: "ri:arrow-drop-left-line",
