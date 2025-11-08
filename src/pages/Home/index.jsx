@@ -19,7 +19,7 @@ export default function Home() {
       <Header sectionRefs={sectionRefs} />
       <Hero />
       <Main sectionRefs={sectionRefs} />
-      <Footer />
+      <Footer sectionRefs={sectionRefs} />
     </div>
   );
 }
