@@ -9,6 +9,12 @@ export default function Footer({ sectionRefs }) {
   return (
     <footer className={styles.footer}>
       <div className={styles.content}>
+        <div className={styles.contentBackgroundContainer}>
+          <div className={styles.contentRing1}></div>
+          <div className={styles.contentRing2}></div>
+          <div className={styles.contentCircle}></div>
+        </div>
+
         <div className={styles.navigation}>
           <h2 className={styles.navTitle}>{t("footer")}</h2>
 
@@ -91,8 +97,8 @@ export default function Footer({ sectionRefs }) {
       </div>
 
       <div className={styles.illustration}>
-        <div className={styles.circleContainer}>
-          <div className={styles.circle}></div>
+        <div className={styles.illustationBackgroundContainer}>
+          <div className={styles.illustationCircle}></div>
         </div>
 
         <img

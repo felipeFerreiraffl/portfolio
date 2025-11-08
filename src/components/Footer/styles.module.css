@@ -18,16 +18,81 @@
 }
 
 .content {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 23rem;
   width: 100%;
-  border: 1px solid red;
 
   @media (max-width: 884px) {
     max-width: var(--spacing-size-204);
   }
+}
+
+.contentBackgroundContainer,
+.contentRing1,
+.contentRing2,
+.contentCircle,
+.illustationCircle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: var(--zindex-10);
+  pointer-events: none;
+}
+
+.contentBackgroundContainer {
+  width: var(--spacing-size-584);
+  aspect-ratio: 1;
+  border: var(--spacing-size-8) solid transparent;
+  background: linear-gradient(rgb(var(--color-bg)), rgb(var(--color-bg)))
+      padding-box,
+    linear-gradient(135deg, rgb(var(--color-main)), rgb(var(--color-bg)))
+      border-box;
+  border-radius: var(--radius-circular);
+  opacity: 0.4;
+
+  @media (max-width: 884px) {
+    width: 30.75rem;
+  }
+
+  @media (max-width: 884px) {
+    width: 25.25rem;
+  }
+}
+
+.contentRing1,
+.contentRing2 {
+  border: solid transparent;
+  background: linear-gradient(rgb(var(--color-bg)), rgb(var(--color-bg)))
+      padding-box,
+    linear-gradient(135deg, rgb(var(--color-main)), rgb(var(--color-bg)))
+      border-box;
+  border-radius: var(--radius-circular);
+  aspect-ratio: 1;
+}
+
+.contentRing1 {
+  width: min(34.75rem, 95%);
+  border-width: var(--spacing-size-2);
+}
+
+.contentRing2 {
+  width: min(30.75rem, 84%);
+  border-width: var(--spacing-size-4);
+}
+
+.contentCircle {
+  width: min(29rem, 79%);
+  aspect-ratio: 1;
+  border-radius: var(--radius-circular);
+  background: linear-gradient(
+    135deg,
+    rgb(var(--color-main)),
+    rgb(var(--color-bg))
+  );
 }
 
 .navigation {
@@ -36,6 +101,7 @@
   align-items: start;
   gap: var(--spacing-size-12);
   padding: var(--spacing-size-28);
+  z-index: var(--zindex-100);
 }
 
 .navTitle {
@@ -65,7 +131,7 @@
 }
 
 .section:hover {
-  color: rgb(var(--color-main-01));
+  color: rgb(var(--color-main));
 }
 
 .copyright {
@@ -81,7 +147,6 @@
   max-width: 34.5rem;
   width: 100%;
   aspect-ratio: 1;
-  border: 1px solid red;
 
   @media (max-width: 884px) {
     max-width: 26.5rem;
@@ -92,17 +157,46 @@
   }
 }
 
-.circleContainer {
+.illustationBackgroundContainer {
+  position: absolute;
+  top: var(--spacing-size-96);
+  left: 12rem;
+  width: var(--spacing-size-620);
+  aspect-ratio: 1;
+  border: var(--spacing-size-8) solid transparent;
+  background: linear-gradient(rgb(var(--color-bg)), rgb(var(--color-bg)))
+      padding-box,
+    linear-gradient(225deg, rgb(var(--color-main)), rgb(var(--color-bg)))
+      border-box;
+  border-radius: var(--radius-circular);
+  opacity: 0.4;
+  z-index: var(--zindex-10);
+
+  @media (max-width: 884px) {
+    width: 33.75rem;
+  }
+
+  @media (max-width: 884px) {
+    width: 26.25rem;
+    top: var(--spacing-size-48);
+    left: var(--spacing-size-104);
+  }
 }
 
-.ring {
-}
-
-.circle {
+.illustationCircle {
+  width: min(37rem, 95%);
+  aspect-ratio: 1;
+  background: linear-gradient(
+    225deg,
+    rgb(var(--color-main)),
+    rgb(var(--color-bg))
+  );
+  border-radius: var(--radius-circular);
 }
 
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: var(--zindex-100);
 }
