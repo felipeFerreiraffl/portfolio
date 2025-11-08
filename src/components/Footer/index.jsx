@@ -8,16 +8,16 @@ export default function Footer({ sectionRefs }) {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles}>
-        <div className={styles}>
-          <h2 className={styles}>{t("footer")}</h2>
+      <div className={styles.content}>
+        <div className={styles.navigation}>
+          <h2 className={styles.navTitle}>{t("footer")}</h2>
 
-          <nav className={styles}>
-            <ul>
+          <nav>
+            <ul className={styles.sectionContainer}>
               <li>
                 <a
                   href="#"
-                  className={styles}
+                  className={styles.section}
                   title={"Intro"}
                   aria-label={"Intro"}
                   onClick={(e) => {
@@ -31,7 +31,7 @@ export default function Footer({ sectionRefs }) {
               <li>
                 <a
                   href="#"
-                  className={styles}
+                  className={styles.section}
                   title={t("navbar.experiences")}
                   aria-label={t("navbar.experiences")}
                   onClick={(e) => {
@@ -45,7 +45,7 @@ export default function Footer({ sectionRefs }) {
               <li>
                 <a
                   href="#"
-                  className={styles}
+                  className={styles.section}
                   title={t("navbar.skills")}
                   aria-label={t("navbar.skills")}
                   onClick={(e) => {
@@ -59,7 +59,7 @@ export default function Footer({ sectionRefs }) {
               <li>
                 <a
                   href="#"
-                  className={styles}
+                  className={styles.section}
                   title={t("navbar.projects")}
                   aria-label={t("navbar.projects")}
                   onClick={(e) => {
@@ -73,7 +73,7 @@ export default function Footer({ sectionRefs }) {
               <li>
                 <a
                   href="#"
-                  className={styles}
+                  className={styles.section}
                   title={t("navbar.contacts")}
                   aria-label={t("navbar.contacts")}
                   onClick={(e) => {
@@ -86,19 +86,19 @@ export default function Footer({ sectionRefs }) {
               </li>
             </ul>
           </nav>
-          <span className={styles}>Copyright &copy; 2025</span>
+          <span className={styles.copyright}>Copyright &copy; 2025</span>
         </div>
       </div>
 
-      <div className={styles}>
-        <div className={styles}>
-          <div className={styles}></div>
+      <div className={styles.illustration}>
+        <div className={styles.circleContainer}>
+          <div className={styles.circle}></div>
         </div>
 
         <img
           src={images.statue}
           alt={t("alts.statue")}
-          className={styles}
+          className={styles.image}
           title={t("alts.statue")}
           aria-label={t("alts.statue")}
           loading="lazy"
