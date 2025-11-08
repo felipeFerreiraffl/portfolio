@@ -136,8 +136,3 @@
   z-index: var(--zindex-1);
   pointer-events: none;
 }
-
-.constellation .line {
-  stroke-dashoffset: 1;
-  stroke-dasharray: 1;
-}
