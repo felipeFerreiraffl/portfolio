@@ -72,7 +72,11 @@ export default function Techs({ title, skills = [], alignSelf }) {
   );
 
   return (
-    <div className={styles.container} style={{ "--align-self": alignSelf }}>
+    <div
+      className={styles.container}
+      style={{ "--align-self": alignSelf }}
+      tabIndex={0}
+    >
       <div className={styles.mainContent}>
         <div className={styles.symbolContainer}>
           <span ref={diamondRef} className={styles.diamond}></span>
