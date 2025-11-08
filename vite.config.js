@@ -11,6 +11,7 @@ export default defineConfig({
         exportType: "named",
         ref: true,
         jsxRuntime: "classic",
+        svgo: false,
       },
       include: "**/*.svg",
     }),

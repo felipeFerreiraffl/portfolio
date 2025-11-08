@@ -1,13 +1,17 @@
+import { useGSAP } from "@gsap/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { ReactComponent as Constellation } from "../../../assets/svgs/illustrations/contacts-constellation.svg";
 import { socialLinks } from "../../../data/data";
 import { useGSAPTimeline } from "../../../utils/hooks/global/gsap";
 import icons from "../../../utils/icons";
 import SectionTitle from "../../SectionTitle";
 import SocialIcon from "./SocialIcon";
 import styles from "./styles.module.css";
-import { ReactComponent as Constellation } from "../../../assets/svgs/illustrations/contacts-constellation.svg";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Contacts({ ref }) {
   const { t: tSections } = useTranslation("sections");
